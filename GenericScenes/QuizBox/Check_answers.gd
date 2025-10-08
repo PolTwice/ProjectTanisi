@@ -23,26 +23,21 @@ func _ready():
 	#if the second and third choice are not entered, then hide the box
 	if quizResource.choices[2] ==0 && quizResource.choices[3] ==0:
 		button_cd_box.visible=false;
-	$Right.visible = false
-	$Wrong.visible = false
 
 func _on_button_a_pressed() -> void:
-	pass # Replace with function body.
+	checkAnswer(0);
 
 func _on_button_b_pressed() -> void:
-	pass # Replace with function body.
+	checkAnswer(1)
 
 func _on_button_c_pressed() -> void:
-	pass # Replace with function body.
+	checkAnswer(2)
 
 func _on_button_d_pressed() -> void:
-	pass # Replace with function body.
+	checkAnswer(3)
 
-# --- Main Logic ---
-func check_option(is_correct: bool):
-	if is_correct:
-		$Right.visible = true
-		$Wrong.visible = false
+func checkAnswer(option: int) -> void:
+	if(option == quizResource.correctIndex):
+		print("Right Answer")
 	else:
-		$Right.visible = false
-		$Wrong.visible = true
+		print("Wrong Answer")
