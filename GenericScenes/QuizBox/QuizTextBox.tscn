@@ -1,0 +1,266 @@
+[gd_scene load_steps=12 format=3 uid="uid://ywowko6thpw8"]
+
+[ext_resource type="Script" uid="uid://du0m5a50lew2v" path="res://GenericScenes/Check_answers.gd" id="1_uakr6"]
+[ext_resource type="Theme" uid="uid://c7ov3td0u36sq" path="res://GenericScenes/Themes/GenericTextBox.tres" id="1_x11fd"]
+[ext_resource type="Texture2D" uid="uid://7mf0ow2ulifp" path="res://Tanisi.png" id="2_2q68e"]
+[ext_resource type="Theme" uid="uid://byi38q23oj3ta" path="res://GenericScenes/Themes/ButtonTheme.tres" id="2_e0t6s"]
+[ext_resource type="StyleBox" uid="uid://chw4c3yc2s508" path="res://GenericScenes/Themes/InfoBox.tres" id="3_2q68e"]
+[ext_resource type="Texture2D" uid="uid://btbswx1ntxcql" path="res://Icons/Yes.svg" id="6_pw7es"]
+[ext_resource type="Texture2D" uid="uid://6ytmi46w3k3i" path="res://Icons/Noo.svg" id="7_uakr6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x11fd"]
+bg_color = Color(0.191509, 0.106161, 0.0477274, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e0t6s"]
+bg_color = Color(0.776471, 0.278431, 0.262745, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2q68e"]
+bg_color = Color(0.498627, 0.42742, 0.325971, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mjyky"]
+bg_color = Color(0.204679, 0.505877, 0.366227, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="QuizTextBoxA" type="Control"]
+layout_mode = 3
+anchor_left = 0.159
+anchor_top = 0.407
+anchor_right = 0.837
+anchor_bottom = 1.0
+offset_left = -305.28
+offset_top = -434.56
+offset_right = 312.96
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.996217, 1.00975)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_uakr6")
+metadata/_edit_use_anchors_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -652.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = 300
+theme_override_constants/margin_right = 300
+theme_override_constants/margin_bottom = 30
+
+[node name="BoxDesign" type="PanelContainer" parent="MarginContainer"]
+custom_minimum_size = Vector2(0, 500)
+layout_mode = 2
+theme = ExtResource("1_x11fd")
+
+[node name="TextboxMargin" type="MarginContainer" parent="MarginContainer/BoxDesign"]
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/BoxDesign/TextboxMargin"]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 20.0
+
+[node name="TextboxDesign" type="PanelContainer" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/PanelContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+size_flags_vertical = 0
+theme = ExtResource("1_x11fd")
+theme_override_styles/panel = SubResource("StyleBoxFlat_x11fd")
+
+[node name="Label" type="Label" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/PanelContainer/TextboxDesign"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 40
+text = "Question In English"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="Tanisi" type="Sprite2D" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/PanelContainer/HBoxContainer"]
+position = Vector2(142.153, 279.422)
+scale = Vector2(0.194882, 0.167701)
+texture = ExtResource("2_2q68e")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/PanelContainer/HBoxContainer"]
+custom_minimum_size = Vector2(50, 200)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 8
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/PanelContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/PanelContainer/HBoxContainer/VBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+
+[node name="TextboxDesign2" type="PanelContainer" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/PanelContainer/HBoxContainer/VBoxContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_x11fd")
+theme_override_styles/panel = SubResource("StyleBoxFlat_x11fd")
+
+[node name="ButtonA" type="Button" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/PanelContainer/HBoxContainer/VBoxContainer/MarginContainer/HBoxContainer/TextboxDesign2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover = ExtResource("3_2q68e")
+text = "OptionA"
+
+[node name="TextboxDesign3" type="PanelContainer" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/PanelContainer/HBoxContainer/VBoxContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_x11fd")
+theme_override_styles/panel = SubResource("StyleBoxFlat_x11fd")
+
+[node name="ButtonB" type="Button" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/PanelContainer/HBoxContainer/VBoxContainer/MarginContainer/HBoxContainer/TextboxDesign3"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover = ExtResource("3_2q68e")
+text = "OptionB"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/PanelContainer/HBoxContainer/VBoxContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(900, 120)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TextboxDesign2" type="PanelContainer" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_x11fd")
+theme_override_styles/panel = SubResource("StyleBoxFlat_x11fd")
+
+[node name="ButtonC" type="Button" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer2/TextboxDesign2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover = ExtResource("3_2q68e")
+text = "OptionC"
+
+[node name="TextboxDesign3" type="PanelContainer" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_x11fd")
+theme_override_styles/panel = SubResource("StyleBoxFlat_x11fd")
+
+[node name="ButtonD" type="Button" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer2/TextboxDesign3"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover = ExtResource("3_2q68e")
+text = "OptionD"
+
+[node name="ButtonsContainer" type="HBoxContainer" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer"]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 20
+
+[node name="Back" type="Button" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer/MarginContainer"]
+layout_mode = 2
+theme = ExtResource("2_e0t6s")
+theme_override_styles/normal = SubResource("StyleBoxFlat_e0t6s")
+text = "GO BACK"
+
+[node name="MarginContainer3" type="MarginContainer" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer"]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 20
+
+[node name="ListenAgain" type="Button" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer/MarginContainer3"]
+layout_mode = 2
+theme = ExtResource("2_e0t6s")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2q68e")
+text = "LISTEN AGAIN"
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 20
+
+[node name="Submit" type="Button" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer/MarginContainer2"]
+layout_mode = 2
+theme = ExtResource("2_e0t6s")
+theme_override_styles/normal = SubResource("StyleBoxFlat_mjyky")
+text = "Submit"
+
+[node name="Right" type="TextureRect" parent="."]
+offset_left = 368.0
+offset_top = 492.0
+offset_right = 1554.0
+offset_bottom = 646.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_pw7es")
+
+[node name="Wrong" type="TextureRect" parent="."]
+offset_left = 448.0
+offset_top = 490.0
+offset_right = 1463.0
+offset_bottom = 662.0
+texture = ExtResource("7_uakr6")
+
+[connection signal="button_down" from="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/PanelContainer/HBoxContainer/VBoxContainer/MarginContainer/HBoxContainer/TextboxDesign2/ButtonA" to="." method="_on_button_a_button_down"]
+[connection signal="button_down" from="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/PanelContainer/HBoxContainer/VBoxContainer/MarginContainer/HBoxContainer/TextboxDesign3/ButtonB" to="." method="_on_button_b_button_down"]
+[connection signal="button_down" from="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer2/TextboxDesign2/ButtonC" to="." method="_on_button_c_button_down"]
+[connection signal="button_down" from="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer2/TextboxDesign3/ButtonD" to="." method="_on_button_d_button_down"]
