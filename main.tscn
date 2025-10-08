@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://d1td81fgd4w5k"]
+
+[ext_resource type="Script" uid="uid://32k7keirkbqt" path="res://SceneManager.gd" id="1_h2yge"]
+[ext_resource type="PackedScene" uid="uid://bi0pslf5vn6yf" path="res://ChapterOne/AnimalSelectScenes/animalSelectScene.tscn" id="2_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://cfdga74wde3ce" path="res://GenericScenes/NavigationBar/MainUI.tscn" id="2_272bh"]
+
+[node name="Root" type="CanvasLayer" node_paths=PackedStringArray("nodeContainerOne")]
+layer = 0
+script = ExtResource("1_h2yge")
+nodeContainerOne = NodePath("NodeContainerOne")
+
+[node name="NodeContainerOne" type="Node" parent="."]
+
+[node name="AnimalSelectScene" parent="NodeContainerOne" instance=ExtResource("2_1bvp3")]
+
+[node name="UI" parent="." instance=ExtResource("2_272bh")]

@@ -1,0 +1,95 @@
+[gd_scene load_steps=5 format=3 uid="uid://cfdga74wde3ce"]
+
+[ext_resource type="Script" uid="uid://dkuass2vmjv3e" path="res://GenericScenes/NavigationBar/UIScript.gd" id="1_ghp6m"]
+[ext_resource type="Theme" uid="uid://byi38q23oj3ta" path="res://GenericScenes/Themes/ButtonTheme.tres" id="2_6upvk"]
+[ext_resource type="StyleBox" uid="uid://chw4c3yc2s508" path="res://GenericScenes/Themes/InfoBox.tres" id="3_xpsp7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a0a74"]
+bg_color = Color(0.639216, 0.537255, 0.396078, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="UI" type="Control"]
+layout_mode = 3
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+script = ExtResource("1_ghp6m")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 8.0
+grow_horizontal = 2
+alignment = 1
+
+[node name="LeftMargin" type="MarginContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_bottom = 20
+
+[node name="BackMargin" type="MarginContainer" parent="HBoxContainer/LeftMargin"]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Back" type="Button" parent="HBoxContainer/LeftMargin/BackMargin"]
+layout_mode = 2
+theme = ExtResource("2_6upvk")
+disabled = true
+text = "← Back To Home"
+
+[node name="MidMargin" type="MarginContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 20
+
+[node name="PageInfoMargin" type="MarginContainer" parent="HBoxContainer/MidMargin"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Info" type="Button" parent="HBoxContainer/MidMargin/PageInfoMargin"]
+layout_mode = 2
+theme = ExtResource("2_6upvk")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/focus = ExtResource("3_xpsp7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_a0a74")
+theme_override_styles/pressed = ExtResource("3_xpsp7")
+theme_override_styles/normal = ExtResource("3_xpsp7")
+text = "Default"
+
+[node name="RightMargin" type="MarginContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 20
+
+[node name="AccountInfoMargin" type="MarginContainer" parent="HBoxContainer/RightMargin"]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Account" type="Button" parent="HBoxContainer/RightMargin/AccountInfoMargin"]
+visible = false
+layout_mode = 2
+theme = ExtResource("2_6upvk")
+text = "Log in"
+
+[connection signal="pressed" from="HBoxContainer/LeftMargin/BackMargin/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="HBoxContainer/MidMargin/PageInfoMargin/Info" to="." method="_on_info_pressed"]
+[connection signal="pressed" from="HBoxContainer/RightMargin/AccountInfoMargin/Account" to="." method="_on_account_pressed"]

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="DialogBlock" load_steps=4 format=3 uid="uid://dym333jxpdmx6"]
+
+[ext_resource type="AudioStream" uid="uid://dglwomeveiypy" path="res://Tests/587510__mrseriousss__welcome-to-my-website-3-ver.mp3" id="1_lx2d1"]
+[ext_resource type="Script" uid="uid://hfxsmkkfuyqk" path="res://GenericScenes/TextBox/DialogueBox.gd" id="2_mk0xq"]
+[ext_resource type="AudioStream" uid="uid://c7n3welnm1ygk" path="res://Tests/TestMumble.wav" id="2_s5tic"]
+
+[resource]
+script = ExtResource("2_mk0xq")
+creeLines = Array[String](["Cree 0", "Cree 1", "Cree 2"])
+englishLines = Array[String](["English 0", "English 1", "English 2"])
+creeAudios = Array[AudioStream]([ExtResource("1_lx2d1"), ExtResource("1_lx2d1"), ExtResource("1_lx2d1")])
+englishAudios = Array[AudioStream]([ExtResource("2_s5tic"), ExtResource("2_s5tic"), ExtResource("2_s5tic")])
+metadata/_custom_type_script = "uid://hfxsmkkfuyqk"

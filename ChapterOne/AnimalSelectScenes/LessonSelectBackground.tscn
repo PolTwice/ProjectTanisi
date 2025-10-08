@@ -1,0 +1,52 @@
+[gd_scene load_steps=8 format=3 uid="uid://bfy50ijn0okwe"]
+
+[ext_resource type="Texture2D" uid="uid://b10fy7ituacs5" path="res://ChapterOne/AnimalSelectScenes/assets/Environment/green.png" id="1_y2x8y"]
+[ext_resource type="Texture2D" uid="uid://b1utx2lkje250" path="res://ChapterOne/AnimalSelectScenes/assets/Environment/sky.png" id="2_8lh3b"]
+[ext_resource type="Texture2D" uid="uid://c1uxdj4qts3dm" path="res://ChapterOne/AnimalSelectScenes/assets/Environment/lake.png" id="3_fv8xn"]
+[ext_resource type="Texture2D" uid="uid://bsvbwnqitna83" path="res://ChapterOne/AnimalSelectScenes/assets/Environment/tipi.png" id="4_v0fn2"]
+[ext_resource type="Texture2D" uid="uid://bwbpg3yrjd6bt" path="res://ChapterOne/AnimalSelectScenes/assets/Sabe/background_tree.png" id="5_hodpd"]
+[ext_resource type="Texture2D" uid="uid://d2qy1r0pd6o54" path="res://ChapterOne/AnimalSelectScenes/assets/Sabe/front_tree.png" id="6_xo3tc"]
+[ext_resource type="Texture2D" uid="uid://dnfa40nfene7v" path="res://ChapterOne/AnimalSelectScenes/assets/Environment/cave.png" id="7_osqnj"]
+
+[node name="Background" type="Node2D"]
+
+[node name="Green" type="Sprite2D" parent="."]
+position = Vector2(963.5, 629.375)
+scale = Vector2(1937, 897.25)
+texture = ExtResource("1_y2x8y")
+
+[node name="Sky" type="Sprite2D" parent="."]
+position = Vector2(959, -3006)
+scale = Vector2(0.828964, 0.808231)
+texture = ExtResource("2_8lh3b")
+
+[node name="Lake" type="Sprite2D" parent="."]
+position = Vector2(1018, 725)
+texture = ExtResource("3_fv8xn")
+
+[node name="BackgroundTree" type="Sprite2D" parent="."]
+position = Vector2(230, 363)
+texture = ExtResource("5_hodpd")
+
+[node name="FrontTree" type="Sprite2D" parent="."]
+position = Vector2(73, 451)
+texture = ExtResource("6_xo3tc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="Cave" type="Sprite2D" parent="."]
+position = Vector2(1874, 343)
+scale = Vector2(0.565482, 0.626061)
+texture = ExtResource("7_osqnj")
+
+[node name="Tipi" type="Sprite2D" parent="."]
+position = Vector2(36, 911)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("4_v0fn2")
+flip_h = true
+
+[node name="Tipi2" type="Sprite2D" parent="."]
+position = Vector2(1784, 899)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("4_v0fn2")
+flip_h = true
