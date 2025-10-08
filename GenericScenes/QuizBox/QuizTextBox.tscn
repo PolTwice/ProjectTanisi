@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://ywowko6thpw8"]
+[gd_scene load_steps=13 format=3 uid="uid://ywowko6thpw8"]
 
 [ext_resource type="Script" uid="uid://du0m5a50lew2v" path="res://GenericScenes/QuizBox/Check_answers.gd" id="1_uakr6"]
 [ext_resource type="Theme" uid="uid://c7ov3td0u36sq" path="res://GenericScenes/Themes/GenericTextBox.tres" id="1_x11fd"]
 [ext_resource type="Texture2D" uid="uid://7mf0ow2ulifp" path="res://Tanisi.png" id="2_2q68e"]
+[ext_resource type="Resource" uid="uid://bmau3425bq0o8" path="res://GenericScenes/QuizBox/testQuizResource.tres" id="2_coehs"]
 [ext_resource type="Theme" uid="uid://byi38q23oj3ta" path="res://GenericScenes/Themes/ButtonTheme.tres" id="2_e0t6s"]
 [ext_resource type="StyleBox" uid="uid://chw4c3yc2s508" path="res://GenericScenes/Themes/InfoBox.tres" id="3_2q68e"]
 [ext_resource type="Texture2D" uid="uid://btbswx1ntxcql" path="res://GenericScenes/QuizBox/Icons/Yes.svg" id="6_pw7es"]
@@ -72,6 +73,7 @@ scale = Vector2(0.996217, 1.00975)
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_uakr6")
+quizResource = ExtResource("2_coehs")
 metadata/_edit_use_anchors_ = true
 
 [node name="MarginContainer" type="MarginContainer" parent="."]

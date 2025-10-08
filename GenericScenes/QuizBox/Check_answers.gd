@@ -12,28 +12,31 @@ extends Control
 @onready var listen_again: Button = $MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer/MarginContainer3/ListenAgain
 @onready var submit: Button = $MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer/MarginContainer2/Submit
 
-@export var quizResouce: Resource
+@export var quizResource: Resource
+	#var choices = [0,0,0,0]
+	#var correctIndex = -1
+	#var picture: Texture
 
 var correct_option = null
 
 func _ready():
+	#if the second and third choice are not entered, then hide the box
+	if quizResource.choices[2] ==0 && quizResource.choices[3] ==0:
+		button_cd_box.visible=false;
 	$Right.visible = false
 	$Wrong.visible = false
 
-# --- Button Signals ---
-func _on_button_a_button_down():
-	check_option(true)   # correct
+func _on_button_a_pressed() -> void:
+	pass # Replace with function body.
 
-func _on_button_b_button_down():
-	check_option(false)
+func _on_button_b_pressed() -> void:
+	pass # Replace with function body.
 
-func _on_button_c_button_down():
-	check_option(false)
+func _on_button_c_pressed() -> void:
+	pass # Replace with function body.
 
-func _on_button_d_button_down():
-	check_option(false)
-
-
+func _on_button_d_pressed() -> void:
+	pass # Replace with function body.
 
 # --- Main Logic ---
 func check_option(is_correct: bool):
@@ -43,19 +46,3 @@ func check_option(is_correct: bool):
 	else:
 		$Right.visible = false
 		$Wrong.visible = true
-
-
-func _on_button_a_pressed() -> void:
-	pass # Replace with function body.
-
-
-func _on_button_b_pressed() -> void:
-	pass # Replace with function body.
-
-
-func _on_button_c_pressed() -> void:
-	pass # Replace with function body.
-
-
-func _on_button_d_pressed() -> void:
-	pass # Replace with function body.
