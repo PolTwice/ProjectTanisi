@@ -1,12 +1,12 @@
 [gd_scene load_steps=12 format=3 uid="uid://ywowko6thpw8"]
 
-[ext_resource type="Script" uid="uid://du0m5a50lew2v" path="res://GenericScenes/Check_answers.gd" id="1_uakr6"]
+[ext_resource type="Script" uid="uid://du0m5a50lew2v" path="res://GenericScenes/QuizBox/Check_answers.gd" id="1_uakr6"]
 [ext_resource type="Theme" uid="uid://c7ov3td0u36sq" path="res://GenericScenes/Themes/GenericTextBox.tres" id="1_x11fd"]
 [ext_resource type="Texture2D" uid="uid://7mf0ow2ulifp" path="res://Tanisi.png" id="2_2q68e"]
 [ext_resource type="Theme" uid="uid://byi38q23oj3ta" path="res://GenericScenes/Themes/ButtonTheme.tres" id="2_e0t6s"]
 [ext_resource type="StyleBox" uid="uid://chw4c3yc2s508" path="res://GenericScenes/Themes/InfoBox.tres" id="3_2q68e"]
-[ext_resource type="Texture2D" uid="uid://btbswx1ntxcql" path="res://Icons/Yes.svg" id="6_pw7es"]
-[ext_resource type="Texture2D" uid="uid://6ytmi46w3k3i" path="res://Icons/Noo.svg" id="7_uakr6"]
+[ext_resource type="Texture2D" uid="uid://btbswx1ntxcql" path="res://GenericScenes/QuizBox/Icons/Yes.svg" id="6_pw7es"]
+[ext_resource type="Texture2D" uid="uid://6ytmi46w3k3i" path="res://GenericScenes/QuizBox/Icons/Noo.svg" id="7_uakr6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x11fd"]
 bg_color = Color(0.191509, 0.106161, 0.0477274, 1)
@@ -102,100 +102,80 @@ theme_override_constants/margin_bottom = 50
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/BoxDesign/TextboxMargin"]
 layout_mode = 2
 
-[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer"]
+[node name="QuizContainer" type="VBoxContainer" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-size_flags_stretch_ratio = 20.0
 
-[node name="TextboxDesign" type="PanelContainer" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/PanelContainer"]
+[node name="TextboxDesign" type="PanelContainer" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/QuizContainer"]
 custom_minimum_size = Vector2(0, 150)
 layout_mode = 2
-size_flags_vertical = 0
+size_flags_vertical = 4
 theme = ExtResource("1_x11fd")
 theme_override_styles/panel = SubResource("StyleBoxFlat_x11fd")
 
-[node name="Label" type="Label" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/PanelContainer/TextboxDesign"]
+[node name="Label" type="Label" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/QuizContainer/TextboxDesign"]
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 0
+size_flags_vertical = 1
 theme_override_font_sizes/font_size = 40
 text = "Question In English"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/PanelContainer"]
+[node name="UnderTextContainer" type="HBoxContainer" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/QuizContainer"]
 layout_mode = 2
+size_flags_vertical = 3
 
-[node name="Tanisi" type="Sprite2D" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/PanelContainer/HBoxContainer"]
-position = Vector2(142.153, 279.422)
-scale = Vector2(0.194882, 0.167701)
+[node name="Picture" type="TextureRect" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/QuizContainer/UnderTextContainer"]
+layout_mode = 2
 texture = ExtResource("2_2q68e")
+expand_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/PanelContainer/HBoxContainer"]
+[node name="QuizQuestionBox" type="VBoxContainer" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/QuizContainer/UnderTextContainer"]
 custom_minimum_size = Vector2(50, 200)
 layout_mode = 2
-size_flags_horizontal = 10
-size_flags_vertical = 8
+size_flags_horizontal = 6
+size_flags_vertical = 4
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/PanelContainer/HBoxContainer/VBoxContainer"]
-custom_minimum_size = Vector2(0, 100)
-layout_mode = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/PanelContainer/HBoxContainer/VBoxContainer/MarginContainer"]
-custom_minimum_size = Vector2(0, 120)
-layout_mode = 2
-
-[node name="TextboxDesign2" type="PanelContainer" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/PanelContainer/HBoxContainer/VBoxContainer/MarginContainer/HBoxContainer"]
-custom_minimum_size = Vector2(0, 100)
-layout_mode = 2
-size_flags_horizontal = 3
-theme = ExtResource("1_x11fd")
-theme_override_styles/panel = SubResource("StyleBoxFlat_x11fd")
-
-[node name="ButtonA" type="Button" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/PanelContainer/HBoxContainer/VBoxContainer/MarginContainer/HBoxContainer/TextboxDesign2"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 50
-theme_override_styles/hover = ExtResource("3_2q68e")
-text = "OptionA"
-
-[node name="TextboxDesign3" type="PanelContainer" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/PanelContainer/HBoxContainer/VBoxContainer/MarginContainer/HBoxContainer"]
-custom_minimum_size = Vector2(0, 100)
-layout_mode = 2
-size_flags_horizontal = 3
-theme = ExtResource("1_x11fd")
-theme_override_styles/panel = SubResource("StyleBoxFlat_x11fd")
-
-[node name="ButtonB" type="Button" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/PanelContainer/HBoxContainer/VBoxContainer/MarginContainer/HBoxContainer/TextboxDesign3"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 50
-theme_override_styles/hover = ExtResource("3_2q68e")
-text = "OptionB"
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/PanelContainer/HBoxContainer/VBoxContainer"]
+[node name="ButtonABBox" type="HBoxContainer" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/QuizContainer/UnderTextContainer/QuizQuestionBox"]
 clip_contents = true
 custom_minimum_size = Vector2(900, 120)
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="TextboxDesign2" type="PanelContainer" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer2"]
+[node name="ButtonA" type="Button" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/QuizContainer/UnderTextContainer/QuizQuestionBox/ButtonABBox"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme = ExtResource("1_x11fd")
-theme_override_styles/panel = SubResource("StyleBoxFlat_x11fd")
+theme = ExtResource("2_e0t6s")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover = ExtResource("3_2q68e")
+text = "OptionA"
 
-[node name="ButtonC" type="Button" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer2/TextboxDesign2"]
+[node name="ButtonB" type="Button" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/QuizContainer/UnderTextContainer/QuizQuestionBox/ButtonABBox"]
 layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("2_e0t6s")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover = ExtResource("3_2q68e")
+text = "OptionB"
+
+[node name="ButtonCDBox" type="HBoxContainer" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/QuizContainer/UnderTextContainer/QuizQuestionBox"]
+clip_contents = true
+custom_minimum_size = Vector2(900, 120)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ButtonC" type="Button" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/QuizContainer/UnderTextContainer/QuizQuestionBox/ButtonCDBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("2_e0t6s")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/hover = ExtResource("3_2q68e")
 text = "OptionC"
 
-[node name="TextboxDesign3" type="PanelContainer" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer2"]
-custom_minimum_size = Vector2(0, 100)
+[node name="ButtonD" type="Button" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/QuizContainer/UnderTextContainer/QuizQuestionBox/ButtonCDBox"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme = ExtResource("1_x11fd")
-theme_override_styles/panel = SubResource("StyleBoxFlat_x11fd")
-
-[node name="ButtonD" type="Button" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer2/TextboxDesign3"]
-layout_mode = 2
+theme = ExtResource("2_e0t6s")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/hover = ExtResource("3_2q68e")
 text = "OptionD"
@@ -215,7 +195,7 @@ theme_override_constants/margin_right = 20
 layout_mode = 2
 theme = ExtResource("2_e0t6s")
 theme_override_styles/normal = SubResource("StyleBoxFlat_e0t6s")
-text = "GO BACK"
+text = "LAST"
 
 [node name="MarginContainer3" type="MarginContainer" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer"]
 custom_minimum_size = Vector2(0, 70)
@@ -229,7 +209,7 @@ theme_override_constants/margin_right = 20
 layout_mode = 2
 theme = ExtResource("2_e0t6s")
 theme_override_styles/normal = SubResource("StyleBoxFlat_2q68e")
-text = "LISTEN AGAIN"
+text = "REPLAY"
 
 [node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer"]
 layout_mode = 2
@@ -242,9 +222,11 @@ theme_override_constants/margin_right = 20
 layout_mode = 2
 theme = ExtResource("2_e0t6s")
 theme_override_styles/normal = SubResource("StyleBoxFlat_mjyky")
-text = "Submit"
+text = "NEXT"
 
 [node name="Right" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
 offset_left = 368.0
 offset_top = 492.0
 offset_right = 1554.0
@@ -254,13 +236,15 @@ grow_vertical = 2
 texture = ExtResource("6_pw7es")
 
 [node name="Wrong" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
 offset_left = 448.0
 offset_top = 490.0
 offset_right = 1463.0
 offset_bottom = 662.0
 texture = ExtResource("7_uakr6")
 
-[connection signal="button_down" from="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/PanelContainer/HBoxContainer/VBoxContainer/MarginContainer/HBoxContainer/TextboxDesign2/ButtonA" to="." method="_on_button_a_button_down"]
-[connection signal="button_down" from="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/PanelContainer/HBoxContainer/VBoxContainer/MarginContainer/HBoxContainer/TextboxDesign3/ButtonB" to="." method="_on_button_b_button_down"]
-[connection signal="button_down" from="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer2/TextboxDesign2/ButtonC" to="." method="_on_button_c_button_down"]
-[connection signal="button_down" from="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer2/TextboxDesign3/ButtonD" to="." method="_on_button_d_button_down"]
+[connection signal="pressed" from="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/QuizContainer/UnderTextContainer/QuizQuestionBox/ButtonABBox/ButtonA" to="." method="_on_button_a_pressed"]
+[connection signal="pressed" from="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/QuizContainer/UnderTextContainer/QuizQuestionBox/ButtonABBox/ButtonB" to="." method="_on_button_b_pressed"]
+[connection signal="pressed" from="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/QuizContainer/UnderTextContainer/QuizQuestionBox/ButtonCDBox/ButtonC" to="." method="_on_button_c_pressed"]
+[connection signal="pressed" from="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/QuizContainer/UnderTextContainer/QuizQuestionBox/ButtonCDBox/ButtonD" to="." method="_on_button_d_pressed"]

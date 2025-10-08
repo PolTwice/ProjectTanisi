@@ -1,11 +1,11 @@
 [gd_scene load_steps=11 format=3 uid="uid://wbcmviqvnukn"]
 
-[ext_resource type="Script" uid="uid://du0m5a50lew2v" path="res://GenericScenes/Check_answers.gd" id="1_7cwia"]
+[ext_resource type="Script" path="res://GenericScenes/QuizBox/Check_answers.gd" id="1_7cwia"]
 [ext_resource type="Theme" uid="uid://c7ov3td0u36sq" path="res://GenericScenes/Themes/GenericTextBox.tres" id="1_sd1ub"]
-[ext_resource type="Texture2D" uid="uid://btbswx1ntxcql" path="res://Icons/Yes.svg" id="2_7ceyn"]
+[ext_resource type="Texture2D" uid="uid://btbswx1ntxcql" path="res://GenericScenes/QuizBox/Icons/Yes.svg" id="2_7ceyn"]
 [ext_resource type="Theme" uid="uid://byi38q23oj3ta" path="res://GenericScenes/Themes/ButtonTheme.tres" id="2_tfa1p"]
 [ext_resource type="StyleBox" uid="uid://chw4c3yc2s508" path="res://GenericScenes/Themes/InfoBox.tres" id="3_sv1wm"]
-[ext_resource type="Texture2D" uid="uid://6ytmi46w3k3i" path="res://Icons/Noo.svg" id="6_7cwia"]
+[ext_resource type="Texture2D" uid="uid://6ytmi46w3k3i" path="res://GenericScenes/QuizBox/Icons/Noo.svg" id="6_7cwia"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x11fd"]
 bg_color = Color(0.191509, 0.106161, 0.0477274, 1)
@@ -251,6 +251,7 @@ grow_vertical = 2
 texture = ExtResource("2_7ceyn")
 
 [node name="Wrong" type="TextureRect" parent="."]
+layout_mode = 0
 offset_left = 514.948
 offset_top = 490.22
 offset_right = 1391.95
