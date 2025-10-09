@@ -83,11 +83,13 @@ func _on_listen_again_pressed() -> void:
 	playCreeAudio()
 
 func _on_continue_pressed() -> void:
-	currentIndex+=1
-	show_line(currentIndex)
+	#currentIndex+=1
+	#show_line(currentIndex)
+	pass
 	
 func _on_back_pressed() -> void:
-	currentIndex -=1
-	show_line(currentIndex)
+	#currentIndex -=1
+	#show_line(currentIndex)
+	pass
 
 	
