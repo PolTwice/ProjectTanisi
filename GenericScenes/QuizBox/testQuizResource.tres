@@ -1,11 +1,9 @@
-[gd_resource type="Resource" script_class="quizResource" load_steps=3 format=3 uid="uid://bmau3425bq0o8"]
+[gd_resource type="Resource" script_class="quizResource" load_steps=2 format=3 uid="uid://bmau3425bq0o8"]
 
-[ext_resource type="Texture2D" uid="uid://7mf0ow2ulifp" path="res://Tanisi.png" id="1_bwsny"]
 [ext_resource type="Script" uid="uid://dux5iq8x4urte" path="res://GenericScenes/QuizBox/quizResource.gd" id="2_5pvvm"]
 
 [resource]
 script = ExtResource("2_5pvvm")
-choices = [0, 0, 0, 0]
-correctIndex = 0
-picture = ExtResource("1_bwsny")
+choices = ["Blue", "Green", "Yellow", "Red"]
+correctIndex = 1
 metadata/_custom_type_script = "uid://dux5iq8x4urte"

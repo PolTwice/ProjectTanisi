@@ -20,8 +20,18 @@ extends Control
 var correct_option = null
 
 func _ready():
-	#if the second and third choice are not entered, then hide the box
-	if quizResource.choices[2] ==0 && quizResource.choices[3] ==0:
+	button_a.text = quizResource.choices[0]
+	button_b.text = quizResource.choices[1]
+	button_c.text = quizResource.choices[2]
+	button_d.text = quizResource.choices[3]
+	
+	if quizResource.picture == null:
+		picture.visible = false
+	else:
+		picture.texture = quizResource.picture
+	
+	#if the second and third choice are not entered, then hide the box	
+	if quizResource.choices[2] == "0" && quizResource.choices[3] == "0":
 		button_cd_box.visible=false;
 
 func _on_button_a_pressed() -> void:
