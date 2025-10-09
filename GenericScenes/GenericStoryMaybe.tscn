@@ -1,10 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://e1odecg5mapg"]
+[gd_scene load_steps=9 format=3 uid="uid://e1odecg5mapg"]
 
 [ext_resource type="PackedScene" uid="uid://crvl47hxfi0b6" path="res://GenericScenes/TextBox/StoryTextBox.tscn" id="1_8ydg6"]
+[ext_resource type="Script" uid="uid://clb8m2f4fi3l1" path="res://GenericScenes/story_manager.gd" id="1_40l8n"]
 [ext_resource type="Texture2D" uid="uid://jf2lmc8oc04y" path="res://ChapterOne/AnimalSelectScenes/assets/Beaver/beaver1.png" id="3_u644a"]
 [ext_resource type="Texture2D" uid="uid://cneps1tdfqw2f" path="res://ChapterOne/AnimalSelectScenes/assets/Beaver/beaver2.png" id="4_xdjrn"]
 [ext_resource type="Texture2D" uid="uid://ejgo44y5ulv6" path="res://ChapterOne/AnimalSelectScenes/assets/Beaver/beaver3.png" id="5_fdaqt"]
 [ext_resource type="Texture2D" uid="uid://c05dxqxmpevdp" path="res://ChapterOne/AnimalSelectScenes/assets/Beaver/beaver4.png" id="6_7dmnb"]
+[ext_resource type="PackedScene" uid="uid://ctpkbwihuq3y2" path="res://GenericScenes/QuizBox/QuizBox.tscn" id="7_u644a"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_o43cl"]
 animations = [{
@@ -28,10 +30,15 @@ animations = [{
 
 [node name="StoryScene" type="CanvasLayer"]
 
-[node name="TextBox" parent="." instance=ExtResource("1_8ydg6")]
+[node name="StoryManager" type="Node" parent="."]
+script = ExtResource("1_40l8n")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="StoryManager"]
 position = Vector2(960, 358)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_o43cl")
 autoplay = "default"
+
+[node name="TextBox" parent="StoryManager" instance=ExtResource("1_8ydg6")]
+
+[node name="QuizBox" parent="StoryManager" instance=ExtResource("7_u644a")]

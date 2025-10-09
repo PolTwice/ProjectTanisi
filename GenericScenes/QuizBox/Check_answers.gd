@@ -33,6 +33,7 @@ func _ready():
 	#if the second and third choice are not entered, then hide the box	
 	if quizResource.choices[2] == "0" && quizResource.choices[3] == "0":
 		button_cd_box.visible=false;
+		quizResource.correctIndex = 0
 
 func _on_button_a_pressed() -> void:
 	checkAnswer(0);
@@ -49,5 +50,7 @@ func _on_button_d_pressed() -> void:
 func checkAnswer(option: int) -> void:
 	if(option == quizResource.correctIndex):
 		print("Right Answer")
+		submit.disabled = false;
 	else:
 		print("Wrong Answer")
+		submit.disabled = true;
