@@ -24,11 +24,21 @@ signal quizBackSignal();
 var correct_option = null
 
 func _ready():
+	#when does this get enabled? will we have audio?
+	#Commenting out until decided
+	#listen_again.disabled = true
+	#back.disabled=true;
+	
+	if(quizResource!=null):
+		updateFromResource()
+
+func updateFromResource():
 	button_a.text = quizResource.choices[0]
 	button_b.text = quizResource.choices[1]
 	button_c.text = quizResource.choices[2]
 	button_d.text = quizResource.choices[3]
 	
+	#if there is no picture, hide the picture, else change the texture
 	if quizResource.picture == null:
 		picture.visible = false
 	else:
@@ -38,7 +48,8 @@ func _ready():
 	if quizResource.choices[2] == "0" && quizResource.choices[3] == "0":
 		button_cd_box.visible=false;
 		quizResource.correctIndex = 0
-
+		
+		
 func _on_button_a_pressed() -> void:
 	checkAnswer(0);
 

@@ -10,38 +10,43 @@ extends Node
 
 @export var storyResource: Resource
 #hold an array of resource for the quiz.
-@export var quizResource: Array[Resource]
-
+@export var quizResourceArray: Array[Resource]
+@onready var quizResource: Resource
 #create an enum for the export
 enum ContentType { QUIZ, STORY }
 @export var order: Array[ContentType] = []
 
 func _ready() -> void:
-	if(order == null):
+	if(order == null || quizResourceArray == null):
 		text_box.visible = false;
 		quiz_box.visible = false;
 		print("Order export is empty. Program does not know the order of quizzes and stories. ")
 		return;
-	
 
 func _on_text_box_story_next_signal() -> void:
-	text_box.currentIndex = text_box.currentIndex + 1
+	text_box.currentIndex = storyIndex
 
 func _on_text_box_story_back_signal() -> void:
-	text_box.currentIndex = text_box.currentIndex - 1
+	text_box.currentIndex = storyIndex
 	
-
 func _on_quiz_box_quiz_next_signal() -> void:
 	quizIndex = quizIndex +1
 
 func _on_quiz_box_quiz_back_signal() -> void:
 	quizIndex = quizIndex -1
 	
-func nextLessonPart()-> void:
-	if(order[lessonIndex] ==ContentType.STORY):
-		quiz_box.visible = false;
-		text_box.show_line(storyIndex);
+func checkNext() -> void:
+	if(order[lessonIndex] != null):
+		if(order[lessonIndex] == ContentType.STORY):
+			quiz_box.visible == false;
+			text_box.show_line(storyIndex)
+			pass
+		else:
+			quizResource == quizResourceArray[quizIndex];
+			quiz_box.updateFromResource()
+			pass
 	else:
-		quiz_box.visible = true;
-		quiz_box.
-	
+		lessonComplete()
+		
+func lessonComplete():
+	pass;
