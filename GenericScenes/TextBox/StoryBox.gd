@@ -10,7 +10,8 @@ extends Control
 @onready var cree_narration: AudioStreamPlayer = $CreeNarration
 @onready var english_narration: AudioStreamPlayer = $EnglishNarration
 
-@export var dialogueBox: Resource;
+#get the resource from the parent
+var dialogueBox = get_parent().storyResource
 #var creeLines: Array[String] = []
 #var englishLines: Array[String] = []
 #var creeAudios: Array[AudioStream] = []

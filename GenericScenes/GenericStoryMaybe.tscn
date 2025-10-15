@@ -42,3 +42,6 @@ autoplay = "default"
 [node name="TextBox" parent="StoryManager" instance=ExtResource("1_8ydg6")]
 
 [node name="QuizBox" parent="StoryManager" instance=ExtResource("7_u644a")]
+
+[connection signal="storyBackSignal" from="StoryManager/TextBox" to="StoryManager" method="_on_text_box_story_back_signal"]
+[connection signal="storyNextSignal" from="StoryManager/TextBox" to="StoryManager" method="_on_text_box_story_next_signal"]

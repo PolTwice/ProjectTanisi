@@ -186,7 +186,7 @@ theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 20
 
-[node name="Submit" type="Button" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer/MarginContainer2" index="0"]
+[node name="Next" type="Button" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer/MarginContainer2" index="0"]
 layout_mode = 2
 theme = ExtResource("5_wo7m1")
 theme_override_styles/normal = SubResource("StyleBoxFlat_vvjru")
@@ -197,3 +197,6 @@ text = "NEXT"
 [connection signal="pressed" from="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/QuizContainer/UnderTextContainer/QuizQuestionBox/ButtonABBox/ButtonB" to="." method="_on_button_b_pressed"]
 [connection signal="pressed" from="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/QuizContainer/UnderTextContainer/QuizQuestionBox/ButtonCDBox/ButtonC" to="." method="_on_button_c_pressed"]
 [connection signal="pressed" from="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/QuizContainer/UnderTextContainer/QuizQuestionBox/ButtonCDBox/ButtonD" to="." method="_on_button_d_pressed"]
+[connection signal="pressed" from="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer/MarginContainer/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer/MarginContainer3/ListenAgain" to="." method="_on_listen_again_pressed"]
+[connection signal="pressed" from="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer/MarginContainer2/Next" to="." method="_on_next_pressed"]
