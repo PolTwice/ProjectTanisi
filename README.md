@@ -80,4 +80,3 @@ Signals for lesson and quiz completion can be emitted from global state.
 **Script attached to each animal in the `animalSelectScene`.**
 
 ---
-Added something

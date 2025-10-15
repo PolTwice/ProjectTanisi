@@ -44,16 +44,14 @@ func _ready() -> void:
 func show_line(index: int):
 	back.disabled=true;
 	
+	if(dialogueBox == null):
+		print("No resource loaded")
+		return
 		
 	if (index >= creeLines.size()):
 		print("End of dialogue")
 		return
-	
-#	var creeLine = creeLines[index]
-#	var englishLine = englishLines[index]
-#	var creeAudio = creeAudios[index]
-#	var englishAudio = englishAudios[index]
-	
+		
 	creeLabel.text = creeLines[index]
 	englishLabel.text = englishLines[index]
 	cree_narration.stream = creeAudios[index]
