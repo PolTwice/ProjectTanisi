@@ -20,7 +20,6 @@ var dialogueBox = get_parent().storyResource
 signal storyNextSignal();
 signal storyBackSignal();
 
-var currentIndex = 0
 var creeLines
 var englishLines 
 var creeAudios 
@@ -32,19 +31,21 @@ func _ready() -> void:
 	back.disabled=true;
 	
 	if(dialogueBox != null):
-		creeLines = dialogueBox.creeLines
-		englishLines = dialogueBox.englishLines
-		creeAudios = dialogueBox.creeAudios
-		englishAudios= dialogueBox.englishAudios
-		
-		print(englishLines)
-		
-		cree_narration.connect("finished",Callable(self, "_on_cree_audio_finished"))
-		english_narration.connect("finished",Callable(self,"_on_english_audio_finished"))
-		show_line(currentIndex)
+		updateFromResource()
 	else:
 		return;
 		
+func updateFromResource():
+	creeLines = dialogueBox.creeLines
+	englishLines = dialogueBox.englishLines
+	creeAudios = dialogueBox.creeAudios
+	englishAudios= dialogueBox.englishAudios
+	
+	print(englishLines)
+	
+	cree_narration.connect("finished",Callable(self, "_on_cree_audio_finished"))
+	english_narration.connect("finished",Callable(self,"_on_english_audio_finished"))
+	
 func show_line(index: int):
 	back.disabled=true;
 	
@@ -76,7 +77,7 @@ func _on_cree_audio_finished():
 func _on_english_audio_finished():
 	listen_again.disabled = false
 	continueStory.disabled = false
-	if(currentIndex>0):
+	if(get_parent().storyIndex>0):
 		back.disabled=false
 
 func _on_listen_again_pressed() -> void:
