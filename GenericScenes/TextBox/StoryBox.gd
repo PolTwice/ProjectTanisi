@@ -16,6 +16,9 @@ extends Control
 #var creeAudios: Array[AudioStream] = []
 #var englishAudios: Array[AudioStream] = []
 
+signal storyNextSignal();
+signal storyBackSignal();
+
 var currentIndex = 0
 var creeLines
 var englishLines 
@@ -81,13 +84,17 @@ func _on_listen_again_pressed() -> void:
 	playCreeAudio()
 
 func _on_continue_pressed() -> void:
-	#currentIndex+=1
-	#show_line(currentIndex)
+
+	emit_signal("storyNextSignal")
+	print("Story next signal sent")
+	
 	pass
 	
 func _on_back_pressed() -> void:
 	#currentIndex -=1
 	#show_line(currentIndex)
+	emit_signal("storyBackSignal")
+	print("Story back signal sent")
 	pass
 
 	
