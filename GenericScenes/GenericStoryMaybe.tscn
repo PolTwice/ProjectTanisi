@@ -28,10 +28,12 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="StoryScene" type="CanvasLayer"]
+[node name="LessonScene" type="CanvasLayer"]
 
 [node name="StoryManager" type="Node" parent="."]
 script = ExtResource("1_40l8n")
+quizResource = null
+order = null
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="StoryManager"]
 position = Vector2(960, 358)
