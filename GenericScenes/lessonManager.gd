@@ -8,26 +8,35 @@ extends Node
 @onready var storyIndex = text_box.currentIndex 
 @onready var quizIndex = 0
 
+@export var lessonName: String;
+
+#The resource for the story
 @export var storyResource: Resource
 #hold an array of resource for the quiz.
 @export var quizResourceArray: Array[Resource]
-@onready var quizResource: Resource
+#use this to hold the current resource
+@onready var quizResource;
+
 #create an enum for the export
 enum ContentType { QUIZ, STORY }
 @export var order: Array[ContentType] = []
 
 func _ready() -> void:
-	if(order == null || quizResourceArray == null):
+	#if there is a resource
+	if(!(order == null && quizResourceArray == null && storyResource ==null)):
+		updateFromResource()
+	else:
 		text_box.visible = false;
 		quiz_box.visible = false;
-		print("Order export is empty. Program does not know the order of quizzes and stories. ")
-		return;
+
+func updateFromResource():
+	pass
 
 func _on_text_box_story_next_signal() -> void:
-	text_box.currentIndex = storyIndex
+	storyIndex = storyIndex +1
 
 func _on_text_box_story_back_signal() -> void:
-	text_box.currentIndex = storyIndex
+	storyIndex = storyIndex -1
 	
 func _on_quiz_box_quiz_next_signal() -> void:
 	quizIndex = quizIndex +1
@@ -36,7 +45,7 @@ func _on_quiz_box_quiz_back_signal() -> void:
 	quizIndex = quizIndex -1
 	
 func checkNext() -> void:
-	if(order[lessonIndex] != null):
+	if(lessonIndex < order.size):
 		if(order[lessonIndex] == ContentType.STORY):
 			quiz_box.visible == false;
 			text_box.show_line(storyIndex)
