@@ -80,23 +80,21 @@ func _on_english_audio_finished():
 	if(get_parent().storyIndex>0):
 		back.disabled=false
 
+func _on_back_pressed() -> void:
+	emit_signal("storyBackSignal")
+	print("Story back signal sent")
+	pass
+
 func _on_listen_again_pressed() -> void:
 	listen_again.disabled = false
 	continueStory.disabled = false
 	playCreeAudio()
 
 func _on_continue_pressed() -> void:
-
 	emit_signal("storyNextSignal")
 	print("Story next signal sent")
 	
 	pass
 	
-func _on_back_pressed() -> void:
-	#currentIndex -=1
-	#show_line(currentIndex)
-	emit_signal("storyBackSignal")
-	print("Story back signal sent")
-	pass
 
 	
