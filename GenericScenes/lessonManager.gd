@@ -5,7 +5,7 @@ extends Node
 
 #Hold index of current story or 
 @onready var lessonIndex = 0
-@onready var storyIndex = text_box.currentIndex 
+@onready var storyIndex = 0
 @onready var quizIndex = 0
 
 @export var lessonName: String;
@@ -31,6 +31,7 @@ func _ready() -> void:
 
 func updateFromResource():
 	pass
+	
 
 func _on_text_box_story_next_signal() -> void:
 	storyIndex = storyIndex +1

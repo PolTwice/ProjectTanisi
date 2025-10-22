@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://c2nyhe52ydet3"]
+
+[ext_resource type="Script" uid="uid://bb4paw4ttc5bs" path="res://GenericScenes/lessonManager.gd" id="1_o1adm"]
+[ext_resource type="PackedScene" uid="uid://crvl47hxfi0b6" path="res://GenericScenes/TextBox/StoryTextBox.tscn" id="6_bkyd2"]
+[ext_resource type="PackedScene" uid="uid://ctpkbwihuq3y2" path="res://GenericScenes/QuizBox/QuizBox.tscn" id="7_h46mh"]
+
+[node name="StoryManager" type="Node"]
+script = ExtResource("1_o1adm")
+
+[node name="TextBox" parent="." instance=ExtResource("6_bkyd2")]
+
+[node name="QuizBox" parent="." instance=ExtResource("7_h46mh")]
+
+[connection signal="storyBackSignal" from="TextBox" to="." method="_on_text_box_story_back_signal"]
+[connection signal="storyNextSignal" from="TextBox" to="." method="_on_text_box_story_next_signal"]

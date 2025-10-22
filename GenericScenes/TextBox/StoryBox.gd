@@ -4,14 +4,14 @@ extends Control
 
 @onready var creeLabel: RichTextLabel = $MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/TextboxDesign/TextboxContainer/CreeContainer/Cree
 @onready var englishLabel: RichTextLabel = $MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/TextboxDesign/TextboxContainer/EnglishContainer/English
-@onready var back: Button = $MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer/MarginContainer/Back
-@onready var listen_again: Button = $MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer/MarginContainer3/ListenAgain
-@onready var continueStory: Button = $MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer/MarginContainer2/Continue
 @onready var cree_narration: AudioStreamPlayer = $CreeNarration
 @onready var english_narration: AudioStreamPlayer = $EnglishNarration
+@onready var listen_again: Button = $MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer/ListenAgainMarginContainer/ListenAgain
+@onready var continueStory: Button = $MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer/ContinueMarginContainer/Continue
+@onready var back: Button = $MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer/BackMarginContainer/Back
 
 #get the resource from the parent
-var dialogueBox = get_parent().storyResource
+var dialogueBox 
 #var creeLines: Array[String] = []
 #var englishLines: Array[String] = []
 #var creeAudios: Array[AudioStream] = []
@@ -26,6 +26,8 @@ var creeAudios
 var englishAudios
 
 func _ready() -> void:
+	
+	dialogueBox = get_parent().storyResource
 	
 	listen_again.disabled = true
 	back.disabled=true;

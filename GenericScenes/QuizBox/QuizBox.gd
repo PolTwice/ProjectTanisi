@@ -13,7 +13,7 @@ extends Control
 @onready var submit: Button = $MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer/MarginContainer2/Submit
 
 #get the resource from the parent
-var quizResource = get_parent().quizResource
+var quizResource 
 	#var choices = [0,0,0,0]
 	#var correctIndex = -1
 	#var picture: Texture
@@ -28,7 +28,7 @@ func _ready():
 	#Commenting out until decided
 	#listen_again.disabled = true
 	#back.disabled=true;
-	
+	quizResource = get_parent().quizResource
 	if(quizResource!=null):
 		updateFromResource()
 

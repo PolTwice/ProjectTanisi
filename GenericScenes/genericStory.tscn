@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://e1odecg5mapg"]
+
+[ext_resource type="PackedScene" uid="uid://c2nyhe52ydet3" path="res://GenericScenes/StoryManager.tscn" id="1_46cs0"]
+
+[node name="LessonScene" type="CanvasLayer"]
+
+[node name="StoryManager" parent="." instance=ExtResource("1_46cs0")]
