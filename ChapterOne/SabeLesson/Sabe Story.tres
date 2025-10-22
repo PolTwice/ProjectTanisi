@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="DialogBlock" load_steps=2 format=3 uid="uid://clw35jom3qptd"]
+
+[ext_resource type="Script" uid="uid://hfxsmkkfuyqk" path="res://GenericScenes/TextBox/DialogueBox.gd" id="1_2do8u"]
+
+[resource]
+resource_name = "Sabe Story"
+script = ExtResource("1_2do8u")
+creeLines = Array[String](["Cree Placeholder", "Cree Placeholder", "Cree Placeholder", "Cree Placeholder", "Cree Placeholder", "Cree Placeholder"])
+englishLines = Array[String]([" Sabe made tracks in the mud. The tracks looked big and scary. ", "Grandpa Sabe asked, “Did you make these tracks?” ", " Sabe felt nervous but said, “No, I didn’t.” ", "Later,  Sabe remembered the truth. “Grandpa, I made the tracks. I was pretending to be big.” ", "Grandpa Sabe smiled kindly. “Honesty makes us strong.” ", " Sabe felt proud and honest inside. "])
+metadata/_custom_type_script = "uid://hfxsmkkfuyqk"

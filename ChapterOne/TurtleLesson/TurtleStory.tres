@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="DialogBlock" load_steps=2 format=3 uid="uid://d3jftgfu10ykh"]
+
+[ext_resource type="Script" uid="uid://hfxsmkkfuyqk" path="res://GenericScenes/TextBox/DialogueBox.gd" id="1_pd655"]
+
+[resource]
+resource_name = "Turtle Story"
+script = ExtResource("1_pd655")
+creeLines = Array[String](["Cree Placeholder", "Cree Placeholder", "Cree Placeholder", "Cree Placeholder", "Cree Placeholder", "Cree Placeholder"])
+englishLines = Array[String]([" Turtle was slow and quiet.  Turtle liked to watch the river sparkle. ", "One day,  Turtle accidentally broke Mom Turtle’s favorite shell bowl. ", "“Who did this?” asked Mom Turtle. ", " Turtle felt scared but said, “I did it. I’m sorry.” ", "Mom Turtle smiled kindly. “Thank you for telling the truth.” ", " Turtle helped fix the mess and felt brave inside. "])
+metadata/_custom_type_script = "uid://hfxsmkkfuyqk"
