@@ -15,7 +15,7 @@ extends Node
 #hold an array of resource for the quiz.
 @export var quizResourceArray: Array[Resource]
 #use this to hold the current resource
-@onready var quizResource;
+@onready var quizResourceParent;
 
 #create an enum for the export
 enum ContentType { QUIZ, STORY }
@@ -24,37 +24,35 @@ enum ContentType { QUIZ, STORY }
 func _ready() -> void:
 	#if there is a resource
 	if(!(order == null && quizResourceArray == null && storyResource ==null)):
-		updateFromResource()
+		checkNext()
 	else:
 		text_box.visible = false;
 		quiz_box.visible = false;
 
-func updateFromResource():
-	pass
-	
-
 func _on_text_box_story_next_signal() -> void:
 	storyIndex = storyIndex +1
+	checkNext();
 
 func _on_text_box_story_back_signal() -> void:
 	storyIndex = storyIndex -1
-	
+	checkNext();
 func _on_quiz_box_quiz_next_signal() -> void:
 	quizIndex = quizIndex +1
+	checkNext();
 
 func _on_quiz_box_quiz_back_signal() -> void:
 	quizIndex = quizIndex -1
+	checkNext();
 	
 func checkNext() -> void:
-	if(lessonIndex < order.size):
+	if(lessonIndex < order.size()):
+		print("Order is:")
 		if(order[lessonIndex] == ContentType.STORY):
-			quiz_box.visible == false;
+			quiz_box.visible = false;
 			text_box.show_line(storyIndex)
-			pass
 		else:
-			quizResource == quizResourceArray[quizIndex];
+			quizResourceParent = quizResourceArray[quizIndex];
 			quiz_box.updateFromResource()
-			pass
 	else:
 		lessonComplete()
 		

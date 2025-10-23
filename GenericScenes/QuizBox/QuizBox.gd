@@ -13,7 +13,7 @@ extends Control
 @onready var submit: Button = $MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer/MarginContainer2/Submit
 
 #get the resource from the parent
-var quizResource 
+var quizResourceChild 
 	#var choices = [0,0,0,0]
 	#var correctIndex = -1
 	#var picture: Texture
@@ -28,26 +28,26 @@ func _ready():
 	#Commenting out until decided
 	#listen_again.disabled = true
 	#back.disabled=true;
-	quizResource = get_parent().quizResource
-	if(quizResource!=null):
+	quizResourceChild = get_parent().quizResourceParent
+	if(quizResourceChild!=null):
 		updateFromResource()
 
 func updateFromResource():
-	button_a.text = quizResource.choices[0]
-	button_b.text = quizResource.choices[1]
-	button_c.text = quizResource.choices[2]
-	button_d.text = quizResource.choices[3]
+	button_a.text = quizResourceChild.choices[0]
+	button_b.text = quizResourceChild.choices[1]
+	button_c.text = quizResourceChild.choices[2]
+	button_d.text = quizResourceChild.choices[3]
 	
 	#if there is no picture, hide the picture, else change the texture
-	if quizResource.picture == null:
+	if quizResourceChild.picture == null:
 		picture.visible = false
 	else:
-		picture.texture = quizResource.picture
+		picture.texture = quizResourceChild.picture
 	
 	#if the second and third choice are not entered, then hide the box	
-	if quizResource.choices[2] == "0" && quizResource.choices[3] == "0":
+	if quizResourceChild.choices[2] == "0" && quizResourceChild.choices[3] == "0":
 		button_cd_box.visible=false;
-		quizResource.correctIndex = 0
+		quizResourceChild.correctIndex = 0
 		
 		
 func _on_button_a_pressed() -> void:
@@ -63,7 +63,7 @@ func _on_button_d_pressed() -> void:
 	checkAnswer(3)
 
 func checkAnswer(option: int) -> void:
-	if(option == quizResource.correctIndex):
+	if(option == quizResourceChild.correctIndex):
 		print("Right Answer")
 		submit.disabled = false;
 	else:

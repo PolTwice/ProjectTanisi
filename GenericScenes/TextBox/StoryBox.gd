@@ -43,7 +43,7 @@ func updateFromResource():
 	creeAudios = dialogueBox.creeAudios
 	englishAudios= dialogueBox.englishAudios
 	
-	print(englishLines)
+
 	
 	cree_narration.connect("finished",Callable(self, "_on_cree_audio_finished"))
 	english_narration.connect("finished",Callable(self,"_on_english_audio_finished"))
@@ -95,8 +95,3 @@ func _on_listen_again_pressed() -> void:
 func _on_continue_pressed() -> void:
 	emit_signal("storyNextSignal")
 	print("Story next signal sent")
-	
-	pass
-	
-
-	
