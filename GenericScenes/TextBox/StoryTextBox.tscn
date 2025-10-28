@@ -87,6 +87,7 @@ theme_override_constants/margin_bottom = 20
 [node name="Cree" type="RichTextLabel" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/TextboxDesign/TextboxContainer/CreeContainer" index="0"]
 layout_mode = 2
 theme = ExtResource("3_yasqk")
+theme_override_font_sizes/normal_font_size = 30
 text = "example cree"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -102,6 +103,7 @@ theme_override_constants/margin_bottom = 20
 [node name="English" type="RichTextLabel" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/TextboxDesign/TextboxContainer/EnglishContainer" index="0"]
 layout_mode = 2
 theme_override_colors/default_color = Color(0.913168, 0.71556, 0.590196, 1)
+theme_override_font_sizes/normal_font_size = 30
 text = "example english"
 horizontal_alignment = 1
 vertical_alignment = 1

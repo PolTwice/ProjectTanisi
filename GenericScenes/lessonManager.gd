@@ -31,26 +31,33 @@ func _ready() -> void:
 
 func _on_text_box_story_next_signal() -> void:
 	storyIndex = storyIndex +1
+	lessonIndex +=1
 	checkNext();
 
 func _on_text_box_story_back_signal() -> void:
 	storyIndex = storyIndex -1
+	lessonIndex -=1
 	checkNext();
 func _on_quiz_box_quiz_next_signal() -> void:
 	quizIndex = quizIndex +1
+	lessonIndex +=1
 	checkNext();
 
 func _on_quiz_box_quiz_back_signal() -> void:
-	quizIndex = quizIndex -1
+	if(quizIndex>0):
+		quizIndex = quizIndex -1
+	lessonIndex-=1
 	checkNext();
 	
 func checkNext() -> void:
 	if(lessonIndex < order.size()):
 		print("Order is:")
+		print(order[lessonIndex])
 		if(order[lessonIndex] == ContentType.STORY):
 			quiz_box.visible = false;
 			text_box.show_line(storyIndex)
 		else:
+			quiz_box.visible = true
 			quizResourceParent = quizResourceArray[quizIndex];
 			quiz_box.updateFromResource()
 	else:

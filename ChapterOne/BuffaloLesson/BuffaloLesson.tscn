@@ -10,4 +10,4 @@
 lessonName = "The Buffalo Story"
 storyResource = ExtResource("2_u5u2b")
 quizResourceArray = Array[Resource]([ExtResource("3_ifgvw"), ExtResource("3_ifgvw")])
-order = Array[int]([1, 1, 1, 0, 1, 1, 0])
+order = Array[int]([1, 0, 1, 1, 1, 1, 0])
