@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bi0pslf5vn6yf"]
+[gd_scene load_steps=5 format=3 uid="uid://bi0pslf5vn6yf"]
 
 [ext_resource type="PackedScene" uid="uid://bfy50ijn0okwe" path="res://ChapterOne/AnimalSelectScenes/LessonSelectBackground.tscn" id="1_8c87u"]
 [ext_resource type="PackedScene" uid="uid://byq48so6bekdy" path="res://ChapterOne/AnimalSelectScenes/BeaverLessonSelect.tscn" id="2_oyypd"]
 [ext_resource type="PackedScene" uid="uid://dewjhcey6tmgw" path="res://ChapterOne/AnimalSelectScenes/BuffaloLessonSelect.tscn" id="3_p5wf7"]
+[ext_resource type="PackedScene" uid="uid://bfnxevo05b0o6" path="res://ChapterOne/AnimalSelectScenes/bearLessonSelect.tscn" id="4_vrled"]
 
 [node name="AnimalSelectScene" type="Node2D"]
 
@@ -10,6 +11,7 @@
 position = Vector2(2, 25)
 
 [node name="BeaverLessonSelect" parent="." instance=ExtResource("2_oyypd")]
+visible = false
 position = Vector2(1588, 900)
 scale = Vector2(0.1, 0.1)
 
@@ -18,3 +20,8 @@ position = Vector2(369, 696)
 scale = Vector2(0.1, 0.1)
 lessonPath = "res://ChapterOne/BuffaloLesson/BuffaloLesson.tscn"
 lessonName = "Buffalo Learns Respect"
+
+[node name="BearSelect" parent="." instance=ExtResource("4_vrled")]
+position = Vector2(1707, 502)
+scale = Vector2(0.1, 0.1)
+lessonName = "The Courageous Bear"
