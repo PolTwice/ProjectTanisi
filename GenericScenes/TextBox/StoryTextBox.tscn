@@ -87,6 +87,7 @@ theme_override_constants/margin_bottom = 20
 [node name="Cree" type="RichTextLabel" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/TextboxDesign/TextboxContainer/CreeContainer" index="0"]
 layout_mode = 2
 theme = ExtResource("3_yasqk")
+theme_override_font_sizes/normal_font_size = 30
 text = "example cree"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -102,6 +103,7 @@ theme_override_constants/margin_bottom = 20
 [node name="English" type="RichTextLabel" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/TextboxDesign/TextboxContainer/EnglishContainer" index="0"]
 layout_mode = 2
 theme_override_colors/default_color = Color(0.913168, 0.71556, 0.590196, 1)
+theme_override_font_sizes/normal_font_size = 30
 text = "example english"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -109,7 +111,7 @@ vertical_alignment = 1
 [node name="ButtonsContainer" type="HBoxContainer" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer" index="1"]
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer" index="0"]
+[node name="BackMarginContainer" type="MarginContainer" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer" index="0"]
 custom_minimum_size = Vector2(0, 70)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -117,13 +119,13 @@ theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 20
 
-[node name="Back" type="Button" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer/MarginContainer" index="0"]
+[node name="Back" type="Button" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer/BackMarginContainer" index="0"]
 layout_mode = 2
 theme = ExtResource("4_bthrx")
 theme_override_styles/normal = SubResource("StyleBoxFlat_rf27j")
 text = "LAST"
 
-[node name="MarginContainer3" type="MarginContainer" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer" index="1"]
+[node name="ListenAgainMarginContainer" type="MarginContainer" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer" index="1"]
 custom_minimum_size = Vector2(0, 70)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -131,20 +133,20 @@ theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 20
 
-[node name="ListenAgain" type="Button" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer/MarginContainer3" index="0"]
+[node name="ListenAgain" type="Button" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer/ListenAgainMarginContainer" index="0"]
 layout_mode = 2
 theme = ExtResource("4_bthrx")
 theme_override_styles/normal = SubResource("StyleBoxFlat_ad1nw")
 text = "REPLAY"
 
-[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer" index="2"]
+[node name="ContinueMarginContainer" type="MarginContainer" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer" index="2"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 20
 
-[node name="Continue" type="Button" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer/MarginContainer2" index="0"]
+[node name="Continue" type="Button" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer/ContinueMarginContainer" index="0"]
 layout_mode = 2
 theme = ExtResource("4_bthrx")
 theme_override_styles/normal = SubResource("StyleBoxFlat_tcl28")
@@ -155,6 +157,6 @@ stream = ExtResource("5_bnykj")
 
 [node name="EnglishNarration" type="AudioStreamPlayer" parent="." index="2"]
 
-[connection signal="pressed" from="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer/MarginContainer/Back" to="." method="_on_back_pressed"]
-[connection signal="pressed" from="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer/MarginContainer3/ListenAgain" to="." method="_on_listen_again_pressed"]
-[connection signal="pressed" from="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer/MarginContainer2/Continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer/BackMarginContainer/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer/ListenAgainMarginContainer/ListenAgain" to="." method="_on_listen_again_pressed"]
+[connection signal="pressed" from="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer/ContinueMarginContainer/Continue" to="." method="_on_continue_pressed"]
