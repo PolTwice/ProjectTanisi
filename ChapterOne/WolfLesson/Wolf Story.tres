@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="DialogBlock" load_steps=2 format=3 uid="uid://cu6c67ifug6tl"]
+
+[ext_resource type="Script" uid="uid://hfxsmkkfuyqk" path="res://GenericScenes/TextBox/DialogueBox.gd" id="1_bkaxq"]
+
+[resource]
+resource_name = "Wolf Story"
+script = ExtResource("1_bkaxq")
+creeLines = Array[String](["Cree Placeholder", "Cree Placeholder", "Cree Placeholder", "Cree Placeholder", "Cree Placeholder", "Cree Placeholder", "Cree Placeholder"])
+englishLines = Array[String](["Wolf ran fast and howled loud.", " “I am the best!” said Wolf.", "Wolf jumped over rocks and streams to show off.", "Splash! Wolf slipped and fell in the cold water.", "Wolf shook off and felt shy.", "“Maybe I’m not best at everything,” thought Wolf.", "Wolf learned to be humble. "])
+metadata/_custom_type_script = "uid://hfxsmkkfuyqk"

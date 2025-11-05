@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="DialogBlock" load_steps=2 format=3 uid="uid://c6ukqpkp0ogsj"]
+
+[ext_resource type="Script" uid="uid://hfxsmkkfuyqk" path="res://GenericScenes/TextBox/DialogueBox.gd" id="1_dhws5"]
+
+[resource]
+resource_name = "Bear Story"
+script = ExtResource("1_dhws5")
+creeLines = Array[String](["Cree Placeholder", "Cree Placeholder", "Cree Placeholder", "Cree Placeholder", "Cree Placeholder", "Cree Placeholder", "Cree Placeholder"])
+englishLines = Array[String](["Bear liked quiet places. Loud things made Bear scared. ", "One night, the wind roared through the trees. ", "Bear wanted to hide, but took a deep breath.", "Bear stood tall and gave a big roar back. ", "The sound made Bear feel strong.", "“I was scared, but I tried,” thought Bear. ", "Bear learned courage. "])
+metadata/_custom_type_script = "uid://hfxsmkkfuyqk"

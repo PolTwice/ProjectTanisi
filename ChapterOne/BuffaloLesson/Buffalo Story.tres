@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="DialogBlock" load_steps=2 format=3 uid="uid://dq3hgmhcxd6r0"]
+
+[ext_resource type="Script" uid="uid://hfxsmkkfuyqk" path="res://GenericScenes/TextBox/DialogueBox.gd" id="1_in0uj"]
+
+[resource]
+resource_name = "Buffalo Story"
+script = ExtResource("1_in0uj")
+creeLines = Array[String](["Cree Placeholder", "Placeholder", "Placeholder", "Placeholder", "Placeholder", "Placeholder", "Placeholder"])
+englishLines = Array[String](["Buffalo liked to run fast across the grass.", "One day, Buffalo ran past Grandpa Buffalo.  ", "Dust flew in Grandpa Buffalo’s face. ", "“Please slow down,” said Grandpa Buffalo. “Respect means thinking of others.” ", "Next time, Buffalo saw Grandpa Buffalo on the path, Buffalo walked slowly. ", "“Thank you,” said Grandpa Buffalo. Buffalo felt proud. ", "Respect means caring about others. "])
+metadata/_custom_type_script = "uid://hfxsmkkfuyqk"
