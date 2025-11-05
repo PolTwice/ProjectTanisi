@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="DialogBlock" load_steps=4 format=3 uid="uid://c6ukqpkp0ogsj"]
+
+[ext_resource type="Script" uid="uid://hfxsmkkfuyqk" path="res://GenericScenes/TextBox/DialogueBox.gd" id="1_dhws5"]
+[ext_resource type="AudioStream" uid="uid://bknm06mfgj7qw" path="res://ChapterOne/Sounds/Bear.mp3" id="1_i8b73"]
+[ext_resource type="AudioStream" uid="uid://s001c0k3axce" path="res://ChapterOne/Sounds/Wolf.mp3" id="2_42kch"]
+
+[resource]
+resource_name = "Bear Story"
+script = ExtResource("1_dhws5")
+creeLines = Array[String](["Cree Placeholder", "Cree Placeholder", "Cree Placeholder", "Cree Placeholder", "Cree Placeholder", "Cree Placeholder", "Cree Placeholder"])
+englishLines = Array[String](["Bear liked quiet places. Loud things made Bear scared. ", "One night, the wind roared through the trees. ", "Bear wanted to hide, but took a deep breath.", "Bear stood tall and gave a big roar back. ", "The sound made Bear feel strong.", "“I was scared, but I tried,” thought Bear. ", "Bear learned courage. "])
+creeAudios = Array[AudioStream]([ExtResource("1_i8b73"), ExtResource("1_i8b73"), ExtResource("1_i8b73"), ExtResource("1_i8b73"), ExtResource("1_i8b73"), ExtResource("1_i8b73"), ExtResource("1_i8b73")])
+englishAudios = Array[AudioStream]([ExtResource("2_42kch"), ExtResource("2_42kch"), ExtResource("2_42kch"), ExtResource("2_42kch"), ExtResource("2_42kch"), ExtResource("2_42kch"), ExtResource("2_42kch")])
+metadata/_custom_type_script = "uid://hfxsmkkfuyqk"

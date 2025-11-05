@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://crj8avlberf7u"
-path="res://.godot/imported/Bear.jpg-01c0a64289cbbe147adeec77103f3231.ctex"
+uid="uid://1wg5ul1uc0cg"
+path="res://.godot/imported/Turtle1.png-9712c9ae2644936840f394a3cbcdfd1c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ChapterOne/BearLesson/assets/Bear.jpg"
-dest_files=["res://.godot/imported/Bear.jpg-01c0a64289cbbe147adeec77103f3231.ctex"]
+source_file="res://ChapterOne/AnimalSelectScenes/assets/Turtle/Turtle1.png"
+dest_files=["res://.godot/imported/Turtle1.png-9712c9ae2644936840f394a3cbcdfd1c.ctex"]
 
 [params]
 

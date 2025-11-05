@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2sysqcspxr1"
-path="res://.godot/imported/turtles.png-60547a860858426769aca2f9c1947876.ctex"
+uid="uid://dma43uo8vhgsk"
+path="res://.godot/imported/sabe2.png-f13e116f1eba5e31f08ded7c36ee6f31.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ChapterOne/AnimalSelectScenes/assets/Turtle/turtles.png"
-dest_files=["res://.godot/imported/turtles.png-60547a860858426769aca2f9c1947876.ctex"]
+source_file="res://ChapterOne/AnimalSelectScenes/assets/SabeTwo/sabe2.png"
+dest_files=["res://.godot/imported/sabe2.png-f13e116f1eba5e31f08ded7c36ee6f31.ctex"]
 
 [params]
 

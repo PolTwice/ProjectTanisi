@@ -19,6 +19,8 @@ animations = [{
 }]
 
 [node name="BearSelect" instance=ExtResource("1_8yrxv")]
+lessonPath = "res://ChapterOne/BearLesson/BearLesson.tscn"
+lessonName = "The CourageousBear"
 
 [node name="AnimalSprite" parent="." index="0"]
 sprite_frames = SubResource("SpriteFrames_4bjim")

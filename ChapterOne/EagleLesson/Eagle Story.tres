@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="DialogBlock" load_steps=4 format=3 uid="uid://cu33p45n61bf7"]
+
+[ext_resource type="Script" uid="uid://hfxsmkkfuyqk" path="res://GenericScenes/TextBox/DialogueBox.gd" id="1_whg4s"]
+[ext_resource type="AudioStream" uid="uid://bknm06mfgj7qw" path="res://ChapterOne/Sounds/Bear.mp3" id="1_yyul7"]
+[ext_resource type="AudioStream" uid="uid://h3ibjg4yc80u" path="res://ChapterOne/Sounds/Eagle.mp3" id="2_x7snt"]
+
+[resource]
+resource_name = "Eagle Story"
+script = ExtResource("1_whg4s")
+creeLines = Array[String](["Cree Placeholder", "Cree Placeholder", "Cree Placeholder", "Cree Placeholder", "Cree Placeholder", "Cree Placeholder", "Cree Placeholder", "Cree Placeholder"])
+englishLines = Array[String]([" Eagle flew high above the trees. The wind felt cool on  Eagle’s wings. ", " Eagle saw a broken nest in the tall pine tree. The nest was small and shaky. ", " Eagle wanted to help.  Eagle found twigs and soft leaves. ", "Slowly and carefully,  Eagle fixed the nest. ", "Mom Eagle flew over and smiled. “Thank you,  Eagle. Love means caring for family.” ", " Eagle looked at the strong nest and felt happy inside. ", "Love is helping those you care about, even when it takes time. ", " Eagle flapped wings with joy and flew back home. "])
+creeAudios = Array[AudioStream]([ExtResource("1_yyul7"), ExtResource("1_yyul7"), ExtResource("1_yyul7"), ExtResource("1_yyul7"), ExtResource("1_yyul7"), ExtResource("1_yyul7"), ExtResource("1_yyul7"), ExtResource("1_yyul7")])
+englishAudios = Array[AudioStream]([ExtResource("2_x7snt"), ExtResource("2_x7snt"), ExtResource("2_x7snt"), ExtResource("2_x7snt"), ExtResource("2_x7snt"), ExtResource("2_x7snt"), ExtResource("2_x7snt"), ExtResource("2_x7snt")])
+metadata/_custom_type_script = "uid://hfxsmkkfuyqk"

@@ -1,8 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://c1upw3f0qecc5"]
+[gd_scene load_steps=4 format=3 uid="uid://c1upw3f0qecc5"]
 
 [ext_resource type="PackedScene" uid="uid://c2nyhe52ydet3" path="res://GenericScenes/StoryManager.tscn" id="1_0qtf8"]
+[ext_resource type="Resource" uid="uid://c6ukqpkp0ogsj" path="res://ChapterOne/BearLesson/Bear Story.tres" id="2_b786v"]
+[ext_resource type="Resource" uid="uid://c7hxm5e3mtfqw" path="res://ChapterOne/TestQuiz.tres" id="3_mbisl"]
 
 [node name="Node" type="Node"]
 
 [node name="StoryManager" parent="." instance=ExtResource("1_0qtf8")]
 lessonName = "The Courageous Bear"
+storyResource = ExtResource("2_b786v")
+quizResourceArray = Array[Resource]([ExtResource("3_mbisl"), ExtResource("3_mbisl")])
+order = Array[int]([1, 0, 1, 1, 1, 1, 1, 1, 0])
