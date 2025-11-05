@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cnieguj6iu6tx"
-path="res://.godot/imported/Beaver.jpg-095b8da516e87b0f299a4e2dae8156de.ctex"
+uid="uid://bhlj3wrlgqhqq"
+path="res://.godot/imported/Buffalo.png-c688ee82604f272eee58376150b5b8a3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ChapterOne/BeaverLesson/assets/Beaver.jpg"
-dest_files=["res://.godot/imported/Beaver.jpg-095b8da516e87b0f299a4e2dae8156de.ctex"]
+source_file="res://ChapterOne/AnimalSelectScenes/assets/Buffalo/Buffalo.png"
+dest_files=["res://.godot/imported/Buffalo.png-c688ee82604f272eee58376150b5b8a3.ctex"]
 
 [params]
 

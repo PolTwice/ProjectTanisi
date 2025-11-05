@@ -26,6 +26,4 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 		#pause
 		#play animation
 		#play sounds
-		
-		
 		GlobalState.sceneManager.changeNodeOne(lessonPath, lessonName)

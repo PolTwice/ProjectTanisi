@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bhlj3wrlgqhqq"
-path="res://.godot/imported/Buffalo.png-6a43e3b7c13da9ad4ffcc8b35dc8572d.ctex"
+uid="uid://djd00yyhrnwbt"
+path="res://.godot/imported/Buffalo2.png-f2f1fea2bcd2d88daead5a71d9b44aff.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ChapterOne/BuffaloLesson/Buffalo.png"
-dest_files=["res://.godot/imported/Buffalo.png-6a43e3b7c13da9ad4ffcc8b35dc8572d.ctex"]
+source_file="res://ChapterOne/AnimalSelectScenes/assets/Buffalo/Buffalo2.png"
+dest_files=["res://.godot/imported/Buffalo2.png-f2f1fea2bcd2d88daead5a71d9b44aff.ctex"]
 
 [params]
 

@@ -10,7 +10,8 @@ extends Control
 @onready var button_cd_box: HBoxContainer = $MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/QuizContainer/UnderTextContainer/QuizQuestionBox/ButtonCDBox
 @onready var back: Button = $MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer/MarginContainer/Back
 @onready var listen_again: Button = $MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer/MarginContainer3/ListenAgain
-@onready var submit: Button = $MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer/MarginContainer2/Submit
+@onready var next: Button = $MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer/MarginContainer2/Next
+
 
 #get the resource from the parent
 var quizResourceChild 
@@ -23,16 +24,9 @@ signal quizBackSignal();
 
 var correct_option = null
 
-func _ready():
-	#when does this get enabled? will we have audio?
-	#Commenting out until decided
-	#listen_again.disabled = true
-	#back.disabled=true;
-	quizResourceChild = get_parent().quizResourceParent
-	if(quizResourceChild!=null):
-		updateFromResource()
-
 func updateFromResource():
+	#Get parent resource. Update from it.
+	quizResourceChild = get_parent().quizResourceParent
 	button_a.text = quizResourceChild.choices[0]
 	button_b.text = quizResourceChild.choices[1]
 	button_c.text = quizResourceChild.choices[2]
@@ -65,16 +59,15 @@ func _on_button_d_pressed() -> void:
 func checkAnswer(option: int) -> void:
 	if(option == quizResourceChild.correctIndex):
 		print("Right Answer")
-		submit.disabled = false;
+		next.disabled = false;
 	else:
 		print("Wrong Answer")
-		submit.disabled = true;
+		next.disabled = true;
 
 
 func _on_back_pressed() -> void:
 	emit_signal("quizBackSignal")
 	print("Quiz Back signal sent")
-
 
 func _on_listen_again_pressed() -> void:
 	pass # Replace with function body.

@@ -1,0 +1,200 @@
+[gd_scene load_steps=11 format=3 uid="uid://ctpkbwihuq3y2"]
+
+[ext_resource type="PackedScene" uid="uid://b1r624c4ej3ru" path="res://GenericScenes/TextBox/GenericTextBox.tscn" id="1_hx2jg"]
+[ext_resource type="Script" uid="uid://d71s7pus8d1j" path="res://GenericScenes/QuizBox/QuizBox.gd" id="2_t3hoo"]
+[ext_resource type="Theme" uid="uid://c7ov3td0u36sq" path="res://GenericScenes/Themes/GenericTextBox.tres" id="3_yrh4r"]
+[ext_resource type="StyleBox" uid="uid://chw4c3yc2s508" path="res://GenericScenes/Themes/InfoBox.tres" id="4_r3ylr"]
+[ext_resource type="Texture2D" uid="uid://7mf0ow2ulifp" path="res://Tanisi.png" id="5_q53be"]
+[ext_resource type="Theme" uid="uid://byi38q23oj3ta" path="res://GenericScenes/Themes/ButtonTheme.tres" id="5_wo7m1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lbm0y"]
+bg_color = Color(0.191509, 0.106161, 0.0477274, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_naysj"]
+bg_color = Color(0.776471, 0.278431, 0.262745, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5c2x2"]
+bg_color = Color(0.498627, 0.42742, 0.325971, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vvjru"]
+bg_color = Color(0.204679, 0.505877, 0.366227, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="TextBox" instance=ExtResource("1_hx2jg")]
+script = ExtResource("2_t3hoo")
+
+[node name="TextboxMargin" type="MarginContainer" parent="MarginContainer/BoxDesign" index="0"]
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/BoxDesign/TextboxMargin" index="0"]
+layout_mode = 2
+
+[node name="QuizContainer" type="VBoxContainer" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer" index="0"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TextboxDesign" type="PanelContainer" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/QuizContainer" index="0"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+size_flags_vertical = 4
+theme = ExtResource("3_yrh4r")
+theme_override_styles/panel = SubResource("StyleBoxFlat_lbm0y")
+
+[node name="Label" type="Label" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/QuizContainer/TextboxDesign" index="0"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 40
+text = "Question In English"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="UnderTextContainer" type="HBoxContainer" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/QuizContainer" index="1"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Picture" type="TextureRect" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/QuizContainer/UnderTextContainer" index="0"]
+layout_mode = 2
+texture = ExtResource("5_q53be")
+expand_mode = 2
+
+[node name="QuizQuestionBox" type="VBoxContainer" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/QuizContainer/UnderTextContainer" index="1"]
+custom_minimum_size = Vector2(50, 200)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+
+[node name="ButtonABBox" type="HBoxContainer" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/QuizContainer/UnderTextContainer/QuizQuestionBox" index="0"]
+clip_contents = true
+custom_minimum_size = Vector2(900, 120)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ButtonA" type="Button" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/QuizContainer/UnderTextContainer/QuizQuestionBox/ButtonABBox" index="0"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("5_wo7m1")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover = ExtResource("4_r3ylr")
+text = "OptionA"
+
+[node name="ButtonB" type="Button" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/QuizContainer/UnderTextContainer/QuizQuestionBox/ButtonABBox" index="1"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("5_wo7m1")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover = ExtResource("4_r3ylr")
+text = "OptionB"
+
+[node name="ButtonCDBox" type="HBoxContainer" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/QuizContainer/UnderTextContainer/QuizQuestionBox" index="1"]
+clip_contents = true
+custom_minimum_size = Vector2(900, 120)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ButtonC" type="Button" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/QuizContainer/UnderTextContainer/QuizQuestionBox/ButtonCDBox" index="0"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("5_wo7m1")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover = ExtResource("4_r3ylr")
+text = "OptionC"
+
+[node name="ButtonD" type="Button" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/QuizContainer/UnderTextContainer/QuizQuestionBox/ButtonCDBox" index="1"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("5_wo7m1")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover = ExtResource("4_r3ylr")
+text = "OptionD"
+
+[node name="ButtonsContainer" type="HBoxContainer" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer" index="1"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer" index="0"]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 20
+
+[node name="Back" type="Button" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer/MarginContainer" index="0"]
+layout_mode = 2
+theme = ExtResource("5_wo7m1")
+theme_override_styles/normal = SubResource("StyleBoxFlat_naysj")
+text = "LAST"
+
+[node name="MarginContainer3" type="MarginContainer" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer" index="1"]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 20
+
+[node name="ListenAgain" type="Button" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer/MarginContainer3" index="0"]
+layout_mode = 2
+theme = ExtResource("5_wo7m1")
+theme_override_styles/normal = SubResource("StyleBoxFlat_5c2x2")
+text = "REPLAY"
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer" index="2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 20
+
+[node name="Next" type="Button" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer/MarginContainer2" index="0"]
+layout_mode = 2
+theme = ExtResource("5_wo7m1")
+theme_override_styles/normal = SubResource("StyleBoxFlat_vvjru")
+disabled = true
+text = "NEXT"
+
+[connection signal="pressed" from="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/QuizContainer/UnderTextContainer/QuizQuestionBox/ButtonABBox/ButtonA" to="." method="_on_button_a_pressed"]
+[connection signal="pressed" from="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/QuizContainer/UnderTextContainer/QuizQuestionBox/ButtonABBox/ButtonB" to="." method="_on_button_b_pressed"]
+[connection signal="pressed" from="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/QuizContainer/UnderTextContainer/QuizQuestionBox/ButtonCDBox/ButtonC" to="." method="_on_button_c_pressed"]
+[connection signal="pressed" from="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/QuizContainer/UnderTextContainer/QuizQuestionBox/ButtonCDBox/ButtonD" to="." method="_on_button_d_pressed"]
+[connection signal="pressed" from="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer/MarginContainer/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer/MarginContainer3/ListenAgain" to="." method="_on_listen_again_pressed"]
+[connection signal="pressed" from="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer/MarginContainer2/Next" to="." method="_on_next_pressed"]

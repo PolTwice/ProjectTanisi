@@ -14,3 +14,5 @@ order = Array[int]([0, 0])
 
 [connection signal="storyBackSignal" from="TextBox" to="." method="_on_text_box_story_back_signal"]
 [connection signal="storyNextSignal" from="TextBox" to="." method="_on_text_box_story_next_signal"]
+[connection signal="quizBackSignal" from="QuizBox" to="." method="_on_quiz_box_quiz_back_signal"]
+[connection signal="quizNextSignal" from="QuizBox" to="." method="_on_quiz_box_quiz_next_signal"]

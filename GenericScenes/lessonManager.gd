@@ -23,6 +23,8 @@ enum ContentType { QUIZ, STORY }
 
 func _ready() -> void:
 	#if there is a resource
+	#if(quizResourceArray.size != storyResource.Cree )
+	
 	if(!(order == null && quizResourceArray == null && storyResource ==null)):
 		checkNext()
 	else:
@@ -38,6 +40,8 @@ func _on_text_box_story_back_signal() -> void:
 	storyIndex = storyIndex -1
 	lessonIndex -=1
 	checkNext();
+	
+	
 func _on_quiz_box_quiz_next_signal() -> void:
 	quizIndex = quizIndex +1
 	lessonIndex +=1
@@ -59,9 +63,12 @@ func checkNext() -> void:
 		else:
 			quiz_box.visible = true
 			quizResourceParent = quizResourceArray[quizIndex];
-			quiz_box.updateFromResource()
+			await quiz_box.updateFromResource()
 	else:
 		lessonComplete()
 		
 func lessonComplete():
 	pass;
+
+func onInvalidResources():
+	pass
