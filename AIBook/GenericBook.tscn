@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://37stp61yphyj" path="res://AIBook/directionDifferentLeft.png" id="4_7y6js"]
 [ext_resource type="Texture2D" uid="uid://chs18hry00pbg" path="res://AIBook/directionDifferent.png" id="5_vbcgo"]
 
-[node name="Control" type="Control"]
+[node name="StoryBook" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

@@ -14,23 +14,22 @@ extends Control
 @onready var next: TextureButton = $PagesHBOX/PageTwoMargin/PageTwoVBox/Next
 
 var bookContents 
-#var creeLines: Array[String] = []
-#var englishLines: Array[String] = []
-#var creeAudios: Array[AudioStream] = []
-#var englishAudios: Array[AudioStream] = []
+#@export var creeLines: Array[String] = []
+#@export var englishLines: Array[String] = []
+#@export var pictures: Array[Texture] = []
 
 signal bookNextSignal();
 signal bookBackSignal();
 
 
-var pageOnePicture
-var pageTwoPicture
+var pageOnePicture: Array[Texture]
+var pageTwoPicture: Array[Texture]
 
-var creeLinesOne
-var englishLinesOne
+var creeLinesOne: Array[String]
+var englishLinesOne: Array[String]
 
-var creeLinesTwo
-var englishLinesTwo
+var creeLinesTwo: Array[String]
+var englishLinesTwo: Array[String]
 
 func _ready() -> void:
 	
@@ -43,46 +42,53 @@ func _ready() -> void:
 		return;
 		
 func updateFromResource():
-	for line in 
-	creeLines = dialogueBox.creeLines
-	englishLines = dialogueBox.englishLines
-	creeAudios = dialogueBox.creeAudios
-	englishAudios= dialogueBox.englishAudios
+	var counter = 1 
+	for line in bookContents.creeLines:
+		if counter % 2 !=0:
+			creeLinesOne.append(line)
+		else:
+			creeLinesTwo.append(line)
+		counter +=1
+		
+	counter = 1 
+	for line in bookContents.englishLines:
+		if counter % 2 !=0:
+			englishLinesOne.append(line)
+		else:
+			englishLinesTwo.append(line)
+		counter +=1
 	
+	counter = 1 
+	for pic in bookContents.pictures:
+		if counter % 2 !=0:
+			pageOnePicture.append(pic)
+		else:
+			pageTwoPicture.append(pic)
+		counter +=1
 
 func show_line(index: int):
 	back.disabled=true;
 	
-	if(dialogueBox == null):
+	if(bookContents == null):
 		print("No resource loaded")
 		return
 		
-	if (index >= creeLines.size()):
+	if index >= ( creeLinesOne.size()+creeLinesTwo.size() ):
 		print("End of dialogue")
 		return
 		
-	creeLabel.text = creeLines[index]
-	englishLabel.text = englishLines[index]
-	cree_narration.stream = creeAudios[index]
-	english_narration.stream = englishAudios[index]
-	continueStory.disabled = true;
-	playCreeAudio()
-
-#Disable the listen again button, the start playing the cree narration
-func playCreeAudio():
-	listen_again.disabled = true;
-	cree_narration.play()
-
+	page_one_cree.text = creeLinesOne[index]
+	page_one_english.text = englishLinesOne[index]
+	page_one_picture.texture = pageOnePicture[index]
+	
+	page_two_cree.text = creeLinesTwo[index]
+	page_two_english.text = englishLinesTwo[index]
+	page_two_picture.texture = pageTwoPicture[index]
 
 func _on_back_pressed() -> void:
 	emit_signal("storyBackSignal")
 	print("Story back signal sent")
 	pass
-
-func _on_listen_again_pressed() -> void:
-	listen_again.disabled = false
-	continueStory.disabled = false
-	playCreeAudio()
 
 func _on_continue_pressed() -> void:
 	emit_signal("storyNextSignal")
