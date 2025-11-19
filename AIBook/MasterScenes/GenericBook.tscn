@@ -1,0 +1,120 @@
+[gd_scene load_steps=7 format=3 uid="uid://c5g202x2u123x"]
+
+[ext_resource type="Script" uid="uid://wco4wc3vi6nh" path="res://AIBook/MasterScenes/generic_book.gd" id="1_5822i"]
+[ext_resource type="Texture2D" uid="uid://ckiuuswqn6emf" path="res://AIBook/Assets/BookBetter.png" id="3_nhhh6"]
+[ext_resource type="Texture2D" uid="uid://bqxs1aqjc2ym0" path="res://Tests/TestLake.jpeg" id="4_6h0bw"]
+[ext_resource type="Theme" uid="uid://bnsjo7qyi8fhs" path="res://AIBook/Assets/BookText.tres" id="5_vv511"]
+[ext_resource type="Texture2D" uid="uid://37stp61yphyj" path="res://AIBook/Assets/directionDifferentLeft.png" id="6_52w6f"]
+[ext_resource type="Texture2D" uid="uid://chs18hry00pbg" path="res://AIBook/Assets/directionDifferent.png" id="7_f3lna"]
+
+[node name="StoryBook" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5822i")
+
+[node name="BookTexure" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("3_nhhh6")
+
+[node name="PagesHBOX" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PageOneMargin" type="MarginContainer" parent="PagesHBOX"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 120
+theme_override_constants/margin_top = 70
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 150
+
+[node name="ColorRect" type="ColorRect" parent="PagesHBOX/PageOneMargin"]
+visible = false
+layout_mode = 2
+
+[node name="PageOneVBox" type="VBoxContainer" parent="PagesHBOX/PageOneMargin"]
+layout_mode = 2
+
+[node name="PageOnePicture" type="TextureRect" parent="PagesHBOX/PageOneMargin/PageOneVBox"]
+custom_minimum_size = Vector2(0, 500)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture = ExtResource("4_6h0bw")
+expand_mode = 3
+
+[node name="PageOneCree" type="RichTextLabel" parent="PagesHBOX/PageOneMargin/PageOneVBox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("5_vv511")
+text = "Cree Text Page One"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PageOneEnglish" type="RichTextLabel" parent="PagesHBOX/PageOneMargin/PageOneVBox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("5_vv511")
+text = "English Text Page One"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Back" type="TextureButton" parent="PagesHBOX/PageOneMargin/PageOneVBox"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+texture_normal = ExtResource("6_52w6f")
+
+[node name="PageTwoMargin" type="MarginContainer" parent="PagesHBOX"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 70
+theme_override_constants/margin_right = 120
+theme_override_constants/margin_bottom = 150
+
+[node name="PageTwoVBox" type="VBoxContainer" parent="PagesHBOX/PageTwoMargin"]
+layout_mode = 2
+
+[node name="PageTwoPicture" type="TextureRect" parent="PagesHBOX/PageTwoMargin/PageTwoVBox"]
+custom_minimum_size = Vector2(0, 500)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture = ExtResource("4_6h0bw")
+expand_mode = 3
+
+[node name="PageTwoCree" type="RichTextLabel" parent="PagesHBOX/PageTwoMargin/PageTwoVBox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("5_vv511")
+text = "Cree Text Page Two"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PageTwoEnglish" type="RichTextLabel" parent="PagesHBOX/PageTwoMargin/PageTwoVBox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("5_vv511")
+text = "English Text Page Two"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Next" type="TextureButton" parent="PagesHBOX/PageTwoMargin/PageTwoVBox"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+texture_normal = ExtResource("7_f3lna")
+
+[connection signal="pressed" from="PagesHBOX/PageOneMargin/PageOneVBox/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="PagesHBOX/PageTwoMargin/PageTwoVBox/Next" to="." method="_on_next_pressed"]
