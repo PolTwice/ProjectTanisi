@@ -1,0 +1,101 @@
+[gd_scene load_steps=4 format=3 uid="uid://c5g202x2u123x"]
+
+[ext_resource type="Texture2D" uid="uid://ckiuuswqn6emf" path="res://AIBook/BookBetter.png" id="1_cwj51"]
+[ext_resource type="Texture2D" uid="uid://bqxs1aqjc2ym0" path="res://Tests/TestLake.jpeg" id="2_n7rjq"]
+[ext_resource type="Theme" uid="uid://bnsjo7qyi8fhs" path="res://BookText.tres" id="3_nieyl"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BookTexure" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_cwj51")
+
+[node name="PagesHBOX" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PageOneMargin" type="MarginContainer" parent="PagesHBOX"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 120
+theme_override_constants/margin_top = 70
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 150
+
+[node name="ColorRect" type="ColorRect" parent="PagesHBOX/PageOneMargin"]
+visible = false
+layout_mode = 2
+
+[node name="PageOneVBox" type="VBoxContainer" parent="PagesHBOX/PageOneMargin"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="PagesHBOX/PageOneMargin/PageOneVBox"]
+custom_minimum_size = Vector2(0, 500)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture = ExtResource("2_n7rjq")
+expand_mode = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PagesHBOX/PageOneMargin/PageOneVBox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("3_nieyl")
+text = "Cree Text Page One"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="PagesHBOX/PageOneMargin/PageOneVBox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("3_nieyl")
+text = "English Text Page One"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PageTwoMargin" type="MarginContainer" parent="PagesHBOX"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 70
+theme_override_constants/margin_right = 120
+theme_override_constants/margin_bottom = 150
+
+[node name="PageTwoVBox" type="VBoxContainer" parent="PagesHBOX/PageTwoMargin"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="PagesHBOX/PageTwoMargin/PageTwoVBox"]
+custom_minimum_size = Vector2(0, 500)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture = ExtResource("2_n7rjq")
+expand_mode = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PagesHBOX/PageTwoMargin/PageTwoVBox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("3_nieyl")
+text = "Cree Text Page Two"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="PagesHBOX/PageTwoMargin/PageTwoVBox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("3_nieyl")
+text = "English Text Page Two"
+horizontal_alignment = 1
+vertical_alignment = 1
