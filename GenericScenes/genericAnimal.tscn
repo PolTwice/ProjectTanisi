@@ -1,7 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://drq53txkkdr8y"]
 
 [ext_resource type="Script" uid="uid://8bs4kcwjwk5x" path="res://GenericScenes/animal.gd" id="1_2gra4"]
-[ext_resource type="Texture2D" uid="uid://7mf0ow2ulifp" path="res://Tanisi.png" id="2_nw4mq"]
+[ext_resource type="Texture2D" uid="uid://7mf0ow2ulifp" path="res://AITanisi.png" id="2_nw4mq"]
+
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_knduu"]
 animations = [{

@@ -4,8 +4,9 @@
 [ext_resource type="Script" uid="uid://d71s7pus8d1j" path="res://GenericScenes/QuizBox/QuizBox.gd" id="2_t3hoo"]
 [ext_resource type="Theme" uid="uid://c7ov3td0u36sq" path="res://GenericScenes/Themes/GenericTextBox.tres" id="3_yrh4r"]
 [ext_resource type="StyleBox" uid="uid://chw4c3yc2s508" path="res://GenericScenes/Themes/InfoBox.tres" id="4_r3ylr"]
-[ext_resource type="Texture2D" uid="uid://7mf0ow2ulifp" path="res://Tanisi.png" id="5_q53be"]
+[ext_resource type="Texture2D" uid="uid://7mf0ow2ulifp" path="res://AITanisi.png" id="5_q53be"]
 [ext_resource type="Theme" uid="uid://byi38q23oj3ta" path="res://GenericScenes/Themes/ButtonTheme.tres" id="5_wo7m1"]
+
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lbm0y"]
 bg_color = Color(0.191509, 0.106161, 0.0477274, 1)
