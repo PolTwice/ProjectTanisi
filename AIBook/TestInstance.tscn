@@ -23,3 +23,29 @@ color = Color(0, 0.4566605, 0.4566605, 1)
 [node name="StoryBook" parent="ColorRect" instance=ExtResource("1_8u35d")]
 layout_mode = 1
 bookResource = ExtResource("2_ep5fu")
+
+[node name="ResoureError" type="RichTextLabel" parent="ColorRect"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 90
+text = "ERROR IN RESOURCE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NoResourceError" type="RichTextLabel" parent="ColorRect"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 90
+text = "NO RESOURCE LOADED"
+horizontal_alignment = 1
+vertical_alignment = 1

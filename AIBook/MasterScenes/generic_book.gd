@@ -15,6 +15,12 @@ extends Control
 @onready var back: TextureButton = $PagesHBOX/PageOneMargin/PageOneVBox/Back
 @onready var next: TextureButton = $PagesHBOX/PageTwoMargin/PageTwoVBox/Next
 
+@onready var no_resource_error: RichTextLabel = $"../NoResourceError"
+@onready var resoure_error: RichTextLabel = $"../ResoureError"
+
+const SQUARE = preload("uid://dj8620tornxsa")
+const STAR = preload("uid://dc4hjivllkw0x")
+
 var bookContents 
 #@export var creeLines: Array[String] = []
 #@export var englishLines: Array[String] = []
@@ -34,18 +40,30 @@ var englishLinesTwo: Array[String] = []
 
 func _ready() -> void:
 	
+	#make the book contents = to book Resource
 	bookContents  = bookResource
+	
+	#disable back at the beginning
 	back.disabled=true;
 	
+	#if we have a resource, update from the resource, and show the first line
 	if(bookContents != null):
 		await updateFromResource()
 		await show_line(i)
-	else:
-		visible = false
-		return;
 		
+	#if no resource is loaded, display 
+	else:
+		#hide the book
+		#display the error message if no resource is load
+		visible = false
+
+		no_resource_error.visible = true;
+		return;
+
+#populate arrays from the resource
 func updateFromResource():
 	var counter = 1 
+	#odd numbered pages go on the left page, even goes on the right page
 	for line in bookContents.creeLines:
 		if counter % 2 !=0:
 			creeLinesOne.append(line)
@@ -68,7 +86,12 @@ func updateFromResource():
 		else:
 			pageTwoPicture.append(pic)
 		counter +=1
+	
+	#if the arrays are not equal size, display an error
+	if englishLinesOne.size() != creeLinesOne.size() || englishLinesTwo.size() != creeLinesTwo.size():
+		resoure_error.visible = true;
 		
+	#The Size one index index should
 	max_index = creeLinesOne.size() - 1
 
 func show_line(idx: int):
@@ -79,11 +102,16 @@ func show_line(idx: int):
 	var index = clamp(idx, 0, max_index)
 	
 	back.disabled = (index == 0)
-	next.disabled = (index == max_index)
+	#next.disabled = (index == max_index)
 
 	page_one_cree.text = creeLinesOne[index]
 	page_one_english.text = englishLinesOne[index]
-	page_one_picture.texture = pageOnePicture[index]
+	
+	#check if there is a picture, if not, use a default picture
+	if pageOnePicture.size() == 0:
+		page_one_picture.texture = SQUARE
+	else:
+		page_one_picture.texture = pageOnePicture[index]
 	
 	if index < creeLinesTwo.size():
 		page_two_cree.visible = true
@@ -91,7 +119,12 @@ func show_line(idx: int):
 		page_two_picture.visible = true
 		page_two_cree.text = creeLinesTwo[index]
 		page_two_english.text = englishLinesTwo[index]
-		page_two_picture.texture = pageTwoPicture[index]
+		
+		if pageTwoPicture.size() == 0:
+			page_two_picture.texture = STAR
+		else:
+			page_two_picture.texture = pageTwoPicture[index]
+			
 	else:
 		page_two_cree.visible = true
 		page_two_english.visible = false
@@ -107,6 +140,7 @@ func _on_back_pressed() -> void:
 func _on_next_pressed() -> void:
 	if i >= max_index:
 		emit_signal("book_finished")
+		print("book finished")
 		return
 		
 	i = i+1

@@ -1,13 +1,9 @@
-[gd_resource type="Resource" script_class="bookContentResource" load_steps=5 format=3 uid="uid://dicrkv0k11cry"]
+[gd_resource type="Resource" script_class="bookContentResource" load_steps=2 format=3 uid="uid://dicrkv0k11cry"]
 
-[ext_resource type="Texture2D" uid="uid://dj8620tornxsa" path="res://AIBook/Assets/Square.png" id="1_uggwc"]
-[ext_resource type="Texture2D" uid="uid://dc4hjivllkw0x" path="res://AIBook/Assets/Star.png" id="2_htwgl"]
-[ext_resource type="Texture2D" uid="uid://bhw4ge68xlpg5" path="res://AIBook/Assets/Triange.png" id="3_w5ko8"]
 [ext_resource type="Script" uid="uid://jrguaax8ic12" path="res://AIBook/MasterScenes/BookContents.gd" id="6_cf6i1"]
 
 [resource]
 script = ExtResource("6_cf6i1")
 creeLines = Array[String](["Cree one", "Cree Two", "Cree Three", "Cree Four", "Cree Five"])
 englishLines = Array[String](["English One", "English Two", "English Three", "English Four", "English Five"])
-pictures = Array[Texture]([ExtResource("1_uggwc"), ExtResource("2_htwgl"), ExtResource("3_w5ko8"), ExtResource("1_uggwc"), ExtResource("2_htwgl")])
 metadata/_custom_type_script = "uid://jrguaax8ic12"
