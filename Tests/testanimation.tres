@@ -1,0 +1,56 @@
+[gd_resource type="Resource" script_class="animation_resource" load_steps=12 format=3 uid="uid://ddy5isyiun7lu"]
+
+[ext_resource type="Texture2D" uid="uid://cb8bgyndqk7gf" path="res://ChapterOne/AnimalSelectScenes/assets/Bear/bear_1.png" id="1_u07oa"]
+[ext_resource type="Texture2D" uid="uid://dvxnwbe13jlf1" path="res://ChapterOne/AnimalSelectScenes/assets/Bear/bear_2.png" id="2_ak1bn"]
+[ext_resource type="Texture2D" uid="uid://jf2lmc8oc04y" path="res://ChapterOne/AnimalSelectScenes/assets/Beaver/beaver1.png" id="3_nh3f2"]
+[ext_resource type="Texture2D" uid="uid://cneps1tdfqw2f" path="res://ChapterOne/AnimalSelectScenes/assets/Beaver/beaver2.png" id="4_pg4te"]
+[ext_resource type="Texture2D" uid="uid://ejgo44y5ulv6" path="res://ChapterOne/AnimalSelectScenes/assets/Beaver/beaver3.png" id="5_8mg24"]
+[ext_resource type="Texture2D" uid="uid://c05dxqxmpevdp" path="res://ChapterOne/AnimalSelectScenes/assets/Beaver/beaver4.png" id="6_hsc4b"]
+[ext_resource type="Texture2D" uid="uid://bqxs1aqjc2ym0" path="res://Tests/TestLake.jpeg" id="7_xj28g"]
+[ext_resource type="Texture2D" uid="uid://bj3i0b0se30n0" path="res://Tests/1-94eaf38c.jpg" id="8_j2cr7"]
+[ext_resource type="Script" uid="uid://6xhkksjm7u2i" path="res://GenericScenes/Animation/animationResource.gd" id="9_afs7u"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qh17n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_u07oa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ak1bn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dmp52"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_nh3f2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_pg4te")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_8mg24")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_hsc4b")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[resource]
+script = ExtResource("9_afs7u")
+backgrounds = Array[Texture]([ExtResource("7_xj28g"), ExtResource("8_j2cr7"), ExtResource("7_xj28g"), ExtResource("8_j2cr7"), ExtResource("7_xj28g"), ExtResource("8_j2cr7"), ExtResource("7_xj28g")])
+animations = Array[SpriteFrames]([SubResource("SpriteFrames_qh17n"), SubResource("SpriteFrames_dmp52"), SubResource("SpriteFrames_qh17n"), SubResource("SpriteFrames_dmp52"), SubResource("SpriteFrames_qh17n"), SubResource("SpriteFrames_dmp52"), SubResource("SpriteFrames_qh17n")])
+metadata/_custom_type_script = "uid://6xhkksjm7u2i"

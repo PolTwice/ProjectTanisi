@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://7mf0ow2ulifp" path="res://Tanisi.png" id="5_q53be"]
 [ext_resource type="Theme" uid="uid://byi38q23oj3ta" path="res://GenericScenes/Themes/ButtonTheme.tres" id="5_wo7m1"]
 
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lbm0y"]
 bg_color = Color(0.191509, 0.106161, 0.0477274, 1)
 border_width_left = 10
@@ -173,6 +172,7 @@ theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 20
 
 [node name="ListenAgain" type="Button" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer/MarginContainer3" index="0"]
+visible = false
 layout_mode = 2
 theme = ExtResource("5_wo7m1")
 theme_override_styles/normal = SubResource("StyleBoxFlat_5c2x2")

@@ -74,7 +74,8 @@ func checkNext() -> void:
 		lessonComplete()
 		
 func lessonComplete():
-	pass;
+	#Go back to the home
+	GlobalState.sceneManager.backNodeOne()
 
 func isInvalidResources() -> bool:
 	#if no resources

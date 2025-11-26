@@ -15,7 +15,6 @@ order = Array[int]([1, 0, 1, 1, 0, 0, 0, 0, 0, 0])
 [node name="TextBox" parent="." instance=ExtResource("6_bkyd2")]
 
 [node name="QuizBox" parent="." instance=ExtResource("7_h46mh")]
-visible = false
 
 [node name="ResourceError" type="RichTextLabel" parent="."]
 visible = false

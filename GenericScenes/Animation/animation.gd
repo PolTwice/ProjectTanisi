@@ -7,6 +7,8 @@ extends Control
 @onready var random_interval_sound: AudioStreamPlayer = $randomIntervalSound
 @onready var random_interval_sound_2: AudioStreamPlayer = $randomIntervalSound2
 
+const SILENCE = preload("uid://cd41sp1tnxguk")
+
 @onready var index = 0;
 
 var animation: Resource
@@ -23,17 +25,26 @@ var animationArray
 
 func _ready() -> void:
 	animation = get_parent().animationResource
-	updateFromResource()
+	if(animation == null):
+		pass
+		#do something
+	else:
+		updateFromResource()
 	schedule_sound()
 	
 func updateFromResource():
 	backgroundArray = animation.backgrounds
 	animationArray = animation.animations
+	if background_sound == null:
+		background_sound.stream = SILENCE
+		random_interval_sound.stream = SILENCE
+		random_interval_sound_2.stream = SILENCE
 	
 func show_animation(i):
 	if i < backgroundArray.size():
-		background = backgroundArray[i]
-		animated_sprite = animationArray[i]
+		background.texture = backgroundArray[i]
+		animated_sprite.sprite_frames = animationArray[i]
+		animated_sprite.play("default");
 	else:
 		pass
 

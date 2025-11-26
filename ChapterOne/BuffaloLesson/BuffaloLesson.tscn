@@ -2,7 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://c2nyhe52ydet3" path="res://GenericScenes/StoryManager.tscn" id="1_y3iqk"]
 [ext_resource type="Resource" uid="uid://co3gnf51rud56" path="res://ChapterOne/BuffaloLesson/BuffaloTestStory.tres" id="2_u5u2b"]
-[ext_resource type="Resource" uid="uid://c7hxm5e3mtfqw" path="res://ChapterOne/TestQuiz.tres" id="3_ifgvw"]
+[ext_resource type="Resource" uid="uid://c7hxm5e3mtfqw" path="res://Tests/TestQuiz.tres" id="3_ifgvw"]
+
 
 [node name="Node" type="Node"]
 
