@@ -1,0 +1,59 @@
+[gd_scene load_steps=8 format=3 uid="uid://cjrimch84nn5c"]
+
+[ext_resource type="Script" uid="uid://benv5w63bt1rj" path="res://GenericScenes/Animation/animation.gd" id="1_w436n"]
+[ext_resource type="Texture2D" uid="uid://bqxs1aqjc2ym0" path="res://Tests/TestLake.jpeg" id="2_lbjq8"]
+[ext_resource type="Texture2D" uid="uid://jf2lmc8oc04y" path="res://ChapterOne/AnimalSelectScenes/assets/Beaver/beaver1.png" id="3_o1ks2"]
+[ext_resource type="Texture2D" uid="uid://cneps1tdfqw2f" path="res://ChapterOne/AnimalSelectScenes/assets/Beaver/beaver2.png" id="4_u2mnv"]
+[ext_resource type="Texture2D" uid="uid://ejgo44y5ulv6" path="res://ChapterOne/AnimalSelectScenes/assets/Beaver/beaver3.png" id="5_fmyg2"]
+[ext_resource type="Texture2D" uid="uid://c05dxqxmpevdp" path="res://ChapterOne/AnimalSelectScenes/assets/Beaver/beaver4.png" id="6_lkwmm"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jvqao"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_o1ks2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_u2mnv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_fmyg2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_lkwmm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Animation" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_w436n")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_lbjq8")
+
+[node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(960, 400)
+scale = Vector2(0.26, 0.26)
+sprite_frames = SubResource("SpriteFrames_jvqao")
+autoplay = "default"
+
+[node name="BackgroundSound" type="AudioStreamPlayer" parent="."]
+autoplay = true
+
+[node name="randomIntervalSound" type="AudioStreamPlayer" parent="."]
+
+[node name="randomIntervalSound2" type="AudioStreamPlayer" parent="."]

@@ -1,10 +1,11 @@
 [gd_scene load_steps=10 format=3 uid="uid://crvl47hxfi0b6"]
 
-[ext_resource type="PackedScene" uid="uid://b1r624c4ej3ru" path="res://GenericScenes/TextBox/GenericTextBox.tscn" id="1_0ckii"]
+[ext_resource type="PackedScene" uid="uid://b1r624c4ej3ru" path="res://GenericScenes/TextBox/GenericBox.tscn" id="1_0ckii"]
 [ext_resource type="Script" uid="uid://cjvjhl17vvny0" path="res://GenericScenes/TextBox/StoryBox.gd" id="2_oofw8"]
 [ext_resource type="Theme" uid="uid://c7ov3td0u36sq" path="res://GenericScenes/Themes/GenericTextBox.tres" id="3_yasqk"]
 [ext_resource type="Theme" uid="uid://byi38q23oj3ta" path="res://GenericScenes/Themes/ButtonTheme.tres" id="4_bthrx"]
 [ext_resource type="AudioStream" uid="uid://dglwomeveiypy" path="res://Tests/587510__mrseriousss__welcome-to-my-website-3-ver.mp3" id="5_bnykj"]
+
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6aybu"]
 bg_color = Color(0.191509, 0.106161, 0.0477274, 1)

@@ -27,7 +27,7 @@ position = Vector2(1707, 502)
 scale = Vector2(0.1, 0.1)
 lessonName = "The Courageous Bear"
 
-[node name="Animal" parent="." instance=ExtResource("5_lxpig")]
+[node name="EagleSelect" parent="." instance=ExtResource("5_lxpig")]
 position = Vector2(1026, 277)
 scale = Vector2(0.1, 0.1)
 lessonPath = "res://ChapterOne/EagleLesson/EagleLesson.tscn"

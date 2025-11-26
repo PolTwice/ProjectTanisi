@@ -2,7 +2,8 @@
 
 [ext_resource type="AudioStream" uid="uid://bknm06mfgj7qw" path="res://ChapterOne/Sounds/Bear.mp3" id="1_6e8ud"]
 [ext_resource type="AudioStream" uid="uid://s001c0k3axce" path="res://ChapterOne/Sounds/Wolf.mp3" id="2_b4nua"]
-[ext_resource type="Script" uid="uid://hfxsmkkfuyqk" path="res://GenericScenes/TextBox/DialogueBox.gd" id="3_bxpqx"]
+[ext_resource type="Script" uid="uid://hfxsmkkfuyqk" path="res://GenericScenes/TextBox/StoryBoxResource.gd" id="3_bxpqx"]
+
 
 [resource]
 script = ExtResource("3_bxpqx")

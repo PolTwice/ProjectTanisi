@@ -43,8 +43,6 @@ func updateFromResource():
 	creeAudios = dialogueBox.creeAudios
 	englishAudios= dialogueBox.englishAudios
 	
-
-	
 	cree_narration.connect("finished",Callable(self, "_on_cree_audio_finished"))
 	english_narration.connect("finished",Callable(self,"_on_english_audio_finished"))
 	

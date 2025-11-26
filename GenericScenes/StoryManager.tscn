@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://c2nyhe52ydet3"]
+[gd_scene load_steps=5 format=3 uid="uid://c2nyhe52ydet3"]
 
 [ext_resource type="Script" uid="uid://bb4paw4ttc5bs" path="res://GenericScenes/lessonManager.gd" id="1_o1adm"]
+[ext_resource type="PackedScene" uid="uid://cjrimch84nn5c" path="res://GenericScenes/Animation/animation.tscn" id="2_fejsu"]
 [ext_resource type="PackedScene" uid="uid://crvl47hxfi0b6" path="res://GenericScenes/TextBox/StoryTextBox.tscn" id="6_bkyd2"]
 [ext_resource type="PackedScene" uid="uid://ctpkbwihuq3y2" path="res://GenericScenes/QuizBox/QuizBox.tscn" id="7_h46mh"]
 
@@ -9,9 +10,24 @@ script = ExtResource("1_o1adm")
 quizResourceArray = Array[Resource]([null, null, null, null])
 order = Array[int]([1, 0, 1, 1, 0, 0, 0, 0, 0, 0])
 
+[node name="Animation" parent="." instance=ExtResource("2_fejsu")]
+
 [node name="TextBox" parent="." instance=ExtResource("6_bkyd2")]
 
 [node name="QuizBox" parent="." instance=ExtResource("7_h46mh")]
+visible = false
+
+[node name="ResourceError" type="RichTextLabel" parent="."]
+visible = false
+offset_right = 1920.0
+offset_bottom = 1077.0
+size_flags_horizontal = 6
+size_flags_vertical = 6
+theme_override_font_sizes/normal_font_size = 200
+text = "ERROR IN RESOURCE
+"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="storyBackSignal" from="TextBox" to="." method="_on_text_box_story_back_signal"]
 [connection signal="storyNextSignal" from="TextBox" to="." method="_on_text_box_story_next_signal"]
