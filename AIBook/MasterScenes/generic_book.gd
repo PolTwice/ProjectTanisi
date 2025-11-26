@@ -26,7 +26,9 @@ var bookContents
 #@export var englishLines: Array[String] = []
 #@export var pictures: Array[Texture] = []
 
+#index of the story
 var i = 0
+#maximum index
 var max_index 
 
 var pageOnePicture: Array[Texture] = []
@@ -95,6 +97,7 @@ func updateFromResource():
 	max_index = creeLinesOne.size() - 1
 
 func show_line(idx: int):
+	#Check error
 	if bookContents == null:
 		print("No resource loaded")
 		return
@@ -104,6 +107,7 @@ func show_line(idx: int):
 	back.disabled = (index == 0)
 	#next.disabled = (index == max_index)
 
+	#Set text
 	page_one_cree.text = creeLinesOne[index]
 	page_one_english.text = englishLinesOne[index]
 	
