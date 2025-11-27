@@ -4,6 +4,6 @@
 
 [resource]
 script = ExtResource("6_cf6i1")
-creeLines = Array[String](["Cree one", "Cree Two", "Cree Three", "Cree Four"])
+creeLines = Array[String](["Cree one", "Cree Two", "Cree Three", "Cree Four", "Cree Five"])
 englishLines = Array[String](["English One", "English Two", "English Three", "English Four", "English Five"])
 metadata/_custom_type_script = "uid://jrguaax8ic12"

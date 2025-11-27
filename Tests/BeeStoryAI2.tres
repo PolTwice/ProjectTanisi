@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="bookContentResource" load_steps=1 format=3 uid="uid://i1wpfsvoy3gm"]
+
+[ext_resource type="Script" uid="uid://4a6d6bd7ede5458284093cbf9e4f5444" path="res://AIBook/MasterScenes/BookContents.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+creeLines = Array[String](["Buzzy kîsikâw êkosi pîsimwa kîsikâk nîhithâk.", "Buzzy wîhkâk pîsimwa kîsikâk êkosi, 'Nîso kîsikâk kîkway!'", "Nîkâw, Buzzy wîhkâk nîhithâk nîhkwâk nîhithâk kîsikâk.", "Buzzy pîkiskwêw kîsikâk êkosi nîhkwâk nîhithâk kîsikâk!", "Buzzy pîkiskwêw kîsikâk, 'Kîkway nîhithâk kîsikâk, kîkway pîsimwa!'"])
+englishLines = Array[String](["Buzzy the bee woke up in a bright flower garden.", "Buzzy saw one big flower and thought, 'One is fun!'.", "Next, Buzzy found two busy ants marching by.", "Buzzy flew high and spotted three buzzing friends!", "Buzzy giggled and said, 'Counting is sweet, just like flowers!'"])
+metadata/_custom_type_script = "uid://4a6d6bd7ede5458284093cbf9e4f5444"

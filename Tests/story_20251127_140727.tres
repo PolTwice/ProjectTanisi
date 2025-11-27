@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="bookContentResource" load_steps=1 format=3 uid="uid://b7jxbla8cu5ac"]
+
+[ext_resource type="Script" uid="uid://e77b30b98bfe4de8b8b14d0e99e811e3" path="res://AIBook/MasterScenes/BookContents.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+creeLines = Array[String](["Lila, Leo, na Lenny wîhkâkâw êkosi êkâwîhkâkâw. Nîkâwîkâw êkosi kîsikâw!", "Lila pîkiskwêw pîsimwêw kîsikâw. Leo wîhkâkâw kîsikâw. Lenny kîsikâw kîsikâw pîkiskwêw.", "Wîhkâkâw kîsikâw, wîhkâkâw kîsikâw kîsikâw. Nîkâwîkâw êkosi wîhkâkâw!", "Êkosi wîhkâkâw, wîhkâkâw kîsikâw. Lila wîhkâkâw, Leo wîhkâkâw, na Lenny wîhkâkâw kîsikâw.", "Êkosi wîhkâkâw, wîhkâkâw kîsikâw, wîhkâkâw kîsikâw. Wîhkâkâw êkosi kîsikâw, na wîhkâkâw êkosi kîsikâw!"])
+englishLines = Array[String](["Lila, Leo, and Lenny wake up in their sunny lizard home. It's a big day for work!", "Lila packs a tiny backpack with snacks. Leo checks the weather. Lenny brings his art supplies.", "They hop on their little bikes, zooming to the lizard office. It's a fun ride!", "At the office, they work together. Lila writes, Leo organizes, and Lenny draws colorful pictures.", "After a busy day, they ride home, sharing stories. Work was fun, and they can't wait for tomorrow!"])
+metadata/_custom_type_script = "uid://e77b30b98bfe4de8b8b14d0e99e811e3"
