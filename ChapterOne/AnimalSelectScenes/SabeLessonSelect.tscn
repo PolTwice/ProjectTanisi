@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=3 uid="uid://cm8ceejgg5md0"]
+
+[ext_resource type="PackedScene" uid="uid://drq53txkkdr8y" path="res://GenericScenes/genericAnimal.tscn" id="1_bf1xg"]
+[ext_resource type="Texture2D" uid="uid://dfs1pwrak40ve" path="res://ChapterOne/AnimalSelectScenes/assets/Sabe/sabe.png" id="2_gsm7t"]
+[ext_resource type="Texture2D" uid="uid://dma43uo8vhgsk" path="res://ChapterOne/AnimalSelectScenes/assets/SabeTwo/sabe2.png" id="3_txemj"]
+[ext_resource type="Texture2D" uid="uid://rh8pjf42xt1p" path="res://ChapterOne/AnimalSelectScenes/assets/SabeTwo/sabe.png" id="4_p6ya0"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cndl6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_gsm7t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_txemj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_p6ya0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_txemj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_p6ya0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_txemj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_p6ya0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="SabeSelect" instance=ExtResource("1_bf1xg")]
+lessonPath = "res://ChapterOne/SabeLesson/SabeLesson.tscn"
+lessonName = "The Sabe's Honesty"
+
+[node name="AnimalSprite" parent="." index="0"]
+sprite_frames = SubResource("SpriteFrames_cndl6")
+frame = 1
+frame_progress = 0.7292753

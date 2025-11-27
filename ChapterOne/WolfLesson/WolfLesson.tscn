@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://bwrwtq5enduqq"]
+
+[ext_resource type="PackedScene" uid="uid://c2nyhe52ydet3" path="res://GenericScenes/StoryManager.tscn" id="1_mddnh"]
+
+[node name="StoryManager" instance=ExtResource("1_mddnh")]

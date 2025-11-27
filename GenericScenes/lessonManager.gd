@@ -30,8 +30,11 @@ enum ContentType { QUIZ, STORY }
 func _ready() -> void:
 	#if resource is invalid, hide everything and show an error
 	if(isInvalidResources()):
-		self.visible= false;
-		resource_error.visible = true;
+		text_box.visible = false
+		quiz_box.visible = false
+		animation.visible = false
+		resource_error.visible = true
+		return
 	#else check next
 	else:
 		checkNext()
@@ -80,24 +83,31 @@ func lessonComplete():
 func isInvalidResources() -> bool:
 	#if no resources
 	if(order == null || quizResourceArray == null || storyResource ==null || animationResource == null):
+		resource_error.text += "Missing a resource"
 		return true
 	#english and cree lines are not the same size
 	if(storyResource.creeLines.size() != storyResource.englishLines.size()):
+		resource_error.text += "Cree lines length != english Lines length"
 		return true
 	#english and cree audio are not the same size
 	if(storyResource.creeAudios.size() != storyResource.englishAudios.size()):
+		resource_error.text += "Cree audio length != english audio length"
 		return true
 	#audios are not the same as the lines
 	if(storyResource.creeLines.size() != storyResource.creeAudios.size()):
+		resource_error.text += "Audio lenght != line length"
 		return true
 	#Num quizzes + num lines is not equal to order of all lines and quizzes
 	if(order.size() != (quizResourceArray.size()+storyResource.creeLines.size())):
+		resource_error.text += "order != quiz+story length"
 		return true
 	#number of backgrounds is not equal to animations
 	if(animationResource.backgrounds.size() != animationResource.animations.size()):
+		resource_error.text += "background size != animation size"
 		return true
 	#number of animations is not equal to amount of lines
 	if(animationResource.backgrounds.size() != storyResource.creeLines.size()):
+		resource_error.text += "animations does not equal story size"
 		return true
 	#else looks good and we can work with the resources we have
 	return false

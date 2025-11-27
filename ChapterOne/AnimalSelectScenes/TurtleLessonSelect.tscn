@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://d2kfxr5p3wcne"]
+
+[ext_resource type="PackedScene" uid="uid://drq53txkkdr8y" path="res://GenericScenes/genericAnimal.tscn" id="1_bbgl1"]
+[ext_resource type="Texture2D" uid="uid://s8y3pnnvyxfs" path="res://ChapterOne/AnimalSelectScenes/assets/Turtle/Turtle2.png" id="2_sds8f"]
+[ext_resource type="Texture2D" uid="uid://djvvm7knhro5b" path="res://ChapterOne/AnimalSelectScenes/assets/Turtle/Turtle.png" id="3_u53fl"]
+[ext_resource type="Texture2D" uid="uid://1wg5ul1uc0cg" path="res://ChapterOne/AnimalSelectScenes/assets/Turtle/Turtle1.png" id="4_kl6r5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7yb15"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_sds8f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_u53fl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_kl6r5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_sds8f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_sds8f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_sds8f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_sds8f")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Animal" instance=ExtResource("1_bbgl1")]
+lessonName = "Turtle Tells the Truth"
+
+[node name="AnimalSprite" parent="." index="0"]
+sprite_frames = SubResource("SpriteFrames_7yb15")
