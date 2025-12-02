@@ -79,7 +79,7 @@ size_flags_vertical = 4
 theme = ExtResource("3_yrh4r")
 theme_override_styles/panel = SubResource("StyleBoxFlat_lbm0y")
 
-[node name="Label" type="Label" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/QuizContainer/TextboxDesign" index="0"]
+[node name="Question" type="Label" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/QuizContainer/TextboxDesign" index="0"]
 layout_mode = 2
 size_flags_vertical = 1
 theme_override_font_sizes/font_size = 40

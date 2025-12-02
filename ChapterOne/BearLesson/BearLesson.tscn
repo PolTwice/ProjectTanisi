@@ -1,15 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://c1upw3f0qecc5"]
+[gd_scene load_steps=6 format=3 uid="uid://c1upw3f0qecc5"]
 
 [ext_resource type="PackedScene" uid="uid://c2nyhe52ydet3" path="res://GenericScenes/StoryManager.tscn" id="1_0qtf8"]
 [ext_resource type="Resource" uid="uid://c6ukqpkp0ogsj" path="res://ChapterOne/BearLesson/Bear Story.tres" id="2_b786v"]
-[ext_resource type="Resource" uid="uid://c7hxm5e3mtfqw" path="res://Tests/TestQuiz.tres" id="3_mbisl"]
+[ext_resource type="Resource" uid="uid://c7hxm5e3mtfqw" path="res://ChapterOne/BearLesson/bearQuiz1.tres" id="3_mbisl"]
 [ext_resource type="Resource" uid="uid://ddy5isyiun7lu" path="res://Tests/testanimation.tres" id="4_3v5wr"]
+[ext_resource type="Resource" uid="uid://nvuh2or7mudx" path="res://ChapterOne/BearLesson/bearQuiz2.tres" id="4_7lgg7"]
 
 [node name="Node" type="Node"]
 
 [node name="StoryManager" parent="." instance=ExtResource("1_0qtf8")]
 lessonName = "The Courageous Bear"
 storyResource = ExtResource("2_b786v")
-quizResourceArray = Array[Resource]([ExtResource("3_mbisl"), ExtResource("3_mbisl")])
+quizResourceArray = Array[Resource]([ExtResource("3_mbisl"), ExtResource("4_7lgg7")])
 animationResource = ExtResource("4_3v5wr")
 order = Array[int]([1, 0, 1, 1, 1, 1, 1, 1, 0])
