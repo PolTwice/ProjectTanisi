@@ -1,14 +1,20 @@
-[gd_resource type="Resource" script_class="DialogueBox" load_steps=4 format=3 uid="uid://c6ukqpkp0ogsj"]
+[gd_resource type="Resource" script_class="DialogueBox" load_steps=10 format=3 uid="uid://c6ukqpkp0ogsj"]
 
 [ext_resource type="Script" uid="uid://hfxsmkkfuyqk" path="res://GenericScenes/TextBox/StoryBoxResource.gd" id="1_dhws5"]
 [ext_resource type="AudioStream" uid="uid://bknm06mfgj7qw" path="res://ChapterOne/Sounds/Bear.mp3" id="1_i8b73"]
-[ext_resource type="AudioStream" uid="uid://s001c0k3axce" path="res://ChapterOne/Sounds/Wolf.mp3" id="2_42kch"]
+[ext_resource type="AudioStream" uid="uid://dym31g3t3uynk" path="res://ChapterOne/BearLesson/assets/audio/Narration/Bear1.wav" id="2_kpu13"]
+[ext_resource type="AudioStream" uid="uid://bblmgbrnu2nng" path="res://ChapterOne/BearLesson/assets/audio/Narration/bear2.wav" id="3_4wc06"]
+[ext_resource type="AudioStream" uid="uid://clg0mpvxe63py" path="res://ChapterOne/BearLesson/assets/audio/Narration/bear3.wav" id="4_gckkd"]
+[ext_resource type="AudioStream" uid="uid://dntw2ywtyxll2" path="res://ChapterOne/BearLesson/assets/audio/Narration/bear4.wav" id="5_qj4tm"]
+[ext_resource type="AudioStream" uid="uid://lpqsxwmspeci" path="res://ChapterOne/BearLesson/assets/audio/Narration/bear5.wav" id="6_uu6v2"]
+[ext_resource type="AudioStream" uid="uid://b54i5un6ympp1" path="res://ChapterOne/BearLesson/assets/audio/Narration/bear6.wav" id="7_x3qf6"]
+[ext_resource type="AudioStream" uid="uid://o0p4loxbrf8t" path="res://ChapterOne/BearLesson/assets/audio/Narration/bear7.wav" id="8_tr043"]
 
 [resource]
 resource_name = "Bear Story"
 script = ExtResource("1_dhws5")
 creeLines = Array[String](["Cree Placeholder", "Cree Placeholder", "Cree Placeholder", "Cree Placeholder", "Cree Placeholder", "Cree Placeholder", "Cree Placeholder"])
-englishLines = Array[String](["Bear liked quiet places. Loud things made Bear scared. ", "One night, the wind roared through the trees. ", "Bear wanted to hide, but took a deep breath.", "Bear stood tall and gave a big roar back. ", "The sound made Bear feel strong.", "“I was scared, but I tried,” thought Bear. ", "Bear learned courage. "])
+englishLines = Array[String](["Bear liked quiet places. Loud things made Bear scared. ", "One night, the wind roared through the trees. ", "Bear wanted to hide, but they took a deep breath.", "Bear stood tall and gave a big roar back. ", "The sound made Bear feel strong.", "“I was scared, but I tried,” thought Bear. ", "Bear learned courage. "])
 creeAudios = Array[AudioStream]([ExtResource("1_i8b73"), ExtResource("1_i8b73"), ExtResource("1_i8b73"), ExtResource("1_i8b73"), ExtResource("1_i8b73"), ExtResource("1_i8b73"), ExtResource("1_i8b73")])
-englishAudios = Array[AudioStream]([ExtResource("2_42kch"), ExtResource("2_42kch"), ExtResource("2_42kch"), ExtResource("2_42kch"), ExtResource("2_42kch"), ExtResource("2_42kch"), ExtResource("2_42kch")])
+englishAudios = Array[AudioStream]([ExtResource("2_kpu13"), ExtResource("3_4wc06"), ExtResource("4_gckkd"), ExtResource("5_qj4tm"), ExtResource("6_uu6v2"), ExtResource("7_x3qf6"), ExtResource("8_tr043")])
 metadata/_custom_type_script = "uid://hfxsmkkfuyqk"

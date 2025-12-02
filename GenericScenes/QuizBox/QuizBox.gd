@@ -12,9 +12,11 @@ extends Control
 @onready var listen_again: Button = $MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer/MarginContainer3/ListenAgain
 @onready var next: Button = $MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer/MarginContainer2/Next
 
+@onready var question: Label = $MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/QuizContainer/TextboxDesign/Question
 
 #get the resource from the parent
 var quizResourceChild 
+	#@var question: String
 	#var choices = [0,0,0,0]
 	#var correctIndex = -1
 	#var picture: Texture
@@ -27,10 +29,16 @@ var correct_option = null
 func updateFromResource():
 	#Get parent resource. Update from it.
 	quizResourceChild = get_parent().quizResourceParent
+	question.text = quizResourceChild.question
 	button_a.text = quizResourceChild.choices[0]
 	button_b.text = quizResourceChild.choices[1]
-	button_c.text = quizResourceChild.choices[2]
-	button_d.text = quizResourceChild.choices[3]
+	
+	if quizResourceChild.choices.size() >2:
+		button_c.text = quizResourceChild.choices[2]
+		button_d.text = quizResourceChild.choices[3]
+	else:
+		button_cd_box.visible=false;
+		quizResourceChild.correctIndex = 0
 	
 	#if there is no picture, hide the picture, else change the texture
 	if quizResourceChild.picture == null:
@@ -39,9 +47,7 @@ func updateFromResource():
 		picture.texture = quizResourceChild.picture
 	
 	#if the second and third choice are not entered, then hide the box	
-	if quizResourceChild.choices[2] == "0" && quizResourceChild.choices[3] == "0":
-		button_cd_box.visible=false;
-		quizResourceChild.correctIndex = 0
+
 		
 		
 func _on_button_a_pressed() -> void:

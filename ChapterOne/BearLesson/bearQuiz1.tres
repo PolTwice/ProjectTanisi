@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="quizResource" load_steps=2 format=3 uid="uid://c7hxm5e3mtfqw"]
+
+[ext_resource type="Script" uid="uid://dux5iq8x4urte" path="res://GenericScenes/QuizBox/quizResource.gd" id="2_rd0oh"]
+
+[resource]
+script = ExtResource("2_rd0oh")
+question = "Bear is ____ in cree"
+choices = ["True", "False"]
+correctIndex = 2
+metadata/_custom_type_script = "uid://dux5iq8x4urte"

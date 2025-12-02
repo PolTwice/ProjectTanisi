@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="quizResource" load_steps=2 format=3 uid="uid://nvuh2or7mudx"]
+
+[ext_resource type="Script" uid="uid://dux5iq8x4urte" path="res://GenericScenes/QuizBox/quizResource.gd" id="1_jmaih"]
+
+[resource]
+script = ExtResource("1_jmaih")
+question = "What is Tree in Cree?"
+choices = ["Wrong", "Wrong", "Wrong", "Right"]
+correctIndex = 3
+metadata/_custom_type_script = "uid://dux5iq8x4urte"
