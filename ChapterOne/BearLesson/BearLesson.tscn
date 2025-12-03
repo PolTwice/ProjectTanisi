@@ -11,6 +11,6 @@
 [node name="StoryManager" parent="." instance=ExtResource("1_0qtf8")]
 lessonName = "The Courageous Bear"
 storyResource = ExtResource("2_b786v")
-quizResourceArray = Array[Resource]([ExtResource("4_7lgg7"), ExtResource("3_mbisl")])
+quizResourceArray = Array[Resource]([ExtResource("3_mbisl"), ExtResource("4_7lgg7")])
 animationResource = ExtResource("4_3v5wr")
 order = Array[int]([1, 0, 1, 1, 1, 1, 1, 1, 0])
