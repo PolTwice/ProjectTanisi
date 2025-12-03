@@ -1,23 +1,28 @@
-[gd_resource type="Resource" script_class="animation_resource" load_steps=12 format=3 uid="uid://ddy5isyiun7lu"]
+[gd_resource type="Resource" script_class="animation_resource" load_steps=20 format=3 uid="uid://ddy5isyiun7lu"]
 
-[ext_resource type="Texture2D" uid="uid://cb8bgyndqk7gf" path="res://ChapterOne/AnimalSelectScenes/assets/Bear/bear_1.png" id="1_u07oa"]
-[ext_resource type="Texture2D" uid="uid://dvxnwbe13jlf1" path="res://ChapterOne/AnimalSelectScenes/assets/Bear/bear_2.png" id="2_ak1bn"]
-[ext_resource type="Texture2D" uid="uid://jf2lmc8oc04y" path="res://ChapterOne/AnimalSelectScenes/assets/Beaver/beaver1.png" id="3_nh3f2"]
-[ext_resource type="Texture2D" uid="uid://cneps1tdfqw2f" path="res://ChapterOne/AnimalSelectScenes/assets/Beaver/beaver2.png" id="4_pg4te"]
-[ext_resource type="Texture2D" uid="uid://ejgo44y5ulv6" path="res://ChapterOne/AnimalSelectScenes/assets/Beaver/beaver3.png" id="5_8mg24"]
-[ext_resource type="Texture2D" uid="uid://c05dxqxmpevdp" path="res://ChapterOne/AnimalSelectScenes/assets/Beaver/beaver4.png" id="6_hsc4b"]
-[ext_resource type="Texture2D" uid="uid://bqxs1aqjc2ym0" path="res://Tests/TestLake.jpeg" id="7_xj28g"]
-[ext_resource type="Texture2D" uid="uid://bj3i0b0se30n0" path="res://Tests/1-94eaf38c.jpg" id="8_j2cr7"]
+[ext_resource type="Texture2D" uid="uid://0oqcvwbbatkp" path="res://ChapterOne/BearLesson/assets/visuals/Animations/bearOne1.png" id="1_c4q0d"]
+[ext_resource type="Texture2D" uid="uid://dwkhlcckwspk8" path="res://ChapterOne/BearLesson/assets/visuals/Animations/bearOne2.png" id="2_u07oa"]
+[ext_resource type="Texture2D" uid="uid://qc3wn54uqy56" path="res://ChapterOne/BearLesson/assets/visuals/Animations/bearTwo1.png" id="3_ak1bn"]
+[ext_resource type="Texture2D" uid="uid://b8mrf367ia1i4" path="res://ChapterOne/BearLesson/assets/visuals/Animations/bearTwo2.png" id="4_nh3f2"]
+[ext_resource type="Texture2D" uid="uid://bf53rjojkenl7" path="res://ChapterOne/BearLesson/assets/visuals/Animations/bearTwo3.png" id="5_pg4te"]
+[ext_resource type="Texture2D" uid="uid://bsdm6ijx4vod3" path="res://ChapterOne/BearLesson/assets/visuals/Animations/bearThree1.png" id="6_ak1bn"]
+[ext_resource type="Texture2D" uid="uid://si521w2at0d8" path="res://ChapterOne/BearLesson/assets/visuals/Animations/bearThree2.png" id="7_nh3f2"]
+[ext_resource type="Texture2D" uid="uid://cljamduldes7g" path="res://ChapterOne/BearLesson/assets/visuals/Backgrounds/BG.png" id="8_ak1bn"]
+[ext_resource type="Texture2D" uid="uid://cnjg3ct5pxf4m" path="res://ChapterOne/BearLesson/assets/visuals/Animations/bearFour2.png" id="8_hsc4b"]
 [ext_resource type="Script" uid="uid://6xhkksjm7u2i" path="res://GenericScenes/Animation/animationResource.gd" id="9_afs7u"]
+[ext_resource type="Texture2D" uid="uid://xt8faofybc6l" path="res://ChapterOne/BearLesson/assets/visuals/Backgrounds/darkBG.png" id="9_nh3f2"]
+[ext_resource type="Texture2D" uid="uid://cct1nn35duv7p" path="res://ChapterOne/BearLesson/assets/visuals/Animations/bearFour1.png" id="9_xj28g"]
+[ext_resource type="Texture2D" uid="uid://db0xjyvo10xud" path="res://ChapterOne/BearLesson/assets/visuals/Animations/BearFive1.png" id="10_j2cr7"]
+[ext_resource type="Texture2D" uid="uid://f3bks4vu6jh5" path="res://ChapterOne/BearLesson/assets/visuals/Animations/BearFive2.png" id="11_afs7u"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qh17n"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_u07oa")
+"texture": ExtResource("1_c4q0d")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_ak1bn")
+"texture": ExtResource("2_u07oa")
 }],
 "loop": true,
 "name": &"default",
@@ -33,16 +38,145 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_nh3f2")
+"texture": ExtResource("3_ak1bn")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_pg4te")
+"texture": ExtResource("3_ak1bn")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_8mg24")
+"texture": ExtResource("3_ak1bn")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_hsc4b")
+"texture": ExtResource("4_nh3f2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_nh3f2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_nh3f2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_nh3f2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_nh3f2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_pg4te")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_pg4te")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_pg4te")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_pg4te")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_pg4te")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pg4te"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_ak1bn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ak1bn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_nh3f2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_nh3f2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_nh3f2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_nh3f2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_nh3f2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0mxe5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_hsc4b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_hsc4b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_hsc4b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_hsc4b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_xj28g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_xj28g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_xj28g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_xj28g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_xj28g")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4q7wu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_j2cr7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_j2cr7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_j2cr7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_j2cr7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_j2cr7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_afs7u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_afs7u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_afs7u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_afs7u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_afs7u")
 }],
 "loop": true,
 "name": &"default",
@@ -51,6 +185,6 @@ animations = [{
 
 [resource]
 script = ExtResource("9_afs7u")
-backgrounds = Array[Texture]([ExtResource("7_xj28g"), ExtResource("8_j2cr7"), ExtResource("7_xj28g"), ExtResource("8_j2cr7"), ExtResource("7_xj28g"), ExtResource("8_j2cr7"), ExtResource("7_xj28g")])
-animations = Array[SpriteFrames]([SubResource("SpriteFrames_qh17n"), SubResource("SpriteFrames_dmp52"), SubResource("SpriteFrames_qh17n"), SubResource("SpriteFrames_dmp52"), SubResource("SpriteFrames_qh17n"), SubResource("SpriteFrames_dmp52"), SubResource("SpriteFrames_qh17n")])
+backgrounds = Array[Texture]([ExtResource("8_ak1bn"), ExtResource("9_nh3f2"), ExtResource("9_nh3f2"), ExtResource("9_nh3f2"), ExtResource("9_nh3f2"), ExtResource("9_nh3f2"), ExtResource("8_ak1bn")])
+animations = Array[SpriteFrames]([SubResource("SpriteFrames_qh17n"), SubResource("SpriteFrames_dmp52"), SubResource("SpriteFrames_pg4te"), SubResource("SpriteFrames_0mxe5"), SubResource("SpriteFrames_4q7wu"), SubResource("SpriteFrames_4q7wu"), SubResource("SpriteFrames_qh17n")])
 metadata/_custom_type_script = "uid://6xhkksjm7u2i"

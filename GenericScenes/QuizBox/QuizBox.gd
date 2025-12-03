@@ -38,7 +38,6 @@ func updateFromResource():
 		button_d.text = quizResourceChild.choices[3]
 	else:
 		button_cd_box.visible=false;
-		quizResourceChild.correctIndex = 0
 	
 	#if there is no picture, hide the picture, else change the texture
 	if quizResourceChild.picture == null:
