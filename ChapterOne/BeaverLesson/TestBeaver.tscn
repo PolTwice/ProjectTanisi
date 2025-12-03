@@ -1,8 +1,9 @@
 [gd_scene load_steps=4 format=3 uid="uid://fpl2bukw7l74"]
 
-[ext_resource type="Texture2D" uid="uid://cnieguj6iu6tx" path="res://ChapterOne/BeaverLesson/assets/Beaver.jpg" id="1_8kmpo"]
-[ext_resource type="PackedScene" uid="uid://crvl47hxfi0b6" path="res://GenericScenes/TextBox/StoryTextBox.tscn" id="2_f3lfy"]
-[ext_resource type="Resource" uid="uid://dym333jxpdmx6" path="res://testResource.tres" id="4_al5pv"]
+[ext_resource type="Texture2D" path="res://ChapterOne/BeaverLesson/assets/Beaver.jpg" id="1_8kmpo"]
+[ext_resource type="PackedScene" uid="uid://crvl47hxfi0b6" path="res://GenericScenes/LessonModules/StoryModule/storyModule.tscn" id="2_f3lfy"]
+[ext_resource type="Resource" path="res://testResource.tres" id="4_al5pv"]
+
 
 [node name="TextureRect" type="TextureRect"]
 offset_right = 1929.0

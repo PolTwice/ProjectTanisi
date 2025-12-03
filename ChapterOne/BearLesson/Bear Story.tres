@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="DialogueBox" load_steps=16 format=3 uid="uid://c6ukqpkp0ogsj"]
 
-[ext_resource type="Script" uid="uid://hfxsmkkfuyqk" path="res://GenericScenes/TextBox/StoryBoxResource.gd" id="1_dhws5"]
+[ext_resource type="Script" uid="uid://hfxsmkkfuyqk" path="res://GenericScenes/LessonModules/StoryModule/storyModuleResource.gd" id="1_dhws5"]
 [ext_resource type="AudioStream" uid="uid://fxfy7jhiov8y" path="res://ChapterOne/BearLesson/assets/audio/Narration/cree/creeBear2.wav" id="1_tr043"]
 [ext_resource type="AudioStream" uid="uid://cleqr6s0ke8mh" path="res://ChapterOne/BearLesson/assets/audio/Narration/cree/creeBear3.wav" id="2_2laq5"]
 [ext_resource type="AudioStream" uid="uid://3mnxgamwo654" path="res://ChapterOne/BearLesson/assets/audio/Narration/cree/creeBear4.wav" id="3_leuet"]

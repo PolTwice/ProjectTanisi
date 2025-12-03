@@ -1,11 +1,10 @@
 [gd_scene load_steps=10 format=3 uid="uid://crvl47hxfi0b6"]
 
-[ext_resource type="PackedScene" uid="uid://b1r624c4ej3ru" path="res://GenericScenes/TextBox/GenericBox.tscn" id="1_0ckii"]
-[ext_resource type="Script" uid="uid://cjvjhl17vvny0" path="res://GenericScenes/TextBox/StoryBox.gd" id="2_oofw8"]
-[ext_resource type="Theme" uid="uid://c7ov3td0u36sq" path="res://GenericScenes/Themes/GenericTextBox.tres" id="3_yasqk"]
-[ext_resource type="Theme" uid="uid://byi38q23oj3ta" path="res://GenericScenes/Themes/ButtonTheme.tres" id="4_bthrx"]
-[ext_resource type="AudioStream" uid="uid://dglwomeveiypy" path="res://Tests/587510__mrseriousss__welcome-to-my-website-3-ver.mp3" id="5_bnykj"]
-
+[ext_resource type="PackedScene" uid="uid://b1r624c4ej3ru" path="res://GenericScenes/TextBox/GenericBox.tscn" id="1_5v6xm"]
+[ext_resource type="Script" uid="uid://cjvjhl17vvny0" path="res://GenericScenes/TextBox/StoryBox.gd" id="2_bd4lp"]
+[ext_resource type="Theme" uid="uid://c7ov3td0u36sq" path="res://GenericScenes/Themes/GenericTextBox.tres" id="3_3gsnd"]
+[ext_resource type="Theme" uid="uid://byi38q23oj3ta" path="res://GenericScenes/Themes/ButtonTheme.tres" id="4_neiqt"]
+[ext_resource type="AudioStream" uid="uid://dglwomeveiypy" path="res://Tests/587510__mrseriousss__welcome-to-my-website-3-ver.mp3" id="5_sqv37"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6aybu"]
 bg_color = Color(0.191509, 0.106161, 0.0477274, 1)
@@ -55,8 +54,8 @@ corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
-[node name="TextBox" instance=ExtResource("1_0ckii")]
-script = ExtResource("2_oofw8")
+[node name="TextBox" instance=ExtResource("1_5v6xm")]
+script = ExtResource("2_bd4lp")
 
 [node name="TextboxMargin" type="MarginContainer" parent="MarginContainer/BoxDesign" index="0"]
 layout_mode = 2
@@ -71,7 +70,7 @@ layout_mode = 2
 [node name="TextboxDesign" type="PanelContainer" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer" index="0"]
 layout_mode = 2
 size_flags_vertical = 3
-theme = ExtResource("3_yasqk")
+theme = ExtResource("3_3gsnd")
 theme_override_styles/panel = SubResource("StyleBoxFlat_6aybu")
 
 [node name="TextboxContainer" type="VBoxContainer" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/TextboxDesign" index="0"]
@@ -87,7 +86,7 @@ theme_override_constants/margin_bottom = 20
 
 [node name="Cree" type="RichTextLabel" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/TextboxDesign/TextboxContainer/CreeContainer" index="0"]
 layout_mode = 2
-theme = ExtResource("3_yasqk")
+theme = ExtResource("3_3gsnd")
 theme_override_font_sizes/normal_font_size = 30
 text = "example cree"
 horizontal_alignment = 1
@@ -122,7 +121,7 @@ theme_override_constants/margin_right = 20
 
 [node name="Back" type="Button" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer/BackMarginContainer" index="0"]
 layout_mode = 2
-theme = ExtResource("4_bthrx")
+theme = ExtResource("4_neiqt")
 theme_override_styles/normal = SubResource("StyleBoxFlat_rf27j")
 text = "LAST"
 
@@ -136,7 +135,7 @@ theme_override_constants/margin_right = 20
 
 [node name="ListenAgain" type="Button" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer/ListenAgainMarginContainer" index="0"]
 layout_mode = 2
-theme = ExtResource("4_bthrx")
+theme = ExtResource("4_neiqt")
 theme_override_styles/normal = SubResource("StyleBoxFlat_ad1nw")
 text = "REPLAY"
 
@@ -149,12 +148,12 @@ theme_override_constants/margin_right = 20
 
 [node name="Continue" type="Button" parent="MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer/ContinueMarginContainer" index="0"]
 layout_mode = 2
-theme = ExtResource("4_bthrx")
+theme = ExtResource("4_neiqt")
 theme_override_styles/normal = SubResource("StyleBoxFlat_tcl28")
 text = "NEXT"
 
 [node name="CreeNarration" type="AudioStreamPlayer" parent="." index="1"]
-stream = ExtResource("5_bnykj")
+stream = ExtResource("5_sqv37")
 
 [node name="EnglishNarration" type="AudioStreamPlayer" parent="." index="2"]
 

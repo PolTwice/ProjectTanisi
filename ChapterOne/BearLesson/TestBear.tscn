@@ -1,9 +1,10 @@
 [gd_scene load_steps=5 format=3 uid="uid://bpuj6yjgclw20"]
 
-[ext_resource type="Texture2D" uid="uid://crj8avlberf7u" path="res://ChapterOne/BearLesson/assets/Bear.jpg" id="1_jtms4"]
+[ext_resource type="Texture2D" path="res://ChapterOne/BearLesson/assets/Bear.jpg" id="1_jtms4"]
 [ext_resource type="PackedScene" uid="uid://cfdga74wde3ce" path="res://GenericScenes/NavigationBar/MainUI.tscn" id="2_ll7nf"]
-[ext_resource type="Resource" uid="uid://dkfuic25ljilu" path="res://ChapterOne/BearLesson/BearUI.tres" id="3_i28xv"]
-[ext_resource type="PackedScene" uid="uid://crvl47hxfi0b6" path="res://GenericScenes/TextBox/StoryTextBox.tscn" id="4_dct8d"]
+[ext_resource type="Resource" path="res://ChapterOne/BearLesson/BearUI.tres" id="3_i28xv"]
+[ext_resource type="PackedScene" uid="uid://crvl47hxfi0b6" path="res://GenericScenes/LessonModules/StoryModule/storyModule.tscn" id="4_dct8d"]
+
 
 [node name="TextureRect" type="TextureRect"]
 offset_right = 1924.0
