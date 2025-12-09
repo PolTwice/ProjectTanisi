@@ -19,7 +19,7 @@
 [resource]
 resource_name = "Bear Story"
 script = ExtResource("1_dhws5")
-creeLines = Array[String](["Cree Placeholder", "Cree Placeholder", "Cree Placeholder", "Cree Placeholder", "Cree Placeholder", "Cree Placeholder", "Cree Placeholder"])
+creeLines = Array[String](["Maskwa miywêyihtam ita ê-kâmwâtahk. Kîspin mistahi pê-tahkon, sêkisiw maskwa. ", "pêyak-tipiskâw, mistahi-yôtin, matwêwêstin (roared) ita ministikosihtiskâw. ", "Maskwa nôhtê- kâsôw, mâka nitawâc mahkatâhtam. ", "Maskwa ê-ispikâpawit êkwa kâwi sôhkê- ê-têpwêt. ", "Miyohtam Maskwa otêpwêwin, maskawîsiw.  ", "“nikî-kostâcin, mâka nikocihtân,\" ê-ihtatêyihtahk Maskwa. ", "Maskwa kiskêyihtam sôhkêyimowin "])
 englishLines = Array[String](["Bear liked quiet places. Loud things made Bear scared. ", "One night, the wind roared through the trees. ", "Bear wanted to hide, but they took a deep breath.", "Bear stood tall and gave a big roar back. ", "The sound made Bear feel strong.", "“I was scared, but I tried,” thought Bear. ", "Bear learned courage. "])
 creeAudios = Array[AudioStream]([ExtResource("1_tr043"), ExtResource("2_2laq5"), ExtResource("3_leuet"), ExtResource("4_1igrl"), ExtResource("5_iotma"), ExtResource("6_803y8"), ExtResource("7_hgnrp")])
 englishAudios = Array[AudioStream]([ExtResource("8_gtujg"), ExtResource("9_fu550"), ExtResource("10_1joed"), ExtResource("11_lnc3x"), ExtResource("12_c1uel"), ExtResource("13_65kft"), ExtResource("14_d7aab")])
