@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://mrr50uojnxdm"]
+[gd_scene load_steps=2 format=3 uid="uid://mrr50uojnxdm"]
 
 [ext_resource type="PackedScene" uid="uid://c5g202x2u123x" path="res://AIBook/MasterScenes/GenericBook.tscn" id="1_8u35d"]
-[ext_resource type="Resource" path="res://Tests/story_20251127_140727.tres" id="2_ep5fu"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -22,7 +21,6 @@ color = Color(0, 0.4566605, 0.4566605, 1)
 
 [node name="StoryBook" parent="ColorRect" instance=ExtResource("1_8u35d")]
 layout_mode = 1
-bookResource = ExtResource("2_ep5fu")
 
 [node name="ResoureError" type="RichTextLabel" parent="ColorRect"]
 visible = false
