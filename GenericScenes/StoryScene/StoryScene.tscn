@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://badg536ucu3cf"]
+[gd_scene load_steps=11 format=3 uid="uid://badg536ucu3cf"]
 
 [ext_resource type="Script" uid="uid://dppl08ywqbbmi" path="res://GenericScenes/StoryScene/StorySceneScript.gd" id="1_opd5b"]
 [ext_resource type="Script" uid="uid://c8oqnnpgkao8a" path="res://GenericScenes/StoryScene/StoryTextBoxScript.gd" id="2_88qh8"]
+[ext_resource type="Texture2D" uid="uid://cljamduldes7g" path="res://ChapterOne/BearLesson/assets/visuals/Backgrounds/BG.png" id="2_b1owf"]
 [ext_resource type="Theme" uid="uid://c7ov3td0u36sq" path="res://GenericScenes/Themes/GenericTextBox.tres" id="3_b1owf"]
 [ext_resource type="Theme" uid="uid://byi38q23oj3ta" path="res://GenericScenes/Themes/ButtonTheme.tres" id="4_7b4nj"]
 
@@ -73,6 +74,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("2_b1owf")
 expand_mode = 3
 
 [node name="Animation" type="AnimatedSprite2D" parent="Animation"]
