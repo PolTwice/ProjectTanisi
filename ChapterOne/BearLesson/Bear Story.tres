@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="DialogueBox" load_steps=16 format=3 uid="uid://c6ukqpkp0ogsj"]
+[gd_resource type="Resource" script_class="storyModuleResource" load_steps=16 format=3 uid="uid://c6ukqpkp0ogsj"]
 
 [ext_resource type="Script" uid="uid://hfxsmkkfuyqk" path="res://GenericScenes/LessonModules/StoryModule/storyModuleResource.gd" id="1_dhws5"]
 [ext_resource type="AudioStream" uid="uid://fxfy7jhiov8y" path="res://ChapterOne/BearLesson/assets/audio/Narration/cree/creeBear2.wav" id="1_tr043"]

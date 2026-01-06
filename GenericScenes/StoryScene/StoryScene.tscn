@@ -1,0 +1,188 @@
+[gd_scene load_steps=10 format=3 uid="uid://badg536ucu3cf"]
+
+[ext_resource type="Script" uid="uid://dppl08ywqbbmi" path="res://GenericScenes/StoryScene/StorySceneScript.gd" id="1_opd5b"]
+[ext_resource type="Script" uid="uid://c8oqnnpgkao8a" path="res://GenericScenes/StoryScene/StoryTextBoxScript.gd" id="2_88qh8"]
+[ext_resource type="Theme" uid="uid://c7ov3td0u36sq" path="res://GenericScenes/Themes/GenericTextBox.tres" id="3_b1owf"]
+[ext_resource type="Theme" uid="uid://byi38q23oj3ta" path="res://GenericScenes/Themes/ButtonTheme.tres" id="4_7b4nj"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mnomo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0pjfo"]
+bg_color = Color(0.191509, 0.106161, 0.0477274, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1mkgt"]
+bg_color = Color(0.776471, 0.278431, 0.262745, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_47g56"]
+bg_color = Color(0.498627, 0.42742, 0.325971, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_be767"]
+bg_color = Color(0.204679, 0.505877, 0.366227, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="StoryRoot" type="CanvasLayer"]
+script = ExtResource("1_opd5b")
+
+[node name="Animation" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackgroundImage" type="TextureRect" parent="Animation"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+
+[node name="Animation" type="AnimatedSprite2D" parent="Animation"]
+sprite_frames = SubResource("SpriteFrames_mnomo")
+
+[node name="TextBox" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("2_88qh8")
+
+[node name="MarginContainer" type="MarginContainer" parent="TextBox"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -200.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = 300
+theme_override_constants/margin_right = 300
+theme_override_constants/margin_bottom = 30
+
+[node name="BoxDesign" type="PanelContainer" parent="TextBox/MarginContainer"]
+custom_minimum_size = Vector2(0, 500)
+layout_mode = 2
+theme = ExtResource("3_b1owf")
+
+[node name="TextboxMargin" type="MarginContainer" parent="TextBox/MarginContainer/BoxDesign"]
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextBox/MarginContainer/BoxDesign/TextboxMargin"]
+layout_mode = 2
+
+[node name="TextboxDesign" type="PanelContainer" parent="TextBox/MarginContainer/BoxDesign/TextboxMargin/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("3_b1owf")
+theme_override_styles/panel = SubResource("StyleBoxFlat_0pjfo")
+
+[node name="TextContainer" type="MarginContainer" parent="TextBox/MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/TextboxDesign"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 20
+
+[node name="TextLabel" type="RichTextLabel" parent="TextBox/MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/TextboxDesign/TextContainer"]
+layout_mode = 2
+theme = ExtResource("3_b1owf")
+theme_override_font_sizes/normal_font_size = 30
+text = "Placeholder"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonsContainer" type="HBoxContainer" parent="TextBox/MarginContainer/BoxDesign/TextboxMargin/VBoxContainer"]
+layout_mode = 2
+
+[node name="BackMarginContainer" type="MarginContainer" parent="TextBox/MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer"]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 20
+
+[node name="Back" type="Button" parent="TextBox/MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer/BackMarginContainer"]
+layout_mode = 2
+theme = ExtResource("4_7b4nj")
+theme_override_styles/normal = SubResource("StyleBoxFlat_1mkgt")
+text = "LAST"
+
+[node name="ListenAgainMarginContainer" type="MarginContainer" parent="TextBox/MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer"]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 20
+
+[node name="ListenAgain" type="Button" parent="TextBox/MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer/ListenAgainMarginContainer"]
+layout_mode = 2
+theme = ExtResource("4_7b4nj")
+theme_override_styles/normal = SubResource("StyleBoxFlat_47g56")
+text = "REPLAY"
+
+[node name="ContinueMarginContainer" type="MarginContainer" parent="TextBox/MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 20
+
+[node name="Continue" type="Button" parent="TextBox/MarginContainer/BoxDesign/TextboxMargin/VBoxContainer/ButtonsContainer/ContinueMarginContainer"]
+layout_mode = 2
+theme = ExtResource("4_7b4nj")
+theme_override_styles/normal = SubResource("StyleBoxFlat_be767")
+text = "NEXT"
+
+[node name="Narration" type="AudioStreamPlayer" parent="."]
+
+[node name="BackgroundSound" type="AudioStreamPlayer" parent="."]
