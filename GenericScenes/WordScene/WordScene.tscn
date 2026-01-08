@@ -1,0 +1,99 @@
+[gd_scene load_steps=4 format=3 uid="uid://divch3hk5xww0"]
+
+[ext_resource type="Script" uid="uid://gg8k8quudorw" path="res://GenericScenes/WordScene/WordSceneScript.gd" id="1_1ej8d"]
+[ext_resource type="Theme" uid="uid://cu47n5kjyr28" path="res://GenericScenes/Themes/NewText.tres" id="2_g426t"]
+[ext_resource type="Theme" uid="uid://byi38q23oj3ta" path="res://GenericScenes/Themes/ButtonTheme.tres" id="3_hl41y"]
+
+[node name="WordScene" type="CanvasLayer"]
+script = ExtResource("1_1ej8d")
+
+[node name="Background" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchors_preset = -1
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="EnglishVBox" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="EnglishLabel" type="RichTextLabel" parent="HBoxContainer/EnglishVBox"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.2
+theme = ExtResource("2_g426t")
+theme_override_font_sizes/normal_font_size = 40
+text = "English"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EnglishMargin" type="MarginContainer" parent="HBoxContainer/EnglishVBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="EnglishWord" type="Button" parent="HBoxContainer/EnglishVBox/EnglishMargin"]
+layout_mode = 2
+theme = ExtResource("3_hl41y")
+theme_override_font_sizes/font_size = 100
+text = "English Word"
+
+[node name="EnglishReading" type="AudioStreamPlayer" parent="HBoxContainer/EnglishVBox/EnglishMargin/EnglishWord"]
+
+[node name="CreeVBox" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="EnglishLabel" type="RichTextLabel" parent="HBoxContainer/CreeVBox"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.2
+theme = ExtResource("2_g426t")
+theme_override_font_sizes/normal_font_size = 40
+text = "Cree"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CreeLabel" type="RichTextLabel" parent="HBoxContainer/CreeVBox"]
+layout_mode = 2
+text = "In English"
+
+[node name="CreeMargin" type="MarginContainer" parent="HBoxContainer/CreeVBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="CreeWord" type="Button" parent="HBoxContainer/CreeVBox/CreeMargin"]
+layout_mode = 2
+theme = ExtResource("3_hl41y")
+theme_override_font_sizes/font_size = 100
+text = "Cree Word"
+
+[node name="CreeReading" type="AudioStreamPlayer" parent="HBoxContainer/CreeVBox/CreeMargin/CreeWord"]
+
+[node name="Narration" type="AudioStreamPlayer" parent="."]
+
+[connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="pressed" from="HBoxContainer/EnglishVBox/EnglishMargin/EnglishWord" to="." method="_on_english_word_pressed"]
+[connection signal="pressed" from="HBoxContainer/CreeVBox/CreeMargin/CreeWord" to="." method="_on_cree_word_pressed"]

@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://brwxmsb3gs0ps"]
+
+[ext_resource type="Script" uid="uid://dc1dmt13ygd2e" path="res://GenericScenes/TextBox/newTextBoxScript.gd" id="1_ujg21"]
+[ext_resource type="Theme" uid="uid://cu47n5kjyr28" path="res://GenericScenes/Themes/NewText.tres" id="2_avoc5"]
+
+[sub_resource type="Theme" id="Theme_dbifb"]
+
+[node name="TextBox" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ujg21")
+
+[node name="TransparentBackground" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.667
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("2_avoc5")
+
+[node name="TextMargin" type="MarginContainer" parent="TransparentBackground"]
+layout_mode = 2
+theme = SubResource("Theme_dbifb")
+
+[node name="TextContents" type="RichTextLabel" parent="TransparentBackground/TextMargin"]
+layout_mode = 2
+theme = ExtResource("2_avoc5")
+bbcode_enabled = true
+text = "This is a sample story line. 
+This should be replaced later.
+We can have about three lines before a scroll bar appears"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="ready" from="." to="." method="_on_ready"]
