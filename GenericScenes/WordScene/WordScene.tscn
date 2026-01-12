@@ -18,9 +18,23 @@ size_flags_vertical = 3
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 
+[node name="Narration" type="RichTextLabel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("2_g426t")
+theme_override_font_sizes/normal_font_size = 80
+text = "English in Cree is Cree"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 anchors_preset = -1
-anchor_top = 0.5
+anchor_top = 0.591
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
@@ -33,19 +47,19 @@ size_flags_horizontal = 3
 [node name="EnglishLabel" type="RichTextLabel" parent="HBoxContainer/EnglishVBox"]
 layout_mode = 2
 size_flags_vertical = 3
-size_flags_stretch_ratio = 0.2
+size_flags_stretch_ratio = 0.3
 theme = ExtResource("2_g426t")
-theme_override_font_sizes/normal_font_size = 40
+theme_override_colors/default_color = Color(0.728822, 0.728822, 0.728822, 1)
+theme_override_font_sizes/normal_font_size = 60
 text = "English"
 horizontal_alignment = 1
-vertical_alignment = 1
+vertical_alignment = 2
 
 [node name="EnglishMargin" type="MarginContainer" parent="HBoxContainer/EnglishVBox"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/margin_left = 50
-theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 50
 theme_override_constants/margin_bottom = 50
 
@@ -61,26 +75,22 @@ text = "English Word"
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="EnglishLabel" type="RichTextLabel" parent="HBoxContainer/CreeVBox"]
-layout_mode = 2
-size_flags_vertical = 3
-size_flags_stretch_ratio = 0.2
-theme = ExtResource("2_g426t")
-theme_override_font_sizes/normal_font_size = 40
-text = "Cree"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="CreeLabel" type="RichTextLabel" parent="HBoxContainer/CreeVBox"]
 layout_mode = 2
-text = "In English"
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.3
+theme = ExtResource("2_g426t")
+theme_override_colors/default_color = Color(0.7294118, 0.7294118, 0.7294118, 1)
+theme_override_font_sizes/normal_font_size = 60
+text = "Cree"
+horizontal_alignment = 1
+vertical_alignment = 2
 
 [node name="CreeMargin" type="MarginContainer" parent="HBoxContainer/CreeVBox"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/margin_left = 50
-theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 50
 theme_override_constants/margin_bottom = 50
 
@@ -92,7 +102,7 @@ text = "Cree Word"
 
 [node name="CreeReading" type="AudioStreamPlayer" parent="HBoxContainer/CreeVBox/CreeMargin/CreeWord"]
 
-[node name="Narration" type="AudioStreamPlayer" parent="."]
+[node name="NarrationAudio" type="AudioStreamPlayer" parent="."]
 
 [connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="pressed" from="HBoxContainer/EnglishVBox/EnglishMargin/EnglishWord" to="." method="_on_english_word_pressed"]

@@ -63,13 +63,14 @@ layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="Info" type="Button" parent="HBoxContainer/MidMargin/PageInfoMargin"]
+visible = false
 layout_mode = 2
 theme = ExtResource("2_6upvk")
 theme_override_font_sizes/font_size = 60
-theme_override_styles/focus = ExtResource("3_xpsp7")
-theme_override_styles/hover = SubResource("StyleBoxFlat_a0a74")
-theme_override_styles/pressed = ExtResource("3_xpsp7")
 theme_override_styles/normal = ExtResource("3_xpsp7")
+theme_override_styles/pressed = ExtResource("3_xpsp7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_a0a74")
+theme_override_styles/focus = ExtResource("3_xpsp7")
 text = "Default"
 
 [node name="RightMargin" type="MarginContainer" parent="HBoxContainer"]

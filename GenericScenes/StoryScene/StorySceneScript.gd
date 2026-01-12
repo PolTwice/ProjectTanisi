@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-@onready var contents_node: RichTextLabel = $TextPanel/TextMargin/Contents
+@onready var contents_node: RichTextLabel = $TextPanel/TextMargin/HBoxContainer/Contents
 @onready var background_image_node: TextureRect = $BackgroundImage
 @onready var animated_sprite_node: AnimatedSprite2D = $AnimatedSprite
 @onready var narration_node: AudioStreamPlayer = $Narration
@@ -21,8 +21,17 @@ extends CanvasLayer
 #Frames for the animation:
 @export var animation: SpriteFrames
 
+@export var EnglishNarration: AudioStream
+@export var CreeNarration: AudioStream
+
+var isEnglish = true
+
 func _on_ready() -> void:
-	contents_node.text = highlightWords()
+	#Add BBC Codes
+	StoryText = StoryText.replace(EnglishTarget, "[color=#FFD000]"+EnglishTarget+"[/color]")
+	contents_node.text = StoryText
+	print("Text replaced")
+	
 	if (backgroundTexture != null):
 		background_image_node.texture = backgroundTexture
 	else:
@@ -33,14 +42,43 @@ func _on_ready() -> void:
 	var buttonText = EnglishTarget + "\n" + CreeTarget
 	button_node.text = buttonText
 	
-#Highlight the words in the text label
-func highlightWords() -> String:
-	#Process the words and highlight the words appropriately
+	narration_node.stream = EnglishNarration
 	
-	#TEMP
-	return StoryText
-
+	await get_tree().create_timer(1.0).timeout
+	narration_node.play()
+	
+	
 #Display some error
 func showError() -> void:
-	
+	self.visible = false
 	pass
+
+
+func _on_button_pressed() -> void:
+	if(isEnglish):
+		#check if target is there
+		if !StoryText.find(EnglishTarget):
+			print("Word not found in story text")
+			showError()
+		#replace
+		StoryText = StoryText.replace(EnglishTarget, CreeTarget)
+		narration_node.stream = CreeNarration
+	#if it is currently on cree, swap to english
+	else:
+		#check if target is there
+		if !StoryText.find(CreeTarget):
+			print("Word not found in story text")
+			showError()
+		#replace
+		StoryText = StoryText.replace(CreeTarget, EnglishTarget)
+		narration_node.stream = EnglishNarration
+	#swap mode the cree mode
+	isEnglish = !isEnglish
+	#Change the text to display correctly
+	contents_node.text = StoryText
+	button_node.disabled = true
+	narration_node.play()
+
+
+func _on_narration_finished() -> void:
+	button_node.disabled= false

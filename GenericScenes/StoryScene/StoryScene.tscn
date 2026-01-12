@@ -8,9 +8,6 @@
 
 [node name="StoryRoot" type="CanvasLayer"]
 script = ExtResource("1_opd5b")
-StoryText = "The bear walked to the store"
-EnglishTarget = "bear"
-CreeTarget = "maskwa"
 
 [node name="BackgroundImage" type="TextureRect" parent="."]
 anchors_preset = 15
@@ -63,6 +60,7 @@ theme_override_constants/margin_bottom = 30
 layout_mode = 2
 theme = ExtResource("4_7b4nj")
 theme_override_font_sizes/font_size = 60
+disabled = true
 text = "English Word
 🔄
 Cree Word"
@@ -70,3 +68,7 @@ Cree Word"
 [node name="Narration" type="AudioStreamPlayer" parent="."]
 
 [node name="BackgroundSound" type="AudioStreamPlayer" parent="."]
+
+[connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="pressed" from="TextPanel/TextMargin/HBoxContainer/MarginContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="finished" from="Narration" to="." method="_on_narration_finished"]
