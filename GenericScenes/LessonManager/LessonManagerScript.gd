@@ -10,6 +10,7 @@ extends Control
 @onready var go_back: Button = $"LessonComplete/Panel/Panel Margin/ContentsVBox/ButtonHbox/GoBackMargin/GoBack"
 
 @export var lessonArray: Array[PackedScene]
+@export var lessonName: StringName
 
 var index = 0
 
