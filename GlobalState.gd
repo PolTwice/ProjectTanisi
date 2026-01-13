@@ -15,7 +15,6 @@ var lessonsCompleted: Dictionary = {}
 func setLessonCompleted(lesson:StringName, state: bool) -> void:
 	lessonsCompleted[lesson] = state;
 	lesson_completed.emit(lesson)
-	
 	return
 
 #Given a lesson name, return the lessons status. If the lesson doesn't exist, return false

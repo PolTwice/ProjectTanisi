@@ -22,8 +22,13 @@ func changeContents (new_scene: PackedScene):
 	
 	#instantiate the new scene
 	var new = new_scene.instantiate()
+	new.canContinue.connect(_can_continue)
 	#make new scene a child of contents_canvas
 	contents_canvas.add_child(new)
+	
+	#disable next button until canContinue signal is emitted
+	next_button.disabled = true
+	
 
 func _on_ready() -> void:
 	changeContents(changeContents(lessonArray[0]))
@@ -53,7 +58,8 @@ func _on_next_button_pressed() -> void:
 
 func completeLesson():
 	lesson_complete.visible = true
-	
+	GlobalState.setLessonCompleted(lessonName, true)
+	return
 
 func _on_replay_pressed() -> void:
 	changeContents(changeContents(lessonArray[0]))
@@ -62,3 +68,6 @@ func _on_replay_pressed() -> void:
 
 func _on_go_back_pressed() -> void:
 	pass
+
+func _can_continue() -> void:
+	next_button.disabled = false

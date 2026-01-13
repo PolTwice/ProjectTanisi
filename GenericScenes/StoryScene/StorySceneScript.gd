@@ -25,6 +25,9 @@ extends CanvasLayer
 @export var CreeNarration: AudioStream
 
 var isEnglish = true
+var firstPush = true
+
+signal canContinue
 
 func _on_ready() -> void:
 	#Add BBC Codes
@@ -38,16 +41,15 @@ func _on_ready() -> void:
 		showError()
 	if (animation != null):
 		animated_sprite_node.sprite_frames = animation
-		
-	var buttonText = EnglishTarget + "\n🔄\n" + CreeTarget
-	button_node.text = buttonText
+	
+	button_node.text = EnglishTarget + "\n🔄\n" + CreeTarget
 	
 	narration_node.stream = EnglishNarration
 	
 	await get_tree().create_timer(1.0).timeout
 	narration_node.play()
 	
-	
+
 #Display some error
 func showError() -> void:
 	self.visible = false
@@ -55,6 +57,8 @@ func showError() -> void:
 
 
 func _on_button_pressed() -> void:
+	if(firstPush):
+		canContinue.emit()
 	if(isEnglish):
 		#check if target is there
 		if !StoryText.find(EnglishTarget):
