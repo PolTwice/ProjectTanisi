@@ -39,7 +39,7 @@ func _on_ready() -> void:
 	if (animation != null):
 		animated_sprite_node.sprite_frames = animation
 		
-	var buttonText = EnglishTarget + "\n" + CreeTarget
+	var buttonText = EnglishTarget + "\n🔄\n" + CreeTarget
 	button_node.text = buttonText
 	
 	narration_node.stream = EnglishNarration

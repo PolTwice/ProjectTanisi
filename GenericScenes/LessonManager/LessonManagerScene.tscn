@@ -1,0 +1,149 @@
+[gd_scene load_steps=6 format=3 uid="uid://cfm8ssfd0vkfp"]
+
+[ext_resource type="Script" uid="uid://dorgig40hvp8e" path="res://GenericScenes/LessonManager/LessonManagerScript.gd" id="1_3dfst"]
+[ext_resource type="Theme" uid="uid://byi38q23oj3ta" path="res://GenericScenes/Themes/ButtonTheme.tres" id="1_nsup3"]
+[ext_resource type="Theme" uid="uid://cu47n5kjyr28" path="res://GenericScenes/Themes/NewText.tres" id="3_wlhbt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btpd4"]
+bg_color = Color(0.59948766, 0.5202961, 0.40783226, 1)
+border_width_left = 15
+border_width_top = 15
+border_width_right = 15
+border_width_bottom = 15
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 75
+corner_radius_top_right = 75
+corner_radius_bottom_right = 75
+corner_radius_bottom_left = 75
+
+[sub_resource type="Theme" id="Theme_lv8wn"]
+Panel/styles/panel = SubResource("StyleBoxFlat_btpd4")
+
+[node name="LessonManager" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3dfst")
+
+[node name="ButtonsCanvas" type="CanvasLayer" parent="."]
+
+[node name="ButtonContainer" type="HBoxContainer" parent="ButtonsCanvas"]
+anchors_preset = -1
+anchor_top = 0.4
+anchor_right = 1.0
+anchor_bottom = 0.6
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackMargin" type="MarginContainer" parent="ButtonsCanvas/ButtonContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 50
+
+[node name="BackButton" type="Button" parent="ButtonsCanvas/ButtonContainer/BackMargin"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_nsup3")
+theme_override_font_sizes/font_size = 100
+disabled = true
+text = "<"
+
+[node name="MiddleMargin" type="MarginContainer" parent="ButtonsCanvas/ButtonContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 6.38
+
+[node name="NextMargin" type="MarginContainer" parent="ButtonsCanvas/ButtonContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_right = 50
+
+[node name="NextButton" type="Button" parent="ButtonsCanvas/ButtonContainer/NextMargin"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_nsup3")
+theme_override_font_sizes/font_size = 100
+text = ">"
+
+[node name="ContentsCanvas" type="CanvasLayer" parent="."]
+
+[node name="LessonComplete" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Panel" type="Panel" parent="LessonComplete"]
+anchors_preset = -1
+anchor_left = 0.15
+anchor_top = 0.15
+anchor_right = 0.85
+anchor_bottom = 0.85
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_lv8wn")
+
+[node name="Panel Margin" type="MarginContainer" parent="LessonComplete/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="ContentsVBox" type="VBoxContainer" parent="LessonComplete/Panel/Panel Margin"]
+layout_mode = 2
+alignment = 1
+
+[node name="CongratText" type="RichTextLabel" parent="LessonComplete/Panel/Panel Margin/ContentsVBox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("3_wlhbt")
+text = "Congrats on completing the lesson!"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="ButtonHbox" type="HBoxContainer" parent="LessonComplete/Panel/Panel Margin/ContentsVBox"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ReplayMargin" type="MarginContainer" parent="LessonComplete/Panel/Panel Margin/ContentsVBox/ButtonHbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 70
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 70
+
+[node name="Replay" type="Button" parent="LessonComplete/Panel/Panel Margin/ContentsVBox/ButtonHbox/ReplayMargin"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_nsup3")
+theme_override_font_sizes/font_size = 50
+text = "Play Again"
+
+[node name="GoBackMargin" type="MarginContainer" parent="LessonComplete/Panel/Panel Margin/ContentsVBox/ButtonHbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 70
+theme_override_constants/margin_bottom = 70
+
+[node name="GoBack" type="Button" parent="LessonComplete/Panel/Panel Margin/ContentsVBox/ButtonHbox/GoBackMargin"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_nsup3")
+theme_override_font_sizes/font_size = 50
+text = "Back To
+Lesson Select"
+
+[connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="pressed" from="ButtonsCanvas/ButtonContainer/BackMargin/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="ButtonsCanvas/ButtonContainer/NextMargin/NextButton" to="." method="_on_next_button_pressed"]
+[connection signal="pressed" from="LessonComplete/Panel/Panel Margin/ContentsVBox/ButtonHbox/ReplayMargin/Replay" to="." method="_on_replay_pressed"]
+[connection signal="pressed" from="LessonComplete/Panel/Panel Margin/ContentsVBox/ButtonHbox/GoBackMargin/GoBack" to="." method="_on_go_back_pressed"]
