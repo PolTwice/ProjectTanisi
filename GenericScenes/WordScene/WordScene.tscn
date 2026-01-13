@@ -1,11 +1,38 @@
-[gd_scene load_steps=4 format=3 uid="uid://divch3hk5xww0"]
+[gd_scene load_steps=11 format=3 uid="uid://divch3hk5xww0"]
 
 [ext_resource type="Script" uid="uid://gg8k8quudorw" path="res://GenericScenes/WordScene/WordSceneScript.gd" id="1_1ej8d"]
 [ext_resource type="Theme" uid="uid://cu47n5kjyr28" path="res://GenericScenes/Themes/NewText.tres" id="2_g426t"]
+[ext_resource type="Texture2D" uid="uid://bj3i0b0se30n0" path="res://Tests/1-94eaf38c.jpg" id="2_mx3iq"]
+[ext_resource type="Texture2D" uid="uid://db0xjyvo10xud" path="res://ChapterOne/BearLesson/assets/visuals/Animations/BearFive1.png" id="3_3mnrk"]
 [ext_resource type="Theme" uid="uid://byi38q23oj3ta" path="res://GenericScenes/Themes/ButtonTheme.tres" id="3_hl41y"]
+[ext_resource type="Texture2D" uid="uid://f3bks4vu6jh5" path="res://ChapterOne/BearLesson/assets/visuals/Animations/BearFive2.png" id="4_xk4m6"]
+[ext_resource type="AudioStream" uid="uid://dym31g3t3uynk" path="res://ChapterOne/BearLesson/assets/audio/Narration/english/Bear1.wav" id="5_m58k2"]
+[ext_resource type="AudioStream" uid="uid://der0vdegkwkhj" path="res://ChapterOne/BearLesson/assets/audio/Narration/cree/creeBear1.wav" id="6_o43y8"]
+[ext_resource type="AudioStream" uid="uid://fxfy7jhiov8y" path="res://ChapterOne/BearLesson/assets/audio/Narration/cree/creeBear2.wav" id="7_pj0jh"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f52vl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_3mnrk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_xk4m6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="WordScene" type="CanvasLayer"]
 script = ExtResource("1_1ej8d")
+background = ExtResource("2_mx3iq")
+spriteFrames = SubResource("SpriteFrames_f52vl")
+EnglishButtonText = "Bear"
+CreeButtonText = "Maskwa"
+englishReading = ExtResource("5_m58k2")
+creeReading = ExtResource("6_o43y8")
+Reading = ExtResource("7_pj0jh")
 
 [node name="Background" type="TextureRect" parent="."]
 anchors_preset = 15

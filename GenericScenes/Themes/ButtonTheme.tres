@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=6 format=3 uid="uid://byi38q23oj3ta"]
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://byi38q23oj3ta"]
 
 [ext_resource type="FontFile" uid="uid://b8urr5fupfkes" path="res://GenericScenes/Themes/Fonts/static/Baloo2-Bold.ttf" id="1_6ve4r"]
 [ext_resource type="StyleBox" uid="uid://dmqpmf2odflty" path="res://GenericScenes/Themes/NormalButton.tres" id="1_i7534"]
@@ -39,6 +39,18 @@ corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6ve4r"]
+bg_color = Color(0.43137255, 0.36862746, 0.27450982, 1)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
 [resource]
 Button/constants/outline_size = 10
 Button/font_sizes/font_size = 35
@@ -47,3 +59,8 @@ Button/styles/disabled = SubResource("StyleBoxFlat_i3k6t")
 Button/styles/hover = SubResource("StyleBoxFlat_qtj2r")
 Button/styles/normal = ExtResource("1_i7534")
 Button/styles/pressed = SubResource("StyleBoxFlat_kpxyo")
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_6ve4r")
+RichTextLabel/colors/font_shadow_color = Color(0, 0, 0, 0.43529412)
+RichTextLabel/constants/shadow_outline_size = 10
+RichTextLabel/font_sizes/normal_font_size = 100
+RichTextLabel/fonts/normal_font = ExtResource("1_6ve4r")

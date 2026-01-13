@@ -95,6 +95,7 @@ Cree Word"
 
 [node name="BackgroundSound" type="AudioStreamPlayer" parent="."]
 
+[connection signal="canContinue" from="." to="." method="_on_can_continue"]
 [connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="pressed" from="TextPanel/TextMargin/HBoxContainer/MarginContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="finished" from="Narration" to="." method="_on_narration_finished"]

@@ -18,6 +18,7 @@ extends CanvasLayer
 @export var creeReading: AudioStream
 @export var Reading: AudioStream
 
+signal canContinue
 
 func _on_english_word_pressed() -> void:
 	english_reading_node.play()

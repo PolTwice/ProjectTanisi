@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://7rov3h1r8pnk"]
+
+[ext_resource type="Theme" uid="uid://byi38q23oj3ta" path="res://GenericScenes/Themes/ButtonTheme.tres" id="1_pck5s"]
+
+[node name="QuizScene" type="CanvasLayer"]
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 200
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 200
+theme_override_constants/margin_bottom = 100
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer"]
+layout_mode = 2
+theme = ExtResource("1_pck5s")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/PanelContainer"]
+layout_mode = 2
+theme = ExtResource("1_pck5s")
+text = "Testing Testing"
+horizontal_alignment = 1
+vertical_alignment = 1

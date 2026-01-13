@@ -27,6 +27,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_3dfst")
+lessonArray = Array[PackedScene]([null, null, null, null])
 
 [node name="ButtonsCanvas" type="CanvasLayer" parent="."]
 
@@ -71,7 +72,6 @@ text = ">"
 [node name="ContentsCanvas" type="CanvasLayer" parent="."]
 
 [node name="LessonComplete" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="Panel" type="Panel" parent="LessonComplete"]
 anchors_preset = -1
