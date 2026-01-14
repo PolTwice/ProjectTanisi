@@ -72,6 +72,7 @@ text = ">"
 [node name="ContentsCanvas" type="CanvasLayer" parent="."]
 
 [node name="LessonComplete" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="Panel" type="Panel" parent="LessonComplete"]
 anchors_preset = -1
