@@ -32,7 +32,6 @@ func changeContents (new_scene: PackedScene):
 
 func _on_ready() -> void:
 	changeContents(changeContents(lessonArray[0]))
-	
 
 func _on_back_button_pressed() -> void:
 	index -= 1
@@ -40,14 +39,14 @@ func _on_back_button_pressed() -> void:
 	if(index < 1):
 		back_button.disabled = true
 		return
-	
+
 	changeContents(lessonArray[index])
 	
 	next_button.disabled = false
 
 func _on_next_button_pressed() -> void:
 	index += 1
-	
+
 	if(index > lessonArray.size()):
 		completeLesson()
 		next_button.disabled = true
