@@ -38,6 +38,8 @@ extends CanvasLayer
 @export var buttonCPic: Texture
 @export var buttonDPic: Texture
 
+@onready var incorrect_answer_label: Label = $IncorrectAnswerLabel
+
 
 enum answers{
 	A=0, B=1, C=2 ,D=3
@@ -49,6 +51,7 @@ var correctAnswerButItsAString: String
 var currentSelection;
 
 func _on_ready() -> void:
+	TransitionManager.make_invisible(incorrect_answer_label)
 	question_text.text = question
 	
 	match correctAnswer:
@@ -89,34 +92,30 @@ func _on_submit_pressed() -> void:
 	print(correctAnswerButItsAString)
 	
 	if currentSelection == correctAnswerButItsAString:
-		print("Right")
+		correctAnswerFunc()
+		
 	else:
-		print("Wrong")
-
+		incorrectAnswerFunc()
+		
 func _on_button_a_toggled(toggled_on: bool) -> void:
-
-
 	if(toggled_on):
 		currentSelection = "A"
 		print("A toggled on")
 		changeToggle(button_a)
 
 func _on_button_b_toggled(toggled_on: bool) -> void:
-
 	if(toggled_on):
 		currentSelection = "B"
 		print("B toggled on")
 		changeToggle(button_b)
 
 func _on_button_c_toggled(toggled_on: bool) -> void:
-	
 	if(toggled_on):
 		currentSelection = "C"
 		print("C toggled on")
 		changeToggle(button_c)
 
 func _on_button_d_toggled(toggled_on: bool) -> void:
-
 	if(toggled_on):
 		currentSelection = "D"
 		print("D toggled on")
@@ -130,3 +129,24 @@ func changeToggle(button: Button) -> void:
 			continue
 		else:
 			curButton.button_pressed = false
+			
+func incorrectAnswerFunc():
+	match currentSelection:
+		"A":
+			TransitionManager.fade_out(button_a,0.5)
+		"B":
+			TransitionManager.fade_out(button_b,0.5)
+		"C":
+			TransitionManager.fade_out(button_c,0.5)
+		"D":
+			TransitionManager.fade_out(button_d,0.5)
+	
+	TransitionManager.make_visible(incorrect_answer_label)
+	await TransitionManager.pause_for(2.0)
+	TransitionManager.fade_out(incorrect_answer_label)
+	
+	
+
+func correctAnswerFunc():
+	pass
+	

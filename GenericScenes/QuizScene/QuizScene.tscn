@@ -246,6 +246,19 @@ theme = ExtResource("2_1pk8x")
 disabled = true
 text = "               SUBMIT               "
 
+[node name="IncorrectAnswerLabel" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_pck5s")
+text = "Oops! Lets try again!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="toggled" from="VBoxContainer/AnswerPanel/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxAB/MarginContainerA/ButtonA" to="." method="_on_button_a_toggled"]
 [connection signal="toggled" from="VBoxContainer/AnswerPanel/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxAB/MarginContainerB/ButtonB" to="." method="_on_button_b_toggled"]
