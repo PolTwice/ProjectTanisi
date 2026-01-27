@@ -1,13 +1,26 @@
-[gd_scene load_steps=5 format=3 uid="uid://7rov3h1r8pnk"]
+[gd_scene load_steps=6 format=3 uid="uid://7rov3h1r8pnk"]
 
 [ext_resource type="Script" uid="uid://bimpaob37mgwr" path="res://GenericScenes/QuizScene/QuizSceneScript.gd" id="1_8d8od"]
 [ext_resource type="Theme" uid="uid://byi38q23oj3ta" path="res://GenericScenes/Themes/ButtonTheme.tres" id="1_pck5s"]
 [ext_resource type="Theme" uid="uid://pu8lm4fhm5lb" path="res://GenericScenes/Themes/GreenButton.tres" id="2_1pk8x"]
 [ext_resource type="Texture2D" uid="uid://7mf0ow2ulifp" path="res://Tanisi.png" id="3_irbco"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8d8od"]
+bg_color = Color(0.33, 0.28776002, 0.22440001, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
 [node name="QuizScene" type="CanvasLayer"]
 script = ExtResource("1_8d8od")
 question = "EXAMPLE QUESTION"
+correctAnswerText = "That's the right answer! It's right because it is correct"
 hasPictures = true
 buttonAText = "Right Answer"
 buttonBText = "Answer Two"
@@ -231,6 +244,40 @@ size_flags_vertical = 6
 size_flags_stretch_ratio = 0.3
 theme = ExtResource("1_pck5s")
 text = "Test"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CorrectParentMargin" type="MarginContainer" parent="VBoxContainer/AnswerPanel/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="CorrectAnswer" type="PanelContainer" parent="VBoxContainer/AnswerPanel/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/CorrectParentMargin"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("1_pck5s")
+theme_override_styles/panel = SubResource("StyleBoxFlat_8d8od")
+
+[node name="CorrectVBox" type="VBoxContainer" parent="VBoxContainer/AnswerPanel/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/CorrectParentMargin/CorrectAnswer"]
+layout_mode = 2
+
+[node name="CorrectPicture" type="TextureRect" parent="VBoxContainer/AnswerPanel/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/CorrectParentMargin/CorrectAnswer/CorrectVBox"]
+layout_mode = 2
+size_flags_vertical = 3
+expand_mode = 3
+stretch_mode = 5
+
+[node name="CorrectMargin" type="MarginContainer" parent="VBoxContainer/AnswerPanel/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/CorrectParentMargin/CorrectAnswer/CorrectVBox"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+
+[node name="CorrectAnswerText" type="Label" parent="VBoxContainer/AnswerPanel/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/CorrectParentMargin/CorrectAnswer/CorrectVBox/CorrectMargin"]
+layout_mode = 2
+size_flags_vertical = 6
+text = "The answer is blank"
 horizontal_alignment = 1
 vertical_alignment = 1
 

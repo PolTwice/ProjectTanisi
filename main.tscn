@@ -7,9 +7,9 @@
 [node name="Root" type="CanvasLayer" node_paths=PackedStringArray("nodeContainerOne")]
 layer = 0
 script = ExtResource("1_h2yge")
-nodeContainerOne = NodePath("NodeContainerOne")
+nodeContainerOne = NodePath("")
 
-[node name="NodeContainerOne" type="Node" parent="."]
+[node name="NodeContainerOne" type="CanvasLayer" parent="."]
 
 [node name="AnimalSelectScene" parent="NodeContainerOne" instance=ExtResource("2_1bvp3")]
 

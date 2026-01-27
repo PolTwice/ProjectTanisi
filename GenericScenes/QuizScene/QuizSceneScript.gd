@@ -1,10 +1,13 @@
 extends CanvasLayer
 
+#node for holding the question
 @onready var question_text: RichTextLabel = $VBoxContainer/QuestionPanel/QuestionText
 
+#Hboxes that hold button ab and cd
 @onready var h_box_ab: HBoxContainer = $VBoxContainer/AnswerPanel/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxAB
 @onready var h_box_cd: HBoxContainer = $VBoxContainer/AnswerPanel/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxCD
 
+#Button, picture, and text for each answer
 @onready var button_a: Button = $VBoxContainer/AnswerPanel/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxAB/MarginContainerA/ButtonA
 @onready var button_a_pic: TextureRect = $VBoxContainer/AnswerPanel/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxAB/MarginContainerA/ButtonA/buttonAVBox/buttonAPic
 @onready var button_a_text: Label = $VBoxContainer/AnswerPanel/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxAB/MarginContainerA/ButtonA/buttonAVBox/buttonAText
@@ -21,26 +24,44 @@ extends CanvasLayer
 @onready var button_d_pic: TextureRect = $VBoxContainer/AnswerPanel/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxCD/MarginContainerD/ButtonD/buttonDVbox/ButtonDPic
 @onready var button_d_text: Label = $VBoxContainer/AnswerPanel/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxCD/MarginContainerD/ButtonD/buttonDVbox/buttonDText
 
+#button for submitting answer
 @onready var submit: Button = $VBoxContainer/SubmitPanel/Submit
 
+#nodes for correct answers
+@onready var correct_parent_margin: MarginContainer = $VBoxContainer/AnswerPanel/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/CorrectParentMargin
+@onready var correct_picture: TextureRect = $VBoxContainer/AnswerPanel/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/CorrectParentMargin/CorrectAnswer/CorrectVBox/CorrectPicture
+@onready var correct_answer_text: Label = $VBoxContainer/AnswerPanel/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/CorrectParentMargin/CorrectAnswer/CorrectVBox/CorrectMargin/CorrectAnswerText
+
+#incorrect answer text
+@onready var incorrect_answer_label: Label = $IncorrectAnswerLabel
+
+#text for the question
 @export var question: String
 
+#Text for what it says when you get the right answer
+@export var correctAnswerText: String
+
+#does this question have pictures?
 @export var hasPictures = false
+
+#does this question have four choice? if false, it has 2
 @export var hasFourQuestions = true
 
+#Text for each button
 @export var buttonAText: String
 @export var buttonBText: String
 @export var buttonCText: String
 @export var buttonDText: String
 
+#picture for each button if there is one
 @export var buttonAPic: Texture
 @export var buttonBPic: Texture
 @export var buttonCPic: Texture
 @export var buttonDPic: Texture
 
-@onready var incorrect_answer_label: Label = $IncorrectAnswerLabel
 
 
+#enum for correct answer used in Export. 
 enum answers{
 	A=0, B=1, C=2 ,D=3
 }
@@ -53,16 +74,25 @@ var currentSelection;
 func _on_ready() -> void:
 	TransitionManager.make_invisible(incorrect_answer_label)
 	question_text.text = question
+	correct_answer_text.text = correctAnswerText
 	
 	match correctAnswer:
 		answers.A:
 			correctAnswerButItsAString = "A"
+			if hasPictures:
+				correct_picture.texture = buttonAPic
 		answers.B:
 			correctAnswerButItsAString = "B"
+			if hasPictures:
+				correct_picture.texture = buttonBPic
 		answers.C:
 			correctAnswerButItsAString = "C"
+			if hasPictures:
+				correct_picture.texture = buttonCPic
 		answers.D:
 			correctAnswerButItsAString = "D"
+			if hasPictures:
+				correct_picture.texture = buttonDPic
 			
 	print("The correct answers is "+ correctAnswerButItsAString )
 	if hasPictures:
@@ -148,5 +178,8 @@ func incorrectAnswerFunc():
 	
 
 func correctAnswerFunc():
-	pass
+	h_box_ab.visible = false
+	h_box_cd.visible = false
+	correct_parent_margin.visible = true
+	submit.visible = false
 	

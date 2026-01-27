@@ -14,9 +14,11 @@ extends Control
 
 var index = 0
 
+#change which module is loaded.
 func changeContents (new_scene: PackedScene):
+	#When there is the canvas isn't empty,
 	if contents_canvas != null:
-		#remove each node
+		#remove each node that is a child of the current contents_canvas
 		for node in contents_canvas.get_children():
 			node.queue_free()
 	
@@ -31,17 +33,19 @@ func changeContents (new_scene: PackedScene):
 	
 
 func _on_ready() -> void:
+	#set the contents to the first scene in the lesson array
 	changeContents(changeContents(lessonArray[0]))
 
 func _on_back_button_pressed() -> void:
+	#deincrement the index
 	index -= 1
 	
+	#if index is 0 or less, we can't deincrement anymore
 	if(index < 1):
 		back_button.disabled = true
 		return
 
 	changeContents(lessonArray[index])
-	
 	next_button.disabled = false
 
 func _on_next_button_pressed() -> void:

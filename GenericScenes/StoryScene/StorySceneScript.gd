@@ -59,6 +59,7 @@ func showError() -> void:
 func _on_button_pressed() -> void:
 	if(firstPush):
 		canContinue.emit()
+		firstPush = false
 	if(isEnglish):
 		#check if target is there
 		if !StoryText.find(EnglishTarget):
