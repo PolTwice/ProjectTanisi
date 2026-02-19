@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://7rov3h1r8pnk"]
 
-[ext_resource type="Script" uid="uid://bimpaob37mgwr" path="res://GenericScenes/QuizScene/QuizSceneScript.gd" id="1_8d8od"]
-[ext_resource type="Theme" uid="uid://byi38q23oj3ta" path="res://GenericScenes/Themes/ButtonTheme.tres" id="1_pck5s"]
-[ext_resource type="Theme" uid="uid://pu8lm4fhm5lb" path="res://GenericScenes/Themes/GreenButton.tres" id="2_1pk8x"]
+[ext_resource type="Script" uid="uid://bimpaob37mgwr" path="res://TemplateScenes/QuizScene/QuizSceneScript.gd" id="1_8d8od"]
+[ext_resource type="Theme" uid="uid://byi38q23oj3ta" path="res://TemplateScenes/Themes/ButtonTheme.tres" id="1_pck5s"]
+[ext_resource type="Theme" uid="uid://pu8lm4fhm5lb" path="res://TemplateScenes/Themes/GreenButton.tres" id="2_1pk8x"]
 [ext_resource type="Texture2D" uid="uid://7mf0ow2ulifp" path="res://Tanisi.png" id="3_irbco"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8d8od"]

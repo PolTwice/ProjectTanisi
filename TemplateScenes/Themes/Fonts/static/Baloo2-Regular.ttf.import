@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://clg60occ1q86h"
-path="res://.godot/imported/Baloo2-Regular.ttf-1cbe4eaa78afa4bef742f56419b68eae.fontdata"
+path="res://.godot/imported/Baloo2-Regular.ttf-0bc587501d224cc6e70e4a66fcc8e43d.fontdata"
 
 [deps]
 
-source_file="res://GenericScenes/Themes/Fonts/static/Baloo2-Regular.ttf"
-dest_files=["res://.godot/imported/Baloo2-Regular.ttf-1cbe4eaa78afa4bef742f56419b68eae.fontdata"]
+source_file="res://TemplateScenes/Themes/Fonts/static/Baloo2-Regular.ttf"
+dest_files=["res://.godot/imported/Baloo2-Regular.ttf-0bc587501d224cc6e70e4a66fcc8e43d.fontdata"]
 
 [params]
 

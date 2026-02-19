@@ -8,8 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://cm8ceejgg5md0" path="res://ChapterOne/AnimalSelectScenes/SabeLessonSelect.tscn" id="6_fiji8"]
 [ext_resource type="PackedScene" uid="uid://d2kfxr5p3wcne" path="res://ChapterOne/AnimalSelectScenes/TurtleLessonSelect.tscn" id="7_qd80w"]
 [ext_resource type="PackedScene" uid="uid://b5og2jwo337pk" path="res://ChapterOne/AnimalSelectScenes/WolfLessonSelect.tscn" id="8_wopos"]
-[ext_resource type="Theme" uid="uid://byi38q23oj3ta" path="res://GenericScenes/Themes/ButtonTheme.tres" id="9_2kw34"]
-[ext_resource type="StyleBox" uid="uid://chw4c3yc2s508" path="res://GenericScenes/Themes/InfoBox.tres" id="10_c53tf"]
+[ext_resource type="Theme" uid="uid://byi38q23oj3ta" path="res://TemplateScenes/Themes/ButtonTheme.tres" id="9_2kw34"]
+[ext_resource type="StyleBox" uid="uid://chw4c3yc2s508" path="res://TemplateScenes/Themes/InfoBox.tres" id="10_c53tf"]
+
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cci4c"]
 bg_color = Color(0.639216, 0.537255, 0.396078, 1)

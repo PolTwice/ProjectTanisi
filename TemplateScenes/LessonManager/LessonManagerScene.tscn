@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://cfm8ssfd0vkfp"]
 
-[ext_resource type="Script" uid="uid://dorgig40hvp8e" path="res://GenericScenes/LessonManager/LessonManagerScript.gd" id="1_3dfst"]
-[ext_resource type="Theme" uid="uid://byi38q23oj3ta" path="res://GenericScenes/Themes/ButtonTheme.tres" id="1_nsup3"]
-[ext_resource type="Theme" uid="uid://cu47n5kjyr28" path="res://GenericScenes/Themes/NewText.tres" id="3_wlhbt"]
+[ext_resource type="Script" uid="uid://dorgig40hvp8e" path="res://TemplateScenes/LessonManager/LessonManagerScript.gd" id="1_3dfst"]
+[ext_resource type="Theme" uid="uid://byi38q23oj3ta" path="res://TemplateScenes/Themes/ButtonTheme.tres" id="1_nsup3"]
+[ext_resource type="Theme" uid="uid://cu47n5kjyr28" path="res://TemplateScenes/Themes/NewText.tres" id="3_wlhbt"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btpd4"]
 bg_color = Color(0.59948766, 0.5202961, 0.40783226, 1)

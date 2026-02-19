@@ -17,8 +17,8 @@ config/icon="uid://7mf0ow2ulifp"
 
 [autoload]
 
-GlobalState="*res://GlobalState.gd"
-TransitionManager="*res://TransitionManager.gd"
+GlobalState="*res://Autoloads/GlobalState.gd"
+TransitionManager="*res://Autoloads/TransitionManager.gd"
 
 [display]
 

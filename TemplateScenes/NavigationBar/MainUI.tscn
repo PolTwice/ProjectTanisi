@@ -1,9 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://cfdga74wde3ce"]
 
-[ext_resource type="Script" uid="uid://dkuass2vmjv3e" path="res://GenericScenes/NavigationBar/UIScript.gd" id="1_ghp6m"]
-[ext_resource type="Theme" uid="uid://byi38q23oj3ta" path="res://GenericScenes/Themes/ButtonTheme.tres" id="2_6upvk"]
-[ext_resource type="Theme" uid="uid://pu8lm4fhm5lb" path="res://GenericScenes/Themes/GreenButton.tres" id="3_a6xji"]
-[ext_resource type="StyleBox" uid="uid://chw4c3yc2s508" path="res://GenericScenes/Themes/InfoBox.tres" id="3_xpsp7"]
+[ext_resource type="Script" uid="uid://dkuass2vmjv3e" path="res://TemplateScenes/NavigationBar/UIScript.gd" id="1_ghp6m"]
+[ext_resource type="Theme" uid="uid://byi38q23oj3ta" path="res://TemplateScenes/Themes/ButtonTheme.tres" id="2_6upvk"]
+[ext_resource type="Theme" uid="uid://pu8lm4fhm5lb" path="res://TemplateScenes/Themes/GreenButton.tres" id="3_a6xji"]
+[ext_resource type="StyleBox" uid="uid://chw4c3yc2s508" path="res://TemplateScenes/Themes/InfoBox.tres" id="3_xpsp7"]
+
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a0a74"]
 bg_color = Color(0.639216, 0.537255, 0.396078, 1)

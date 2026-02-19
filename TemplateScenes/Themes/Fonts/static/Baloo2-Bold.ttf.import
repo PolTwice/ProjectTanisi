@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://cphjuf8jd34ny"
-path="res://.godot/imported/Baloo2-ExtraBold.ttf-28b58409d7c145549fbda3c97620d880.fontdata"
+uid="uid://b8urr5fupfkes"
+path="res://.godot/imported/Baloo2-Bold.ttf-91f4f58b2abeee519648f4f75b734944.fontdata"
 
 [deps]
 
-source_file="res://GenericScenes/Themes/Fonts/static/Baloo2-ExtraBold.ttf"
-dest_files=["res://.godot/imported/Baloo2-ExtraBold.ttf-28b58409d7c145549fbda3c97620d880.fontdata"]
+source_file="res://TemplateScenes/Themes/Fonts/static/Baloo2-Bold.ttf"
+dest_files=["res://.godot/imported/Baloo2-Bold.ttf-91f4f58b2abeee519648f4f75b734944.fontdata"]
 
 [params]
 
