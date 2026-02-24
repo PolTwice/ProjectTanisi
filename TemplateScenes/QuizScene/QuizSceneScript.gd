@@ -35,6 +35,9 @@ extends CanvasLayer
 #incorrect answer text
 @onready var incorrect_answer_label: Label = $IncorrectAnswerLabel
 
+#Background Image
+@onready var background_image: TextureRect = $BackgroundImage
+
 #text for the question
 @export var question: String
 
@@ -53,11 +56,16 @@ extends CanvasLayer
 @export var buttonCText: String
 @export var buttonDText: String
 
+#correct answer
+@export var correctAnswer: answers 
+
 #picture for each button if there is one
 @export var buttonAPic: Texture
 @export var buttonBPic: Texture
 @export var buttonCPic: Texture
 @export var buttonDPic: Texture
+
+@export var backgroundImage: Texture
 
 signal canContinue
 
@@ -66,8 +74,6 @@ enum answers{
 	A=0, B=1, C=2 ,D=3
 }
 
-@export var correctAnswer: answers 
-
 var correctAnswerButItsAString: String
 var currentSelection;
 
@@ -75,6 +81,9 @@ func _on_ready() -> void:
 	TransitionManager.make_invisible(incorrect_answer_label)
 	question_text.text = question
 	correct_answer_text.text = correctAnswerText
+	
+	if (backgroundImage != null):
+		background_image.texture = backgroundImage
 	
 	match correctAnswer:
 		answers.A:
@@ -105,6 +114,7 @@ func _on_ready() -> void:
 		button_b_pic.visible = false
 		button_c_pic.visible = false
 		button_d_pic.visible = false
+		correct_picture.visible = false
 
 	if !hasFourQuestions:
 		h_box_cd.visible = false
@@ -176,7 +186,6 @@ func incorrectAnswerFunc():
 	TransitionManager.fade_out(incorrect_answer_label)
 	
 	
-
 func correctAnswerFunc():
 	h_box_ab.visible = false
 	h_box_cd.visible = false

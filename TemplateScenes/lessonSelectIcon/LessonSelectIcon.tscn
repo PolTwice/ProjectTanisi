@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://drq53txkkdr8y"]
+
+[ext_resource type="Script" uid="uid://8bs4kcwjwk5x" path="res://TemplateScenes/lessonSelectIcon/lessonSelectScript.gd" id="1_v2178"]
+[ext_resource type="Texture2D" uid="uid://7mf0ow2ulifp" path="res://Tanisi.png" id="2_hby2h"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_knduu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_hby2h")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_e144x"]
+radius = 1150.02
+
+[node name="lessonArea2D" type="Area2D"]
+script = ExtResource("1_v2178")
+
+[node name="lessonSprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_knduu")
+
+[node name="lessonArea" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_e144x")
+
+[node name="lessonName" type="AudioStreamPlayer" parent="."]
+
+[node name="lessonSound" type="AudioStreamPlayer" parent="."]
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="finished" from="lessonName" to="." method="_on_lesson_name_finished"]
+[connection signal="finished" from="lessonSound" to="." method="_on_lesson_sound_finished"]

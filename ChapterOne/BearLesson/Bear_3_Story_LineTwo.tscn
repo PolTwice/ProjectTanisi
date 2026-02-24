@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://b1kuggqve16yu"]
+
+[ext_resource type="PackedScene" uid="uid://bakvp2vudvfqy" path="res://TemplateScenes/StoryScene/StoryScene.tscn" id="1_7y2ki"]
+
+[node name="StoryRoot" instance=ExtResource("1_7y2ki")]
+StoryText = "One night, the wind roared through the trees"
+EnglishTarget = "wind"
+CreeTarget = "yotin"

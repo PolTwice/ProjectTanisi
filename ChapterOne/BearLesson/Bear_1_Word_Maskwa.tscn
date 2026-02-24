@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dwsmitp2aw8bi"]
+
+[ext_resource type="PackedScene" uid="uid://divch3hk5xww0" path="res://TemplateScenes/WordScene/WordScene.tscn" id="1_1wcch"]
+
+[node name="WordScene" instance=ExtResource("1_1wcch")]

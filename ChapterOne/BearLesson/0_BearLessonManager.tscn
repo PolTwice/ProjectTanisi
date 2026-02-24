@@ -1,0 +1,12 @@
+[gd_scene load_steps=7 format=3 uid="uid://f6kqh5g6jni4"]
+
+[ext_resource type="PackedScene" uid="uid://cfm8ssfd0vkfp" path="res://TemplateScenes/LessonManager/LessonManagerScene.tscn" id="1_1o8mi"]
+[ext_resource type="PackedScene" uid="uid://dwsmitp2aw8bi" path="res://ChapterOne/BearLesson/Bear_1_Word_Maskwa.tscn" id="2_uy2ud"]
+[ext_resource type="PackedScene" uid="uid://cq2yyd123wc2f" path="res://ChapterOne/BearLesson/Bear_2_Story_LineOne.tscn" id="3_1ioi0"]
+[ext_resource type="PackedScene" uid="uid://b1kuggqve16yu" path="res://ChapterOne/BearLesson/Bear_3_Story_LineTwo.tscn" id="4_mtl5f"]
+[ext_resource type="PackedScene" uid="uid://lb5ssc20ks4" path="res://ChapterOne/BearLesson/Bear_4_Quiz_Maskwa.tscn" id="5_0mcm7"]
+[ext_resource type="PackedScene" uid="uid://b8phhcnisw6xf" path="res://ChapterOne/BearLesson/Bear_5_Story_LineThree.tscn" id="6_fgndu"]
+
+[node name="LessonManager" instance=ExtResource("1_1o8mi")]
+lessonArray = Array[PackedScene]([ExtResource("2_uy2ud"), ExtResource("3_1ioi0"), ExtResource("4_mtl5f"), ExtResource("5_0mcm7"), ExtResource("6_fgndu")])
+lessonName = &"Bear"

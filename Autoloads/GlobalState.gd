@@ -4,6 +4,8 @@ extends Node
 #Declare and create the SceneManager so it is accessible. 
 var sceneManager: SceneManager
 
+var audioManager: AudioManager
+
 #signal for lesson and quiz completion
 signal lesson_completed(lesson_id: StringName)
 

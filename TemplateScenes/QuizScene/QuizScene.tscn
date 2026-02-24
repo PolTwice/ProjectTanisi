@@ -31,7 +31,7 @@ buttonBPic = ExtResource("3_irbco")
 buttonCPic = ExtResource("3_irbco")
 buttonDPic = ExtResource("3_irbco")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="BackgroundImage" type="TextureRect" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
