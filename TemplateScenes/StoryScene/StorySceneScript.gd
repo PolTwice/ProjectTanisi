@@ -14,6 +14,7 @@ extends CanvasLayer
 
 #The word that we are targeting in this line of the story
 @export var EnglishTarget: String
+@export var switchButtonEnabled: bool = true
 @export var CreeTarget: String
 
 #Texture of the background of the story
@@ -24,8 +25,6 @@ extends CanvasLayer
 
 @export var EnglishNarration: AudioStream
 @export var CreeNarration: AudioStream
-
-@export var switchButtonEnabled: bool
 
 var isEnglish = true
 var firstPush = true
