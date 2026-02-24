@@ -1,0 +1,10 @@
+[gd_scene load_steps=6 format=3 uid="uid://c777wna1x6y1t"]
+
+[ext_resource type="PackedScene" uid="uid://cfm8ssfd0vkfp" path="res://TemplateScenes/LessonManager/LessonManagerScene.tscn" id="1_vfsqh"]
+[ext_resource type="PackedScene" uid="uid://bwklb0sga0cd1" path="res://ChapterOne/TestLesson/1_WordLesson.tscn" id="2_4rrn3"]
+[ext_resource type="PackedScene" uid="uid://1m63a2bwatdn" path="res://ChapterOne/TestLesson/2_Storypt1.tscn" id="3_58f7p"]
+[ext_resource type="PackedScene" uid="uid://ocvskafwvoil" path="res://ChapterOne/TestLesson/3_StoryPt2.tscn" id="4_y1je5"]
+[ext_resource type="PackedScene" uid="uid://dqvli63l580sw" path="res://ChapterOne/TestLesson/4_QuizScene.tscn" id="5_285k0"]
+
+[node name="LessonManager" instance=ExtResource("1_vfsqh")]
+lessonArray = Array[PackedScene]([ExtResource("2_4rrn3"), ExtResource("3_58f7p"), ExtResource("4_y1je5"), ExtResource("5_285k0")])

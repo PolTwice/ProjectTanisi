@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://ocvskafwvoil"]
+
+[ext_resource type="PackedScene" uid="uid://bakvp2vudvfqy" path="res://TemplateScenes/StoryScene/StoryScene.tscn" id="1_ka63f"]
+
+[node name="StoryRoot" instance=ExtResource("1_ka63f")]

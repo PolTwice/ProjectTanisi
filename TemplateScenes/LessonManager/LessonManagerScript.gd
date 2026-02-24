@@ -34,7 +34,7 @@ func changeContents (new_scene: PackedScene):
 
 func _on_ready() -> void:
 	#set the contents to the first scene in the lesson array
-	changeContents(changeContents(lessonArray[0]))
+	changeContents(lessonArray[0])
 
 func _on_back_button_pressed() -> void:
 	#deincrement the index
@@ -51,13 +51,13 @@ func _on_back_button_pressed() -> void:
 func _on_next_button_pressed() -> void:
 	index += 1
 
-	if(index > lessonArray.size()):
+	if(index >= lessonArray.size()):
 		completeLesson()
 		next_button.disabled = true
 		return
 	
 	changeContents(lessonArray[index])
-	back_button.disable = false
+	back_button.disabled = false
 
 func completeLesson():
 	lesson_complete.visible = true
@@ -65,12 +65,12 @@ func completeLesson():
 	return
 
 func _on_replay_pressed() -> void:
-	changeContents(changeContents(lessonArray[0]))
+	changeContents(lessonArray[0])
 	lesson_complete.visible = false
 
 
 func _on_go_back_pressed() -> void:
-	pass
+	GlobalState.SceneManager.backNodeOne()
 
 func _can_continue() -> void:
 	next_button.disabled = false

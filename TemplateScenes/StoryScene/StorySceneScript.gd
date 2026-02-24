@@ -6,6 +6,7 @@ extends CanvasLayer
 @onready var narration_node: AudioStreamPlayer = $Narration
 @onready var background_sound_node: AudioStreamPlayer = $BackgroundSound
 @onready var button_node: Button = $TextPanel/TextMargin/HBoxContainer/MarginContainer/Button
+@onready var margin_container: MarginContainer = $TextPanel/TextMargin/HBoxContainer/MarginContainer
 
 
 #Contents of the story
@@ -24,14 +25,20 @@ extends CanvasLayer
 @export var EnglishNarration: AudioStream
 @export var CreeNarration: AudioStream
 
+@export var switchButtonEnabled: bool
+
 var isEnglish = true
 var firstPush = true
 
 signal canContinue
 
 func _on_ready() -> void:
-	#Add BBC Codes
-	StoryText = StoryText.replace(EnglishTarget, "[color=#FFD000]"+EnglishTarget+"[/color]")
+	#if has switch, then we r
+	if(switchButtonEnabled):
+		StoryText = StoryText.replace(EnglishTarget, "[color=#FFD000]"+EnglishTarget+"[/color]")
+	else:
+		margin_container.visible = false
+		
 	contents_node.text = StoryText
 	print("Text replaced")
 	
@@ -86,4 +93,6 @@ func _on_button_pressed() -> void:
 
 
 func _on_narration_finished() -> void:
+	if(!switchButtonEnabled):
+		canContinue.emit()
 	button_node.disabled= false

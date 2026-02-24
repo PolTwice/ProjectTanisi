@@ -59,7 +59,7 @@ extends CanvasLayer
 @export var buttonCPic: Texture
 @export var buttonDPic: Texture
 
-
+signal canContinue
 
 #enum for correct answer used in Export. 
 enum answers{
@@ -182,4 +182,5 @@ func correctAnswerFunc():
 	h_box_cd.visible = false
 	correct_parent_margin.visible = true
 	submit.visible = false
+	canContinue.emit()
 	

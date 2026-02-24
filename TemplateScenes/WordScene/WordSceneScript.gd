@@ -19,6 +19,8 @@ extends CanvasLayer
 @export var Reading: AudioStream
 
 signal canContinue
+var engDone: bool = false
+var creeDone: bool = false
 
 func _on_english_word_pressed() -> void:
 	english_reading_node.play()
@@ -37,4 +39,16 @@ func _on_ready() -> void:
 	narration_audio.stream = Reading
 	
 	narration_audio.play()
+
+func _on_english_reading_finished() -> void:
+	engDone = true
+	checkCanContinue()
+
+func _on_cree_reading_finished() -> void:
+	creeDone = true
+	checkCanContinue()
+
+func checkCanContinue() -> void:
+	if(engDone && creeDone):
+		canContinue.emit()
 	

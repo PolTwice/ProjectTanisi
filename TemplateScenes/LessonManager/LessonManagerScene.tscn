@@ -30,6 +30,7 @@ script = ExtResource("1_3dfst")
 lessonArray = Array[PackedScene]([null, null, null, null])
 
 [node name="ButtonsCanvas" type="CanvasLayer" parent="."]
+layer = 5
 
 [node name="ButtonContainer" type="HBoxContainer" parent="ButtonsCanvas"]
 anchors_preset = -1
