@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://bi0pslf5vn6yf"]
 
-[ext_resource type="PackedScene" uid="uid://bfy50ijn0okwe" path="res://ChapterOne/AnimalSelectScenes/LessonSelectBackground.tscn" id="1_8c87u"]
+[ext_resource type="Texture2D" uid="uid://pjyq14q7cxef" path="res://ChapterOne/AnimalSelectScenes/assets/Environment/NewBackground.png" id="1_2kw34"]
 [ext_resource type="PackedScene" uid="uid://byq48so6bekdy" path="res://ChapterOne/AnimalSelectScenes/BeaverLessonSelect.tscn" id="2_oyypd"]
 [ext_resource type="PackedScene" uid="uid://dewjhcey6tmgw" path="res://ChapterOne/AnimalSelectScenes/BuffaloLessonSelect.tscn" id="3_p5wf7"]
 [ext_resource type="PackedScene" uid="uid://bfnxevo05b0o6" path="res://ChapterOne/AnimalSelectScenes/bearLessonSelect.tscn" id="4_vrled"]
@@ -10,7 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://b5og2jwo337pk" path="res://ChapterOne/AnimalSelectScenes/WolfLessonSelect.tscn" id="8_wopos"]
 [ext_resource type="Theme" uid="uid://byi38q23oj3ta" path="res://TemplateScenes/Themes/ButtonTheme.tres" id="9_2kw34"]
 [ext_resource type="StyleBox" uid="uid://chw4c3yc2s508" path="res://TemplateScenes/Themes/InfoBox.tres" id="10_c53tf"]
-
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cci4c"]
 bg_color = Color(0.639216, 0.537255, 0.396078, 1)
@@ -26,43 +25,49 @@ corner_radius_bottom_left = 20
 
 [node name="AnimalSelectScene" type="Node2D"]
 
-[node name="Background" parent="." instance=ExtResource("1_8c87u")]
-position = Vector2(2, 25)
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 3.0517578e-05
+offset_top = 6.1035156e-05
+offset_right = 40.00003
+offset_bottom = 40.00006
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("1_2kw34")
 
 [node name="BuffaloLessonSelect" parent="." instance=ExtResource("3_p5wf7")]
-position = Vector2(293, 719)
+position = Vector2(1141, 764)
 scale = Vector2(0.1, 0.1)
 lessonPath = "res://ChapterOne/BuffaloLesson/BuffaloLesson.tscn"
 lessonName = "Buffalo Learns Respect"
 
 [node name="BearSelect" parent="." instance=ExtResource("4_vrled")]
-position = Vector2(1707, 502)
+position = Vector2(1683, 700)
 scale = Vector2(0.1, 0.1)
 lessonName = "The Courageous Bear"
 
 [node name="EagleSelect" parent="." instance=ExtResource("5_lxpig")]
-position = Vector2(1349, 206)
+position = Vector2(1073, 279)
 scale = Vector2(0.1, 0.1)
 lessonPath = "res://ChapterOne/EagleLesson/EagleLesson.tscn"
 lessonName = "The Loving Eagle"
 
 [node name="SabeSelect" parent="." instance=ExtResource("6_fiji8")]
-position = Vector2(145, 402)
+position = Vector2(1415, 409)
 scale = Vector2(0.1, 0.1)
 
 [node name="TurtleSelect" parent="." instance=ExtResource("7_qd80w")]
-position = Vector2(800, 727)
+position = Vector2(794, 427)
 scale = Vector2(0.1, 0.1)
 lessonPath = "res://ChapterOne/TurtleLesson/TurtleLesson.tscn"
 
 [node name="WolfSelect" parent="." instance=ExtResource("8_wopos")]
-position = Vector2(783, 417)
+position = Vector2(581, 875)
 scale = Vector2(0.1, 0.1)
 lessonPath = "res://ChapterOne/WolfLesson/WolfLesson.tscn"
 lessonName = "Wolf"
 
 [node name="BeaverLessonSelect2" parent="." instance=ExtResource("2_oyypd")]
-position = Vector2(1430, 866)
+position = Vector2(343.00006, 250)
 scale = Vector2(0.1, 0.1)
 lessonPath = "res://ChapterOne/BeaverLesson/BeaverLesson.tscn"
 
