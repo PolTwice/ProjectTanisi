@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="bookContentResource" load_steps=6 format=3 uid="uid://6yqqtcng542g"]
+
+[ext_resource type="Script" uid="uid://jrguaax8ic12" path="res://AIBook/MasterScenes/BookContents.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://bmup28reih3tr" path="res://AIBook/chipmunk1.png" id="1_xyhqi"]
+[ext_resource type="Texture2D" uid="uid://hdwsp2ekajeh" path="res://AIBook/chipmunk2.png" id="2_g47mc"]
+[ext_resource type="Texture2D" uid="uid://clyhvcccxw1sf" path="res://AIBook/chipmunk3.png" id="3_6keaj"]
+[ext_resource type="Texture2D" uid="uid://dit8mfwyemh8o" path="res://AIBook/chipmunk5.png" id="5_7pet8"]
+
+[resource]
+script = ExtResource("1_script")
+creeLines = Array[String](["Charlie iskwêwâk wîkîhkâk! Nîsta, wîkîhkâk, nîkâwîk kîkway nîhîhkâk.", "Nîkâwîk pîsimwâk kîkway. 'Nîs!' Charlie pîkiskwêw, kîkway kîkâk.", "Nîkâwîk nîkâwîk pîsimwâk. 'Nîs!' nîkâwîk kîkway, kîkway kîkâk.", "Nîkâwîk nîkâwîk pîsimwâk. 'Nîs!' Charlie pîkiskwêw, kîkway kîkâk.", "Nîkâwîk Charlie nîkâwîk kîkway. 'Nîs!' nîkâwîk kîkway, kîkway kîkâk."])
+englishLines = Array[String](["Charlie the Chipmunk woke up excited! Today, he wanted to count everything he saw.", "One big tree stood tall. 'One!' Charlie shouted, pointing at it.", "He spotted two fluffy clouds. 'Two!' he giggled, waving at them.", "Next, three bright flowers bloomed. 'Three!' Charlie cheered, dancing around.", "At last, Charlie found four shiny pebbles. 'Four!' he laughed, feeling happy."])
+pictures = Array[Texture]([ExtResource("1_xyhqi"), ExtResource("2_g47mc"), ExtResource("3_6keaj"), ExtResource("5_7pet8"), ExtResource("5_7pet8")])
+metadata/_custom_type_script = "uid://c568f3d5864e408b9a190651fd817bb5"
