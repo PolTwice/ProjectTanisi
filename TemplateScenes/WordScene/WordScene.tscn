@@ -58,6 +58,25 @@ englishReading = SubResource("AudioStreamWAV_b1owf")
 creeReading = SubResource("AudioStreamWAV_7b4nj")
 Reading = SubResource("AudioStreamWAV_g426t")
 
+[node name="PanelContainer" type="PanelContainer" parent="."]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 50.0
+grow_horizontal = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.34
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "Press the buttons to hear the words!"
+horizontal_alignment = 1
+
 [node name="Background" type="TextureRect" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
@@ -69,33 +88,36 @@ size_flags_vertical = 3
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 
-[node name="Narration" type="RichTextLabel" parent="."]
+[node name="NarrationAudio" type="AudioStreamPlayer" parent="."]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Narration" type="RichTextLabel" parent="VBoxContainer"]
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+size_flags_stretch_ratio = 2.14
 theme = ExtResource("2_g426t")
 theme_override_font_sizes/normal_font_size = 80
 text = "English in Cree is Cree"
 horizontal_alignment = 1
-vertical_alignment = 1
+vertical_alignment = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
-anchors_preset = -1
-anchor_top = 0.591
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
 
-[node name="EnglishVBox" type="VBoxContainer" parent="HBoxContainer"]
+[node name="EnglishVBox" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="EnglishLabel" type="RichTextLabel" parent="HBoxContainer/EnglishVBox"]
+[node name="EnglishLabel" type="RichTextLabel" parent="VBoxContainer/HBoxContainer/EnglishVBox"]
+visible = false
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.3
@@ -106,27 +128,29 @@ text = "English"
 horizontal_alignment = 1
 vertical_alignment = 2
 
-[node name="EnglishMargin" type="MarginContainer" parent="HBoxContainer/EnglishVBox"]
+[node name="EnglishMargin" type="MarginContainer" parent="VBoxContainer/HBoxContainer/EnglishVBox"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_constants/margin_left = 50
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 50
 theme_override_constants/margin_right = 50
 theme_override_constants/margin_bottom = 50
 
-[node name="EnglishWord" type="Button" parent="HBoxContainer/EnglishVBox/EnglishMargin"]
+[node name="EnglishWord" type="Button" parent="VBoxContainer/HBoxContainer/EnglishVBox/EnglishMargin"]
 layout_mode = 2
 theme = ExtResource("3_hl41y")
-theme_override_font_sizes/font_size = 100
+theme_override_font_sizes/font_size = 80
 text = "English Word"
 
-[node name="EnglishReading" type="AudioStreamPlayer" parent="HBoxContainer/EnglishVBox/EnglishMargin/EnglishWord"]
+[node name="EnglishReading" type="AudioStreamPlayer" parent="VBoxContainer/HBoxContainer/EnglishVBox/EnglishMargin/EnglishWord"]
 
-[node name="CreeVBox" type="VBoxContainer" parent="HBoxContainer"]
+[node name="CreeVBox" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="CreeLabel" type="RichTextLabel" parent="HBoxContainer/CreeVBox"]
+[node name="CreeLabel" type="RichTextLabel" parent="VBoxContainer/HBoxContainer/CreeVBox"]
+visible = false
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.3
@@ -137,26 +161,25 @@ text = "Cree"
 horizontal_alignment = 1
 vertical_alignment = 2
 
-[node name="CreeMargin" type="MarginContainer" parent="HBoxContainer/CreeVBox"]
+[node name="CreeMargin" type="MarginContainer" parent="VBoxContainer/HBoxContainer/CreeVBox"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/margin_left = 50
-theme_override_constants/margin_right = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 100
 theme_override_constants/margin_bottom = 50
 
-[node name="CreeWord" type="Button" parent="HBoxContainer/CreeVBox/CreeMargin"]
+[node name="CreeWord" type="Button" parent="VBoxContainer/HBoxContainer/CreeVBox/CreeMargin"]
 layout_mode = 2
 theme = ExtResource("3_hl41y")
-theme_override_font_sizes/font_size = 100
+theme_override_font_sizes/font_size = 80
 text = "Cree Word"
 
-[node name="CreeReading" type="AudioStreamPlayer" parent="HBoxContainer/CreeVBox/CreeMargin/CreeWord"]
-
-[node name="NarrationAudio" type="AudioStreamPlayer" parent="."]
+[node name="CreeReading" type="AudioStreamPlayer" parent="VBoxContainer/HBoxContainer/CreeVBox/CreeMargin/CreeWord"]
 
 [connection signal="ready" from="." to="." method="_on_ready"]
-[connection signal="pressed" from="HBoxContainer/EnglishVBox/EnglishMargin/EnglishWord" to="." method="_on_english_word_pressed"]
-[connection signal="finished" from="HBoxContainer/EnglishVBox/EnglishMargin/EnglishWord/EnglishReading" to="." method="_on_english_reading_finished"]
-[connection signal="pressed" from="HBoxContainer/CreeVBox/CreeMargin/CreeWord" to="." method="_on_cree_word_pressed"]
-[connection signal="finished" from="HBoxContainer/CreeVBox/CreeMargin/CreeWord/CreeReading" to="." method="_on_cree_reading_finished"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/EnglishVBox/EnglishMargin/EnglishWord" to="." method="_on_english_word_pressed"]
+[connection signal="finished" from="VBoxContainer/HBoxContainer/EnglishVBox/EnglishMargin/EnglishWord/EnglishReading" to="." method="_on_english_reading_finished"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/CreeVBox/CreeMargin/CreeWord" to="." method="_on_cree_word_pressed"]
+[connection signal="finished" from="VBoxContainer/HBoxContainer/CreeVBox/CreeMargin/CreeWord/CreeReading" to="." method="_on_cree_reading_finished"]

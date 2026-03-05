@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://cq2yyd123wc2f"]
+[gd_scene load_steps=3 format=3 uid="uid://cq2yyd123wc2f"]
 
 [ext_resource type="PackedScene" uid="uid://bakvp2vudvfqy" path="res://TemplateScenes/StoryScene/StoryScene.tscn" id="1_ddjsb"]
+[ext_resource type="Texture2D" uid="uid://cghytk141wl86" path="res://ChapterOne/BearLesson/LessonAssets/Grass.png" id="2_dvvkl"]
 
 [node name="StoryRoot" instance=ExtResource("1_ddjsb")]
 StoryText = "Bear liked quiet places. Loud things made Bear scared."
 EnglishTarget = "Bear"
 CreeTarget = "Maskwa"
+backgroundTexture = ExtResource("2_dvvkl")
