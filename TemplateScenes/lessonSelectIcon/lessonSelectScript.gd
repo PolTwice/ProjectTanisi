@@ -15,26 +15,26 @@ class_name lessonIcon extends Area2D
 #@export var lessonScene: PackedScene			Stopped using in favor of using scene path
 @export var lessonPath: String
 @export var lessonName: String
+@export var animation: SpriteFrames
+@export var lessonSound: AudioStream
+@export var lessonNameAudio: AudioStream
 
 
-signal currentPosition
 func _ready() -> void:
+	lesson_sprite.sprite_frames = animation
+	lesson_name.stream = lessonNameAudio
+	lesson_sound.stream = lessonSound
 	GlobalState.connect("lesson_completed",Callable(self,"_on_lesson_complete"))
 	
 func _on_mouse_entered() -> void:
-	lesson_sprite.play()
+	#lesson_sprite.play()
+	pass
 	
 func _on_mouse_exited() -> void:
-	lesson_sprite.pause()
-
+	#lesson_sprite.pause()
+	pass
 func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 	if ((event is InputEventMouseButton and event.pressed)||(event is InputEventScreenTouch and event.pressed)):
-		
-		#emit current position to zoom here
-		currentPosition.emit(position.x, position.y)
-		
-		#pause
-		await get_tree().create_timer(500).timeout
 		
 		#play the sound of the lesson
 		lesson_sound.play()
@@ -47,5 +47,4 @@ func _on_lesson_sound_finished() -> void:
 
 func _on_lesson_name_finished() -> void:
 	#pause then move the next scene
-	await get_tree().create_timer(500).timeout
 	GlobalState.sceneManager.changeNodeOne(lessonPath, lessonName)

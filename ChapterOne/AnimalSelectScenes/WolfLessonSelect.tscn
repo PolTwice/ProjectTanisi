@@ -4,8 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://d0p6reppvvr04" path="res://ChapterOne/AnimalSelectScenes/assets/Wolf/Wolf1.png" id="2_oolh6"]
 [ext_resource type="Texture2D" uid="uid://bsow7op6qso74" path="res://ChapterOne/AnimalSelectScenes/assets/Wolf/Wolf2.png" id="3_1q5ub"]
 
-
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_bh6bg"]
 animations = [{
 "frames": [{
@@ -20,7 +18,5 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Animal" instance=ExtResource("1_mwd1p")]
-
-[node name="AnimalSprite" parent="." index="0"]
-sprite_frames = SubResource("SpriteFrames_bh6bg")
+[node name="WolfLessonSelect" instance=ExtResource("1_mwd1p")]
+animation = SubResource("SpriteFrames_bh6bg")

@@ -1,13 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dewjhcey6tmgw"]
+[gd_scene load_steps=5 format=3 uid="uid://bbqavuivyw684"]
 
 [ext_resource type="PackedScene" uid="uid://drq53txkkdr8y" path="res://TemplateScenes/lessonSelectIcon/LessonSelectIcon.tscn" id="1_4ns5i"]
 [ext_resource type="Texture2D" uid="uid://djd00yyhrnwbt" path="res://ChapterOne/AnimalSelectScenes/assets/Buffalo/Buffalo2.png" id="2_snahv"]
 [ext_resource type="Texture2D" uid="uid://bhlj3wrlgqhqq" path="res://ChapterOne/AnimalSelectScenes/assets/Buffalo/Buffalo.png" id="3_im38p"]
 
-
-
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_47ewn"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_r0btg"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -21,7 +18,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Animal" instance=ExtResource("1_4ns5i")]
-
-[node name="AnimalSprite" parent="." index="0"]
-sprite_frames = SubResource("SpriteFrames_47ewn")
+[node name="BuffaloLessonSelect" instance=ExtResource("1_4ns5i")]
+lessonPath = "Buffalo"
+lessonName = "Buffalo Lesson"
+animation = SubResource("SpriteFrames_r0btg")

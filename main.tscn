@@ -9,11 +9,14 @@
 layer = 0
 script = ExtResource("1_h2yge")
 
+[node name="UI" parent="." instance=ExtResource("2_272bh")]
+size_flags_horizontal = 1
+size_flags_vertical = 1
+
 [node name="NodeContainerOne" type="CanvasLayer" parent="."]
+layer = -1
 
 [node name="AnimalSelectScene" parent="NodeContainerOne" instance=ExtResource("2_1bvp3")]
-
-[node name="UI" parent="." instance=ExtResource("2_272bh")]
 
 [node name="AudioManager" type="Node" parent="."]
 script = ExtResource("4_1bvp3")
@@ -24,4 +27,5 @@ script = ExtResource("4_1bvp3")
 
 [node name="StreamThree" type="AudioStreamPlayer" parent="AudioManager"]
 
+[connection signal="tree_entered" from="NodeContainerOne" to="." method="_on_node_container_one_tree_entered"]
 [connection signal="ready" from="AudioManager" to="AudioManager" method="_on_ready"]

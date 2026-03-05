@@ -19,6 +19,7 @@ config/icon="uid://7mf0ow2ulifp"
 
 GlobalState="*res://Autoloads/GlobalState.gd"
 TransitionManager="*res://Autoloads/TransitionManager.gd"
+Main="res://main.tscn"
 
 [display]
 

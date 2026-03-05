@@ -4,9 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://clqbp2fjg7htd" path="res://ChapterOne/AnimalSelectScenes/assets/Eagle/Eagle 2.png" id="2_gioj8"]
 [ext_resource type="Texture2D" uid="uid://u44388ag735g" path="res://ChapterOne/AnimalSelectScenes/assets/Eagle/Eagle.png" id="3_rroln"]
 
-
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_h6lfo"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_c3i8g"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -20,7 +18,5 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Animal" instance=ExtResource("1_c3i8g")]
-
-[node name="AnimalSprite" parent="." index="0"]
-sprite_frames = SubResource("SpriteFrames_h6lfo")
+[node name="EagleLessonSelect" instance=ExtResource("1_c3i8g")]
+animation = SubResource("SpriteFrames_c3i8g")

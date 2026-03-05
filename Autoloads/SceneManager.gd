@@ -2,8 +2,7 @@ class_name SceneManager extends CanvasLayer
 #linked to root node. Methods will be used for changing scenes.
 
 @onready var ui: MainUI = $UI
-
-@export var nodeContainerOne: Node
+@onready var nodeContainerOne: Node = $NodeContainerOne
 
 #an array holds the paths of the last scenes
 var backStack = [];
@@ -16,17 +15,20 @@ var currentContainerOnePath;
 var currentContainerName;
 
 func _ready() -> void:
-	GlobalState.sceneManager = self;
+	pass
 	
 	#Make sure to change this in the future when the initial screen changes. 
-	currentContainerOne = $NodeContainerOne/AnimalSelectScene
-	currentContainerOnePath = "res://ChapterOne/AnimalSelectScenes/animalSelectScene.tscn"
-	currentContainerName = "Pick an Animal to hear a Story!"
-	ui.info.text = currentContainerName
+
 	
 #Used to change the scene contained in NodeContainerOne
 func changeNodeOne (new_scene: String, infoText: String,pushToStack = true, delete: bool = true, keep_running: bool = false):
+	currentContainerOne = $NodeContainerOne/AnimalSelectScene
+	currentContainerOnePath = "res://ChapterOne/AnimalSelectScenes/animalSelectScene.tscn"
+	currentContainerName = "Pick an Animal to hear a Story!"
 	
+	if ui:
+		ui.info.text = currentContainerName
+		
 	#if we want to add the scene to the backstack.	
 	if(pushToStack):
 		backStack.append(currentContainerOnePath)
@@ -63,3 +65,8 @@ func backNodeOne() -> void:
 	
 func changeInfoUi(infoText: String) -> void:
 	ui.info.text = infoText;
+
+	
+func _enter_tree() -> void:
+	GlobalState.sceneManager = self;
+	
