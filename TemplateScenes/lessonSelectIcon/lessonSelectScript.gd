@@ -1,6 +1,6 @@
 class_name lessonIcon extends Area2D
 
-#Sprite of the
+#Sprite of the lesson select Icon
 @onready var lesson_sprite: AnimatedSprite2D = $lessonSprite
 
 #audio stream that says the name of the lesson
@@ -21,30 +21,40 @@ class_name lessonIcon extends Area2D
 
 
 func _ready() -> void:
+	#set the sprite to the one specified in the export
 	lesson_sprite.sprite_frames = animation
+	#set the lesson name stream to the one specified in the export
 	lesson_name.stream = lessonNameAudio
+	#set the sound stream to the one specified in the export
 	lesson_sound.stream = lessonSound
-	GlobalState.connect("lesson_completed",Callable(self,"_on_lesson_complete"))
 	
+	#connect the lesson completed signal
+	#(this doesn't seem necessary?
+	#instead this should read if it is complete from the global state
+	GlobalState.connect("lesson_completed",Callable(self,"_on_lesson_complete"))
+
+#change this to be more appropriate
 func _on_mouse_entered() -> void:
-	#lesson_sprite.play()
+	#make it bigger when you hover over it.
 	pass
 	
 func _on_mouse_exited() -> void:
-	#lesson_sprite.pause()
+	#make it smaller
 	pass
 func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 	if ((event is InputEventMouseButton and event.pressed)||(event is InputEventScreenTouch and event.pressed)):
 		
 		#play the sound of the lesson
-		lesson_sound.play()
+		#after this, we go to _on_lesson_sound_finished() function
+		lesson_sound.play() 
 		
 		#play animation
 		lesson_sprite.play()
 
 func _on_lesson_sound_finished() -> void:
+	#when the lesson sound is finished, play the name of the lesson
 	lesson_name.play()
 
 func _on_lesson_name_finished() -> void:
-	#pause then move the next scene
+	#When the lesson name is finished, move to the lesson
 	GlobalState.sceneManager.changeNodeOne(lessonPath, lessonName)

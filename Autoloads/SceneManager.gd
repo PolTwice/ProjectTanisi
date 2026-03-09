@@ -1,5 +1,7 @@
 class_name SceneManager extends CanvasLayer
 #linked to root node. Methods will be used for changing scenes.
+#this script is an autoload as well
+
 
 @onready var ui: MainUI = $UI
 @onready var nodeContainerOne: Node = $NodeContainerOne
@@ -12,29 +14,19 @@ var nameHistory = []
 
 var currentContainerOne;
 var currentContainerOnePath;
-var currentContainerName;
 
 func _ready() -> void:
 	pass
 	
-	#Make sure to change this in the future when the initial screen changes. 
-
-	
 #Used to change the scene contained in NodeContainerOne
-func changeNodeOne (new_scene: String, infoText: String,pushToStack = true, delete: bool = true, keep_running: bool = false):
+func changeNodeOne (new_scene: String, pushToStack = true, delete: bool = true, keep_running: bool = false):
 	currentContainerOne = $NodeContainerOne/AnimalSelectScene
 	currentContainerOnePath = "res://ChapterOne/AnimalSelectScenes/animalSelectScene.tscn"
-	currentContainerName = "Pick an Animal to hear a Story!"
-	
-	if ui:
-		ui.info.text = currentContainerName
 		
 	#if we want to add the scene to the backstack.	
 	if(pushToStack):
 		backStack.append(currentContainerOnePath)
 		ui.back.disabled = false;
-		nameHistory.append(currentContainerName)
-		#nameHistory.append(infoText)
 	
 	if currentContainerOne != null:
 		if delete:	#if delete is true, delete the scene
@@ -56,17 +48,12 @@ func changeNodeOne (new_scene: String, infoText: String,pushToStack = true, dele
 	#update currentContainer variables
 	currentContainerOne = new
 	currentContainerOnePath = new_scene
-	changeInfoUi(infoText)
 
 func backNodeOne() -> void:
 	var backScene = backStack.pop_back()
 	if(backScene != null):
-		changeNodeOne(backScene, nameHistory.pop_back(),false)
-	
-func changeInfoUi(infoText: String) -> void:
-	ui.info.text = infoText;
+		changeNodeOne(backScene,false)
 
-	
 func _enter_tree() -> void:
 	GlobalState.sceneManager = self;
 	
