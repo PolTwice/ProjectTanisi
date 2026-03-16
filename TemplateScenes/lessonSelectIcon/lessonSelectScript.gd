@@ -41,7 +41,9 @@ func _on_mouse_entered() -> void:
 func _on_mouse_exited() -> void:
 	#make it smaller
 	pass
+	
 func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
+	#this checks for an event, and checks if the vent is either a click or a press from a touch screen.
 	if ((event is InputEventMouseButton and event.pressed)||(event is InputEventScreenTouch and event.pressed)):
 		
 		#play the sound of the lesson

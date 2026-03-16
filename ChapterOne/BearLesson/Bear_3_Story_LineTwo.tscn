@@ -6,3 +6,6 @@
 StoryText = "One night, the wind roared through the trees"
 EnglishTarget = "wind"
 CreeTarget = "yotin"
+
+[node name="AnimatedSprite" parent="." index="2"]
+position = Vector2(1043, 376)

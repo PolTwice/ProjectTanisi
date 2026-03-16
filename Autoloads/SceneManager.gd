@@ -2,8 +2,7 @@ class_name SceneManager extends CanvasLayer
 #linked to root node. Methods will be used for changing scenes.
 #this script is an autoload as well
 
-
-@onready var ui: MainUI = $UI
+@onready var ui: MainUI = $CanvasLayer/UI
 @onready var nodeContainerOne: Node = $NodeContainerOne
 
 #an array holds the paths of the last scenes
@@ -16,12 +15,13 @@ var currentContainerOne;
 var currentContainerOnePath;
 
 func _ready() -> void:
+	currentContainerOne = $NodeContainerOne/AnimalSelectScene
+	currentContainerOnePath = "res://ChapterOne/AnimalSelectScenes/animalSelectScene.tscn"
 	pass
 	
 #Used to change the scene contained in NodeContainerOne
 func changeNodeOne (new_scene: String, pushToStack = true, delete: bool = true, keep_running: bool = false):
-	currentContainerOne = $NodeContainerOne/AnimalSelectScene
-	currentContainerOnePath = "res://ChapterOne/AnimalSelectScenes/animalSelectScene.tscn"
+	
 		
 	#if we want to add the scene to the backstack.	
 	if(pushToStack):

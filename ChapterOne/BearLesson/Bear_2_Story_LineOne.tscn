@@ -1,10 +1,27 @@
-[gd_scene load_steps=3 format=3 uid="uid://cq2yyd123wc2f"]
+[gd_scene load_steps=5 format=3 uid="uid://cq2yyd123wc2f"]
 
 [ext_resource type="PackedScene" uid="uid://bakvp2vudvfqy" path="res://TemplateScenes/StoryScene/StoryScene.tscn" id="1_ddjsb"]
 [ext_resource type="Texture2D" uid="uid://cghytk141wl86" path="res://ChapterOne/BearLesson/LessonAssets/Grass.png" id="2_dvvkl"]
+[ext_resource type="Texture2D" uid="uid://c6baw73pfug6" path="res://ChapterOne/BearLesson/LessonAssets/Bear_1.png" id="3_0gj17"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dxc3q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_0gj17")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="StoryRoot" instance=ExtResource("1_ddjsb")]
 StoryText = "Bear liked quiet places. Loud things made Bear scared."
 EnglishTarget = "Bear"
 CreeTarget = "Maskwa"
 backgroundTexture = ExtResource("2_dvvkl")
+animation = SubResource("SpriteFrames_dxc3q")
+
+[node name="AnimatedSprite" parent="." index="2"]
+position = Vector2(969, 449)
+scale = Vector2(0.8, 0.8)
