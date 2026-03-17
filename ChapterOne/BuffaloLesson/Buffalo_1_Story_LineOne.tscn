@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://cpv0iiacxlfxw"]
+
+[ext_resource type="PackedScene" uid="uid://bakvp2vudvfqy" path="res://TemplateScenes/StoryScene/StoryScene.tscn" id="1_qvapa"]
+[ext_resource type="Texture2D" uid="uid://b2a5273bhy11x" path="res://ChapterOne/BuffaloLesson/Assets/Buffalo1.png" id="2_qm265"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cmpka"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_qm265")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="StoryRoot" instance=ExtResource("1_qvapa")]
+StoryText = "Buffalo liked to run fast across the grass. "
+EnglishTarget = "buffalo"
+switchButtonEnabled = false
+CreeTarget = "Buffalo in cree"
+
+[node name="AnimatedSprite" parent="." index="2"]
+sprite_frames = SubResource("SpriteFrames_cmpka")

@@ -15,6 +15,27 @@ animations = [{
 "texture": ExtResource("2_sds8f")
 }, {
 "duration": 1.0,
+"texture": ExtResource("2_sds8f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_sds8f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_sds8f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_sds8f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_sds8f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_u53fl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_u53fl")
+}, {
+"duration": 1.0,
 "texture": ExtResource("3_u53fl")
 }],
 "loop": true,

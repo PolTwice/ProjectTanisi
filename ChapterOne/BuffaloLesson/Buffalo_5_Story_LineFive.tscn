@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://c35ya1kd4obda"]
+
+[ext_resource type="PackedScene" uid="uid://bakvp2vudvfqy" path="res://TemplateScenes/StoryScene/StoryScene.tscn" id="1_vb8dq"]
+[ext_resource type="Texture2D" uid="uid://b6dshn52j8w4j" path="res://ChapterOne/BuffaloLesson/Assets/Buffalo5.png" id="2_8lnyu"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_42uqc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_8lnyu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="StoryRoot" instance=ExtResource("1_vb8dq")]
+StoryText = "Next time, Buffalo saw Grandpa Buffalo on the path, Buffalo walked slowly. "
+
+[node name="AnimatedSprite" parent="." index="2"]
+sprite_frames = SubResource("SpriteFrames_42uqc")

@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bionx4vstpolg"]
+
+[ext_resource type="PackedScene" uid="uid://bakvp2vudvfqy" path="res://TemplateScenes/StoryScene/StoryScene.tscn" id="1_yx8mn"]
+[ext_resource type="Texture2D" uid="uid://eb7gpw82is5n" path="res://ChapterOne/BuffaloLesson/Assets/Buffalo6.png" id="2_uxl5n"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qqk6t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_uxl5n")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="StoryRoot" instance=ExtResource("1_yx8mn")]
+StoryText = "“Thank you,” said Grandpa Buffalo. Buffalo felt proud. "
+
+[node name="AnimatedSprite" parent="." index="2"]
+sprite_frames = SubResource("SpriteFrames_qqk6t")

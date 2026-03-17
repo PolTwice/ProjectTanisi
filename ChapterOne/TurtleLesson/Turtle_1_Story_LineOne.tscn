@@ -1,0 +1,40 @@
+[gd_scene load_steps=9 format=3 uid="uid://b07v3le5a5kuu"]
+
+[ext_resource type="PackedScene" uid="uid://bakvp2vudvfqy" path="res://TemplateScenes/StoryScene/StoryScene.tscn" id="1_y0akw"]
+[ext_resource type="Texture2D" uid="uid://co1rl4jf2d4tm" path="res://ChapterOne/TurtleLesson/LessonAssets/TurtleBackground.png" id="2_k0d0r"]
+[ext_resource type="Texture2D" uid="uid://btvjnqfp3abos" path="res://ChapterOne/TurtleLesson/LessonAssets/turtleAnimOne.png" id="2_y2iv0"]
+[ext_resource type="Texture2D" uid="uid://bimssy7qa8vy4" path="res://ChapterOne/TurtleLesson/LessonAssets/TurtleAnimTwo.png" id="3_k0d0r"]
+[ext_resource type="Texture2D" uid="uid://c556j67sv2vmv" path="res://ChapterOne/TurtleLesson/LessonAssets/TurtleAnimThree.png" id="4_bn1qk"]
+[ext_resource type="Texture2D" uid="uid://bxnd4bp1wbvy1" path="res://ChapterOne/TurtleLesson/LessonAssets/TurtleAnimFour.png" id="5_l6lbd"]
+[ext_resource type="Texture2D" uid="uid://bi8p4maf83wuh" path="res://ChapterOne/TurtleLesson/LessonAssets/TurtleAnimFive.png" id="6_7w5a0"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t1rop"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_y2iv0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_k0d0r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_bn1qk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_l6lbd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_7w5a0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[node name="StoryRoot" instance=ExtResource("1_y0akw")]
+StoryText = "Turtle was slow and quiet. Turtle liked to watch the river sparkle. "
+backgroundTexture = ExtResource("2_k0d0r")
+
+[node name="AnimatedSprite" parent="." index="2"]
+sprite_frames = SubResource("SpriteFrames_t1rop")
+autoplay = "default"

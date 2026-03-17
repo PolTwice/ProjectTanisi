@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://cljwwimbug77r"]
+
+[ext_resource type="PackedScene" uid="uid://bakvp2vudvfqy" path="res://TemplateScenes/StoryScene/StoryScene.tscn" id="1_54r7l"]
+[ext_resource type="Texture2D" uid="uid://dact77hu7n6r5" path="res://ChapterOne/TurtleLesson/LessonAssets/Turtle4.png" id="2_6hn62"]
+[ext_resource type="Texture2D" uid="uid://b38s30210baxk" path="res://ChapterOne/TurtleLesson/LessonAssets/TurtleTalking.png" id="3_4q3ks"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_44i5k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_6hn62")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_4q3ks")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="StoryRoot" instance=ExtResource("1_54r7l")]
+StoryText = "Turtle felt scared but said, “I did it. I’m sorry.” "
+
+[node name="AnimatedSprite" parent="." index="2"]
+sprite_frames = SubResource("SpriteFrames_44i5k")
+autoplay = "default"

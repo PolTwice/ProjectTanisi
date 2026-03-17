@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://cx8wcfd4iu4sc"]
+
+[ext_resource type="PackedScene" uid="uid://bakvp2vudvfqy" path="res://TemplateScenes/StoryScene/StoryScene.tscn" id="1_mtuki"]
+[ext_resource type="Texture2D" uid="uid://co1rl4jf2d4tm" path="res://ChapterOne/TurtleLesson/LessonAssets/TurtleBackground.png" id="2_ilqap"]
+[ext_resource type="Texture2D" uid="uid://duvhsh5ntlw55" path="res://ChapterOne/TurtleLesson/LessonAssets/Turtle2.png" id="2_l660l"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ilqap"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_l660l")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="StoryRoot" instance=ExtResource("1_mtuki")]
+StoryText = "One day, Turtle accidentally broke Mom Turtle’s favorite shell bowl. "
+backgroundTexture = ExtResource("2_ilqap")
+
+[node name="AnimatedSprite" parent="." index="2"]
+sprite_frames = SubResource("SpriteFrames_ilqap")

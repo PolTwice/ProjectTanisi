@@ -79,6 +79,7 @@ grow_vertical = 2
 size_flags_horizontal = 3
 
 [node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(960, 540)
 
 [node name="TextPanel" type="PanelContainer" parent="."]
 anchors_preset = -1

@@ -1,0 +1,12 @@
+[gd_scene load_steps=8 format=3 uid="uid://deh6kk6i8mstq"]
+
+[ext_resource type="PackedScene" uid="uid://cfm8ssfd0vkfp" path="res://TemplateScenes/LessonManager/LessonManagerScene.tscn" id="1_nww7p"]
+[ext_resource type="PackedScene" uid="uid://b07v3le5a5kuu" path="res://ChapterOne/TurtleLesson/Turtle_1_Story_LineOne.tscn" id="2_3lj54"]
+[ext_resource type="PackedScene" uid="uid://cx8wcfd4iu4sc" path="res://ChapterOne/TurtleLesson/Turtle_2_Story_LineTwo.tscn" id="3_qu6db"]
+[ext_resource type="PackedScene" uid="uid://c2i8uto30n0vi" path="res://ChapterOne/TurtleLesson/Turtle_3_Story_LineThree.tscn" id="4_y731l"]
+[ext_resource type="PackedScene" uid="uid://cljwwimbug77r" path="res://ChapterOne/TurtleLesson/Turtle_4_Story_LineFour.tscn" id="5_cccgi"]
+[ext_resource type="PackedScene" uid="uid://wvxsxtvransj" path="res://ChapterOne/TurtleLesson/Turtle_5_Story_LineFive.tscn" id="6_o4ys1"]
+[ext_resource type="PackedScene" uid="uid://curwnpb0cu11j" path="res://ChapterOne/TurtleLesson/Turtle_6_Story_LineSix.tscn" id="7_8usey"]
+
+[node name="LessonManager" instance=ExtResource("1_nww7p")]
+lessonArray = Array[PackedScene]([ExtResource("2_3lj54"), ExtResource("3_qu6db"), ExtResource("4_y731l"), ExtResource("5_cccgi"), ExtResource("6_o4ys1"), ExtResource("7_8usey")])

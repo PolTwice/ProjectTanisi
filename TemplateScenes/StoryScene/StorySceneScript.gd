@@ -45,13 +45,12 @@ func _on_ready() -> void:
 		background_image_node.texture = backgroundTexture
 	else:
 		showError()
-	if (animation != null):
-		animated_sprite_node.sprite_frames = animation
-	
+	animated_sprite_node.play()
 	button_node.text = EnglishTarget + "\n🔄\n" + CreeTarget
 	
 	narration_node.stream = EnglishNarration
 	
+
 	await get_tree().create_timer(1.0).timeout
 	narration_node.play()
 	
