@@ -11,7 +11,6 @@ extends CanvasLayer
 
 ##EXPORTS
 @export var background: Texture
-@export var spriteFrames: SpriteFrames
 @export var EnglishButtonText: String
 @export var CreeButtonText: String
 @export var englishReading: AudioStream

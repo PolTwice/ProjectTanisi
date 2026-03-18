@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://pjyq14q7cxef" path="res://ChapterOne/AnimalSelectScenes/assets/Environment/NewBackground.png" id="1_2kw34"]
 [ext_resource type="PackedScene" uid="uid://dc8adesvjqfwk" path="res://ChapterOne/AnimalSelectScenes/BeaverLessonSelect.tscn" id="2_oyypd"]
-[ext_resource type="PackedScene" uid="uid://ddv4d8h05ed8g" path="res://ChapterOne/AnimalSelectScenes/BearLessonSelect.tscn" id="2_vrled"]
+[ext_resource type="PackedScene" uid="uid://ddv4d8h05ed8g" path="res://ChapterOne/AnimalSelectScenes/bearLessonSelect.tscn" id="2_vrled"]
 [ext_resource type="AudioStream" uid="uid://dl64kp365sgth" path="res://ChapterOne/AnimalSelectScenes/assets/Bear/BearSound.mp3" id="4_rjx6w"]
 [ext_resource type="AudioStream" uid="uid://bnjfm2bgjooh2" path="res://ChapterOne/AnimalSelectScenes/assets/Bear/BearName.mp3" id="5_qd80w"]
 [ext_resource type="PackedScene" uid="uid://bbqavuivyw684" path="res://ChapterOne/AnimalSelectScenes/BuffaloLessonSelect.tscn" id="6_c53tf"]
