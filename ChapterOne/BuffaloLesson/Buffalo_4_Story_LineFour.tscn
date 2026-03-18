@@ -16,6 +16,8 @@ animations = [{
 
 [node name="StoryRoot" instance=ExtResource("1_ipd45")]
 StoryText = "“Please slow down,” said Grandpa Buffalo. “Respect means thinking of others.” "
+EnglishTarget = "Grandpa"
+CreeTarget = "Mosom"
 
 [node name="AnimatedSprite" parent="." index="2"]
 sprite_frames = SubResource("SpriteFrames_n48sq")

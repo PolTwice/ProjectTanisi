@@ -20,6 +20,7 @@ animations = [{
 
 [node name="StoryRoot" instance=ExtResource("1_54r7l")]
 StoryText = "Turtle felt scared but said, “I did it. I’m sorry.” "
+switchButtonEnabled = false
 
 [node name="AnimatedSprite" parent="." index="2"]
 sprite_frames = SubResource("SpriteFrames_44i5k")

@@ -18,6 +18,7 @@ animations = [{
 [node name="StoryRoot" instance=ExtResource("1_a7cl7")]
 StoryText = "Turtle helped fix the mess and felt brave because he told the truth."
 EnglishTarget = "Turtle"
+switchButtonEnabled = false
 CreeTarget = "Mihkinâhk"
 backgroundTexture = ExtResource("2_d0lnw")
 

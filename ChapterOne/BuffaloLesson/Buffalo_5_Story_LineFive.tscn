@@ -16,6 +16,8 @@ animations = [{
 
 [node name="StoryRoot" instance=ExtResource("1_vb8dq")]
 StoryText = "Next time, Buffalo saw Grandpa Buffalo on the path, Buffalo walked slowly. "
+EnglishTarget = "Grandpa"
+CreeTarget = "Mosom"
 
 [node name="AnimatedSprite" parent="." index="2"]
 sprite_frames = SubResource("SpriteFrames_42uqc")

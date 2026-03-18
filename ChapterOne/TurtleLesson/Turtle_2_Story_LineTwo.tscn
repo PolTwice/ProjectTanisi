@@ -17,6 +17,8 @@ animations = [{
 
 [node name="StoryRoot" instance=ExtResource("1_mtuki")]
 StoryText = "One day, Turtle accidentally broke Mom Turtle’s favorite shell bowl. "
+EnglishTarget = "Mom"
+CreeTarget = "Nikawiy"
 backgroundTexture = ExtResource("2_ilqap")
 
 [node name="AnimatedSprite" parent="." index="2"]

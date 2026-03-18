@@ -16,6 +16,8 @@ animations = [{
 
 [node name="StoryRoot" instance=ExtResource("1_ktmgr")]
 StoryText = "Dust flew in Grandpa Buffalo’s face. "
+EnglishTarget = "Grandpa"
+CreeTarget = "Mosom"
 
 [node name="AnimatedSprite" parent="." index="2"]
 sprite_frames = SubResource("SpriteFrames_l1hha")
