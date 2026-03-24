@@ -1,0 +1,66 @@
+[gd_scene load_steps=12 format=3 uid="uid://df4wv31t1vjme"]
+
+[ext_resource type="PackedScene" uid="uid://bixs4mdgbfi7l" path="res://TemplateScenes/ChapterScene/ChapterScene.tscn" id="1_q25ja"]
+[ext_resource type="Texture2D" uid="uid://pjyq14q7cxef" path="res://ChapterOne/AnimalSelectScenes/assets/Environment/NewBackground.png" id="2_7kf7r"]
+[ext_resource type="PackedScene" uid="uid://dc8adesvjqfwk" path="res://ChapterOne/AnimalSelectScenes/BeaverLessonSelect.tscn" id="3_ri2j5"]
+[ext_resource type="PackedScene" uid="uid://ddv4d8h05ed8g" path="res://ChapterOne/AnimalSelectScenes/bearLessonSelect.tscn" id="4_jyjd3"]
+[ext_resource type="AudioStream" uid="uid://dl64kp365sgth" path="res://ChapterOne/AnimalSelectScenes/assets/Bear/BearSound.mp3" id="5_050ne"]
+[ext_resource type="AudioStream" uid="uid://bnjfm2bgjooh2" path="res://ChapterOne/AnimalSelectScenes/assets/Bear/BearName.mp3" id="6_db48n"]
+[ext_resource type="PackedScene" uid="uid://bbqavuivyw684" path="res://ChapterOne/AnimalSelectScenes/BuffaloLessonSelect.tscn" id="7_xhfgc"]
+[ext_resource type="PackedScene" uid="uid://dj83aat4ycmm2" path="res://ChapterOne/AnimalSelectScenes/EagleLessonSelect.tscn" id="8_n3bd2"]
+[ext_resource type="PackedScene" uid="uid://cm8ceejgg5md0" path="res://ChapterOne/AnimalSelectScenes/SabeLessonSelect.tscn" id="9_t4duj"]
+[ext_resource type="PackedScene" uid="uid://d2kfxr5p3wcne" path="res://ChapterOne/AnimalSelectScenes/TurtleLessonSelect.tscn" id="10_xto1q"]
+[ext_resource type="PackedScene" uid="uid://b5og2jwo337pk" path="res://ChapterOne/AnimalSelectScenes/WolfLessonSelect.tscn" id="11_tfyv7"]
+
+[node name="ChapterScene" instance=ExtResource("1_q25ja")]
+infoText = "Select an Animal!"
+
+[node name="TextureRect" type="TextureRect" parent="." index="0"]
+offset_left = 3.0517578e-05
+offset_top = 6.1035156e-05
+offset_right = 1920.0
+offset_bottom = 1080.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("2_7kf7r")
+
+[node name="BeaverLessonSelect" parent="." index="3" instance=ExtResource("3_ri2j5")]
+top_level = true
+z_as_relative = false
+position = Vector2(791.00006, 516.99994)
+scale = Vector2(0.1, 0.1)
+lessonName = &"Beaver"
+
+[node name="BearLessonSelect" parent="." index="4" instance=ExtResource("4_jyjd3")]
+position = Vector2(1622.9999, 577)
+scale = Vector2(0.1, 0.1)
+lessonName = &"Bear"
+lessonSound = ExtResource("5_050ne")
+lessonNameAudio = ExtResource("6_db48n")
+
+[node name="BuffaloLessonSelect" parent="." index="5" instance=ExtResource("7_xhfgc")]
+position = Vector2(901, 846.00006)
+scale = Vector2(0.15, 0.15)
+lessonPath = &""
+lessonName = &""
+
+[node name="EagleLessonSelect" parent="." index="6" instance=ExtResource("8_n3bd2")]
+position = Vector2(1076.0001, 251)
+scale = Vector2(0.1, 0.1)
+
+[node name="SabeLessonSelect" parent="." index="7" instance=ExtResource("9_t4duj")]
+position = Vector2(1243, 451.99997)
+scale = Vector2(0.1, 0.1)
+
+[node name="TurtleLessonSelect" parent="." index="8" instance=ExtResource("10_xto1q")]
+position = Vector2(510.00003, 413)
+scale = Vector2(0.1, 0.1)
+lessonPath = &"res://ChapterOne/TurtleLesson/0_Turtle_LessonManager.tscn"
+lessonName = &"Turtle Tells the Truth"
+
+[node name="WolfLessonSelect" parent="." index="9" instance=ExtResource("11_tfyv7")]
+position = Vector2(1296, 770)
+scale = Vector2(0.15, 0.15)
+
+[node name="TransitionColor" parent="." index="10"]
+z_as_relative = false

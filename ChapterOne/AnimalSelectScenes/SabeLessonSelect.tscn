@@ -16,6 +16,24 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("4_p6ya0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_txemj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_p6ya0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_txemj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_p6ya0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_txemj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_p6ya0")
 }],
 "loop": true,
 "name": &"default",
@@ -23,4 +41,6 @@ animations = [{
 }]
 
 [node name="SabeLessonSelect" instance=ExtResource("1_bf1xg")]
-animation = SubResource("SpriteFrames_bf1xg")
+
+[node name="lessonSprite" parent="." index="0"]
+sprite_frames = SubResource("SpriteFrames_bf1xg")

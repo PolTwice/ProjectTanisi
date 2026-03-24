@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cavm6p3qt5yri"]
+
+[ext_resource type="PackedScene" uid="uid://7rov3h1r8pnk" path="res://TemplateScenes/QuizScene/QuizScene.tscn" id="1_uega7"]
+[ext_resource type="Texture2D" uid="uid://co1rl4jf2d4tm" path="res://ChapterOne/TurtleLesson/LessonAssets/TurtleBackground.png" id="2_w1r6u"]
+
+[node name="QuizScene" instance=ExtResource("1_uega7")]
+question = "What is \"Thank you\" in Cree?"
+correctAnswerText = "That's Right! Thank you in Cree is ay-hay"
+hasPictures = false
+buttonAText = "Nikawiy"
+buttonBText = "Ay-hay"
+buttonCText = "Yotin"
+buttonDText = "Maskwa"
+correctAnswer = 1
+backgroundImage = ExtResource("2_w1r6u")

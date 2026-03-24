@@ -19,4 +19,6 @@ animations = [{
 }]
 
 [node name="EagleLessonSelect" instance=ExtResource("1_c3i8g")]
-animation = SubResource("SpriteFrames_c3i8g")
+
+[node name="lessonSprite" parent="." index="0"]
+sprite_frames = SubResource("SpriteFrames_c3i8g")

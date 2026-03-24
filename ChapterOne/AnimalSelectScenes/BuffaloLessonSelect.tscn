@@ -21,4 +21,6 @@ animations = [{
 [node name="BuffaloLessonSelect" instance=ExtResource("1_4ns5i")]
 lessonPath = "Buffalo"
 lessonName = "Buffalo Lesson"
-animation = SubResource("SpriteFrames_r0btg")
+
+[node name="lessonSprite" parent="." index="0"]
+sprite_frames = SubResource("SpriteFrames_r0btg")

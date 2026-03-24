@@ -24,19 +24,10 @@ animations = [{
 "texture": ExtResource("2_sds8f")
 }, {
 "duration": 1.0,
+"texture": ExtResource("3_u53fl")
+}, {
+"duration": 1.0,
 "texture": ExtResource("2_sds8f")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_sds8f")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_u53fl")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_u53fl")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_u53fl")
 }],
 "loop": true,
 "name": &"default",
@@ -44,4 +35,6 @@ animations = [{
 }]
 
 [node name="TurtleLessonSelect" instance=ExtResource("1_bbgl1")]
-animation = SubResource("SpriteFrames_bbgl1")
+
+[node name="lessonSprite" parent="." index="0"]
+sprite_frames = SubResource("SpriteFrames_bbgl1")

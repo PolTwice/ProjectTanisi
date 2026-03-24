@@ -25,7 +25,7 @@ corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
-[node name="AnimalSelectScene" type="Node2D"]
+[node name="AnimalSelectScene" type="CanvasLayer"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_left = 3.0517578e-05
@@ -71,10 +71,9 @@ scale = Vector2(0.15, 0.15)
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 anchors_preset = 10
 anchor_right = 1.0
-offset_left = 1.0
-offset_right = 1919.0
 offset_bottom = 147.0
 grow_horizontal = 2
+size_flags_horizontal = 3
 alignment = 1
 
 [node name="LeftMargin" type="MarginContainer" parent="HBoxContainer"]
@@ -134,3 +133,14 @@ visible = false
 layout_mode = 2
 theme = ExtResource("9_2kw34")
 text = "Log in"
+
+[node name="TransitionLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="TransitionColor" type="ColorRect" parent="TransitionLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
