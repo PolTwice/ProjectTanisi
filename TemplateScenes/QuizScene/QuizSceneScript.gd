@@ -77,7 +77,7 @@ enum answers{
 var correctAnswerButItsAString: String
 var currentSelection;
 
-func _on_ready() -> void:
+func _ready() -> void:
 	TransitionManager.make_invisible(incorrect_answer_label)
 	question_text.text = question
 	correct_answer_text.text = correctAnswerText

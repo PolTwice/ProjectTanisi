@@ -1,16 +1,28 @@
 [gd_scene load_steps=5 format=3 uid="uid://d1td81fgd4w5k"]
 
 [ext_resource type="Script" uid="uid://32k7keirkbqt" path="res://Autoloads/SceneManager.gd" id="1_h2yge"]
-[ext_resource type="PackedScene" uid="uid://bi0pslf5vn6yf" path="res://ChapterOne/AnimalSelectScenes/animalSelectScene.tscn" id="2_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://cfdga74wde3ce" path="res://TemplateScenes/NavigationBar/MainUI.tscn" id="2_272bh"]
+[ext_resource type="PackedScene" uid="uid://df4wv31t1vjme" path="res://ChapterOne/AnimalSelectScenes/0ChapterOne.tscn" id="3_1bvp3"]
 [ext_resource type="Script" uid="uid://cuooglhpnchqk" path="res://Autoloads/audio_manager.gd" id="4_1bvp3"]
 
 [node name="Root" type="CanvasLayer"]
 layer = 0
 script = ExtResource("1_h2yge")
 
+[node name="TransitionLayer" type="CanvasLayer" parent="."]
+layer = 1000
+
+[node name="ColorRect" type="ColorRect" parent="TransitionLayer"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-layer = 100
+layer = 5
 
 [node name="UI" parent="CanvasLayer" instance=ExtResource("2_272bh")]
 size_flags_horizontal = 1
@@ -19,7 +31,7 @@ size_flags_vertical = 1
 [node name="NodeContainerOne" type="CanvasLayer" parent="."]
 layer = -1
 
-[node name="AnimalSelectScene" parent="NodeContainerOne" instance=ExtResource("2_1bvp3")]
+[node name="ChapterScene" parent="NodeContainerOne" instance=ExtResource("3_1bvp3")]
 
 [node name="AudioManager" type="Node" parent="."]
 script = ExtResource("4_1bvp3")

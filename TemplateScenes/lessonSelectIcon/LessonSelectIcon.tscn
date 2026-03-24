@@ -33,5 +33,3 @@ shape = SubResource("CircleShape2D_e144x")
 [connection signal="input_event" from="." to="." method="_on_input_event"]
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
-[connection signal="finished" from="lessonName" to="." method="_on_lesson_name_finished"]
-[connection signal="finished" from="lessonSound" to="." method="_on_lesson_sound_finished"]

@@ -32,7 +32,7 @@ func changeContents (new_scene: PackedScene):
 	next_button.disabled = true
 	
 
-func _on_ready() -> void:
+func _ready() -> void:
 	#set the contents to the first scene in the lesson array
 	changeContents(lessonArray[0])
 
