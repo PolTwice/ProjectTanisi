@@ -54,12 +54,10 @@ func _on_ready() -> void:
 	await get_tree().create_timer(1.0).timeout
 	narration_node.play()
 	
-
 #Display some error
 func showError() -> void:
 	self.visible = false
 	pass
-
 
 func _on_button_pressed() -> void:
 	if(firstPush):
