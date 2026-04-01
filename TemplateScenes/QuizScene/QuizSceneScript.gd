@@ -104,6 +104,7 @@ func _ready() -> void:
 				correct_picture.texture = buttonDPic
 			
 	print("The correct answers is "+ correctAnswerButItsAString )
+	
 	if hasPictures:
 		button_a_pic.texture = buttonAPic
 		button_b_pic.texture = buttonBPic

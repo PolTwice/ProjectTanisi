@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://cx8wcfd4iu4sc"]
+[gd_scene load_steps=6 format=3 uid="uid://cx8wcfd4iu4sc"]
 
 [ext_resource type="PackedScene" uid="uid://bakvp2vudvfqy" path="res://TemplateScenes/StoryScene/StoryScene.tscn" id="1_mtuki"]
 [ext_resource type="Texture2D" uid="uid://co1rl4jf2d4tm" path="res://ChapterOne/TurtleLesson/LessonAssets/TurtleBackground.png" id="2_ilqap"]
 [ext_resource type="Texture2D" uid="uid://duvhsh5ntlw55" path="res://ChapterOne/TurtleLesson/LessonAssets/Turtle2.png" id="2_l660l"]
+[ext_resource type="AudioStream" uid="uid://bgj1vmlht8eq7" path="res://ChapterOne/TurtleLesson/LessonAudio/StoryAudio/Turtle2.wav" id="3_ilqap"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ilqap"]
 animations = [{
@@ -18,8 +19,11 @@ animations = [{
 [node name="StoryRoot" instance=ExtResource("1_mtuki")]
 StoryText = "One day, Turtle accidentally broke Mom Turtle’s favorite shell bowl. "
 EnglishTarget = "Mom"
+switchButtonEnabled = false
 CreeTarget = "Nikawiy"
 backgroundTexture = ExtResource("2_ilqap")
+EnglishNarration = ExtResource("3_ilqap")
+CreeNarration = null
 
 [node name="AnimatedSprite" parent="." index="2"]
 sprite_frames = SubResource("SpriteFrames_ilqap")

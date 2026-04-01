@@ -1,0 +1,119 @@
+[gd_scene load_steps=8 format=3 uid="uid://b6o6vt21axaak"]
+
+[ext_resource type="Texture2D" uid="uid://bdlxlq16xgwln" path="res://NonLessonScenes/Assets/BG.png" id="1_hl7tl"]
+[ext_resource type="Script" uid="uid://d0ayf4b0ka2g2" path="res://NonLessonScenes/start_screen.gd" id="1_s8l2f"]
+[ext_resource type="Texture2D" uid="uid://dfs1pwrak40ve" path="res://ChapterOne/AnimalSelectScenes/assets/Sabe/sabe.png" id="2_s8l2f"]
+[ext_resource type="Texture2D" uid="uid://dma43uo8vhgsk" path="res://ChapterOne/AnimalSelectScenes/assets/SabeTwo/sabe2.png" id="3_ppvkr"]
+[ext_resource type="Texture2D" uid="uid://rh8pjf42xt1p" path="res://ChapterOne/AnimalSelectScenes/assets/SabeTwo/sabe.png" id="4_n6g4a"]
+[ext_resource type="Theme" uid="uid://byi38q23oj3ta" path="res://TemplateScenes/Themes/ButtonTheme.tres" id="5_66nqs"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s56cl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_s8l2f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_s8l2f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_s8l2f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_s8l2f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_s8l2f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_s8l2f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_s8l2f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_s8l2f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ppvkr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_n6g4a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ppvkr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_n6g4a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ppvkr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_n6g4a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ppvkr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_n6g4a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ppvkr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_n6g4a")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="TitleScreen" type="CanvasLayer"]
+script = ExtResource("1_s8l2f")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_hl7tl")
+
+[node name="ClickToStart" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("5_66nqs")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "Click the screen to start!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Title" type="Label" parent="."]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 440.0
+grow_horizontal = 2
+theme = ExtResource("5_66nqs")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 20
+theme_override_font_sizes/font_size = 200
+text = "Project Tanisi"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Sabe" type="AnimatedSprite2D" parent="."]
+position = Vector2(1520, 540)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_s56cl")
+autoplay = "default"
+
+[node name="ClickableLayer" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
+
+[connection signal="gui_input" from="ClickableLayer" to="." method="_on_color_rect_gui_input"]

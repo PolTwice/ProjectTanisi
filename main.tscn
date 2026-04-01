@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://32k7keirkbqt" path="res://Autoloads/SceneManager.gd" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://cfdga74wde3ce" path="res://TemplateScenes/NavigationBar/MainUI.tscn" id="2_272bh"]
-[ext_resource type="PackedScene" uid="uid://df4wv31t1vjme" path="res://ChapterOne/AnimalSelectScenes/0ChapterOne.tscn" id="3_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://b6o6vt21axaak" path="res://NonLessonScenes/StartScreen.tscn" id="3_1bvp3"]
 [ext_resource type="Script" uid="uid://cuooglhpnchqk" path="res://Autoloads/audio_manager.gd" id="4_1bvp3"]
 
 [node name="Root" type="CanvasLayer"]
@@ -31,7 +31,7 @@ size_flags_vertical = 1
 [node name="NodeContainerOne" type="CanvasLayer" parent="."]
 layer = -1
 
-[node name="ChapterScene" parent="NodeContainerOne" instance=ExtResource("3_1bvp3")]
+[node name="TitleScreen" parent="NodeContainerOne" instance=ExtResource("3_1bvp3")]
 
 [node name="AudioManager" type="Node" parent="."]
 script = ExtResource("4_1bvp3")

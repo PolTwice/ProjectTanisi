@@ -21,7 +21,6 @@ corner_radius_bottom_left = 50
 script = ExtResource("1_8d8od")
 question = "EXAMPLE QUESTION"
 correctAnswerText = "That's the right answer! It's right because it is correct"
-hasPictures = true
 buttonAText = "Right Answer"
 buttonBText = "Answer Two"
 buttonCText = "Answer Bun"
@@ -125,10 +124,12 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+mouse_filter = 2
 
 [node name="buttonAPic" type="TextureRect" parent="VBoxContainer/AnswerPanel/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxAB/MarginContainerA/ButtonA/buttonAVBox"]
 layout_mode = 2
 size_flags_vertical = 3
+mouse_filter = 2
 expand_mode = 3
 stretch_mode = 5
 
@@ -162,10 +163,12 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="buttonBPic" type="TextureRect" parent="VBoxContainer/AnswerPanel/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxAB/MarginContainerB/ButtonB/buttonBVBox"]
 layout_mode = 2
 size_flags_vertical = 3
+mouse_filter = 2
 expand_mode = 3
 stretch_mode = 5
 
@@ -203,10 +206,12 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="ButtonCPic" type="TextureRect" parent="VBoxContainer/AnswerPanel/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxCD/MarginContainerC/ButtonC/buttonCVBox"]
 layout_mode = 2
 size_flags_vertical = 3
+mouse_filter = 2
 expand_mode = 3
 stretch_mode = 5
 
@@ -240,10 +245,12 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="ButtonDPic" type="TextureRect" parent="VBoxContainer/AnswerPanel/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxCD/MarginContainerD/ButtonD/buttonDVbox"]
 layout_mode = 2
 size_flags_vertical = 3
+mouse_filter = 2
 expand_mode = 3
 stretch_mode = 5
 

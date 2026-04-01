@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://wvxsxtvransj"]
+[gd_scene load_steps=8 format=3 uid="uid://wvxsxtvransj"]
 
 [ext_resource type="PackedScene" uid="uid://bakvp2vudvfqy" path="res://TemplateScenes/StoryScene/StoryScene.tscn" id="1_oqpfv"]
 [ext_resource type="Texture2D" uid="uid://co1rl4jf2d4tm" path="res://ChapterOne/TurtleLesson/LessonAssets/TurtleBackground.png" id="2_24pd3"]
 [ext_resource type="Texture2D" uid="uid://bwigix6gfx16l" path="res://ChapterOne/TurtleLesson/LessonAssets/MomTalking2.png" id="3_kl3si"]
+[ext_resource type="AudioStream" uid="uid://cqgx7dj6gxccu" path="res://ChapterOne/TurtleLesson/LessonAudio/StoryAudio/Turtle5En.wav" id="3_n6nm4"]
+[ext_resource type="AudioStream" uid="uid://bayej4mxd0hk5" path="res://ChapterOne/TurtleLesson/LessonAudio/StoryAudio/Turtle5Cr.wav" id="4_gpw70"]
 [ext_resource type="Texture2D" uid="uid://cvdh3l0cho24j" path="res://ChapterOne/TurtleLesson/LessonAssets/Turtle5.png" id="4_n6nm4"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_gpw70"]
@@ -21,9 +23,11 @@ animations = [{
 
 [node name="StoryRoot" instance=ExtResource("1_oqpfv")]
 StoryText = "Mom Turtle smiled kindly. “Thank you for telling the truth.” "
-EnglishTarget = "Mom"
-CreeTarget = "nikawiy"
+EnglishTarget = "Thank you"
+CreeTarget = "Tiniki"
 backgroundTexture = ExtResource("2_24pd3")
+EnglishNarration = ExtResource("3_n6nm4")
+CreeNarration = ExtResource("4_gpw70")
 
 [node name="AnimatedSprite" parent="." index="2"]
 sprite_frames = SubResource("SpriteFrames_gpw70")

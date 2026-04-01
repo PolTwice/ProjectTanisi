@@ -1,0 +1,136 @@
+[gd_scene load_steps=9 format=3 uid="uid://dl0xoxmeo6kbs"]
+
+[ext_resource type="Theme" uid="uid://byi38q23oj3ta" path="res://TemplateScenes/Themes/ButtonTheme.tres" id="1_ekm3o"]
+[ext_resource type="Script" uid="uid://4btwynijagj3" path="res://NonLessonScenes/chapter_select.gd" id="1_pn4vd"]
+[ext_resource type="Texture2D" uid="uid://bdlxlq16xgwln" path="res://NonLessonScenes/Assets/BG.png" id="2_51wfn"]
+[ext_resource type="Texture2D" uid="uid://gpp6b0aakire" path="res://NonLessonScenes/Assets/Screenshot 2026-03-31 100948.png" id="4_v6voe"]
+[ext_resource type="Texture2D" uid="uid://c5qwn036oa1px" path="res://NonLessonScenes/Assets/Screenshot 2026-03-17 150640.png" id="5_17fv1"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qe4d8"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ector"]
+texture = ExtResource("4_v6voe")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nfp11"]
+texture = ExtResource("5_17fv1")
+
+[node name="ChapterSelect" type="CanvasLayer"]
+script = ExtResource("1_pn4vd")
+
+[node name="background" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_51wfn")
+
+[node name="darkening Layer" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.52156866)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 334.0
+grow_horizontal = 2
+
+[node name="Spacer" type="PanelContainer" parent="Control/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_qe4d8")
+
+[node name="Title" type="Label" parent="Control/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_ekm3o")
+theme_override_font_sizes/font_size = 100
+text = "Select a chapter to begin!"
+horizontal_alignment = 1
+
+[node name="Button Margin" type="MarginContainer" parent="Control/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+size_flags_stretch_ratio = 0.7
+
+[node name="ButtonHbox" type="HBoxContainer" parent="Control/VBoxContainer/Button Margin"]
+layout_mode = 2
+alignment = 1
+
+[node name="Chap1vBox" type="VBoxContainer" parent="Control/VBoxContainer/Button Margin/ButtonHbox"]
+layout_mode = 2
+
+[node name="Chap1Text" type="Label" parent="Control/VBoxContainer/Button Margin/ButtonHbox/Chap1vBox"]
+layout_mode = 2
+theme = ExtResource("1_ekm3o")
+text = "The Seven Grandfather Teachings"
+horizontal_alignment = 1
+
+[node name="Chap1Panel" type="PanelContainer" parent="Control/VBoxContainer/Button Margin/ButtonHbox/Chap1vBox"]
+layout_mode = 2
+theme = ExtResource("1_ekm3o")
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/VBoxContainer/Button Margin/ButtonHbox/Chap1vBox/Chap1Panel"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="PanelContainer" type="PanelContainer" parent="Control/VBoxContainer/Button Margin/ButtonHbox/Chap1vBox/Chap1Panel/MarginContainer"]
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ector")
+
+[node name="Spacer" type="MarginContainer" parent="Control/VBoxContainer/Button Margin/ButtonHbox"]
+layout_mode = 2
+theme_override_constants/margin_right = 200
+
+[node name="Chap2Vbox" type="VBoxContainer" parent="Control/VBoxContainer/Button Margin/ButtonHbox"]
+layout_mode = 2
+
+[node name="Chap2Text" type="Label" parent="Control/VBoxContainer/Button Margin/ButtonHbox/Chap2Vbox"]
+layout_mode = 2
+theme = ExtResource("1_ekm3o")
+text = "The Medicine Wheel"
+horizontal_alignment = 1
+
+[node name="Chap2Panel" type="PanelContainer" parent="Control/VBoxContainer/Button Margin/ButtonHbox/Chap2Vbox"]
+layout_mode = 2
+theme = ExtResource("1_ekm3o")
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/VBoxContainer/Button Margin/ButtonHbox/Chap2Vbox/Chap2Panel"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="PanelContainer2" type="PanelContainer" parent="Control/VBoxContainer/Button Margin/ButtonHbox/Chap2Vbox/Chap2Panel/MarginContainer"]
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_nfp11")
+
+[node name="ColorRect" type="ColorRect" parent="Control/VBoxContainer/Button Margin/ButtonHbox/Chap2Vbox/Chap2Panel/MarginContainer/PanelContainer2"]
+layout_mode = 2
+color = Color(0, 0, 0, 0.33333334)
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/Button Margin/ButtonHbox/Chap2Vbox/Chap2Panel/MarginContainer/PanelContainer2"]
+layout_mode = 2
+theme = ExtResource("1_ekm3o")
+text = "Coming soon!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="gui_input" from="Control/VBoxContainer/Button Margin/ButtonHbox/Chap1vBox/Chap1Panel" to="." method="_on_chap_1_panel_gui_input"]

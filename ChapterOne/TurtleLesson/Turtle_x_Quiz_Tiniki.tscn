@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dxirgpfrcp3h"]
+
+[ext_resource type="PackedScene" uid="uid://7rov3h1r8pnk" path="res://TemplateScenes/QuizScene/QuizScene.tscn" id="1_3ix2h"]
+[ext_resource type="Texture2D" uid="uid://co1rl4jf2d4tm" path="res://ChapterOne/TurtleLesson/LessonAssets/TurtleBackground.png" id="2_ue43p"]
+
+[node name="QuizScene" instance=ExtResource("1_3ix2h")]
+question = "\"Tiniki\" in English means \"Sorry\""
+correctAnswerText = "That's right! \"Tiniki\" means \"Thank you\""
+hasPictures = false
+hasFourQuestions = false
+buttonAText = "True"
+buttonBText = "False"
+correctAnswer = 1
+backgroundImage = ExtResource("2_ue43p")

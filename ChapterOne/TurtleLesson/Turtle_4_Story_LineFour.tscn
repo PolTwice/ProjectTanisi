@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://cljwwimbug77r"]
+[gd_scene load_steps=7 format=3 uid="uid://cljwwimbug77r"]
 
 [ext_resource type="PackedScene" uid="uid://bakvp2vudvfqy" path="res://TemplateScenes/StoryScene/StoryScene.tscn" id="1_54r7l"]
+[ext_resource type="AudioStream" uid="uid://dcubdkpj1gegv" path="res://ChapterOne/TurtleLesson/LessonAudio/StoryAudio/Turtle4.wav" id="2_4q3ks"]
 [ext_resource type="Texture2D" uid="uid://dact77hu7n6r5" path="res://ChapterOne/TurtleLesson/LessonAssets/Turtle4.png" id="2_6hn62"]
+[ext_resource type="Texture2D" uid="uid://co1rl4jf2d4tm" path="res://ChapterOne/TurtleLesson/LessonAssets/TurtleBackground.png" id="2_44i5k"]
 [ext_resource type="Texture2D" uid="uid://b38s30210baxk" path="res://ChapterOne/TurtleLesson/LessonAssets/TurtleTalking.png" id="3_4q3ks"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_44i5k"]
@@ -21,6 +23,9 @@ animations = [{
 [node name="StoryRoot" instance=ExtResource("1_54r7l")]
 StoryText = "Turtle felt scared but said, “I did it. I’m sorry.” "
 switchButtonEnabled = false
+backgroundTexture = ExtResource("2_44i5k")
+EnglishNarration = ExtResource("2_4q3ks")
+CreeNarration = null
 
 [node name="AnimatedSprite" parent="." index="2"]
 sprite_frames = SubResource("SpriteFrames_44i5k")
