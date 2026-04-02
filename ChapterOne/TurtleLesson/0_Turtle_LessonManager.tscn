@@ -16,3 +16,4 @@
 
 [node name="LessonManager" instance=ExtResource("1_nww7p")]
 lessonArray = Array[PackedScene]([ExtResource("2_rhuno"), ExtResource("2_3lj54"), ExtResource("3_qu6db"), ExtResource("4_y731l"), ExtResource("5_cccgi"), ExtResource("9_x08su"), ExtResource("6_o4ys1"), ExtResource("10_l4433"), ExtResource("7_8usey"), ExtResource("11_l4433"), ExtResource("11_0b56h"), ExtResource("13_0b56h")])
+lessonName = &"Turtle Learns the Truth"
