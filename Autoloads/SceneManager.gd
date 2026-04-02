@@ -21,7 +21,7 @@ func _ready() -> void:
 	currentContainerOnePath = "res://NonLessonScenes/StartScreen.tscn"
 	
 #Used to change the scene contained in NodeContainerOne
-func changeNodeOne (new_scene: String, pushToStack = true, fade = true, fadeTime = 1.0):
+func changeNodeOne (new_scene: String, pushToStack = true, fade = true, fadeTime = 0.5):
 	
 	#if we want to add the scene to the backstack.	
 	if(pushToStack):

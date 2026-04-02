@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cavm6p3qt5yri"]
+
+[ext_resource type="PackedScene" uid="uid://7rov3h1r8pnk" path="res://TemplateScenes/QuizScene/QuizScene.tscn" id="1_uega7"]
+[ext_resource type="Texture2D" uid="uid://co1rl4jf2d4tm" path="res://ChapterOne/TurtleLesson/LessonAssets/TurtleBackground.png" id="2_w1r6u"]
+
+[node name="QuizScene" instance=ExtResource("1_uega7")]
+question = "What is \"River\" in Cree?"
+correctAnswerText = "That's Right! \"River\" in Cree is \"Sipiy\""
+hasPictures = false
+buttonAText = "Sipiy"
+buttonBText = "Maskwa"
+buttonCText = "Tanisi"
+buttonDText = "Tiniki"
+backgroundImage = ExtResource("2_w1r6u")

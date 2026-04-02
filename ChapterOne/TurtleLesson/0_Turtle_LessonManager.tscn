@@ -2,17 +2,17 @@
 
 [ext_resource type="PackedScene" uid="uid://cfm8ssfd0vkfp" path="res://TemplateScenes/LessonManager/LessonManagerScene.tscn" id="1_nww7p"]
 [ext_resource type="PackedScene" uid="uid://b07v3le5a5kuu" path="res://ChapterOne/TurtleLesson/Turtle_1_Story_LineOne.tscn" id="2_3lj54"]
-[ext_resource type="PackedScene" uid="uid://c8ts457x3rff7" path="res://ChapterOne/TurtleLesson/Turtle_x_Word_River.tscn" id="2_rhuno"]
+[ext_resource type="PackedScene" uid="uid://c8ts457x3rff7" path="res://ChapterOne/TurtleLesson/Turtle_Word_River.tscn" id="2_rhuno"]
 [ext_resource type="PackedScene" uid="uid://cx8wcfd4iu4sc" path="res://ChapterOne/TurtleLesson/Turtle_2_Story_LineTwo.tscn" id="3_qu6db"]
 [ext_resource type="PackedScene" uid="uid://c2i8uto30n0vi" path="res://ChapterOne/TurtleLesson/Turtle_3_Story_LineThree.tscn" id="4_y731l"]
 [ext_resource type="PackedScene" uid="uid://cljwwimbug77r" path="res://ChapterOne/TurtleLesson/Turtle_4_Story_LineFour.tscn" id="5_cccgi"]
 [ext_resource type="PackedScene" uid="uid://wvxsxtvransj" path="res://ChapterOne/TurtleLesson/Turtle_5_Story_LineFive.tscn" id="6_o4ys1"]
 [ext_resource type="PackedScene" uid="uid://curwnpb0cu11j" path="res://ChapterOne/TurtleLesson/Turtle_6_Story_LineSix.tscn" id="7_8usey"]
-[ext_resource type="PackedScene" uid="uid://loxep8txhepb" path="res://ChapterOne/TurtleLesson/Turtle_x_Word_ThankYou.tscn" id="9_x08su"]
-[ext_resource type="PackedScene" uid="uid://lg3q6ajs0ssr" path="res://ChapterOne/TurtleLesson/Turtle_x_Word_Mom.tscn" id="10_l4433"]
-[ext_resource type="PackedScene" uid="uid://cavm6p3qt5yri" path="res://ChapterOne/TurtleLesson/Turtle_x_Quiz_River.tscn" id="11_0b56h"]
-[ext_resource type="PackedScene" uid="uid://c8ycsqosxvhl2" path="res://ChapterOne/TurtleLesson/Turtle_x_Quiz_MyMom.tscn" id="11_l4433"]
-[ext_resource type="PackedScene" uid="uid://dxirgpfrcp3h" path="res://ChapterOne/TurtleLesson/Turtle_x_Quiz_Tiniki.tscn" id="13_0b56h"]
+[ext_resource type="PackedScene" uid="uid://loxep8txhepb" path="res://ChapterOne/TurtleLesson/Turtle_Word_ThankYou.tscn" id="9_x08su"]
+[ext_resource type="PackedScene" uid="uid://lg3q6ajs0ssr" path="res://ChapterOne/TurtleLesson/Turtle_Word_Mom.tscn" id="10_l4433"]
+[ext_resource type="PackedScene" uid="uid://cavm6p3qt5yri" path="res://ChapterOne/TurtleLesson/Turtle_Quiz_River.tscn" id="11_0b56h"]
+[ext_resource type="PackedScene" uid="uid://c8ycsqosxvhl2" path="res://ChapterOne/TurtleLesson/Turtle_Quiz_MyMom.tscn" id="11_l4433"]
+[ext_resource type="PackedScene" uid="uid://dxirgpfrcp3h" path="res://ChapterOne/TurtleLesson/Turtle_Quiz_Tiniki.tscn" id="13_0b56h"]
 
 [node name="LessonManager" instance=ExtResource("1_nww7p")]
 lessonArray = Array[PackedScene]([ExtResource("2_rhuno"), ExtResource("2_3lj54"), ExtResource("3_qu6db"), ExtResource("4_y731l"), ExtResource("5_cccgi"), ExtResource("9_x08su"), ExtResource("6_o4ys1"), ExtResource("10_l4433"), ExtResource("7_8usey"), ExtResource("11_l4433"), ExtResource("11_0b56h"), ExtResource("13_0b56h")])

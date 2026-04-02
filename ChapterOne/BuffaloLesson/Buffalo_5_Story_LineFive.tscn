@@ -1,13 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://c35ya1kd4obda"]
+[gd_scene load_steps=7 format=3 uid="uid://c35ya1kd4obda"]
 
 [ext_resource type="PackedScene" uid="uid://bakvp2vudvfqy" path="res://TemplateScenes/StoryScene/StoryScene.tscn" id="1_vb8dq"]
-[ext_resource type="Texture2D" uid="uid://b6dshn52j8w4j" path="res://ChapterOne/BuffaloLesson/Assets/Buffalo5.png" id="2_8lnyu"]
+[ext_resource type="Texture2D" uid="uid://cxpxkrrpa85nq" path="res://ChapterOne/BuffaloLesson/Assets/BuffaloBackground.png" id="2_6uul6"]
+[ext_resource type="AudioStream" uid="uid://cv7dsx3cnoaek" path="res://ChapterOne/BuffaloLesson/LessonAudio/Buffalo5En.wav" id="2_42uqc"]
+[ext_resource type="AudioStream" uid="uid://d2xh1y63lh73m" path="res://ChapterOne/BuffaloLesson/LessonAudio/Buffalo5Cr.wav" id="3_6uul6"]
+[ext_resource type="Texture2D" uid="uid://dhh4pw5hrm4bo" path="res://ChapterOne/BuffaloLesson/Assets/Buffalo6.png" id="5_6uul6"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_42uqc"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_8lnyu")
+"texture": ExtResource("5_6uul6")
 }],
 "loop": true,
 "name": &"default",
@@ -15,9 +18,12 @@ animations = [{
 }]
 
 [node name="StoryRoot" instance=ExtResource("1_vb8dq")]
-StoryText = "Next time, Buffalo saw Grandpa Buffalo on the path, Buffalo walked slowly. "
-EnglishTarget = "Grandpa"
-CreeTarget = "Mosom"
+StoryText = "\"Thank you\" said Grandpa Buffalo"
+EnglishTarget = "Thank you"
+CreeTarget = "Tiniki"
+backgroundTexture = ExtResource("2_6uul6")
+EnglishNarration = ExtResource("2_42uqc")
+CreeNarration = ExtResource("3_6uul6")
 
 [node name="AnimatedSprite" parent="." index="2"]
 sprite_frames = SubResource("SpriteFrames_42uqc")

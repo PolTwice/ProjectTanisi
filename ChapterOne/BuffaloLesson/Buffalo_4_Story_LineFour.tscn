@@ -1,13 +1,27 @@
-[gd_scene load_steps=4 format=3 uid="uid://dpf05t4kmqyo1"]
+[gd_scene load_steps=8 format=3 uid="uid://dpf05t4kmqyo1"]
 
 [ext_resource type="PackedScene" uid="uid://bakvp2vudvfqy" path="res://TemplateScenes/StoryScene/StoryScene.tscn" id="1_ipd45"]
-[ext_resource type="Texture2D" uid="uid://ccwvylwpkn3y2" path="res://ChapterOne/BuffaloLesson/Assets/Buffalo4.png" id="2_j23xc"]
+[ext_resource type="Texture2D" uid="uid://cxpxkrrpa85nq" path="res://ChapterOne/BuffaloLesson/Assets/BuffaloBackground.png" id="2_hl2wu"]
+[ext_resource type="AudioStream" uid="uid://cukt46yolcje3" path="res://ChapterOne/BuffaloLesson/LessonAudio/Buffalo4.wav" id="2_n48sq"]
+[ext_resource type="Texture2D" uid="uid://dq6kdkx6kt3yn" path="res://ChapterOne/BuffaloLesson/Assets/Buffalo5.png" id="3_8gbsm"]
+[ext_resource type="AudioStream" uid="uid://d2xh1y63lh73m" path="res://ChapterOne/BuffaloLesson/LessonAudio/Buffalo5Cr.wav" id="3_hl2wu"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uwin5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_8gbsm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_n48sq"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_j23xc")
+"texture": ExtResource("3_8gbsm")
 }],
 "loop": true,
 "name": &"default",
@@ -15,9 +29,14 @@ animations = [{
 }]
 
 [node name="StoryRoot" instance=ExtResource("1_ipd45")]
-StoryText = "“Please slow down,” said Grandpa Buffalo. “Respect means thinking of others.” "
+StoryText = "Next time Buffalo saw Grandpa Buffalo on the path, Buffalo walked slowly"
 EnglishTarget = "Grandpa"
+switchButtonEnabled = false
 CreeTarget = "Mosom"
+backgroundTexture = ExtResource("2_hl2wu")
+animation = SubResource("SpriteFrames_uwin5")
+EnglishNarration = ExtResource("2_n48sq")
+CreeNarration = ExtResource("3_hl2wu")
 
 [node name="AnimatedSprite" parent="." index="2"]
 sprite_frames = SubResource("SpriteFrames_n48sq")

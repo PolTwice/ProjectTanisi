@@ -1,0 +1,29 @@
+[gd_scene load_steps=7 format=3 uid="uid://cn2a61bfaxdre"]
+
+[ext_resource type="PackedScene" uid="uid://bakvp2vudvfqy" path="res://TemplateScenes/StoryScene/StoryScene.tscn" id="1_aa75n"]
+[ext_resource type="AudioStream" uid="uid://c7f3g45uucp8o" path="res://ChapterOne/BuffaloLesson/LessonAudio/Buffalo6en.mp3" id="2_cd3pk"]
+[ext_resource type="Texture2D" uid="uid://dbghrh80kyjed" path="res://ChapterOne/BuffaloLesson/Assets/Buffalo7.png" id="2_jem3e"]
+[ext_resource type="Texture2D" uid="uid://cxpxkrrpa85nq" path="res://ChapterOne/BuffaloLesson/Assets/BuffaloBackground.png" id="2_us1pq"]
+[ext_resource type="AudioStream" uid="uid://bnfqt1qudqiwm" path="res://ChapterOne/BuffaloLesson/LessonAudio/Buffalo6cr.mp3" id="3_us1pq"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cd3pk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_jem3e")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="StoryRoot" instance=ExtResource("1_aa75n")]
+StoryText = "\"I love my Grandpa. I want to show him respect"
+EnglishTarget = "my Grandpa"
+CreeTarget = "nimosom"
+backgroundTexture = ExtResource("2_us1pq")
+EnglishNarration = ExtResource("2_cd3pk")
+CreeNarration = ExtResource("3_us1pq")
+
+[node name="AnimatedSprite" parent="." index="2"]
+sprite_frames = SubResource("SpriteFrames_cd3pk")

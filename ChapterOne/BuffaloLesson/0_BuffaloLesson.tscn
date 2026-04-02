@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://co3ru8hvumuhh"]
+[gd_scene load_steps=8 format=3 uid="uid://co3ru8hvumuhh"]
 
 [ext_resource type="PackedScene" uid="uid://cfm8ssfd0vkfp" path="res://TemplateScenes/LessonManager/LessonManagerScene.tscn" id="1_aw74n"]
 [ext_resource type="PackedScene" uid="uid://cpv0iiacxlfxw" path="res://ChapterOne/BuffaloLesson/Buffalo_1_Story_LineOne.tscn" id="2_kuijb"]
@@ -6,8 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b8cakti07df0v" path="res://ChapterOne/BuffaloLesson/Buffalo_3_Story_LineThree.tscn" id="4_6dflp"]
 [ext_resource type="PackedScene" uid="uid://dpf05t4kmqyo1" path="res://ChapterOne/BuffaloLesson/Buffalo_4_Story_LineFour.tscn" id="5_0rgyo"]
 [ext_resource type="PackedScene" uid="uid://c35ya1kd4obda" path="res://ChapterOne/BuffaloLesson/Buffalo_5_Story_LineFive.tscn" id="6_g6xrs"]
-[ext_resource type="PackedScene" uid="uid://bionx4vstpolg" path="res://ChapterOne/BuffaloLesson/Buffalo_6_Story_LineSix.tscn" id="7_oaxh5"]
-[ext_resource type="PackedScene" uid="uid://cn2a61bfaxdre" path="res://ChapterOne/BuffaloLesson/Buffalo_7_Story_LineSeven.tscn" id="8_mwc0o"]
+[ext_resource type="PackedScene" uid="uid://cn2a61bfaxdre" path="res://ChapterOne/BuffaloLesson/Buffalo_6_Story_LineSeven.tscn" id="7_257pb"]
 
 [node name="LessonManager" instance=ExtResource("1_aw74n")]
-lessonArray = Array[PackedScene]([ExtResource("2_kuijb"), ExtResource("3_gb34e"), ExtResource("4_6dflp"), ExtResource("5_0rgyo"), ExtResource("6_g6xrs"), ExtResource("7_oaxh5"), ExtResource("8_mwc0o")])
+lessonArray = Array[PackedScene]([ExtResource("2_kuijb"), ExtResource("3_gb34e"), ExtResource("4_6dflp"), ExtResource("5_0rgyo"), ExtResource("6_g6xrs"), ExtResource("7_257pb")])

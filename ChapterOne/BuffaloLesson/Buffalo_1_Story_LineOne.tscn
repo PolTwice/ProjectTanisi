@@ -1,24 +1,54 @@
-[gd_scene load_steps=4 format=3 uid="uid://cpv0iiacxlfxw"]
+[gd_scene load_steps=13 format=3 uid="uid://cpv0iiacxlfxw"]
 
 [ext_resource type="PackedScene" uid="uid://bakvp2vudvfqy" path="res://TemplateScenes/StoryScene/StoryScene.tscn" id="1_qvapa"]
-[ext_resource type="Texture2D" uid="uid://b2a5273bhy11x" path="res://ChapterOne/BuffaloLesson/Assets/Buffalo1.png" id="2_qm265"]
+[ext_resource type="Texture2D" uid="uid://cxpxkrrpa85nq" path="res://ChapterOne/BuffaloLesson/Assets/BuffaloBackground.png" id="2_31sj5"]
+[ext_resource type="AudioStream" uid="uid://bdfjfn3tfjwy4" path="res://ChapterOne/BuffaloLesson/LessonAudio/Buffalo1En.wav" id="3_40430"]
+[ext_resource type="AudioStream" uid="uid://vyf0d7oxhnko" path="res://ChapterOne/BuffaloLesson/LessonAudio/Buffalo1Cr.wav" id="4_de6xt"]
+[ext_resource type="Texture2D" uid="uid://3jywhmn60p45" path="res://ChapterOne/BuffaloLesson/Assets/BabyBuffalo.png" id="5_kvfh2"]
+[ext_resource type="Texture2D" uid="uid://dtvf0qovao67o" path="res://ChapterOne/BuffaloLesson/Assets/Buffalo1_1.png" id="6_fbkbw"]
+[ext_resource type="Texture2D" uid="uid://bb60xyj2cfpn" path="res://ChapterOne/BuffaloLesson/Assets/Buffalo1_2.png" id="7_b5ctr"]
+[ext_resource type="Texture2D" uid="uid://nu0m6ir2ftyp" path="res://ChapterOne/BuffaloLesson/Assets/Buffalo1_3.png" id="8_m8ko5"]
+[ext_resource type="Texture2D" uid="uid://dpgt8aaqcg4ix" path="res://ChapterOne/BuffaloLesson/Assets/Buffalo1_4.png" id="9_p5gyf"]
+[ext_resource type="Texture2D" uid="uid://byn2p32ea15ok" path="res://ChapterOne/BuffaloLesson/Assets/Buffalo1_5.png" id="10_tumm7"]
+[ext_resource type="Texture2D" uid="uid://bd680k5n1nmoi" path="res://ChapterOne/BuffaloLesson/Assets/Buffalo1_6.png" id="11_08djj"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_cmpka"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_hdkff"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_qm265")
+"texture": ExtResource("5_kvfh2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_fbkbw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_b5ctr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_m8ko5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_p5gyf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_tumm7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_08djj")
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 3.0
 }]
 
 [node name="StoryRoot" instance=ExtResource("1_qvapa")]
 StoryText = "Buffalo liked to run fast across the grass. "
-EnglishTarget = "buffalo"
-switchButtonEnabled = false
-CreeTarget = "Buffalo in cree"
+EnglishTarget = "grass"
+CreeTarget = "maskoskâk"
+backgroundTexture = ExtResource("2_31sj5")
+EnglishNarration = ExtResource("3_40430")
+CreeNarration = ExtResource("4_de6xt")
 
 [node name="AnimatedSprite" parent="." index="2"]
-sprite_frames = SubResource("SpriteFrames_cmpka")
+sprite_frames = SubResource("SpriteFrames_hdkff")
+frame_progress = 0.38177451
