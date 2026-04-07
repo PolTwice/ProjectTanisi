@@ -1,12 +1,17 @@
-[gd_scene load_steps=8 format=3 uid="uid://co3ru8hvumuhh"]
+[gd_scene load_steps=13 format=3 uid="uid://co3ru8hvumuhh"]
 
 [ext_resource type="PackedScene" uid="uid://cfm8ssfd0vkfp" path="res://TemplateScenes/LessonManager/LessonManagerScene.tscn" id="1_aw74n"]
+[ext_resource type="PackedScene" uid="uid://c5xgkar76u7nh" path="res://ChapterOne/BuffaloLesson/Buffalo_Word_Grass.tscn" id="2_6dflp"]
 [ext_resource type="PackedScene" uid="uid://cpv0iiacxlfxw" path="res://ChapterOne/BuffaloLesson/Buffalo_1_Story_LineOne.tscn" id="2_kuijb"]
 [ext_resource type="PackedScene" uid="uid://dc3h114botcab" path="res://ChapterOne/BuffaloLesson/Buffalo_2_Story_LineTwo.tscn" id="3_gb34e"]
 [ext_resource type="PackedScene" uid="uid://b8cakti07df0v" path="res://ChapterOne/BuffaloLesson/Buffalo_3_Story_LineThree.tscn" id="4_6dflp"]
 [ext_resource type="PackedScene" uid="uid://dpf05t4kmqyo1" path="res://ChapterOne/BuffaloLesson/Buffalo_4_Story_LineFour.tscn" id="5_0rgyo"]
 [ext_resource type="PackedScene" uid="uid://c35ya1kd4obda" path="res://ChapterOne/BuffaloLesson/Buffalo_5_Story_LineFive.tscn" id="6_g6xrs"]
 [ext_resource type="PackedScene" uid="uid://cn2a61bfaxdre" path="res://ChapterOne/BuffaloLesson/Buffalo_6_Story_LineSeven.tscn" id="7_257pb"]
+[ext_resource type="PackedScene" uid="uid://b0wrimpi08eq8" path="res://ChapterOne/BuffaloLesson/Buffalo_Word_Grandpa.tscn" id="9_0rgyo"]
+[ext_resource type="PackedScene" uid="uid://e217fd52k6ld" path="res://ChapterOne/BuffaloLesson/Buffalo_Word_ThankYou.tscn" id="10_g6xrs"]
+[ext_resource type="PackedScene" uid="uid://cvqobb3ovkp1a" path="res://ChapterOne/BuffaloLesson/Buffalo_Quiz_Grandpa.tscn" id="11_g6xrs"]
+[ext_resource type="PackedScene" uid="uid://b6mnjcvs6psbg" path="res://ChapterOne/BuffaloLesson/Buffalo_Quiz_Grass.tscn" id="12_oaxh5"]
 
 [node name="LessonManager" instance=ExtResource("1_aw74n")]
-lessonArray = Array[PackedScene]([ExtResource("2_kuijb"), ExtResource("3_gb34e"), ExtResource("4_6dflp"), ExtResource("5_0rgyo"), ExtResource("6_g6xrs"), ExtResource("7_257pb")])
+lessonArray = Array[PackedScene]([ExtResource("2_6dflp"), ExtResource("2_kuijb"), ExtResource("3_gb34e"), ExtResource("4_6dflp"), ExtResource("5_0rgyo"), ExtResource("10_g6xrs"), ExtResource("6_g6xrs"), ExtResource("9_0rgyo"), ExtResource("7_257pb"), ExtResource("11_g6xrs"), ExtResource("12_oaxh5")])

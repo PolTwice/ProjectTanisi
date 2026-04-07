@@ -1,6 +1,7 @@
-[gd_scene load_steps=14 format=3 uid="uid://deh6kk6i8mstq"]
+[gd_scene load_steps=15 format=3 uid="uid://deh6kk6i8mstq"]
 
 [ext_resource type="PackedScene" uid="uid://cfm8ssfd0vkfp" path="res://TemplateScenes/LessonManager/LessonManagerScene.tscn" id="1_nww7p"]
+[ext_resource type="PackedScene" uid="uid://cjo040pff54y8" path="res://ChapterOne/EagleLesson/EagleGame/EagleFlowerCollection.tscn" id="2_0b56h"]
 [ext_resource type="PackedScene" uid="uid://b07v3le5a5kuu" path="res://ChapterOne/TurtleLesson/Turtle_1_Story_LineOne.tscn" id="2_3lj54"]
 [ext_resource type="PackedScene" uid="uid://c8ts457x3rff7" path="res://ChapterOne/TurtleLesson/Turtle_Word_River.tscn" id="2_rhuno"]
 [ext_resource type="PackedScene" uid="uid://cx8wcfd4iu4sc" path="res://ChapterOne/TurtleLesson/Turtle_2_Story_LineTwo.tscn" id="3_qu6db"]
@@ -15,5 +16,5 @@
 [ext_resource type="PackedScene" uid="uid://dxirgpfrcp3h" path="res://ChapterOne/TurtleLesson/Turtle_Quiz_Tiniki.tscn" id="13_0b56h"]
 
 [node name="LessonManager" instance=ExtResource("1_nww7p")]
-lessonArray = Array[PackedScene]([ExtResource("2_rhuno"), ExtResource("2_3lj54"), ExtResource("3_qu6db"), ExtResource("4_y731l"), ExtResource("5_cccgi"), ExtResource("9_x08su"), ExtResource("6_o4ys1"), ExtResource("10_l4433"), ExtResource("7_8usey"), ExtResource("11_l4433"), ExtResource("11_0b56h"), ExtResource("13_0b56h")])
+lessonArray = Array[PackedScene]([ExtResource("2_0b56h"), ExtResource("2_rhuno"), ExtResource("2_3lj54"), ExtResource("3_qu6db"), ExtResource("4_y731l"), ExtResource("5_cccgi"), ExtResource("9_x08su"), ExtResource("6_o4ys1"), ExtResource("10_l4433"), ExtResource("7_8usey"), ExtResource("11_l4433"), ExtResource("11_0b56h"), ExtResource("13_0b56h")])
 lessonName = &"Turtle Learns the Truth"

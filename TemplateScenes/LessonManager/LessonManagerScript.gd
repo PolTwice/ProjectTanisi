@@ -31,8 +31,7 @@ func changeContents (new_scene: PackedScene):
 	#disable next button until canContinue signal is emitted
 	next_button.disabled = true
 	
-
-func _ready() -> void:
+func _on_ready() -> void:
 	#set the contents to the first scene in the lesson array
 	changeContents(lessonArray[0])
 
@@ -43,7 +42,6 @@ func _on_back_button_pressed() -> void:
 	#if index is 0 or less, we can't deincrement anymore
 	if(index < 1):
 		back_button.disabled = true
-		return
 
 	changeContents(lessonArray[index])
 	next_button.disabled = false

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvqobb3ovkp1a"]
+
+[ext_resource type="PackedScene" uid="uid://7rov3h1r8pnk" path="res://TemplateScenes/QuizScene/QuizScene.tscn" id="1_8lf5y"]
+[ext_resource type="Texture2D" uid="uid://cxpxkrrpa85nq" path="res://ChapterOne/BuffaloLesson/Assets/BuffaloBackground.png" id="2_x4x7o"]
+
+[node name="QuizScene" instance=ExtResource("1_8lf5y")]
+question = "What is Nimosom in English?"
+correctAnswerText = "Nimosom is My Grandpa!"
+buttonAText = "My Grandpa"
+buttonBText = "Your Grandpa"
+buttonCText = "His Grandma"
+buttonDText = "Her Grandma"
+backgroundImage = ExtResource("2_x4x7o")

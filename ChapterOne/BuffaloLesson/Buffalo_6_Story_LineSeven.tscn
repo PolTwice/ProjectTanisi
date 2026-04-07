@@ -18,7 +18,7 @@ animations = [{
 }]
 
 [node name="StoryRoot" instance=ExtResource("1_aa75n")]
-StoryText = "\"I love my Grandpa. I want to show him respect"
+StoryText = "\"I love my Grandpa. I want to show him respect\""
 EnglishTarget = "my Grandpa"
 CreeTarget = "nimosom"
 backgroundTexture = ExtResource("2_us1pq")

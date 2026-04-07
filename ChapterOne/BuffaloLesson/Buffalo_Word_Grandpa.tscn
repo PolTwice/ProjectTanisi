@@ -1,0 +1,30 @@
+[gd_scene load_steps=8 format=3 uid="uid://b0wrimpi08eq8"]
+
+[ext_resource type="PackedScene" uid="uid://divch3hk5xww0" path="res://TemplateScenes/WordScene/WordScene.tscn" id="1_i3elu"]
+[ext_resource type="Texture2D" uid="uid://cxpxkrrpa85nq" path="res://ChapterOne/BuffaloLesson/Assets/BuffaloBackground.png" id="2_ys7l1"]
+[ext_resource type="AudioStream" uid="uid://bsqawke6mr4xp" path="res://ChapterOne/BuffaloLesson/LessonAudio/GrandpaEn.wav" id="3_kwipf"]
+[ext_resource type="AudioStream" uid="uid://bocc8qpek757k" path="res://ChapterOne/BuffaloLesson/LessonAudio/GrandpaCr.wav" id="4_rvn75"]
+[ext_resource type="AudioStream" uid="uid://x3t2rlt02wo6" path="res://ChapterOne/BuffaloLesson/LessonAudio/GrandpaWords.wav" id="5_r5rpu"]
+[ext_resource type="Texture2D" uid="uid://djl8cau2sreyg" path="res://ChapterOne/BuffaloLesson/Assets/GrandpaBuffalo.png" id="6_l03g3"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_svk8g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_l03g3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="WordScene" instance=ExtResource("1_i3elu")]
+background = ExtResource("2_ys7l1")
+EnglishButtonText = "My Grandpa"
+CreeButtonText = "nimosom"
+englishReading = ExtResource("3_kwipf")
+creeReading = ExtResource("4_rvn75")
+Reading = ExtResource("5_r5rpu")
+
+[node name="AnimatedSprite2D" parent="." index="2"]
+sprite_frames = SubResource("SpriteFrames_svk8g")

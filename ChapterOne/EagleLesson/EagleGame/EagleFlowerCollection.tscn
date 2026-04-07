@@ -1,29 +1,81 @@
-[gd_scene load_steps=3 format=3 uid="uid://cjo040pff54y8"]
+[gd_scene load_steps=11 format=3 uid="uid://cjo040pff54y8"]
 
-[ext_resource type="Script" uid="uid://d0j1rw5omqr7" path="res://ChapterOne/EagleLesson/EagleGame/player.gd" id="1_wht4f"]
+[ext_resource type="Texture2D" uid="uid://bj3i0b0se30n0" path="res://Tests/1-94eaf38c.jpg" id="1_mlp6e"]
+[ext_resource type="Script" uid="uid://b5rhue71dy73s" path="res://ChapterOne/EagleLesson/EagleGame/EagleCollectionRootNode.gd" id="1_vpohg"]
+[ext_resource type="Script" uid="uid://bnlf3r1f6vdx1" path="res://ChapterOne/EagleLesson/EagleGame/BirdBody.gd" id="2_c3may"]
+[ext_resource type="Script" uid="uid://bejhhs8fgtq36" path="res://ChapterOne/EagleLesson/EagleGame/trail.gd" id="3_i2he2"]
+[ext_resource type="Script" uid="uid://b5goy10qj3c0d" path="res://ChapterOne/EagleLesson/EagleGame/flower.gd" id="5_vpohg"]
+[ext_resource type="Texture2D" uid="uid://7mf0ow2ulifp" path="res://Tanisi.png" id="6_j4ov3"]
+[ext_resource type="Theme" uid="uid://byi38q23oj3ta" path="res://TemplateScenes/Themes/ButtonTheme.tres" id="7_i2he2"]
+[ext_resource type="Script" uid="uid://bxjbbx7u4dlr" path="res://ChapterOne/EagleLesson/EagleGame/score.gd" id="7_wu7ma"]
+
+[sub_resource type="Gradient" id="Gradient_bgdx1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hk5fm"]
+radius = 83.14
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_vpohg")
 
-[node name="Player" type="CharacterBody2D" parent="."]
-script = ExtResource("1_wht4f")
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_mlp6e")
 
-[node name="Sprite2D" type="Sprite2D" parent="Player"]
+[node name="Bird" type="CharacterBody2D" parent="."]
+position = Vector2(1029, 592)
+script = ExtResource("2_c3may")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+[node name="Trail" type="Line2D" parent="Bird"]
+top_level = true
+position = Vector2(2.255, 0)
+points = PackedVector2Array(8.745, -20)
+gradient = SubResource("Gradient_bgdx1")
+script = ExtResource("3_i2he2")
+
+[node name="Sprite2D" type="Sprite2D" parent="Bird"]
+position = Vector2(2.255, 0)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("6_j4ov3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bird"]
+position = Vector2(2.255, 0)
 shape = SubResource("CircleShape2D_hk5fm")
 
 [node name="Flower" type="Area2D" parent="."]
+position = Vector2(456, 594)
+script = ExtResource("5_vpohg")
 
 [node name="FlowerSprite" type="Sprite2D" parent="Flower"]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("6_j4ov3")
 
 [node name="FlowerCollision" type="CollisionShape2D" parent="Flower"]
 shape = SubResource("CircleShape2D_hk5fm")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+offset_right = 331.0
+offset_bottom = 161.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
-[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+[node name="Score" type="Label" parent="Control"]
+layout_mode = 0
+offset_top = 76.0
+offset_right = 1917.0
+offset_bottom = 237.0
+pivot_offset = Vector2(-1.055, 0)
+size_flags_horizontal = 3
+theme = ExtResource("7_i2he2")
+theme_override_font_sizes/font_size = 100
+text = "Testing"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("7_wu7ma")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("CircleShape2D_hk5fm")
+[connection signal="body_entered" from="Flower" to="Flower" method="_on_body_entered"]
+[connection signal="flowerCollected" from="Flower" to="Control/Score" method="_on_flower_flower_collected"]
+[connection signal="tree_entered" from="Flower" to="Flower" method="_on_tree_entered"]
+[connection signal="win" from="Control/Score" to="." method="_on_score_win"]
+[connection signal="win" from="Control/Score" to="Bird" method="_on_score_win"]

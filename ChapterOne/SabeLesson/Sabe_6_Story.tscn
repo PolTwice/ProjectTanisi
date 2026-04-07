@@ -1,0 +1,30 @@
+[gd_scene load_steps=7 format=3 uid="uid://df06xukrt7p4e"]
+
+[ext_resource type="PackedScene" uid="uid://bakvp2vudvfqy" path="res://TemplateScenes/StoryScene/StoryScene.tscn" id="1_5m6ts"]
+[ext_resource type="Texture2D" uid="uid://dl8x1cyfrrcun" path="res://ChapterOne/SabeLesson/Assets/Sabe13.png" id="2_1w6jq"]
+[ext_resource type="Texture2D" uid="uid://bdnp8dcqm60kk" path="res://ChapterOne/SabeLesson/Assets/SabeBackground2.png" id="2_vfjh6"]
+[ext_resource type="AudioStream" uid="uid://6sjvak7kiv5q" path="res://ChapterOne/SabeLesson/LessonAudio/Sabe6.mp3" id="3_pbpv7"]
+[ext_resource type="Texture2D" uid="uid://dmg031f6rq0cv" path="res://ChapterOne/SabeLesson/Assets/Sabe14.png" id="3_vfjh6"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pbpv7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_1w6jq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_vfjh6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="StoryRoot" instance=ExtResource("1_5m6ts")]
+StoryText = "“Thank you for being honest!” said Sabe's brother."
+switchButtonEnabled = false
+backgroundTexture = ExtResource("2_vfjh6")
+EnglishNarration = ExtResource("3_pbpv7")
+
+[node name="AnimatedSprite" parent="." index="2"]
+sprite_frames = SubResource("SpriteFrames_pbpv7")

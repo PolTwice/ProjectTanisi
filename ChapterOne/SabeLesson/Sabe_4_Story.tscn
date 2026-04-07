@@ -1,0 +1,30 @@
+[gd_scene load_steps=7 format=3 uid="uid://b74xyhm8bh5tl"]
+
+[ext_resource type="PackedScene" uid="uid://bakvp2vudvfqy" path="res://TemplateScenes/StoryScene/StoryScene.tscn" id="1_pfyl4"]
+[ext_resource type="Texture2D" uid="uid://bdnp8dcqm60kk" path="res://ChapterOne/SabeLesson/Assets/SabeBackground2.png" id="2_nmw20"]
+[ext_resource type="AudioStream" uid="uid://dvtanpwc1ron8" path="res://ChapterOne/SabeLesson/LessonAudio/Sabe4.mp3" id="3_sd1d2"]
+[ext_resource type="Texture2D" uid="uid://b11oxejknrjly" path="res://ChapterOne/SabeLesson/Assets/Sabe10.png" id="4_qxndp"]
+[ext_resource type="Texture2D" uid="uid://dda8kclqyknt0" path="res://ChapterOne/SabeLesson/Assets/Sabe11.png" id="5_qdtmn"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6x44k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_qxndp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_qdtmn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="StoryRoot" instance=ExtResource("1_pfyl4")]
+StoryText = "“I lost my favorite red stone!” Sabe's brother cried."
+switchButtonEnabled = false
+backgroundTexture = ExtResource("2_nmw20")
+EnglishNarration = ExtResource("3_sd1d2")
+
+[node name="AnimatedSprite" parent="." index="2"]
+sprite_frames = SubResource("SpriteFrames_6x44k")

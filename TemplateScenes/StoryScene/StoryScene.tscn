@@ -1,44 +1,16 @@
-[gd_scene load_steps=10 format=3 uid="uid://bakvp2vudvfqy"]
+[gd_scene load_steps=5 format=3 uid="uid://bakvp2vudvfqy"]
 
 [ext_resource type="Script" uid="uid://b6c7vabr3xksv" path="res://TemplateScenes/StoryScene/StorySceneScript.gd" id="1_opd5b"]
-[ext_resource type="Texture2D" uid="uid://bj3i0b0se30n0" path="res://Tests/1-94eaf38c.jpg" id="2_mnomo"]
 [ext_resource type="Theme" uid="uid://cu47n5kjyr28" path="res://TemplateScenes/Themes/NewText.tres" id="2_wloaa"]
-[ext_resource type="AudioStream" uid="uid://cd41sp1tnxguk" path="res://Tests/silence.wav" id="3_3165u"]
 [ext_resource type="Theme" uid="uid://byi38q23oj3ta" path="res://TemplateScenes/Themes/ButtonTheme.tres" id="4_7b4nj"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_opd5b"]
-load_path = "res://.godot/imported/BearFive1.png-5580afa4615cb4b6db925e7e35018d55.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_88qh8"]
-load_path = "res://.godot/imported/BearFive2.png-d852a114ca2d979f6508de592ccd7989.ctex"
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_pnfhn"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("CompressedTexture2D_opd5b")
-}, {
-"duration": 1.0,
-"texture": SubResource("CompressedTexture2D_88qh8")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
 
 [sub_resource type="Theme" id="Theme_lgyjk"]
 
 [node name="StoryRoot" type="CanvasLayer"]
 script = ExtResource("1_opd5b")
-StoryText = "Story Text"
-EnglishTarget = "Story"
-CreeTarget = "Acimowin"
-backgroundTexture = ExtResource("2_mnomo")
-animation = SubResource("SpriteFrames_pnfhn")
-EnglishNarration = ExtResource("3_3165u")
-CreeNarration = ExtResource("3_3165u")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
+z_index = 50
 anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 90.0
@@ -54,7 +26,7 @@ theme_override_constants/margin_bottom = 20
 [node name="Label" type="Label" parent="PanelContainer/MarginContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 36
-text = "Listen to the story! Press the button to see the word in Cree"
+text = "Listen to the story! "
 horizontal_alignment = 1
 
 [node name="BackgroundImage" type="TextureRect" parent="."]

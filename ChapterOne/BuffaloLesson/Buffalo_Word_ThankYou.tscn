@@ -1,0 +1,30 @@
+[gd_scene load_steps=8 format=3 uid="uid://e217fd52k6ld"]
+
+[ext_resource type="PackedScene" uid="uid://divch3hk5xww0" path="res://TemplateScenes/WordScene/WordScene.tscn" id="1_e0mhx"]
+[ext_resource type="Texture2D" uid="uid://cxpxkrrpa85nq" path="res://ChapterOne/BuffaloLesson/Assets/BuffaloBackground.png" id="2_ivnck"]
+[ext_resource type="AudioStream" uid="uid://c3sxj6q423j1h" path="res://ChapterOne/BuffaloLesson/LessonAudio/ThankYouEn-2.wav" id="3_ny3ow"]
+[ext_resource type="Texture2D" uid="uid://dhh4pw5hrm4bo" path="res://ChapterOne/BuffaloLesson/Assets/Buffalo6.png" id="3_qhyps"]
+[ext_resource type="AudioStream" uid="uid://cf70rvsr2cfre" path="res://ChapterOne/BuffaloLesson/LessonAudio/ThankYouCr-2.wav" id="4_5b2wl"]
+[ext_resource type="AudioStream" uid="uid://c15gqtuid8ctf" path="res://ChapterOne/BuffaloLesson/LessonAudio/ThankYouWords-2.wav" id="5_uok2i"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ny3ow"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_qhyps")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="WordScene" instance=ExtResource("1_e0mhx")]
+background = ExtResource("2_ivnck")
+EnglishButtonText = "Thank you"
+CreeButtonText = "Tiniki"
+englishReading = ExtResource("3_ny3ow")
+creeReading = ExtResource("4_5b2wl")
+Reading = ExtResource("5_uok2i")
+
+[node name="AnimatedSprite2D" parent="." index="2"]
+sprite_frames = SubResource("SpriteFrames_ny3ow")

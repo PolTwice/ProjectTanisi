@@ -1,0 +1,23 @@
+[gd_scene load_steps=7 format=3 uid="uid://b6mnjcvs6psbg"]
+
+[ext_resource type="PackedScene" uid="uid://7rov3h1r8pnk" path="res://TemplateScenes/QuizScene/QuizScene.tscn" id="1_7cffi"]
+[ext_resource type="Texture2D" uid="uid://bsvbwnqitna83" path="res://ChapterOne/AnimalSelectScenes/assets/Environment/tipi.png" id="2_jbg7k"]
+[ext_resource type="Texture2D" uid="uid://bdnp8dcqm60kk" path="res://ChapterOne/SabeLesson/Assets/SabeBackground2.png" id="2_lcohh"]
+[ext_resource type="Texture2D" uid="uid://bwbpg3yrjd6bt" path="res://ChapterOne/AnimalSelectScenes/assets/Sabe/background_tree.png" id="3_jbg7k"]
+[ext_resource type="Texture2D" uid="uid://cxpxkrrpa85nq" path="res://ChapterOne/BuffaloLesson/Assets/BuffaloBackground.png" id="3_woiot"]
+[ext_resource type="Texture2D" uid="uid://cuoq12pdb1y5p" path="res://ChapterOne/AnimalSelectScenes/assets/Environment/mountains.png" id="4_7ot3l"]
+
+[node name="QuizScene" instance=ExtResource("1_7cffi")]
+question = "What does maskoskâk mean in English?"
+correctAnswerText = "That's the right answer! maskoskâk is grass!"
+hasPictures = true
+buttonAText = "Tipi"
+buttonBText = "Trees"
+buttonCText = "Mountain"
+buttonDText = "Grass"
+correctAnswer = 3
+buttonAPic = ExtResource("2_jbg7k")
+buttonBPic = ExtResource("3_jbg7k")
+buttonCPic = ExtResource("4_7ot3l")
+buttonDPic = ExtResource("2_lcohh")
+backgroundImage = ExtResource("3_woiot")

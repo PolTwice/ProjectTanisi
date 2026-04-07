@@ -1,0 +1,30 @@
+[gd_scene load_steps=7 format=3 uid="uid://kbmaemdqabkc"]
+
+[ext_resource type="PackedScene" uid="uid://bakvp2vudvfqy" path="res://TemplateScenes/StoryScene/StoryScene.tscn" id="1_7568t"]
+[ext_resource type="Texture2D" uid="uid://bdnp8dcqm60kk" path="res://ChapterOne/SabeLesson/Assets/SabeBackground2.png" id="2_xs83j"]
+[ext_resource type="AudioStream" uid="uid://c8ousd34aglp5" path="res://ChapterOne/SabeLesson/LessonAudio/Sabe5.mp3" id="3_n04k0"]
+[ext_resource type="Texture2D" uid="uid://b11oxejknrjly" path="res://ChapterOne/SabeLesson/Assets/Sabe10.png" id="4_ayg7w"]
+[ext_resource type="Texture2D" uid="uid://dow0rxdalnkph" path="res://ChapterOne/SabeLesson/Assets/Sabe12.png" id="5_r7s85"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1jv3r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_ayg7w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_r7s85")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="StoryRoot" instance=ExtResource("1_7568t")]
+StoryText = "Sabe looked at her brother and said softly, “I found this one. I think it is yours.”"
+switchButtonEnabled = false
+backgroundTexture = ExtResource("2_xs83j")
+EnglishNarration = ExtResource("3_n04k0")
+
+[node name="AnimatedSprite" parent="." index="2"]
+sprite_frames = SubResource("SpriteFrames_1jv3r")

@@ -3,10 +3,10 @@ class_name lessonIcon extends Area2D
 @onready var lesson_sprite: AnimatedSprite2D = $lessonSprite
 
 #audio stream that says the name of the lesson
-@onready var lesson_name: AudioStreamPlayer = $lessonName
+#@onready var lesson_name: AudioStreamPlayer = $lessonName
 
 #audio stream that is a sound effect that
-@onready var lesson_sound: AudioStreamPlayer = $lessonSound
+#@onready var lesson_sound: AudioStreamPlayer = $lessonSound
 
 #How much the sprites grow and shring when hovered over.
 @onready var scaleFactor = 1.5
@@ -21,11 +21,11 @@ class_name lessonIcon extends Area2D
 
 func _ready() -> void:
 	#set the lesson name stream to the one specified in the export
-	if (lessonName != null):
-		lesson_name.stream = lessonNameAudio
+	#if (lessonName != null):
+		#lesson_name.stream = lessonNameAudio
 	#set the sound stream to the one specified in the export
-	if (lessonSound != null):
-		lesson_sound.stream = lessonSound
+	#if (lessonSound != null):
+		#lesson_sound.stream = lessonSound
 	SignalHub.selectOff.connect(_select_off)
 	#connect the lesson completed signal
 	#(this doesn't seem necessary?

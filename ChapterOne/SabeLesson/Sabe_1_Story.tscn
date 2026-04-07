@@ -1,0 +1,34 @@
+[gd_scene load_steps=8 format=3 uid="uid://bp8018kaftat3"]
+
+[ext_resource type="PackedScene" uid="uid://bakvp2vudvfqy" path="res://TemplateScenes/StoryScene/StoryScene.tscn" id="1_mfofy"]
+[ext_resource type="Texture2D" uid="uid://jegioafadwnj" path="res://ChapterOne/SabeLesson/Assets/SabeBackground1.png" id="2_e4s8x"]
+[ext_resource type="AudioStream" uid="uid://b0182efj0ksov" path="res://ChapterOne/SabeLesson/LessonAudio/Sabe1.mp3" id="3_pqifs"]
+[ext_resource type="Texture2D" uid="uid://bt4aefhtyweh3" path="res://ChapterOne/SabeLesson/Assets/Sabe1.png" id="4_olf2b"]
+[ext_resource type="Texture2D" uid="uid://lsr0sgfispxk" path="res://ChapterOne/SabeLesson/Assets/Sabe2.png" id="5_g13nf"]
+[ext_resource type="Texture2D" uid="uid://h7rpq07um8wy" path="res://ChapterOne/SabeLesson/Assets/Sabe3.png" id="6_ikdi4"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c6sar"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_olf2b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_g13nf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ikdi4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[node name="StoryRoot" instance=ExtResource("1_mfofy")]
+StoryText = "Sabe was taking a walk while looking for pretty stones."
+switchButtonEnabled = false
+backgroundTexture = ExtResource("2_e4s8x")
+EnglishNarration = ExtResource("3_pqifs")
+
+[node name="AnimatedSprite" parent="." index="2"]
+sprite_frames = SubResource("SpriteFrames_c6sar")

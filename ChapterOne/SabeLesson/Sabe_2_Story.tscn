@@ -1,0 +1,38 @@
+[gd_scene load_steps=9 format=3 uid="uid://dbx3j7ddadiys"]
+
+[ext_resource type="PackedScene" uid="uid://bakvp2vudvfqy" path="res://TemplateScenes/StoryScene/StoryScene.tscn" id="1_grui8"]
+[ext_resource type="Texture2D" uid="uid://bdnp8dcqm60kk" path="res://ChapterOne/SabeLesson/Assets/SabeBackground2.png" id="2_grui8"]
+[ext_resource type="AudioStream" uid="uid://cfm5o5j5bqr52" path="res://ChapterOne/SabeLesson/LessonAudio/Sabe2EN.mp3" id="3_47dxy"]
+[ext_resource type="AudioStream" uid="uid://c7jgfq5lx08sv" path="res://ChapterOne/SabeLesson/LessonAudio/Sabe2CR.mp3" id="4_gdmfb"]
+[ext_resource type="Texture2D" uid="uid://h7rpq07um8wy" path="res://ChapterOne/SabeLesson/Assets/Sabe3.png" id="5_kmdth"]
+[ext_resource type="Texture2D" uid="uid://bh3l3l2wyukn4" path="res://ChapterOne/SabeLesson/Assets/Sabe4.png" id="6_vuc6e"]
+[ext_resource type="Texture2D" uid="uid://bvk61efkgoqne" path="res://ChapterOne/SabeLesson/Assets/Sabe5.png" id="7_naeys"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mtvw7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_kmdth")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_vuc6e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_naeys")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[node name="StoryRoot" instance=ExtResource("1_grui8")]
+StoryText = "Suddenly, Sabe saw a beautiful red stone. She loved it very much."
+EnglishTarget = "stone"
+CreeTarget = "asiniy"
+backgroundTexture = ExtResource("2_grui8")
+EnglishNarration = ExtResource("3_47dxy")
+CreeNarration = ExtResource("4_gdmfb")
+
+[node name="AnimatedSprite" parent="." index="2"]
+sprite_frames = SubResource("SpriteFrames_mtvw7")
+frame_progress = 0.8877724

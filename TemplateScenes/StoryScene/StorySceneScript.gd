@@ -18,9 +18,8 @@ extends CanvasLayer
 
 #Texture of the background of the story
 @export var backgroundTexture: Texture
+@onready var label: Label = $PanelContainer/MarginContainer/Label
 
-#Frames for the animation:
-@export var animation: SpriteFrames
 
 @export var EnglishNarration: AudioStream
 @export var CreeNarration: AudioStream
@@ -34,11 +33,11 @@ func _on_ready() -> void:
 	#if has switch, then we r
 	if(switchButtonEnabled):
 		StoryText = StoryText.replace(EnglishTarget, "[color=#FFD000]"+EnglishTarget+"[/color]")
+		label.text = "Listen to the story! Press the button to see the word in Cree"
 	else:
 		margin_container.visible = false
 		
 	contents_node.text = StoryText
-	print("Text replaced")
 	
 	if (backgroundTexture != null):
 		background_image_node.texture = backgroundTexture
@@ -49,8 +48,6 @@ func _on_ready() -> void:
 	
 	narration_node.stream = EnglishNarration
 	
-
-	await get_tree().create_timer(1.0).timeout
 	narration_node.play()
 	
 #Display some error

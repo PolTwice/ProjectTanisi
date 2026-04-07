@@ -126,6 +126,10 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 mouse_filter = 2
 
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/AnswerPanel/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxAB/MarginContainerA/ButtonA/buttonAVBox"]
+layout_mode = 2
+theme_override_constants/margin_top = 10
+
 [node name="buttonAPic" type="TextureRect" parent="VBoxContainer/AnswerPanel/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxAB/MarginContainerA/ButtonA/buttonAVBox"]
 layout_mode = 2
 size_flags_vertical = 3
@@ -164,6 +168,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/AnswerPanel/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxAB/MarginContainerB/ButtonB/buttonBVBox"]
+layout_mode = 2
+theme_override_constants/margin_top = 10
 
 [node name="buttonBPic" type="TextureRect" parent="VBoxContainer/AnswerPanel/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxAB/MarginContainerB/ButtonB/buttonBVBox"]
 layout_mode = 2
@@ -208,6 +216,10 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/AnswerPanel/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxCD/MarginContainerC/ButtonC/buttonCVBox"]
+layout_mode = 2
+theme_override_constants/margin_top = 10
+
 [node name="ButtonCPic" type="TextureRect" parent="VBoxContainer/AnswerPanel/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxCD/MarginContainerC/ButtonC/buttonCVBox"]
 layout_mode = 2
 size_flags_vertical = 3
@@ -246,6 +258,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/AnswerPanel/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxCD/MarginContainerD/ButtonD/buttonDVbox"]
+layout_mode = 2
+theme_override_constants/margin_top = 10
 
 [node name="ButtonDPic" type="TextureRect" parent="VBoxContainer/AnswerPanel/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxCD/MarginContainerD/ButtonD/buttonDVbox"]
 layout_mode = 2

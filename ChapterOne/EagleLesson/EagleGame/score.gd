@@ -1,0 +1,13 @@
+extends Label
+
+var score = 0
+
+signal win
+
+func _on_flower_flower_collected() -> void:
+	score += 1
+	self.text = "You collected " +str(score) + " flowers"
+	
+	if (score >= 10):
+		self.text = "You did it!"
+		win.emit()

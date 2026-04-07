@@ -1,0 +1,34 @@
+[gd_scene load_steps=8 format=3 uid="uid://by74t1wn028ye"]
+
+[ext_resource type="PackedScene" uid="uid://bakvp2vudvfqy" path="res://TemplateScenes/StoryScene/StoryScene.tscn" id="1_ea0y2"]
+[ext_resource type="Texture2D" uid="uid://bdnp8dcqm60kk" path="res://ChapterOne/SabeLesson/Assets/SabeBackground2.png" id="2_kh2gr"]
+[ext_resource type="AudioStream" uid="uid://d2w5q0fjbu3h8" path="res://ChapterOne/SabeLesson/LessonAudio/Sabe3EN.mp3" id="3_3yf7m"]
+[ext_resource type="AudioStream" uid="uid://dmbtdapn05tkm" path="res://ChapterOne/SabeLesson/LessonAudio/Sabe3CR.mp3" id="4_absae"]
+[ext_resource type="Texture2D" uid="uid://bvk61efkgoqne" path="res://ChapterOne/SabeLesson/Assets/Sabe5.png" id="5_o3dbk"]
+[ext_resource type="Texture2D" uid="uid://b2p13cmjlhksc" path="res://ChapterOne/SabeLesson/Assets/Sabe7.png" id="6_sh2qu"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3lxoa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_o3dbk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_sh2qu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="StoryRoot" instance=ExtResource("1_ea0y2")]
+StoryText = "Sabe heard a noised and looked around. \"That sounds like my brother!\""
+EnglishTarget = "my brother"
+CreeTarget = "nicisan"
+backgroundTexture = ExtResource("2_kh2gr")
+EnglishNarration = ExtResource("3_3yf7m")
+CreeNarration = ExtResource("4_absae")
+
+[node name="AnimatedSprite" parent="." index="2"]
+sprite_frames = SubResource("SpriteFrames_3lxoa")
+frame_progress = 0.08798181

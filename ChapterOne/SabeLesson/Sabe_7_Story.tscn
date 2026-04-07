@@ -1,0 +1,33 @@
+[gd_scene load_steps=8 format=3 uid="uid://c0p2617jk71hr"]
+
+[ext_resource type="PackedScene" uid="uid://bakvp2vudvfqy" path="res://TemplateScenes/StoryScene/StoryScene.tscn" id="1_eanh5"]
+[ext_resource type="Texture2D" uid="uid://bdnp8dcqm60kk" path="res://ChapterOne/SabeLesson/Assets/SabeBackground2.png" id="2_fmrb8"]
+[ext_resource type="AudioStream" uid="uid://d2l3n1kt866j" path="res://ChapterOne/SabeLesson/LessonAudio/Sabe7EN.mp3" id="3_6rpcp"]
+[ext_resource type="AudioStream" uid="uid://dmuibrtcxsrd7" path="res://ChapterOne/SabeLesson/LessonAudio/Sabe7CR.mp3" id="4_rwdqu"]
+[ext_resource type="Texture2D" uid="uid://dl8x1cyfrrcun" path="res://ChapterOne/SabeLesson/Assets/Sabe13.png" id="5_2vsu8"]
+[ext_resource type="Texture2D" uid="uid://52q3d5r53jfm" path="res://ChapterOne/SabeLesson/Assets/Sabe15.png" id="6_3dm7m"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gctge"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_2vsu8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_3dm7m")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="StoryRoot" instance=ExtResource("1_eanh5")]
+StoryText = "Sabe felt good inside. “Let's look for more stones together!”"
+EnglishTarget = "together"
+CreeTarget = "mamawi"
+backgroundTexture = ExtResource("2_fmrb8")
+EnglishNarration = ExtResource("3_6rpcp")
+CreeNarration = ExtResource("4_rwdqu")
+
+[node name="AnimatedSprite" parent="." index="2"]
+sprite_frames = SubResource("SpriteFrames_gctge")
