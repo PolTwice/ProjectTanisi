@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://cjo040pff54y8"]
+
+[ext_resource type="Script" uid="uid://d0j1rw5omqr7" path="res://ChapterOne/EagleLesson/EagleGame/player.gd" id="1_wht4f"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hk5fm"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Player" type="CharacterBody2D" parent="."]
+script = ExtResource("1_wht4f")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource("CircleShape2D_hk5fm")
+
+[node name="Flower" type="Area2D" parent="."]
+
+[node name="FlowerSprite" type="Sprite2D" parent="Flower"]
+
+[node name="FlowerCollision" type="CollisionShape2D" parent="Flower"]
+shape = SubResource("CircleShape2D_hk5fm")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_hk5fm")
