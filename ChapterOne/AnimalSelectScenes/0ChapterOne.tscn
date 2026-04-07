@@ -41,8 +41,8 @@ lessonNameAudio = ExtResource("6_db48n")
 [node name="BuffaloLessonSelect" parent="." index="5" instance=ExtResource("7_xhfgc")]
 position = Vector2(901, 846.00006)
 scale = Vector2(0.15, 0.15)
-lessonPath = &""
-lessonName = &""
+lessonPath = &"res://ChapterOne/BuffaloLesson/0_BuffaloLesson.tscn"
+lessonName = &"Buffalo Runs Fast"
 
 [node name="EagleLessonSelect" parent="." index="6" instance=ExtResource("8_n3bd2")]
 position = Vector2(1076.0001, 251)

@@ -26,9 +26,9 @@ sprite_frames = SubResource("SpriteFrames_knduu")
 [node name="lessonArea" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_e144x")
 
-[node name="lessonName" type="AudioStreamPlayer" parent="."]
-
-[node name="lessonSound" type="AudioStreamPlayer" parent="."]
+[node name="LessonLabel" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]

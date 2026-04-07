@@ -8,7 +8,6 @@ extends CanvasLayer
 @onready var button_node: Button = $TextPanel/TextMargin/HBoxContainer/MarginContainer/Button
 @onready var margin_container: MarginContainer = $TextPanel/TextMargin/HBoxContainer/MarginContainer
 
-
 #Contents of the story
 @export var StoryText: String
 

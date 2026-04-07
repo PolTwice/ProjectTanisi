@@ -12,7 +12,6 @@ var backStack = [];
 #an array that holds the names of the last scenes
 var nameHistory = []
 
-
 var currentContainerOne;
 var currentContainerOnePath;
 
@@ -38,9 +37,6 @@ func changeNodeOne (new_scene: String, pushToStack = true, fade = true, fadeTime
 	#make new scene a child of nodeContainerOne
 	nodeContainerOne.add_child(new)
 	
-
-
-
 	#update currentContainer variables
 	currentContainerOne = new
 	currentContainerOnePath = new_scene

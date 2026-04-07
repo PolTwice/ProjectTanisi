@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://c5xgkar76u7nh"]
+
+[ext_resource type="PackedScene" uid="uid://divch3hk5xww0" path="res://TemplateScenes/WordScene/WordScene.tscn" id="1_4owkb"]
+[ext_resource type="Texture2D" uid="uid://cxpxkrrpa85nq" path="res://ChapterOne/BuffaloLesson/Assets/BuffaloBackground.png" id="2_gnf41"]
+[ext_resource type="Texture2D" uid="uid://3jywhmn60p45" path="res://ChapterOne/BuffaloLesson/Assets/BabyBuffalo.png" id="3_l75mo"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_poy7i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_l75mo")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="WordScene" instance=ExtResource("1_4owkb")]
+background = ExtResource("2_gnf41")
+EnglishButtonText = "Grass"
+CreeButtonText = "maskoskâk"
+
+[node name="AnimatedSprite2D" parent="." index="2"]
+sprite_frames = SubResource("SpriteFrames_poy7i")

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b5lvk2hqmj140"
+path="res://.godot/imported/Audio 8.mp3-92996e2f5dd0fa686feb21c0a6adbf5e.mp3str"
+
+[deps]
+
+source_file="res://ChapterOne/BearLesson/LessonAudio/Audio 8.mp3"
+dest_files=["res://.godot/imported/Audio 8.mp3-92996e2f5dd0fa686feb21c0a6adbf5e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
