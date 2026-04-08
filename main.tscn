@@ -30,6 +30,7 @@ size_flags_vertical = 1
 
 [node name="NodeContainerOne" type="CanvasLayer" parent="."]
 layer = -1
+follow_viewport_enabled = true
 
 [node name="TitleScreen" parent="NodeContainerOne" instance=ExtResource("3_1bvp3")]
 

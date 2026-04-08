@@ -18,9 +18,14 @@ texture = ExtResource("5_17fv1")
 script = ExtResource("1_pn4vd")
 
 [node name="background" type="TextureRect" parent="."]
-offset_right = 1920.0
-offset_bottom = 1080.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("2_51wfn")
+expand_mode = 1
+stretch_mode = 4
 
 [node name="darkening Layer" type="ColorRect" parent="."]
 anchors_preset = 15

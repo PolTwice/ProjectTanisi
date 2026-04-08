@@ -16,13 +16,13 @@
 infoText = "Select an Animal!"
 
 [node name="TextureRect" type="TextureRect" parent="." index="0"]
-offset_left = 3.0517578e-05
-offset_top = 6.1035156e-05
-offset_right = 1920.0
-offset_bottom = 1080.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("2_7kf7r")
+expand_mode = 1
 
 [node name="BeaverLessonSelect" parent="." index="3" instance=ExtResource("3_ri2j5")]
 visible = false
@@ -39,13 +39,13 @@ lessonPath = &"res://ChapterOne/BuffaloLesson/0_BuffaloLesson.tscn"
 lessonName = &"Buffalo Runs Fast"
 
 [node name="EagleLessonSelect" parent="." index="5" instance=ExtResource("8_n3bd2")]
-position = Vector2(1093, 241)
+position = Vector2(995, 268)
 scale = Vector2(0.1, 0.1)
 lessonPath = &"res://ChapterOne/EagleLesson/0EagleTest.tscn"
 lessonName = &"Eagle and Dad"
 
 [node name="SabeLessonSelect" parent="." index="6" instance=ExtResource("9_t4duj")]
-position = Vector2(1481, 357)
+position = Vector2(1304, 394)
 scale = Vector2(0.15, 0.15)
 lessonPath = &"res://ChapterOne/SabeLesson/0SabeLessonManager.tscn"
 lessonName = &"The Prettiest Stone"

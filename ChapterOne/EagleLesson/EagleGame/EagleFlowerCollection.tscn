@@ -25,9 +25,14 @@ script = ExtResource("1_vpohg")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 z_index = -50
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("2_vpohg")
+expand_mode = 1
+stretch_mode = 4
 
 [node name="Bird" type="CharacterBody2D" parent="."]
 position = Vector2(1029, 592)
