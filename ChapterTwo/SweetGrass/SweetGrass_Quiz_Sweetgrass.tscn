@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bppxg330rdhmq"]
+
+[ext_resource type="PackedScene" uid="uid://7rov3h1r8pnk" path="res://TemplateScenes/QuizScene/QuizScene.tscn" id="1_2uqop"]
+[ext_resource type="Texture2D" uid="uid://dwm4eokpr0ee3" path="res://ChapterTwo/SweetGrass/Assets/SweetGrassBG.png" id="2_udpr0"]
+
+[node name="QuizScene" instance=ExtResource("1_2uqop")]
+question = "What is Sweetgrass in Cree?"
+correctAnswerText = "Correct!"
+buttonAText = "yotin"
+buttonBText = "wâpos"
+buttonCText = "wîhkwaskwa"
+buttonDText = "kisikawisi"
+correctAnswer = 1
+backgroundImage = ExtResource("2_udpr0")

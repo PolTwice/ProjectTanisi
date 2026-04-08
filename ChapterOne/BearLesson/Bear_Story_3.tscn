@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://dbbxx0ogb0v4c"]
+
+[ext_resource type="PackedScene" uid="uid://bakvp2vudvfqy" path="res://TemplateScenes/StoryScene/StoryScene.tscn" id="1_cutpp"]
+[ext_resource type="Texture2D" uid="uid://csfxaeq6821tk" path="res://ChapterOne/BearLesson/LessonAssets/BeaarLine4.png" id="2_nfnpu"]
+[ext_resource type="AudioStream" uid="uid://bjoy1rtnw48a6" path="res://ChapterOne/BearLesson/LessonAudio/Audio 3.mp3" id="3_th0yb"]
+[ext_resource type="Texture2D" uid="uid://c4boyemp7cw7y" path="res://ChapterOne/BearLesson/LessonAssets/BeaarLine5.png" id="4_imijf"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oq1q1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_nfnpu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_imijf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[node name="StoryRoot" instance=ExtResource("1_cutpp")]
+StoryText = "Bear wanted to hide, but they took a deep breath. "
+switchButtonEnabled = false
+backgroundTexture = ExtResource("2_nfnpu")
+EnglishNarration = ExtResource("3_th0yb")
+
+[node name="AnimatedSprite" parent="." index="2"]
+sprite_frames = SubResource("SpriteFrames_oq1q1")

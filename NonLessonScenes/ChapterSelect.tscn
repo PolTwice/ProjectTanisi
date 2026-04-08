@@ -123,14 +123,16 @@ layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_nfp11")
 
 [node name="ColorRect" type="ColorRect" parent="Control/VBoxContainer/Button Margin/ButtonHbox/Chap2Vbox/Chap2Panel/MarginContainer/PanelContainer2"]
+visible = false
 layout_mode = 2
 color = Color(0, 0, 0, 0.33333334)
 
 [node name="Label" type="Label" parent="Control/VBoxContainer/Button Margin/ButtonHbox/Chap2Vbox/Chap2Panel/MarginContainer/PanelContainer2"]
 layout_mode = 2
 theme = ExtResource("1_ekm3o")
-text = "Coming soon!"
+text = "INCOMPLETE"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [connection signal="gui_input" from="Control/VBoxContainer/Button Margin/ButtonHbox/Chap1vBox/Chap1Panel" to="." method="_on_chap_1_panel_gui_input"]
+[connection signal="gui_input" from="Control/VBoxContainer/Button Margin/ButtonHbox/Chap2Vbox/Chap2Panel/MarginContainer/PanelContainer2" to="." method="_on_panel_container_2_gui_input"]

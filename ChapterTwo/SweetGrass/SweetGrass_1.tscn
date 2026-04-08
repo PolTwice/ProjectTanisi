@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://c2n4erl0ph2ic"]
+
+[ext_resource type="PackedScene" uid="uid://bakvp2vudvfqy" path="res://TemplateScenes/StoryScene/StoryScene.tscn" id="1_c0xtf"]
+[ext_resource type="Texture2D" uid="uid://dwm4eokpr0ee3" path="res://ChapterTwo/SweetGrass/Assets/SweetGrassBG.png" id="2_1f8iu"]
+[ext_resource type="AudioStream" uid="uid://bknm06mfgj7qw" path="res://ChapterOne/Sounds/Bear.mp3" id="3_1f8iu"]
+[ext_resource type="Texture2D" uid="uid://bvsdyegjnc1iq" path="res://ChapterTwo/SweetGrass/Assets/SweetGrassBG2.png" id="4_oker3"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kwm0d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_oker3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_1f8iu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="StoryRoot" instance=ExtResource("1_c0xtf")]
+StoryText = "In a quiet field, the sweetgrass swayed softly in the wind."
+EnglishTarget = "sweetgrass"
+CreeTarget = "wîhkwaskwa"
+backgroundTexture = ExtResource("2_1f8iu")
+EnglishNarration = ExtResource("3_1f8iu")
+CreeNarration = ExtResource("3_1f8iu")
+
+[node name="AnimatedSprite" parent="." index="2"]
+sprite_frames = SubResource("SpriteFrames_kwm0d")
+
+[node name="Narration" parent="." index="4"]
+volume_db = -80.0
+
+[node name="BackgroundSound" parent="." index="5"]
+volume_db = -80.0

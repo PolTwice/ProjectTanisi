@@ -1,0 +1,14 @@
+[gd_scene load_steps=5 format=3 uid="uid://dvi36hajeymgw"]
+
+[ext_resource type="PackedScene" uid="uid://bakvp2vudvfqy" path="res://TemplateScenes/StoryScene/StoryScene.tscn" id="1_nhmhb"]
+[ext_resource type="Texture2D" uid="uid://cquixvgrhgner" path="res://ChapterOne/BearLesson/LessonAssets/BeaarLine1.png" id="2_et804"]
+[ext_resource type="AudioStream" uid="uid://bw5y6lmt7dksm" path="res://ChapterOne/BearLesson/LessonAudio/Bear1EN.mp3" id="3_nhmhb"]
+[ext_resource type="AudioStream" uid="uid://bdd51chnxshwv" path="res://ChapterOne/BearLesson/LessonAudio/Bear1CR.mp3" id="4_et804"]
+
+[node name="StoryRoot" instance=ExtResource("1_nhmhb")]
+StoryText = "Bear liked quiet places. Loud things made Bear scared."
+EnglishTarget = "scared"
+CreeTarget = "kostaciw"
+backgroundTexture = ExtResource("2_et804")
+EnglishNarration = ExtResource("3_nhmhb")
+CreeNarration = ExtResource("4_et804")

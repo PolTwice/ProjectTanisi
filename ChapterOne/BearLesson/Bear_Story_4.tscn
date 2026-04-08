@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://uoovfes1av2p"]
+
+[ext_resource type="PackedScene" uid="uid://bakvp2vudvfqy" path="res://TemplateScenes/StoryScene/StoryScene.tscn" id="1_hi0wo"]
+[ext_resource type="Texture2D" uid="uid://c4boyemp7cw7y" path="res://ChapterOne/BearLesson/LessonAssets/BeaarLine5.png" id="2_kq6ru"]
+[ext_resource type="AudioStream" uid="uid://drywcidvdy5rq" path="res://ChapterOne/BearLesson/LessonAudio/Audio 4.mp3" id="3_5gxse"]
+[ext_resource type="Texture2D" uid="uid://bduelk8mt2j11" path="res://ChapterOne/BearLesson/LessonAssets/BeaarLine5_2.png" id="5_kq6ru"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6dgcw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_kq6ru")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_kq6ru")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[node name="StoryRoot" instance=ExtResource("1_hi0wo")]
+StoryText = "Bear stood tall and gave a big roar back. "
+switchButtonEnabled = false
+backgroundTexture = ExtResource("2_kq6ru")
+EnglishNarration = ExtResource("3_5gxse")
+
+[node name="AnimatedSprite" parent="." index="2"]
+sprite_frames = SubResource("SpriteFrames_6dgcw")

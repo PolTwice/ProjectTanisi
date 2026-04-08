@@ -1,0 +1,17 @@
+[gd_scene load_steps=12 format=3 uid="uid://cyirp066u4s2c"]
+
+[ext_resource type="PackedScene" uid="uid://cfm8ssfd0vkfp" path="res://TemplateScenes/LessonManager/LessonManagerScene.tscn" id="1_6rp2s"]
+[ext_resource type="PackedScene" uid="uid://bp8018kaftat3" path="res://ChapterOne/SabeLesson/Sabe_1_Story.tscn" id="2_uppm8"]
+[ext_resource type="PackedScene" uid="uid://dbx3j7ddadiys" path="res://ChapterOne/SabeLesson/Sabe_2_Story.tscn" id="3_5m6a8"]
+[ext_resource type="PackedScene" uid="uid://bhcsoxw2bwxkk" path="res://ChapterOne/SabeLesson/Sabe_Word_Stone.tscn" id="3_7xrki"]
+[ext_resource type="PackedScene" uid="uid://by74t1wn028ye" path="res://ChapterOne/SabeLesson/Sabe_3_Story.tscn" id="4_iwj2v"]
+[ext_resource type="PackedScene" uid="uid://b74xyhm8bh5tl" path="res://ChapterOne/SabeLesson/Sabe_4_Story.tscn" id="5_7xrki"]
+[ext_resource type="PackedScene" uid="uid://df1an881krm71" path="res://ChapterOne/SabeLesson/Sabe_Word_Brother.tscn" id="5_pyxv2"]
+[ext_resource type="PackedScene" uid="uid://kbmaemdqabkc" path="res://ChapterOne/SabeLesson/Sabe_5_Story.tscn" id="6_pyxv2"]
+[ext_resource type="PackedScene" uid="uid://df06xukrt7p4e" path="res://ChapterOne/SabeLesson/Sabe_6_Story.tscn" id="7_bi2v6"]
+[ext_resource type="PackedScene" uid="uid://c0p2617jk71hr" path="res://ChapterOne/SabeLesson/Sabe_7_Story.tscn" id="8_0c5c6"]
+[ext_resource type="PackedScene" uid="uid://du4kg7k36lj31" path="res://ChapterOne/SabeLesson/Sabe_Word_Together.tscn" id="10_bi2v6"]
+
+[node name="LessonManager" instance=ExtResource("1_6rp2s")]
+lessonArray = Array[PackedScene]([ExtResource("2_uppm8"), ExtResource("3_7xrki"), ExtResource("3_5m6a8"), ExtResource("5_pyxv2"), ExtResource("4_iwj2v"), ExtResource("5_7xrki"), ExtResource("6_pyxv2"), ExtResource("7_bi2v6"), ExtResource("10_bi2v6"), ExtResource("8_0c5c6")])
+lessonName = &"Sabe"

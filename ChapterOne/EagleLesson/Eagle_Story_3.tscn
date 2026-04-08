@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bdcdi1an1qmvf"]
+
+[ext_resource type="PackedScene" uid="uid://bakvp2vudvfqy" path="res://TemplateScenes/StoryScene/StoryScene.tscn" id="1_5iw2q"]
+[ext_resource type="AudioStream" uid="uid://cdgbbdqtloqmy" path="res://ChapterOne/EagleLesson/LessonAudio/Eagle3.mp3" id="2_7eilk"]
+
+[node name="StoryRoot" instance=ExtResource("1_5iw2q")]
+StoryText = "Eagle gathered all of her Dad's favorite flowers and gave it to him. "
+switchButtonEnabled = false
+EnglishNarration = ExtResource("2_7eilk")

@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=3 uid="uid://blmd827crfdb1"]
+
+[ext_resource type="PackedScene" uid="uid://bakvp2vudvfqy" path="res://TemplateScenes/StoryScene/StoryScene.tscn" id="1_svewg"]
+[ext_resource type="Texture2D" uid="uid://dwu3gu8jkp5w2" path="res://ChapterOne/BearLesson/LessonAssets/BeaarLine6.png" id="2_d3upb"]
+[ext_resource type="AudioStream" uid="uid://crhswccq8kggn" path="res://ChapterOne/BearLesson/LessonAudio/Audio 5.mp3" id="3_47gm8"]
+
+[node name="StoryRoot" instance=ExtResource("1_svewg")]
+StoryText = "The sound made Bear feel strong. “I was scared, but I tried,” thought Bear. "
+switchButtonEnabled = false
+backgroundTexture = ExtResource("2_d3upb")
+EnglishNarration = ExtResource("3_47gm8")

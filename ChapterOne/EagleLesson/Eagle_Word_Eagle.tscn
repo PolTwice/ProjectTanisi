@@ -1,0 +1,13 @@
+[gd_scene load_steps=5 format=3 uid="uid://cxynmw22ghdxr"]
+
+[ext_resource type="PackedScene" uid="uid://divch3hk5xww0" path="res://TemplateScenes/WordScene/WordScene.tscn" id="1_tytdm"]
+[ext_resource type="AudioStream" uid="uid://v6y6ocyuqefh" path="res://ChapterOne/EagleLesson/LessonAudio/EagleEagleEN.mp3" id="2_0k8um"]
+[ext_resource type="AudioStream" uid="uid://da0167h8tbehe" path="res://ChapterOne/EagleLesson/LessonAudio/EagleEagleCR.mp3" id="3_0i7hb"]
+[ext_resource type="AudioStream" uid="uid://cmmwt612nfmsm" path="res://ChapterOne/EagleLesson/LessonAudio/EagleEagle.mp3" id="4_nfeof"]
+
+[node name="WordScene" instance=ExtResource("1_tytdm")]
+EnglishButtonText = "Eagle"
+CreeButtonText = "Mikisiw"
+englishReading = ExtResource("2_0k8um")
+creeReading = ExtResource("3_0i7hb")
+Reading = ExtResource("4_nfeof")

@@ -1,0 +1,36 @@
+[gd_scene load_steps=9 format=3 uid="uid://bhcsoxw2bwxkk"]
+
+[ext_resource type="PackedScene" uid="uid://divch3hk5xww0" path="res://TemplateScenes/WordScene/WordScene.tscn" id="1_phb70"]
+[ext_resource type="Texture2D" uid="uid://bvk61efkgoqne" path="res://ChapterOne/SabeLesson/Assets/Sabe5.png" id="2_3jsw0"]
+[ext_resource type="AudioStream" uid="uid://bkirmqtgtec51" path="res://ChapterOne/SabeLesson/LessonAudio/SabeStoneEN.mp3" id="2_fspe8"]
+[ext_resource type="Texture2D" uid="uid://bdnp8dcqm60kk" path="res://ChapterOne/SabeLesson/Assets/SabeBackground2.png" id="2_gmeec"]
+[ext_resource type="AudioStream" uid="uid://dqkueyvf4512b" path="res://ChapterOne/SabeLesson/LessonAudio/SabeStoneCR.mp3" id="3_gmeec"]
+[ext_resource type="Texture2D" uid="uid://bdw36nf2h5i4q" path="res://ChapterOne/SabeLesson/Assets/Sabe6.png" id="3_p56fh"]
+[ext_resource type="AudioStream" uid="uid://cl3f2f0e0nkiu" path="res://ChapterOne/SabeLesson/LessonAudio/SabeStone.mp3" id="4_umx2i"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fspe8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3jsw0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_p56fh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[node name="WordScene" instance=ExtResource("1_phb70")]
+background = ExtResource("2_gmeec")
+EnglishButtonText = "Stone"
+CreeButtonText = "asiniy"
+englishReading = ExtResource("2_fspe8")
+creeReading = ExtResource("3_gmeec")
+Reading = ExtResource("4_umx2i")
+
+[node name="AnimatedSprite2D" parent="." index="2"]
+position = Vector2(1400, 540)
+sprite_frames = SubResource("SpriteFrames_fspe8")
+autoplay = "default"

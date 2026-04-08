@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cqu37v41bgbyv"]
+
+[ext_resource type="PackedScene" uid="uid://7rov3h1r8pnk" path="res://TemplateScenes/QuizScene/QuizScene.tscn" id="1_vu8q3"]
+[ext_resource type="Texture2D" uid="uid://bvsdyegjnc1iq" path="res://ChapterTwo/SweetGrass/Assets/SweetGrassBG2.png" id="2_qligb"]
+
+[node name="QuizScene" instance=ExtResource("1_vu8q3")]
+question = "What is Rabbit in Cree?"
+correctAnswerText = "Correct!"
+buttonAText = "Yotin"
+buttonBText = "maskwa"
+buttonCText = "wîhkwaskwa"
+buttonDText = "wâpos"
+correctAnswer = 3
+backgroundImage = ExtResource("2_qligb")

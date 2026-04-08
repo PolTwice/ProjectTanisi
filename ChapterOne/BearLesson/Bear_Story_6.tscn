@@ -1,0 +1,14 @@
+[gd_scene load_steps=5 format=3 uid="uid://cnh6i87qewvig"]
+
+[ext_resource type="PackedScene" uid="uid://bakvp2vudvfqy" path="res://TemplateScenes/StoryScene/StoryScene.tscn" id="1_6trj4"]
+[ext_resource type="Texture2D" uid="uid://btpi0tm03talv" path="res://ChapterOne/BearLesson/LessonAssets/BeaarLine7.png" id="2_8vyxu"]
+[ext_resource type="AudioStream" uid="uid://b8gxu38ow1x8b" path="res://ChapterOne/BearLesson/LessonAudio/Audio 6.mp3" id="3_818bw"]
+[ext_resource type="AudioStream" uid="uid://c6wl1vcf6fch7" path="res://ChapterOne/BearLesson/LessonAudio/Audio 7.mp3" id="4_jorpk"]
+
+[node name="StoryRoot" instance=ExtResource("1_6trj4")]
+StoryText = "Bear learned courage. "
+EnglishTarget = "Bear"
+CreeTarget = "Maskwa"
+backgroundTexture = ExtResource("2_8vyxu")
+EnglishNarration = ExtResource("3_818bw")
+CreeNarration = ExtResource("4_jorpk")

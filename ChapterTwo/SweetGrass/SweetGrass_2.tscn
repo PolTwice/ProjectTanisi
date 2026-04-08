@@ -1,0 +1,43 @@
+[gd_scene load_steps=8 format=3 uid="uid://2tpwc3gm44bd"]
+
+[ext_resource type="PackedScene" uid="uid://bakvp2vudvfqy" path="res://TemplateScenes/StoryScene/StoryScene.tscn" id="1_8g5yp"]
+[ext_resource type="Texture2D" uid="uid://dwm4eokpr0ee3" path="res://ChapterTwo/SweetGrass/Assets/SweetGrassBG.png" id="2_yjvu5"]
+[ext_resource type="Texture2D" uid="uid://bvowinepkwdi4" path="res://ChapterTwo/SweetGrass/Assets/SweetGrass1_1.png" id="3_nhqrm"]
+[ext_resource type="Texture2D" uid="uid://darjj3jojjhhk" path="res://ChapterTwo/SweetGrass/Assets/SweetGrass1_2.png" id="4_5l88b"]
+[ext_resource type="Texture2D" uid="uid://cexstgvrl3v8t" path="res://ChapterTwo/SweetGrass/Assets/SweetGrass1_3.png" id="5_qxp4c"]
+[ext_resource type="Texture2D" uid="uid://bm5vjphipgnxd" path="res://ChapterTwo/SweetGrass/Assets/SweetGrass1_4.png" id="6_j6jg2"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u672m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_nhqrm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_5l88b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_qxp4c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_j6jg2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[node name="StoryRoot" instance=ExtResource("1_8g5yp")]
+StoryText = "A Rabbit hopped along, always in a hurry, but it didn’t know the way home."
+EnglishTarget = "Rabbit"
+CreeTarget = "wâpos"
+backgroundTexture = ExtResource("2_yjvu5")
+
+[node name="AnimatedSprite" parent="." index="2"]
+sprite_frames = SubResource("SpriteFrames_u672m")
+
+[node name="Narration" parent="." index="4"]
+volume_db = -80.0
+
+[node name="BackgroundSound" parent="." index="5"]
+volume_db = -80.0

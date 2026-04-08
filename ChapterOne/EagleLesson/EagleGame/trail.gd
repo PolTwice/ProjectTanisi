@@ -1,6 +1,6 @@
 extends Line2D
 
-@export var max_points = 40 # How long the trail is
+@export var max_points = 100 # How long the trail is
 @onready var bird = get_parent()
 
 func _process(_delta):

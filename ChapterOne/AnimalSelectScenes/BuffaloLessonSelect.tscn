@@ -1,17 +1,17 @@
 [gd_scene load_steps=5 format=3 uid="uid://bbqavuivyw684"]
 
 [ext_resource type="PackedScene" uid="uid://drq53txkkdr8y" path="res://TemplateScenes/lessonSelectIcon/LessonSelectIcon.tscn" id="1_4ns5i"]
-[ext_resource type="Texture2D" uid="uid://djd00yyhrnwbt" path="res://ChapterOne/AnimalSelectScenes/assets/Buffalo/Buffalo2.png" id="2_snahv"]
-[ext_resource type="Texture2D" uid="uid://bhlj3wrlgqhqq" path="res://ChapterOne/AnimalSelectScenes/assets/Buffalo/Buffalo.png" id="3_im38p"]
+[ext_resource type="Texture2D" uid="uid://0mr34uhnn66k" path="res://ChapterOne/BuffaloLesson/Assets/Buffalo4.png" id="2_r0btg"]
+[ext_resource type="Texture2D" uid="uid://dhh4pw5hrm4bo" path="res://ChapterOne/BuffaloLesson/Assets/Buffalo6.png" id="3_pxs70"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_r0btg"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_snahv")
+"texture": ExtResource("2_r0btg")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_im38p")
+"texture": ExtResource("3_pxs70")
 }],
 "loop": true,
 "name": &"default",
@@ -23,4 +23,6 @@ lessonPath = "Buffalo"
 lessonName = "Buffalo Lesson"
 
 [node name="lessonSprite" parent="." index="0"]
+position = Vector2(-5, -8.000015)
+scale = Vector2(1.9262154, 2.1141973)
 sprite_frames = SubResource("SpriteFrames_r0btg")

@@ -1,0 +1,33 @@
+[gd_scene load_steps=8 format=3 uid="uid://cp72m8blj7x7x"]
+
+[ext_resource type="PackedScene" uid="uid://divch3hk5xww0" path="res://TemplateScenes/WordScene/WordScene.tscn" id="1_qgjg7"]
+[ext_resource type="Texture2D" uid="uid://ddr2uqllh3bq0" path="res://ChapterOne/BearLesson/LessonAssets/BeaarLine2.png" id="2_xdrq5"]
+[ext_resource type="AudioStream" uid="uid://c2swx4pw85ir7" path="res://ChapterOne/BearLesson/LessonAudio/Audio 9.mp3" id="3_j3gah"]
+[ext_resource type="AudioStream" uid="uid://3xbnbi3c5xvd" path="res://ChapterOne/BearLesson/LessonAudio/Audio 10.mp3" id="4_pvyt4"]
+[ext_resource type="AudioStream" uid="uid://b5lvk2hqmj140" path="res://ChapterOne/BearLesson/LessonAudio/Audio 8.mp3" id="5_b8nsg"]
+[ext_resource type="Texture2D" uid="uid://badp5fkmhubrb" path="res://ChapterOne/BearLesson/LessonAssets/BeaarLine3.png" id="6_e62k5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2afs4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_xdrq5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_e62k5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[node name="WordScene" instance=ExtResource("1_qgjg7")]
+background = ExtResource("2_xdrq5")
+EnglishButtonText = "Scared"
+CreeButtonText = "Kostaciw"
+englishReading = ExtResource("3_j3gah")
+creeReading = ExtResource("4_pvyt4")
+Reading = ExtResource("5_b8nsg")
+
+[node name="AnimatedSprite2D" parent="." index="2"]
+sprite_frames = SubResource("SpriteFrames_2afs4")

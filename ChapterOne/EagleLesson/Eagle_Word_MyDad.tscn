@@ -1,0 +1,13 @@
+[gd_scene load_steps=5 format=3 uid="uid://bginew72tyxtd"]
+
+[ext_resource type="PackedScene" uid="uid://divch3hk5xww0" path="res://TemplateScenes/WordScene/WordScene.tscn" id="1_648oq"]
+[ext_resource type="AudioStream" uid="uid://ntxuhixyt8v5" path="res://ChapterOne/EagleLesson/LessonAudio/EagleMyDadEN.mp3" id="2_mk45s"]
+[ext_resource type="AudioStream" uid="uid://c5ebhm2m1t8t0" path="res://ChapterOne/EagleLesson/LessonAudio/EagleMyDadCR.mp3" id="3_ilstm"]
+[ext_resource type="AudioStream" uid="uid://cruofqvlhasws" path="res://ChapterOne/EagleLesson/LessonAudio/EagleMyDad.mp3" id="4_d4elm"]
+
+[node name="WordScene" instance=ExtResource("1_648oq")]
+EnglishButtonText = "My Dad"
+CreeButtonText = "Nohtahwiy"
+englishReading = ExtResource("2_mk45s")
+creeReading = ExtResource("3_ilstm")
+Reading = ExtResource("4_d4elm")

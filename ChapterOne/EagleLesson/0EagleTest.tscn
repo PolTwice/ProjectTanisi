@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://dg8wakw7ujgfy"]
+
+[ext_resource type="PackedScene" uid="uid://cfm8ssfd0vkfp" path="res://TemplateScenes/LessonManager/LessonManagerScene.tscn" id="1_6tsy3"]
+[ext_resource type="PackedScene" uid="uid://cjo040pff54y8" path="res://ChapterOne/EagleLesson/EagleGame/EagleFlowerCollection.tscn" id="2_62kuw"]
+
+[node name="LessonManager" instance=ExtResource("1_6tsy3")]
+lessonArray = Array[PackedScene]([ExtResource("2_62kuw")])

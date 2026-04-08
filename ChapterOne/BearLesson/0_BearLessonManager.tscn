@@ -1,12 +1,16 @@
-[gd_scene load_steps=7 format=3 uid="uid://f6kqh5g6jni4"]
+[gd_scene load_steps=11 format=3 uid="uid://f6kqh5g6jni4"]
 
 [ext_resource type="PackedScene" uid="uid://cfm8ssfd0vkfp" path="res://TemplateScenes/LessonManager/LessonManagerScene.tscn" id="1_1o8mi"]
-[ext_resource type="PackedScene" uid="uid://dwsmitp2aw8bi" path="res://ChapterOne/BearLesson/Bear_1_Word_Maskwa.tscn" id="2_uy2ud"]
-[ext_resource type="PackedScene" uid="uid://cq2yyd123wc2f" path="res://ChapterOne/BearLesson/Bear_2_Story_LineOne.tscn" id="3_1ioi0"]
-[ext_resource type="PackedScene" uid="uid://b1kuggqve16yu" path="res://ChapterOne/BearLesson/Bear_3_Story_LineTwo.tscn" id="4_mtl5f"]
-[ext_resource type="PackedScene" uid="uid://lb5ssc20ks4" path="res://ChapterOne/BearLesson/Bear_4_Quiz_Maskwa.tscn" id="5_0mcm7"]
-[ext_resource type="PackedScene" uid="uid://b8phhcnisw6xf" path="res://ChapterOne/BearLesson/Bear_5_Story_LineThree.tscn" id="6_fgndu"]
+[ext_resource type="PackedScene" uid="uid://cp72m8blj7x7x" path="res://ChapterOne/BearLesson/Bear_Word_Scared.tscn" id="2_0mcm7"]
+[ext_resource type="PackedScene" uid="uid://dvi36hajeymgw" path="res://ChapterOne/BearLesson/Bear_Story_1.tscn" id="3_fgndu"]
+[ext_resource type="PackedScene" uid="uid://6utukt0qskcv" path="res://ChapterOne/BearLesson/Bear_Word_Forest.tscn" id="4_eos0w"]
+[ext_resource type="PackedScene" uid="uid://ctjkk2rjtkj8f" path="res://ChapterOne/BearLesson/Bear_Story_2.tscn" id="5_8genw"]
+[ext_resource type="PackedScene" uid="uid://dbbxx0ogb0v4c" path="res://ChapterOne/BearLesson/Bear_Story_3.tscn" id="6_yusg4"]
+[ext_resource type="PackedScene" uid="uid://uoovfes1av2p" path="res://ChapterOne/BearLesson/Bear_Story_4.tscn" id="7_xnogc"]
+[ext_resource type="PackedScene" uid="uid://blmd827crfdb1" path="res://ChapterOne/BearLesson/Bear_Story_5.tscn" id="8_iaakx"]
+[ext_resource type="PackedScene" uid="uid://bgsnq5q1fs7x6" path="res://ChapterOne/BearLesson/Bear_Word_Bear.tscn" id="9_h6ps8"]
+[ext_resource type="PackedScene" uid="uid://cnh6i87qewvig" path="res://ChapterOne/BearLesson/Bear_Story_6.tscn" id="10_8wtii"]
 
 [node name="LessonManager" instance=ExtResource("1_1o8mi")]
-lessonArray = Array[PackedScene]([ExtResource("2_uy2ud"), ExtResource("3_1ioi0"), ExtResource("4_mtl5f"), ExtResource("5_0mcm7"), ExtResource("6_fgndu")])
-lessonName = &"Bear"
+lessonArray = Array[PackedScene]([ExtResource("2_0mcm7"), ExtResource("3_fgndu"), ExtResource("4_eos0w"), ExtResource("5_8genw"), ExtResource("6_yusg4"), ExtResource("7_xnogc"), ExtResource("8_iaakx"), ExtResource("9_h6ps8"), ExtResource("10_8wtii")])
+lessonName = &"The Courageous Bear"

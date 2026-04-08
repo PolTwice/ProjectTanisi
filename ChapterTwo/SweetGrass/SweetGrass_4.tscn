@@ -1,0 +1,46 @@
+[gd_scene load_steps=9 format=3 uid="uid://bj3708vl3wbmd"]
+
+[ext_resource type="PackedScene" uid="uid://bakvp2vudvfqy" path="res://TemplateScenes/StoryScene/StoryScene.tscn" id="1_0se33"]
+[ext_resource type="Texture2D" uid="uid://dwm4eokpr0ee3" path="res://ChapterTwo/SweetGrass/Assets/SweetGrassBG.png" id="2_yj0d2"]
+[ext_resource type="AudioStream" uid="uid://bknm06mfgj7qw" path="res://ChapterOne/Sounds/Bear.mp3" id="3_bfx0h"]
+[ext_resource type="Texture2D" uid="uid://bvowinepkwdi4" path="res://ChapterTwo/SweetGrass/Assets/SweetGrass1_1.png" id="4_cgcih"]
+[ext_resource type="Texture2D" uid="uid://darjj3jojjhhk" path="res://ChapterTwo/SweetGrass/Assets/SweetGrass1_2.png" id="5_7u6os"]
+[ext_resource type="Texture2D" uid="uid://cexstgvrl3v8t" path="res://ChapterTwo/SweetGrass/Assets/SweetGrass1_3.png" id="6_vxjtr"]
+[ext_resource type="Texture2D" uid="uid://bm5vjphipgnxd" path="res://ChapterTwo/SweetGrass/Assets/SweetGrass1_4.png" id="7_bjo4x"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h1k0s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_cgcih")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_7u6os")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_vxjtr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_bjo4x")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="StoryRoot" instance=ExtResource("1_0se33")]
+StoryText = "Rabbit stayed still for a while, listening until the Sweetgrass russled and showed the path back."
+EnglishTarget = "Rabbit"
+CreeTarget = "wâpos"
+backgroundTexture = ExtResource("2_yj0d2")
+EnglishNarration = ExtResource("3_bfx0h")
+CreeNarration = ExtResource("3_bfx0h")
+
+[node name="AnimatedSprite" parent="." index="2"]
+sprite_frames = SubResource("SpriteFrames_h1k0s")
+
+[node name="Narration" parent="." index="4"]
+volume_db = -80.0
+
+[node name="BackgroundSound" parent="." index="5"]
+volume_db = -80.0

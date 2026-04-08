@@ -16,8 +16,8 @@ var currentContainerOne;
 var currentContainerOnePath;
 
 func _ready() -> void:
-	#currentContainerOne = $NodeContainerOne/TitleScreen
-	#currentContainerOnePath = "res://NonLessonScenes/StartScreen.tscn"
+	currentContainerOne = $NodeContainerOne/TitleScreen
+	currentContainerOnePath = "res://NonLessonScenes/StartScreen.tscn"
 	pass
 #Used to change the scene contained in NodeContainerOne
 func changeNodeOne (new_scene: String, pushToStack = true, fade = true, fadeTime = 0.5):

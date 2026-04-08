@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://t0hngjxo7vyq"]
+
+[ext_resource type="PackedScene" uid="uid://divch3hk5xww0" path="res://TemplateScenes/WordScene/WordScene.tscn" id="1_boyyx"]
+[ext_resource type="Texture2D" uid="uid://bvsdyegjnc1iq" path="res://ChapterTwo/SweetGrass/Assets/SweetGrassBG2.png" id="2_vptje"]
+[ext_resource type="AudioStream" uid="uid://bknm06mfgj7qw" path="res://ChapterOne/Sounds/Bear.mp3" id="3_70qcb"]
+
+[node name="WordScene" instance=ExtResource("1_boyyx")]
+background = ExtResource("2_vptje")
+EnglishButtonText = "Rabbit"
+CreeButtonText = "wâpos"
+englishReading = ExtResource("3_70qcb")
+creeReading = ExtResource("3_70qcb")
+Reading = ExtResource("3_70qcb")
+
+[node name="NarrationAudio" parent="." index="3"]
+volume_db = -80.0
+
+[node name="EnglishReading" parent="VBoxContainer/HBoxContainer/EnglishVBox/EnglishMargin/EnglishWord" index="0"]
+volume_db = -80.0
+
+[node name="CreeReading" parent="VBoxContainer/HBoxContainer/CreeVBox/CreeMargin/CreeWord" index="0"]
+volume_db = -80.0

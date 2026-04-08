@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://du1pvexxf3nb4"]
-
-[ext_resource type="PackedScene" uid="uid://bakvp2vudvfqy" path="res://TemplateScenes/StoryScene/StoryScene.tscn" id="1_r0055"]
-
-[node name="StoryRoot" instance=ExtResource("1_r0055")]
-StoryText = "Bear stood tall and gave a big roar back."
-EnglishTarget = "Bear"
-CreeTarget = "Maskwa"

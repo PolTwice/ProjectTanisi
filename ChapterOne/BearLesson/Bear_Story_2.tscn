@@ -1,0 +1,32 @@
+[gd_scene load_steps=7 format=3 uid="uid://ctjkk2rjtkj8f"]
+
+[ext_resource type="PackedScene" uid="uid://bakvp2vudvfqy" path="res://TemplateScenes/StoryScene/StoryScene.tscn" id="1_o63pd"]
+[ext_resource type="AudioStream" uid="uid://dwlp1qcdm7d44" path="res://ChapterOne/BearLesson/LessonAudio/Audio 1.mp3" id="2_033b1"]
+[ext_resource type="AudioStream" uid="uid://dep3xeqeksxj5" path="res://ChapterOne/BearLesson/LessonAudio/Audio 2.mp3" id="3_0f64x"]
+[ext_resource type="Texture2D" uid="uid://ddr2uqllh3bq0" path="res://ChapterOne/BearLesson/LessonAssets/BeaarLine2.png" id="4_c5857"]
+[ext_resource type="Texture2D" uid="uid://badp5fkmhubrb" path="res://ChapterOne/BearLesson/LessonAssets/BeaarLine3.png" id="5_5rr2v"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xjmkf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_c5857")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5rr2v")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[node name="StoryRoot" instance=ExtResource("1_o63pd")]
+StoryText = "One night, the wind roared through the pine forest. "
+EnglishTarget = "pine forest"
+CreeTarget = "eminahikostak"
+backgroundTexture = ExtResource("4_c5857")
+EnglishNarration = ExtResource("2_033b1")
+CreeNarration = ExtResource("3_0f64x")
+
+[node name="AnimatedSprite" parent="." index="2"]
+sprite_frames = SubResource("SpriteFrames_xjmkf")

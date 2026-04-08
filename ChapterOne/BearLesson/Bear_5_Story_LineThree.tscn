@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://b8phhcnisw6xf"]
-
-[ext_resource type="PackedScene" uid="uid://bakvp2vudvfqy" path="res://TemplateScenes/StoryScene/StoryScene.tscn" id="1_tc804"]
-
-[node name="StoryRoot" instance=ExtResource("1_tc804")]
-StoryText = "Bear wanted to hide, but they took a deep breath"
-EnglishTarget = "Bear"
-CreeTarget = "Maskwa"

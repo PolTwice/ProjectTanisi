@@ -68,7 +68,7 @@ func _on_replay_pressed() -> void:
 
 
 func _on_go_back_pressed() -> void:
-	GlobalState.SceneManager.backNodeOne()
+	GlobalState.sceneManager.backNodeOne()
 
 func _can_continue() -> void:
 	next_button.disabled = false

@@ -1,0 +1,13 @@
+[gd_scene load_steps=5 format=3 uid="uid://dbk1xao1x18ha"]
+
+[ext_resource type="PackedScene" uid="uid://divch3hk5xww0" path="res://TemplateScenes/WordScene/WordScene.tscn" id="1_vmf8e"]
+[ext_resource type="AudioStream" uid="uid://cou3i63e5dimk" path="res://ChapterOne/EagleLesson/LessonAudio/EagleLoveEN.mp3" id="2_jgbno"]
+[ext_resource type="AudioStream" uid="uid://b7bvcantgonva" path="res://ChapterOne/EagleLesson/LessonAudio/EagleLoveCR.mp3" id="3_4dukb"]
+[ext_resource type="AudioStream" uid="uid://cd5jea02fdps" path="res://ChapterOne/EagleLesson/LessonAudio/EagleILove.mp3" id="4_uvp00"]
+
+[node name="WordScene" instance=ExtResource("1_vmf8e")]
+EnglishButtonText = "I love you"
+CreeButtonText = "Kisakihitin"
+englishReading = ExtResource("2_jgbno")
+creeReading = ExtResource("3_4dukb")
+Reading = ExtResource("4_uvp00")

@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://b0pa6tj128s3l"]
+
+[ext_resource type="PackedScene" uid="uid://bixs4mdgbfi7l" path="res://TemplateScenes/ChapterScene/ChapterScene.tscn" id="1_0a4ug"]
+[ext_resource type="Texture2D" uid="uid://cenx31siv7klm" path="res://ChapterTwo/LessonSelectScenes/Assets/chapter 2 inside tipi.png" id="2_hfyne"]
+[ext_resource type="PackedScene" uid="uid://dyq7mid6d8py" path="res://ChapterTwo/LessonSelectScenes/SweetGrassLessonIcon.tscn" id="3_vundv"]
+
+[node name="ChapterScene" instance=ExtResource("1_0a4ug")]
+
+[node name="TextureRect" type="TextureRect" parent="." index="0"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_hfyne")
+
+[node name="lessonArea2D2" parent="." index="3" instance=ExtResource("3_vundv")]
+position = Vector2(1218, 583)
+scale = Vector2(0.3, 0.3)
+lessonPath = &"res://ChapterTwo/SweetGrass/0SweetGrassLessonManager.tscn"
+lessonName = &"Sweetgrass"

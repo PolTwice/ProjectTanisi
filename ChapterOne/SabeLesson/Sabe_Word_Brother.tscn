@@ -1,0 +1,40 @@
+[gd_scene load_steps=10 format=3 uid="uid://df1an881krm71"]
+
+[ext_resource type="PackedScene" uid="uid://divch3hk5xww0" path="res://TemplateScenes/WordScene/WordScene.tscn" id="1_4kptl"]
+[ext_resource type="Texture2D" uid="uid://bdnp8dcqm60kk" path="res://ChapterOne/SabeLesson/Assets/SabeBackground2.png" id="2_0whpn"]
+[ext_resource type="AudioStream" uid="uid://coacotnsphsk7" path="res://ChapterOne/SabeLesson/LessonAudio/SabeBrotherEN.mp3" id="2_e76b0"]
+[ext_resource type="AudioStream" uid="uid://m6ngseu7aq37" path="res://ChapterOne/SabeLesson/LessonAudio/SabeBrotherCR.mp3" id="3_0whpn"]
+[ext_resource type="AudioStream" uid="uid://b7vkbj36cebd5" path="res://ChapterOne/SabeLesson/LessonAudio/SabeBrother.mp3" id="4_0ikgt"]
+[ext_resource type="Texture2D" uid="uid://dl8x1cyfrrcun" path="res://ChapterOne/SabeLesson/Assets/Sabe13.png" id="5_1bu50"]
+[ext_resource type="Texture2D" uid="uid://dmg031f6rq0cv" path="res://ChapterOne/SabeLesson/Assets/Sabe14.png" id="6_6k6yj"]
+[ext_resource type="Texture2D" uid="uid://52q3d5r53jfm" path="res://ChapterOne/SabeLesson/Assets/Sabe15.png" id="7_3nvcu"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q2rgo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_1bu50")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_6k6yj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_3nvcu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[node name="WordScene" instance=ExtResource("1_4kptl")]
+background = ExtResource("2_0whpn")
+EnglishButtonText = "My Older Brother"
+CreeButtonText = "nistese"
+englishReading = ExtResource("2_e76b0")
+creeReading = ExtResource("3_0whpn")
+Reading = ExtResource("4_0ikgt")
+
+[node name="AnimatedSprite2D" parent="." index="2"]
+position = Vector2(600, 540)
+sprite_frames = SubResource("SpriteFrames_q2rgo")
+autoplay = "default"

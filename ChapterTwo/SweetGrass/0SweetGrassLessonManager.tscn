@@ -1,0 +1,14 @@
+[gd_scene load_steps=10 format=3 uid="uid://sjcmkn6tejhd"]
+
+[ext_resource type="PackedScene" uid="uid://cfm8ssfd0vkfp" path="res://TemplateScenes/LessonManager/LessonManagerScene.tscn" id="1_48ibe"]
+[ext_resource type="PackedScene" uid="uid://c76rowiy585hc" path="res://ChapterTwo/SweetGrass/Sweetgrass_word_SweetGrass.tscn" id="2_wxum4"]
+[ext_resource type="PackedScene" uid="uid://c2n4erl0ph2ic" path="res://ChapterTwo/SweetGrass/SweetGrass_1.tscn" id="3_1bym5"]
+[ext_resource type="PackedScene" uid="uid://t0hngjxo7vyq" path="res://ChapterTwo/SweetGrass/SweetGrass_word_Rabbit.tscn" id="4_6r0ns"]
+[ext_resource type="PackedScene" uid="uid://2tpwc3gm44bd" path="res://ChapterTwo/SweetGrass/SweetGrass_2.tscn" id="5_ym0gd"]
+[ext_resource type="PackedScene" uid="uid://bppxg330rdhmq" path="res://ChapterTwo/SweetGrass/SweetGrass_Quiz_Sweetgrass.tscn" id="6_s33s6"]
+[ext_resource type="PackedScene" uid="uid://s0xwus8eayt7" path="res://ChapterTwo/SweetGrass/SweetGrass_3.tscn" id="7_nr350"]
+[ext_resource type="PackedScene" uid="uid://bj3708vl3wbmd" path="res://ChapterTwo/SweetGrass/SweetGrass_4.tscn" id="8_uune5"]
+[ext_resource type="PackedScene" uid="uid://cqu37v41bgbyv" path="res://ChapterTwo/SweetGrass/Sweetgrass_quiz_Rabbit.tscn" id="9_5ia08"]
+
+[node name="LessonManager" instance=ExtResource("1_48ibe")]
+lessonArray = Array[PackedScene]([ExtResource("2_wxum4"), ExtResource("3_1bym5"), ExtResource("4_6r0ns"), ExtResource("5_ym0gd"), ExtResource("6_s33s6"), ExtResource("7_nr350"), ExtResource("8_uune5"), ExtResource("9_5ia08")])

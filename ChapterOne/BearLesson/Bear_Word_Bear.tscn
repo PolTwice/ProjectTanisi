@@ -1,0 +1,13 @@
+[gd_scene load_steps=6 format=3 uid="uid://bgsnq5q1fs7x6"]
+
+[ext_resource type="PackedScene" uid="uid://divch3hk5xww0" path="res://TemplateScenes/WordScene/WordScene.tscn" id="1_g6ofh"]
+[ext_resource type="Texture2D" uid="uid://dwu3gu8jkp5w2" path="res://ChapterOne/BearLesson/LessonAssets/BeaarLine6.png" id="2_ppipr"]
+[ext_resource type="AudioStream" uid="uid://c1uiad0erm17h" path="res://ChapterOne/BearLesson/LessonAudio/Audio 15.mp3" id="3_6a8ed"]
+[ext_resource type="AudioStream" uid="uid://bmtwvwlggo7v6" path="res://ChapterOne/BearLesson/LessonAudio/Audio 16.mp3" id="4_2o8dl"]
+[ext_resource type="AudioStream" uid="uid://btpmrn205ameo" path="res://ChapterOne/BearLesson/LessonAudio/Audio 14.mp3" id="5_ofxae"]
+
+[node name="WordScene" instance=ExtResource("1_g6ofh")]
+background = ExtResource("2_ppipr")
+englishReading = ExtResource("3_6a8ed")
+creeReading = ExtResource("4_2o8dl")
+Reading = ExtResource("5_ofxae")
