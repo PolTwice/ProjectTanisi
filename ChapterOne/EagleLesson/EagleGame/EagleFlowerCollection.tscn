@@ -11,8 +11,8 @@
 [ext_resource type="Script" uid="uid://bxjbbx7u4dlr" path="res://ChapterOne/EagleLesson/EagleGame/score.gd" id="7_wu7ma"]
 
 [sub_resource type="Gradient" id="Gradient_j4ov3"]
-offsets = PackedFloat32Array(0, 0.4, 1)
-colors = PackedColorArray(0.0057352604, 0.24594864, 0.99181837, 0.69803923, 0.3513985, 0.52761334, 0.9232655, 0.74398977, 0.6476206, 0.7544429, 0.9726638, 0.74398977)
+offsets = PackedFloat32Array(0, 0.4, 0.68, 1)
+colors = PackedColorArray(0.58849967, 0.707608, 0.97442806, 0.7397575, 0.3513985, 0.52761334, 0.9232655, 0.74398977, 0.33795604, 0.51665974, 0.92593145, 0.7422028, 0.0057352604, 0.24594864, 0.99181837, 0.69803923)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vpohg"]
 radius = 118.74921
@@ -85,7 +85,7 @@ pivot_offset = Vector2(-1.055, 0)
 size_flags_horizontal = 3
 theme = ExtResource("7_i2he2")
 theme_override_font_sizes/font_size = 100
-text = "You collect 0 flowers"
+text = "You collected 0 flowers"
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("7_wu7ma")

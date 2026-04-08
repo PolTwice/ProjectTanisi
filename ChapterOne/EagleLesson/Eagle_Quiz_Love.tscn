@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dd1hk0jeq42pk"]
+
+[ext_resource type="PackedScene" uid="uid://7rov3h1r8pnk" path="res://TemplateScenes/QuizScene/QuizScene.tscn" id="1_ig6h6"]
+
+[node name="QuizScene" instance=ExtResource("1_ig6h6")]
+question = "How do you say I love you in Cree"
+correctAnswerText = "That's the right answer! Kisakihitin is I love you in Cree"
+buttonAText = "wîhkwaskwa"
+buttonBText = "Kisakihtin"
+buttonCText = "Nikaway"
+buttonDText = "eminahikostak"

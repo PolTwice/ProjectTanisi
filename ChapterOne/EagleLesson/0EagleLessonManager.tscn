@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cnyos1vurp76h"]
+[gd_scene load_steps=11 format=3 uid="uid://cnyos1vurp76h"]
 
 [ext_resource type="PackedScene" uid="uid://cfm8ssfd0vkfp" path="res://TemplateScenes/LessonManager/LessonManagerScene.tscn" id="1_ey5yt"]
 [ext_resource type="PackedScene" uid="uid://krtxjvk721ks" path="res://ChapterOne/EagleLesson/Eagle_Story_1.tscn" id="2_yccr2"]
@@ -7,6 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://cjo040pff54y8" path="res://ChapterOne/EagleLesson/EagleGame/EagleFlowerCollection.tscn" id="5_lmrot"]
 [ext_resource type="PackedScene" uid="uid://bb8y1frv0lgt3" path="res://ChapterOne/EagleLesson/Eagle_Story_4.tscn" id="6_66ywg"]
 [ext_resource type="PackedScene" uid="uid://b52npuygoqah6" path="res://ChapterOne/EagleLesson/Eagle_Story_5.tscn" id="7_63a70"]
+[ext_resource type="PackedScene" uid="uid://6qf5yn1anod6" path="res://ChapterOne/EagleLesson/Eagle_Quiz_Dad.tscn" id="8_h26ai"]
+[ext_resource type="PackedScene" uid="uid://djqegd3ii4xf7" path="res://ChapterOne/EagleLesson/Eagle_Quiz_Eagle.tscn" id="9_lmrot"]
+[ext_resource type="PackedScene" uid="uid://dd1hk0jeq42pk" path="res://ChapterOne/EagleLesson/Eagle_Quiz_Love.tscn" id="10_66ywg"]
 
 [node name="LessonManager" instance=ExtResource("1_ey5yt")]
-lessonArray = Array[PackedScene]([ExtResource("2_yccr2"), ExtResource("3_hr672"), ExtResource("4_h26ai"), ExtResource("5_lmrot"), ExtResource("6_66ywg"), ExtResource("7_63a70")])
+lessonArray = Array[PackedScene]([ExtResource("2_yccr2"), ExtResource("3_hr672"), ExtResource("4_h26ai"), ExtResource("5_lmrot"), ExtResource("6_66ywg"), ExtResource("7_63a70"), ExtResource("8_h26ai"), ExtResource("9_lmrot"), ExtResource("10_66ywg")])

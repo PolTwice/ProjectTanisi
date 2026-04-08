@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1bb0q1ee0j8h"]
+
+[ext_resource type="PackedScene" uid="uid://7rov3h1r8pnk" path="res://TemplateScenes/QuizScene/QuizScene.tscn" id="1_dg460"]
+[ext_resource type="Texture2D" uid="uid://bdnp8dcqm60kk" path="res://ChapterOne/SabeLesson/Assets/SabeBackground2.png" id="2_1yt2s"]
+
+[node name="QuizScene" instance=ExtResource("1_dg460")]
+question = "\"Asiniy\" means \"Stone\" or \"Rock\""
+correctAnswerText = "That's the right answer! Asiniy means stone or rock"
+hasFourQuestions = false
+buttonAText = "True"
+buttonBText = "False"
+backgroundImage = ExtResource("2_1yt2s")

@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cpq0ae1tv5fgm"]
+
+[ext_resource type="PackedScene" uid="uid://7rov3h1r8pnk" path="res://TemplateScenes/QuizScene/QuizScene.tscn" id="1_nwghk"]
+
+[node name="QuizScene" instance=ExtResource("1_nwghk")]
+question = "Nohtahwiy is My Mom in Cree"
+correctAnswerText = "That's the right answer! Nohtahwiy is My Dad"
+hasFourQuestions = false
+buttonAText = "True"
+buttonBText = "False"
+correctAnswer = 1

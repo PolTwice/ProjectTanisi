@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://djqegd3ii4xf7"]
+
+[ext_resource type="PackedScene" uid="uid://7rov3h1r8pnk" path="res://TemplateScenes/QuizScene/QuizScene.tscn" id="1_qbfah"]
+
+[node name="QuizScene" instance=ExtResource("1_qbfah")]
+question = "What is Eagle in Cree?"
+correctAnswerText = "That's the right answer! Eagle is Mikisiw in Cree"
+buttonAText = "Asiniy"
+buttonBText = "Mamawi"
+buttonCText = "Nimosom"
+buttonDText = "Mikisiw"
+correctAnswer = 3

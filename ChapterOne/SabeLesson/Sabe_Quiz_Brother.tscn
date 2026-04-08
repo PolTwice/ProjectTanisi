@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://5evl74k3dw2"]
+
+[ext_resource type="PackedScene" uid="uid://7rov3h1r8pnk" path="res://TemplateScenes/QuizScene/QuizScene.tscn" id="1_svuyi"]
+[ext_resource type="Texture2D" uid="uid://bdnp8dcqm60kk" path="res://ChapterOne/SabeLesson/Assets/SabeBackground2.png" id="2_bib5r"]
+
+[node name="QuizScene" instance=ExtResource("1_svuyi")]
+question = "Who is nistese?"
+correctAnswerText = "That's the right answer! nistese is my Brother!"
+buttonAText = "My Brother"
+buttonBText = "My Mother"
+buttonCText = "My Father"
+buttonDText = "My Grandpa"
+backgroundImage = ExtResource("2_bib5r")

@@ -24,7 +24,7 @@ animations = [{
 [node name="StoryRoot" instance=ExtResource("1_ea0y2")]
 StoryText = "Sabe heard a noised and looked around. \"That sounds like my brother!\""
 EnglishTarget = "my brother"
-CreeTarget = "nicisan"
+CreeTarget = "nistese"
 backgroundTexture = ExtResource("2_kh2gr")
 EnglishNarration = ExtResource("3_3yf7m")
 CreeNarration = ExtResource("4_absae")

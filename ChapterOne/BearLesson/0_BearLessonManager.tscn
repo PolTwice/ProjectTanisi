@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://f6kqh5g6jni4"]
+[gd_scene load_steps=13 format=3 uid="uid://f6kqh5g6jni4"]
 
 [ext_resource type="PackedScene" uid="uid://cfm8ssfd0vkfp" path="res://TemplateScenes/LessonManager/LessonManagerScene.tscn" id="1_1o8mi"]
 [ext_resource type="PackedScene" uid="uid://cp72m8blj7x7x" path="res://ChapterOne/BearLesson/Bear_Word_Scared.tscn" id="2_0mcm7"]
@@ -10,7 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://blmd827crfdb1" path="res://ChapterOne/BearLesson/Bear_Story_5.tscn" id="8_iaakx"]
 [ext_resource type="PackedScene" uid="uid://bgsnq5q1fs7x6" path="res://ChapterOne/BearLesson/Bear_Word_Bear.tscn" id="9_h6ps8"]
 [ext_resource type="PackedScene" uid="uid://cnh6i87qewvig" path="res://ChapterOne/BearLesson/Bear_Story_6.tscn" id="10_8wtii"]
+[ext_resource type="PackedScene" uid="uid://b27yna42fum2" path="res://ChapterOne/BearLesson/Bear_Quiz_Forest.tscn" id="11_eos0w"]
+[ext_resource type="PackedScene" uid="uid://m038kp8056k4" path="res://ChapterOne/BearLesson/Bear_Quiz_Bear.tscn" id="12_8genw"]
 
 [node name="LessonManager" instance=ExtResource("1_1o8mi")]
-lessonArray = Array[PackedScene]([ExtResource("2_0mcm7"), ExtResource("3_fgndu"), ExtResource("4_eos0w"), ExtResource("5_8genw"), ExtResource("6_yusg4"), ExtResource("7_xnogc"), ExtResource("8_iaakx"), ExtResource("9_h6ps8"), ExtResource("10_8wtii")])
+lessonArray = Array[PackedScene]([ExtResource("2_0mcm7"), ExtResource("3_fgndu"), ExtResource("4_eos0w"), ExtResource("5_8genw"), ExtResource("6_yusg4"), ExtResource("7_xnogc"), ExtResource("8_iaakx"), ExtResource("9_h6ps8"), ExtResource("10_8wtii"), ExtResource("11_eos0w"), ExtResource("12_8genw")])
 lessonName = &"The Courageous Bear"
