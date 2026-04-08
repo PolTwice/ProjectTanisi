@@ -1,52 +1,54 @@
 # Project Tanisi: Plains Cree Language Learning
 
-**Project Tanisi** is an interactive educational application designed to revitalize the Plains Cree language for children aged 4 to 7. By blending modern game development with traditional Indigenous storytelling, the app provides a culturally immersive environment where the next generation can engage with their heritage.
+**Project Tanisi** is a specialized interactive educational application designed to support the revitalization of the Plains Cree language among children aged 4 to 7. By integrating traditional Indigenous storytelling with modern instructional design, the app provides a culturally grounded digital environment for early language acquisition.
 
 ---
 
 ## 🌟 Key Features
 
-### 🎮 Powered by Godot
-Built using the **Godot Game Engine**, Project Tanisi utilizes a modular, scene-based architecture. We have developed a custom library of **instantiable scenes**, allowing for:
-* **Rapid Content Scaling:** Quickly deploy new lessons using pre-configured templates.
-* **Consistency:** Uniform UI/UX across all storytelling and quiz modules.
-* **Cross-Platform Accessibility:** Optimized for deployment on tablets and desktop computers in classroom settings.
+### 📱 Modular App Architecture
+Developed using the **Godot Engine**, Project Tanisi is built on a framework of **instantiable scenes**. This technical approach ensures:
+* **Scalability:** New educational content can be integrated seamlessly into the existing structure.
+* **UI Consistency:** A standardized interface across all modules to reduce cognitive load for young learners.
+* **Multi-Platform Deployment:** Optimized for tablets and desktop computers to support flexible classroom integration.
 
-### 📚 Pedagogical Approach
-We focus on "Simple Contextual Learning." Rather than overwhelming students, we introduce only **one Cree word at a time** within the flow of a story. Our curriculum includes:
-* **Seven Grandfather Teachings:** A comprehensive chapter consisting of seven individual lessons.
-* **Medicine Wheel Teachings:** A dedicated chapter focused on holistic balance and seasonal wisdom.
+### 📚 Pedagogical Framework
+The application utilizes "Contextual Vocabulary Acquisition," where language is introduced through narrative. To ensure high retention and prevent overstimulation, the app focuses on **one Cree word at a time** within its storytelling flow.
 
-### 🧩 Flexible Learning Modules
-Every lesson is comprised of three core interaction types:
-1. **Story Modules:** Narrative-driven scenes where new vocabulary is introduced through Indigenous folklore and teachings.
-2. **Word Scenes:** Focused visual-audio nodes designed to reinforce pronunciation and visual recognition.
-3. **Interactive Quizzes:** Gamified assessments that allow children to demonstrate their understanding in a low-pressure environment.
+* **Seven Grandfather Teachings:** A foundational chapter consisting of seven structured lessons.
+* **Medicine Wheel Teachings:** A chapter focused on holistic health, seasonal cycles, and traditional wisdom.
+
+### 🧩 Core Learning Modules
+Each lesson within the app is divided into three distinct functional modules:
+1. **Storytelling:** Narrative sequences where vocabulary is introduced through traditional Cree teachings and folklore.
+2. **Word Nodes:** Focused audio-visual components designed to reinforce specific word recognition and correct pronunciation.
+3. **Assessment:** Interactive modules that allow students to demonstrate comprehension through engaging, low-stakes activities.
 
 ---
 
-## 🤖 AI Application & Future Vision
+## 🤖 AI Research & Future Vision
 
-Project Tanisi sits at the intersection of tradition and innovation. Our AI roadmap includes:
+Project Tanisi explores the ethical and practical integration of Artificial Intelligence to solve long-term language accessibility challenges.
 
 ### **Large Language Model (LLM) Integration**
-A major long-term goal is the development of a dedicated **Cree-specific Language Model**. By fine-tuning models on authentic Plains Cree dialects, we aim to:
-* Improve translation accuracy where generic models often fail.
-* Generate new, grammatically correct lesson scripts dynamically.
-* Ensure long-term digital accessibility for the Cree language for future learners.
+Our primary research focus is the development and implementation of a dedicated **Cree-specific Language Model**. By leveraging fine-tuned models trained on authentic Plains Cree dialects, we aim to:
+* **Translation Accuracy:** Overcome the limitations of generic translation tools that often lack the nuance of Indigenous languages.
+* **Content Sustainability:** Provide a framework for generating grammatically accurate lesson scripts and supporting materials.
+* **Digital Sovereignty:** Build a specialized tool that ensures the Cree language remains accessible and accurate in a digital-first world.
 
 ---
 
-## 🛠 Technical Stack
-* **Engine:** Godot
-* **Platforms:** Android (Tablets), Windows/Linux (Computers)
-* **Language Focus:** Plains Cree 
+## 🛠 Technical Specifications
+* **Development Environment:** Godot
+* **Target Platforms:** Tablets (Android/iOS) and Classroom Workstations (Windows/Linux)
+* **Linguistic Focus:** Plains Cree (Y-Dialect)
+* **Implementation Goal:** Direct integration into school curricula to support early-age Indigenous language literacy.
 
 ---
 
 ## 🤝 Acknowledgments
-Project Tanisi is a collaborative effort involving:
-* **CST Project Team Lead:** Paul Alejandria.
+Project Tanisi is a collaborative initiative:
+* **Project Lead:** Paul Alejandria
 * **CST Project Team Members:** Avery Collison, Daniel Ajunwa
-* **Instructional Support:** Alex Wang.
-* **Cultural & Linguistic Guidance:** Martha Kilcup (Cree Translator and Advisor).
+* **Instructional Advisor:** Alex Wang
+* **Linguistic & Cultural Advisor:** Martha Kilcup (Cree Translator)
