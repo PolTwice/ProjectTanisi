@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=3 uid="uid://f8r4hn76vep5"]
+
+[ext_resource type="PackedScene" uid="uid://bakvp2vudvfqy" path="res://TemplateScenes/StoryScene/StoryScene.tscn" id="1_wf37y"]
+[ext_resource type="Texture2D" uid="uid://om40y58se6su" path="res://ChapterOne/WolfLesson/Assets/WolfBackground.png" id="2_humr8"]
+[ext_resource type="AudioStream" uid="uid://cu87v0430fw46" path="res://ChapterOne/WolfLesson/LessonAudio/Wolf6.mp3" id="3_y4ghj"]
+[ext_resource type="Texture2D" uid="uid://c2mrgw11kt1yt" path="res://ChapterOne/WolfLesson/Assets/WolfLine6.png" id="4_taq8m"]
+[ext_resource type="Texture2D" uid="uid://c8kivu0tqniur" path="res://ChapterOne/WolfLesson/Assets/WolfLine7.png" id="5_ix2i5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_77yaf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_taq8m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ix2i5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[node name="StoryRoot" instance=ExtResource("1_wf37y")]
+StoryText = "Wolf watched them howl, and it was very pretty"
+switchButtonEnabled = false
+backgroundTexture = ExtResource("2_humr8")
+EnglishNarration = ExtResource("3_y4ghj")
+
+[node name="AnimatedSprite" parent="." index="2"]
+position = Vector2(958.5001, 536.00006)
+scale = Vector2(0.8324631, 0.80538934)
+sprite_frames = SubResource("SpriteFrames_77yaf")
+frame_progress = 0.26657096

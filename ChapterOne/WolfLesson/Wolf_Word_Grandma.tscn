@@ -1,0 +1,32 @@
+[gd_scene load_steps=8 format=3 uid="uid://drlue867qjdjd"]
+
+[ext_resource type="PackedScene" uid="uid://divch3hk5xww0" path="res://TemplateScenes/WordScene/WordScene.tscn" id="1_snc8p"]
+[ext_resource type="Texture2D" uid="uid://om40y58se6su" path="res://ChapterOne/WolfLesson/Assets/WolfBackground.png" id="2_e54ex"]
+[ext_resource type="AudioStream" uid="uid://dys3raddlr4ko" path="res://ChapterOne/WolfLesson/LessonAudio/WolfMyGrandmaEN.mp3" id="3_xqka3"]
+[ext_resource type="AudioStream" uid="uid://6k065vkwwv0v" path="res://ChapterOne/WolfLesson/LessonAudio/WolfMyGrandmaCR.mp3" id="4_ccte7"]
+[ext_resource type="AudioStream" uid="uid://c1y44ho7faoj1" path="res://ChapterOne/WolfLesson/LessonAudio/WolfMyGrandma.mp3" id="5_ansmf"]
+[ext_resource type="Texture2D" uid="uid://cg1ecjeplc3yk" path="res://ChapterOne/WolfLesson/Assets/WolfLine3.png" id="6_elfx1"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qsixo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_elfx1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="WordScene" instance=ExtResource("1_snc8p")]
+background = ExtResource("2_e54ex")
+EnglishButtonText = "My Grandma"
+CreeButtonText = "Nohkom"
+englishReading = ExtResource("3_xqka3")
+creeReading = ExtResource("4_ccte7")
+Reading = ExtResource("5_ansmf")
+
+[node name="AnimatedSprite2D" parent="." index="2"]
+position = Vector2(954.5, 535.5)
+scale = Vector2(0.8333334, 0.80014974)
+sprite_frames = SubResource("SpriteFrames_qsixo")

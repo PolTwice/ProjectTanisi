@@ -1,0 +1,30 @@
+[gd_scene load_steps=8 format=3 uid="uid://c8fknixk1shpq"]
+
+[ext_resource type="PackedScene" uid="uid://divch3hk5xww0" path="res://TemplateScenes/WordScene/WordScene.tscn" id="1_iybqk"]
+[ext_resource type="Texture2D" uid="uid://om40y58se6su" path="res://ChapterOne/WolfLesson/Assets/WolfBackground.png" id="2_a0al0"]
+[ext_resource type="AudioStream" uid="uid://cnkqfwn4g5b3l" path="res://ChapterOne/WolfLesson/LessonAudio/WolfWolfEn.mp3" id="3_blfrh"]
+[ext_resource type="AudioStream" uid="uid://cnpf0dvt18uoe" path="res://ChapterOne/WolfLesson/LessonAudio/WolfWolfCR.mp3" id="4_xi4rt"]
+[ext_resource type="AudioStream" uid="uid://c2rt3n8pkmn3i" path="res://ChapterOne/WolfLesson/LessonAudio/WolfWolf.mp3" id="5_wd3qq"]
+[ext_resource type="Texture2D" uid="uid://xixstqajpbar" path="res://ChapterOne/WolfLesson/Assets/WolfLine1.png" id="6_gjo4j"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x5qm8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_gjo4j")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="WordScene" instance=ExtResource("1_iybqk")]
+background = ExtResource("2_a0al0")
+EnglishButtonText = "Wolf"
+CreeButtonText = "Mahihka"
+englishReading = ExtResource("3_blfrh")
+creeReading = ExtResource("4_xi4rt")
+Reading = ExtResource("5_wd3qq")
+
+[node name="AnimatedSprite2D" parent="." index="2"]
+sprite_frames = SubResource("SpriteFrames_x5qm8")

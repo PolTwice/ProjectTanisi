@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=3 uid="uid://b6pvamgdmj6j8"]
+
+[ext_resource type="PackedScene" uid="uid://bakvp2vudvfqy" path="res://TemplateScenes/StoryScene/StoryScene.tscn" id="1_blmjw"]
+[ext_resource type="Texture2D" uid="uid://om40y58se6su" path="res://ChapterOne/WolfLesson/Assets/WolfBackground.png" id="2_6sjbv"]
+[ext_resource type="AudioStream" uid="uid://drr17dkkdo31f" path="res://ChapterOne/WolfLesson/LessonAudio/Wolf4.mp3" id="3_dyshb"]
+[ext_resource type="Texture2D" uid="uid://cg1ecjeplc3yk" path="res://ChapterOne/WolfLesson/Assets/WolfLine3.png" id="4_awjta"]
+[ext_resource type="Texture2D" uid="uid://bv1i2j78jnnsq" path="res://ChapterOne/WolfLesson/Assets/WolfLine4.png" id="5_1otu5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2wsg8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_awjta")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_1otu5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="StoryRoot" instance=ExtResource("1_blmjw")]
+StoryText = "\"You don’t need to practice! You're already the best!\" said Wolf"
+switchButtonEnabled = false
+backgroundTexture = ExtResource("2_6sjbv")
+EnglishNarration = ExtResource("3_dyshb")
+
+[node name="AnimatedSprite" parent="." index="2"]
+position = Vector2(960.00006, 541.5)
+scale = Vector2(0.83115757, 0.8061378)
+sprite_frames = SubResource("SpriteFrames_2wsg8")
+frame_progress = 0.3766337

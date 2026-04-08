@@ -33,13 +33,13 @@ scale = Vector2(0.1, 0.1)
 lessonName = &"Beaver"
 
 [node name="BuffaloLessonSelect" parent="." index="4" instance=ExtResource("7_xhfgc")]
-position = Vector2(600, 649)
+position = Vector2(557, 675)
 scale = Vector2(0.15, 0.15)
 lessonPath = &"res://ChapterOne/BuffaloLesson/0_BuffaloLesson.tscn"
 lessonName = &"Buffalo Runs Fast"
 
 [node name="EagleLessonSelect" parent="." index="5" instance=ExtResource("8_n3bd2")]
-position = Vector2(995, 268)
+position = Vector2(796, 253)
 scale = Vector2(0.1, 0.1)
 lessonPath = &"res://ChapterOne/EagleLesson/0EagleTest.tscn"
 lessonName = &"Eagle and Dad"
@@ -65,9 +65,10 @@ lessonPath = &"res://ChapterOne/TurtleLesson/0_Turtle_LessonManager.tscn"
 lessonName = &"Turtle Tells the Truth"
 
 [node name="WolfLessonSelect" parent="." index="9" instance=ExtResource("11_tfyv7")]
-visible = false
-position = Vector2(1205, 625)
+position = Vector2(1001, 589)
 scale = Vector2(0.15, 0.15)
+lessonPath = &"res://ChapterOne/WolfLesson/0WolfLessonManager.tscn"
+lessonName = &"The Best Howler"
 
 [node name="TransitionColor" parent="." index="10"]
 z_as_relative = false

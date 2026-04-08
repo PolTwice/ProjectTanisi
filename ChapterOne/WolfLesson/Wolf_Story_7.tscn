@@ -1,0 +1,31 @@
+[gd_scene load_steps=7 format=3 uid="uid://pmfepg8bu2jj"]
+
+[ext_resource type="PackedScene" uid="uid://bakvp2vudvfqy" path="res://TemplateScenes/StoryScene/StoryScene.tscn" id="1_iyqeh"]
+[ext_resource type="Texture2D" uid="uid://om40y58se6su" path="res://ChapterOne/WolfLesson/Assets/WolfBackground.png" id="2_n5o1c"]
+[ext_resource type="AudioStream" uid="uid://c51cdal1wpdel" path="res://ChapterOne/WolfLesson/LessonAudio/Wolf7En.mp3" id="3_ipsbf"]
+[ext_resource type="AudioStream" uid="uid://joivjya6qtjf" path="res://ChapterOne/WolfLesson/LessonAudio/Wolf7Cr.mp3" id="4_fespl"]
+[ext_resource type="Texture2D" uid="uid://c8kivu0tqniur" path="res://ChapterOne/WolfLesson/Assets/WolfLine7.png" id="5_dthm4"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_77j8l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_dthm4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="StoryRoot" instance=ExtResource("1_iyqeh")]
+StoryText = "Wolf realized his friend was very cool because she was humble"
+EnglishTarget = "Wolf"
+CreeTarget = "Mahihka"
+backgroundTexture = ExtResource("2_n5o1c")
+EnglishNarration = ExtResource("3_ipsbf")
+CreeNarration = ExtResource("4_fespl")
+
+[node name="AnimatedSprite" parent="." index="2"]
+position = Vector2(960.00006, 538.5)
+scale = Vector2(0.83115757, 0.80913174)
+sprite_frames = SubResource("SpriteFrames_77j8l")

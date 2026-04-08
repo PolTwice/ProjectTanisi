@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://d0lb0lvd4r6tk"]
+
+[ext_resource type="PackedScene" uid="uid://bakvp2vudvfqy" path="res://TemplateScenes/StoryScene/StoryScene.tscn" id="1_axpbf"]
+[ext_resource type="Texture2D" uid="uid://om40y58se6su" path="res://ChapterOne/WolfLesson/Assets/WolfBackground.png" id="2_pqiiw"]
+[ext_resource type="AudioStream" uid="uid://bfwl2u8ftxo3x" path="res://ChapterOne/WolfLesson/LessonAudio/Wolf1.mp3" id="3_72d17"]
+[ext_resource type="Texture2D" uid="uid://xixstqajpbar" path="res://ChapterOne/WolfLesson/Assets/WolfLine1.png" id="4_ufsvw"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f1x1l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_ufsvw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="StoryRoot" instance=ExtResource("1_axpbf")]
+StoryText = "Wolf had a friend that liked to howl at the moon."
+switchButtonEnabled = false
+backgroundTexture = ExtResource("2_pqiiw")
+EnglishNarration = ExtResource("3_72d17")
+
+[node name="AnimatedSprite" parent="." index="2"]
+sprite_frames = SubResource("SpriteFrames_f1x1l")

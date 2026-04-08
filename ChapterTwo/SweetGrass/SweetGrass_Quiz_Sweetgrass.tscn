@@ -10,5 +10,5 @@ buttonAText = "yotin"
 buttonBText = "wâpos"
 buttonCText = "wîhkwaskwa"
 buttonDText = "kisikawisi"
-correctAnswer = 1
+correctAnswer = 2
 backgroundImage = ExtResource("2_udpr0")

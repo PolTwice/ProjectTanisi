@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://2tpwc3gm44bd"]
+[gd_scene load_steps=9 format=3 uid="uid://2tpwc3gm44bd"]
 
 [ext_resource type="PackedScene" uid="uid://bakvp2vudvfqy" path="res://TemplateScenes/StoryScene/StoryScene.tscn" id="1_8g5yp"]
 [ext_resource type="Texture2D" uid="uid://dwm4eokpr0ee3" path="res://ChapterTwo/SweetGrass/Assets/SweetGrassBG.png" id="2_yjvu5"]
+[ext_resource type="AudioStream" uid="uid://bknm06mfgj7qw" path="res://ChapterOne/Sounds/Bear.mp3" id="3_5l88b"]
 [ext_resource type="Texture2D" uid="uid://bvowinepkwdi4" path="res://ChapterTwo/SweetGrass/Assets/SweetGrass1_1.png" id="3_nhqrm"]
 [ext_resource type="Texture2D" uid="uid://darjj3jojjhhk" path="res://ChapterTwo/SweetGrass/Assets/SweetGrass1_2.png" id="4_5l88b"]
 [ext_resource type="Texture2D" uid="uid://cexstgvrl3v8t" path="res://ChapterTwo/SweetGrass/Assets/SweetGrass1_3.png" id="5_qxp4c"]
@@ -32,6 +33,8 @@ StoryText = "A Rabbit hopped along, always in a hurry, but it didn’t know the 
 EnglishTarget = "Rabbit"
 CreeTarget = "wâpos"
 backgroundTexture = ExtResource("2_yjvu5")
+EnglishNarration = ExtResource("3_5l88b")
+CreeNarration = ExtResource("3_5l88b")
 
 [node name="AnimatedSprite" parent="." index="2"]
 sprite_frames = SubResource("SpriteFrames_u672m")

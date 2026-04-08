@@ -1,0 +1,31 @@
+[gd_scene load_steps=7 format=3 uid="uid://bjypwy5semlb7"]
+
+[ext_resource type="PackedScene" uid="uid://bakvp2vudvfqy" path="res://TemplateScenes/StoryScene/StoryScene.tscn" id="1_3xw6t"]
+[ext_resource type="Texture2D" uid="uid://om40y58se6su" path="res://ChapterOne/WolfLesson/Assets/WolfBackground.png" id="2_c0pcn"]
+[ext_resource type="AudioStream" uid="uid://bodc3s4s6wp05" path="res://ChapterOne/WolfLesson/LessonAudio/Wolf5En.mp3" id="3_0kvu2"]
+[ext_resource type="AudioStream" uid="uid://buo8ka8363y7b" path="res://ChapterOne/WolfLesson/LessonAudio/Wolf5Cr.mp3" id="4_xqvw4"]
+[ext_resource type="Texture2D" uid="uid://chjjtuu6bx6ae" path="res://ChapterOne/WolfLesson/Assets/WolfLine5.png" id="5_fiodq"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s0l8w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_fiodq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="StoryRoot" instance=ExtResource("1_3xw6t")]
+StoryText = "\"There's always something to learn.\" said his friend \"My Grandma is very good at howling\" "
+EnglishTarget = "My Grandma"
+CreeTarget = "Nohkom"
+backgroundTexture = ExtResource("2_c0pcn")
+EnglishNarration = ExtResource("3_0kvu2")
+CreeNarration = ExtResource("4_xqvw4")
+
+[node name="AnimatedSprite" parent="." index="2"]
+position = Vector2(958, 540)
+scale = Vector2(0.8346388, 0.8068862)
+sprite_frames = SubResource("SpriteFrames_s0l8w")

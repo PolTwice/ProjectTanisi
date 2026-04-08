@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dyq7mid6d8py" path="res://ChapterTwo/LessonSelectScenes/SweetGrassLessonIcon.tscn" id="3_vundv"]
 
 [node name="ChapterScene" instance=ExtResource("1_0a4ug")]
+infoText = "Select a color on the Medicine Wheel!"
 
 [node name="TextureRect" type="TextureRect" parent="." index="0"]
 anchors_preset = 15

@@ -1,0 +1,33 @@
+[gd_scene load_steps=8 format=3 uid="uid://bptn0pkgk7xo0"]
+
+[ext_resource type="PackedScene" uid="uid://bakvp2vudvfqy" path="res://TemplateScenes/StoryScene/StoryScene.tscn" id="1_qj3ma"]
+[ext_resource type="Texture2D" uid="uid://om40y58se6su" path="res://ChapterOne/WolfLesson/Assets/WolfBackground.png" id="2_bcg7y"]
+[ext_resource type="AudioStream" uid="uid://csbyxqo0smkb8" path="res://ChapterOne/WolfLesson/LessonAudio/Wolf2En.mp3" id="3_rman1"]
+[ext_resource type="AudioStream" uid="uid://dmnwtrxx5w3gb" path="res://ChapterOne/WolfLesson/LessonAudio/Wolf2Cr.mp3" id="4_d23wq"]
+[ext_resource type="Texture2D" uid="uid://oyq54or1r02q" path="res://ChapterOne/WolfLesson/Assets/WolfLine2.png" id="5_t847h"]
+[ext_resource type="Texture2D" uid="uid://xixstqajpbar" path="res://ChapterOne/WolfLesson/Assets/WolfLine1.png" id="6_jcs1y"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4mssx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_t847h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_jcs1y")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[node name="StoryRoot" instance=ExtResource("1_qj3ma")]
+StoryText = "\"My friend is the best at howling!\" said Wolf"
+EnglishTarget = "My friend"
+CreeTarget = "Nitotem"
+backgroundTexture = ExtResource("2_bcg7y")
+EnglishNarration = ExtResource("3_rman1")
+CreeNarration = ExtResource("4_d23wq")
+
+[node name="AnimatedSprite" parent="." index="2"]
+sprite_frames = SubResource("SpriteFrames_4mssx")

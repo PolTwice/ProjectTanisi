@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmar3xhbfcwvv"]
+
+[ext_resource type="PackedScene" uid="uid://7rov3h1r8pnk" path="res://TemplateScenes/QuizScene/QuizScene.tscn" id="1_06a0t"]
+[ext_resource type="Texture2D" uid="uid://om40y58se6su" path="res://ChapterOne/WolfLesson/Assets/WolfBackground.png" id="2_6tggx"]
+
+[node name="QuizScene" instance=ExtResource("1_06a0t")]
+question = "What is Wolf in Cree?"
+correctAnswerText = "That's right! wolf in Cree is Mahihka"
+buttonAText = "Mahihka"
+buttonBText = "Nicisan"
+buttonCText = "Nikawiy"
+buttonDText = "Maskwa"
+backgroundImage = ExtResource("2_6tggx")

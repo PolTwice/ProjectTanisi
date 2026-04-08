@@ -1,0 +1,18 @@
+[gd_scene load_steps=14 format=3 uid="uid://csguov84qvqfa"]
+
+[ext_resource type="PackedScene" uid="uid://cfm8ssfd0vkfp" path="res://TemplateScenes/LessonManager/LessonManagerScene.tscn" id="1_oap0n"]
+[ext_resource type="PackedScene" uid="uid://d0lb0lvd4r6tk" path="res://ChapterOne/WolfLesson/Wolf_Story_1.tscn" id="2_v6nw8"]
+[ext_resource type="PackedScene" uid="uid://bptn0pkgk7xo0" path="res://ChapterOne/WolfLesson/Wolf_Story_2.tscn" id="3_jh6as"]
+[ext_resource type="PackedScene" uid="uid://c070ryds8m1cl" path="res://ChapterOne/WolfLesson/Wolf_Word_Friend.tscn" id="3_otpsv"]
+[ext_resource type="PackedScene" uid="uid://ddx6fx6px6c54" path="res://ChapterOne/WolfLesson/Wolf_Story_3.tscn" id="4_otpsv"]
+[ext_resource type="PackedScene" uid="uid://b6pvamgdmj6j8" path="res://ChapterOne/WolfLesson/Wolf_Story_4.tscn" id="5_asuvq"]
+[ext_resource type="PackedScene" uid="uid://bjypwy5semlb7" path="res://ChapterOne/WolfLesson/Wolf_Story_5.tscn" id="6_ad2vw"]
+[ext_resource type="PackedScene" uid="uid://drlue867qjdjd" path="res://ChapterOne/WolfLesson/Wolf_Word_Grandma.tscn" id="7_asuvq"]
+[ext_resource type="PackedScene" uid="uid://f8r4hn76vep5" path="res://ChapterOne/WolfLesson/Wolf_Story_6.tscn" id="7_bj2hr"]
+[ext_resource type="PackedScene" uid="uid://pmfepg8bu2jj" path="res://ChapterOne/WolfLesson/Wolf_Story_7.tscn" id="8_1o51v"]
+[ext_resource type="PackedScene" uid="uid://c8fknixk1shpq" path="res://ChapterOne/WolfLesson/Wolf_Word_Wolf.tscn" id="10_ad2vw"]
+[ext_resource type="PackedScene" uid="uid://cq8qdh1vhyonw" path="res://ChapterOne/WolfLesson/Wolf_Quiz_Nitotem.tscn" id="12_ad2vw"]
+[ext_resource type="PackedScene" uid="uid://dmar3xhbfcwvv" path="res://ChapterOne/WolfLesson/Wolf_Quiz_Wolf.tscn" id="13_bj2hr"]
+
+[node name="LessonManager" instance=ExtResource("1_oap0n")]
+lessonArray = Array[PackedScene]([ExtResource("2_v6nw8"), ExtResource("3_otpsv"), ExtResource("3_jh6as"), ExtResource("4_otpsv"), ExtResource("5_asuvq"), ExtResource("7_asuvq"), ExtResource("6_ad2vw"), ExtResource("7_bj2hr"), ExtResource("10_ad2vw"), ExtResource("8_1o51v"), ExtResource("12_ad2vw"), ExtResource("13_bj2hr")])

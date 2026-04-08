@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://ddx6fx6px6c54"]
+
+[ext_resource type="PackedScene" uid="uid://bakvp2vudvfqy" path="res://TemplateScenes/StoryScene/StoryScene.tscn" id="1_4rw0x"]
+[ext_resource type="Texture2D" uid="uid://om40y58se6su" path="res://ChapterOne/WolfLesson/Assets/WolfBackground.png" id="2_4cion"]
+[ext_resource type="AudioStream" uid="uid://dvtsq5h1p1lj8" path="res://ChapterOne/WolfLesson/LessonAudio/Wolf3.mp3" id="3_g66as"]
+[ext_resource type="Texture2D" uid="uid://cg1ecjeplc3yk" path="res://ChapterOne/WolfLesson/Assets/WolfLine3.png" id="4_lb8gl"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_10qg6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_lb8gl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="StoryRoot" instance=ExtResource("1_4rw0x")]
+StoryText = "One day, friend wolf was practicing her howling with her Grandma."
+switchButtonEnabled = false
+backgroundTexture = ExtResource("2_4cion")
+EnglishNarration = ExtResource("3_g66as")
+
+[node name="AnimatedSprite" parent="." index="2"]
+position = Vector2(960.24994, 538)
+scale = Vector2(0.83355093, 0.80988026)
+sprite_frames = SubResource("SpriteFrames_10qg6")

@@ -5,7 +5,7 @@
 [ext_resource type="AudioStream" uid="uid://crhswccq8kggn" path="res://ChapterOne/BearLesson/LessonAudio/Audio 5.mp3" id="3_47gm8"]
 
 [node name="StoryRoot" instance=ExtResource("1_svewg")]
-StoryText = "The sound made Bear feel strong. “I was scared, but I tried,” thought Bear. "
+StoryText = "The sound made Bear feel strong. “I was scared, but I tried my best,” thought Bear. "
 switchButtonEnabled = false
 backgroundTexture = ExtResource("2_d3upb")
 EnglishNarration = ExtResource("3_47gm8")
