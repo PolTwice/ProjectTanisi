@@ -1,12 +1,38 @@
-[gd_scene load_steps=4 format=3 uid="uid://krtxjvk721ks"]
+[gd_scene load_steps=9 format=3 uid="uid://krtxjvk721ks"]
 
 [ext_resource type="PackedScene" uid="uid://bakvp2vudvfqy" path="res://TemplateScenes/StoryScene/StoryScene.tscn" id="1_bfcea"]
 [ext_resource type="AudioStream" uid="uid://cb0mw68aq08eg" path="res://ChapterOne/EagleLesson/LessonAudio/Eagle1EN.mp3" id="2_2lu20"]
+[ext_resource type="Texture2D" uid="uid://dm65bbxl2ap5" path="res://ChapterOne/EagleLesson/Assets/Background1.png" id="2_du0cj"]
 [ext_resource type="AudioStream" uid="uid://r2fbdo5wtqtt" path="res://ChapterOne/EagleLesson/LessonAudio/Eagle1CR.mp3" id="3_rshqp"]
+[ext_resource type="Texture2D" uid="uid://b0reqet8nobm4" path="res://ChapterOne/EagleLesson/Assets/Script1_Part2.png" id="6_r1id6"]
+[ext_resource type="Texture2D" uid="uid://bli4qtat0l5ce" path="res://ChapterOne/EagleLesson/Assets/Script1_Part3.png" id="7_v1l8i"]
+[ext_resource type="Texture2D" uid="uid://dlr4qndsyyi52" path="res://ChapterOne/EagleLesson/Assets/Script1_Part4.png" id="8_ixc4a"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6lhut"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_r1id6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_v1l8i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ixc4a")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="StoryRoot" instance=ExtResource("1_bfcea")]
 StoryText = "One day, Eagle noticed that her Dad was feeling sad. "
 EnglishTarget = "Eagle"
 CreeTarget = "Mikisiw"
+backgroundTexture = ExtResource("2_du0cj")
 EnglishNarration = ExtResource("2_2lu20")
 CreeNarration = ExtResource("3_rshqp")
+
+[node name="AnimatedSprite" parent="." index="2"]
+sprite_frames = SubResource("SpriteFrames_6lhut")
+frame_progress = 0.5903729

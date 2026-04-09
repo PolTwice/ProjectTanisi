@@ -1,9 +1,38 @@
-[gd_scene load_steps=3 format=3 uid="uid://bdcdi1an1qmvf"]
+[gd_scene load_steps=9 format=3 uid="uid://bdcdi1an1qmvf"]
 
 [ext_resource type="PackedScene" uid="uid://bakvp2vudvfqy" path="res://TemplateScenes/StoryScene/StoryScene.tscn" id="1_5iw2q"]
+[ext_resource type="Texture2D" uid="uid://c37neg70kn1w0" path="res://ChapterOne/EagleLesson/Assets/Background3.png" id="2_6vmev"]
 [ext_resource type="AudioStream" uid="uid://cdgbbdqtloqmy" path="res://ChapterOne/EagleLesson/LessonAudio/Eagle3.mp3" id="2_7eilk"]
+[ext_resource type="Texture2D" uid="uid://brvmkb8008de6" path="res://ChapterOne/EagleLesson/Assets/Scene3_Part1.png" id="4_36veu"]
+[ext_resource type="Texture2D" uid="uid://cs74ysr646ygc" path="res://ChapterOne/EagleLesson/Assets/Scene3_Part2.png" id="5_2qr1k"]
+[ext_resource type="Texture2D" uid="uid://tv1qye0mxjan" path="res://ChapterOne/EagleLesson/Assets/Scene3_Part3.png" id="6_fqn00"]
+[ext_resource type="Texture2D" uid="uid://2rku4veq2l81" path="res://ChapterOne/EagleLesson/Assets/Scene3_Part4.png" id="7_418bx"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cr8y6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_36veu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_2qr1k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_fqn00")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_418bx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
 
 [node name="StoryRoot" instance=ExtResource("1_5iw2q")]
 StoryText = "Eagle gathered all of her Dad's favorite flowers and gave it to him. "
 switchButtonEnabled = false
+backgroundTexture = ExtResource("2_6vmev")
 EnglishNarration = ExtResource("2_7eilk")
+
+[node name="AnimatedSprite" parent="." index="2"]
+sprite_frames = SubResource("SpriteFrames_cr8y6")

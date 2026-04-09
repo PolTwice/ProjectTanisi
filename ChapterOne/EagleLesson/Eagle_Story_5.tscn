@@ -1,12 +1,30 @@
-[gd_scene load_steps=4 format=3 uid="uid://b52npuygoqah6"]
+[gd_scene load_steps=7 format=3 uid="uid://b52npuygoqah6"]
 
 [ext_resource type="PackedScene" uid="uid://bakvp2vudvfqy" path="res://TemplateScenes/StoryScene/StoryScene.tscn" id="1_ic8se"]
-[ext_resource type="AudioStream" uid="uid://v6y6ocyuqefh" path="res://ChapterOne/EagleLesson/LessonAudio/EagleEagleEN.mp3" id="2_ea7jw"]
-[ext_resource type="AudioStream" uid="uid://da0167h8tbehe" path="res://ChapterOne/EagleLesson/LessonAudio/EagleEagleCR.mp3" id="3_a04we"]
+[ext_resource type="Texture2D" uid="uid://dm65bbxl2ap5" path="res://ChapterOne/EagleLesson/Assets/Background1.png" id="2_a04we"]
+[ext_resource type="AudioStream" uid="uid://k7wokmxbng7m" path="res://ChapterOne/EagleLesson/LessonAudio/Eagle5EN.mp3" id="3_ce5gh"]
+[ext_resource type="Texture2D" uid="uid://bepksioy5wb51" path="res://ChapterOne/EagleLesson/Assets/Script4_Part2.png" id="4_ea7jw"]
+[ext_resource type="AudioStream" uid="uid://c0feuxb5v2c5s" path="res://ChapterOne/EagleLesson/LessonAudio/Eagle5CR.mp3" id="4_t60dh"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a04we"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_ea7jw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="StoryRoot" instance=ExtResource("1_ic8se")]
 StoryText = "\"I love you Dad! Thank you for loving me too\" said Eagle. "
 EnglishTarget = "I love you"
 CreeTarget = "Kisakihitin"
-EnglishNarration = ExtResource("2_ea7jw")
-CreeNarration = ExtResource("3_a04we")
+backgroundTexture = ExtResource("2_a04we")
+EnglishNarration = ExtResource("3_ce5gh")
+CreeNarration = ExtResource("4_t60dh")
+
+[node name="AnimatedSprite" parent="." index="2"]
+position = Vector2(960, 604)
+sprite_frames = SubResource("SpriteFrames_a04we")

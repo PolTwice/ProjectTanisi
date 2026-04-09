@@ -4,9 +4,9 @@
 [ext_resource type="Script" uid="uid://bnlf3r1f6vdx1" path="res://ChapterOne/EagleLesson/EagleGame/BirdBody.gd" id="2_c3may"]
 [ext_resource type="Texture2D" uid="uid://cvjidxc6wt7a6" path="res://ChapterOne/EagleLesson/EagleGame/overheadbackground.png" id="2_vpohg"]
 [ext_resource type="Script" uid="uid://bejhhs8fgtq36" path="res://ChapterOne/EagleLesson/EagleGame/trail.gd" id="3_i2he2"]
-[ext_resource type="Texture2D" uid="uid://lxnpn2wstrq8" path="res://ChapterOne/EagleLesson/EagleGame/OverheadEagle.png" id="5_j4ov3"]
+[ext_resource type="Texture2D" uid="uid://dmgued01ry1hp" path="res://ChapterOne/EagleLesson/Assets/OverheadEagle.png" id="5_j4ov3"]
 [ext_resource type="Script" uid="uid://b5goy10qj3c0d" path="res://ChapterOne/EagleLesson/EagleGame/flower.gd" id="5_vpohg"]
-[ext_resource type="Texture2D" uid="uid://cbfy682k6fllc" path="res://ChapterOne/EagleLesson/EagleGame/Flower.png" id="7_bgdx1"]
+[ext_resource type="Texture2D" uid="uid://cnky28ngld5lk" path="res://ChapterOne/EagleLesson/Assets/OverheadFlower.png" id="7_bgdx1"]
 [ext_resource type="Theme" uid="uid://byi38q23oj3ta" path="res://TemplateScenes/Themes/ButtonTheme.tres" id="7_i2he2"]
 [ext_resource type="Script" uid="uid://bxjbbx7u4dlr" path="res://ChapterOne/EagleLesson/EagleGame/score.gd" id="7_wu7ma"]
 
@@ -50,7 +50,7 @@ script = ExtResource("3_i2he2")
 [node name="Sprite2D" type="Sprite2D" parent="Bird"]
 position = Vector2(2.255, 0)
 rotation = 1.5707964
-scale = Vector2(0.3, 0.3)
+scale = Vector2(0.8, 0.8)
 texture = ExtResource("5_j4ov3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bird"]
@@ -62,7 +62,7 @@ position = Vector2(456, 594)
 script = ExtResource("5_vpohg")
 
 [node name="FlowerSprite" type="Sprite2D" parent="Flower"]
-scale = Vector2(0.5, 0.5)
+scale = Vector2(1.645, 1.645)
 texture = ExtResource("7_bgdx1")
 
 [node name="FlowerCollision" type="CollisionShape2D" parent="Flower"]

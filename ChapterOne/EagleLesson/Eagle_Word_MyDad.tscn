@@ -1,13 +1,38 @@
-[gd_scene load_steps=5 format=3 uid="uid://bginew72tyxtd"]
+[gd_scene load_steps=10 format=3 uid="uid://bginew72tyxtd"]
 
 [ext_resource type="PackedScene" uid="uid://divch3hk5xww0" path="res://TemplateScenes/WordScene/WordScene.tscn" id="1_648oq"]
+[ext_resource type="Texture2D" uid="uid://dm65bbxl2ap5" path="res://ChapterOne/EagleLesson/Assets/Background1.png" id="2_ilstm"]
 [ext_resource type="AudioStream" uid="uid://ntxuhixyt8v5" path="res://ChapterOne/EagleLesson/LessonAudio/EagleMyDadEN.mp3" id="2_mk45s"]
 [ext_resource type="AudioStream" uid="uid://c5ebhm2m1t8t0" path="res://ChapterOne/EagleLesson/LessonAudio/EagleMyDadCR.mp3" id="3_ilstm"]
 [ext_resource type="AudioStream" uid="uid://cruofqvlhasws" path="res://ChapterOne/EagleLesson/LessonAudio/EagleMyDad.mp3" id="4_d4elm"]
+[ext_resource type="Texture2D" uid="uid://b0reqet8nobm4" path="res://ChapterOne/EagleLesson/Assets/Script1_Part2.png" id="6_q85n5"]
+[ext_resource type="Texture2D" uid="uid://bli4qtat0l5ce" path="res://ChapterOne/EagleLesson/Assets/Script1_Part3.png" id="7_b1pam"]
+[ext_resource type="Texture2D" uid="uid://dlr4qndsyyi52" path="res://ChapterOne/EagleLesson/Assets/Script1_Part4.png" id="8_to7sy"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q85n5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_q85n5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_b1pam")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_to7sy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="WordScene" instance=ExtResource("1_648oq")]
+background = ExtResource("2_ilstm")
 EnglishButtonText = "My Dad"
 CreeButtonText = "Nohtahwiy"
 englishReading = ExtResource("2_mk45s")
 creeReading = ExtResource("3_ilstm")
 Reading = ExtResource("4_d4elm")
+
+[node name="AnimatedSprite2D" parent="." index="2"]
+sprite_frames = SubResource("SpriteFrames_q85n5")

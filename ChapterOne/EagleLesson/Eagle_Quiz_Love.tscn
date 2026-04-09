@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dd1hk0jeq42pk"]
+[gd_scene load_steps=3 format=3 uid="uid://dd1hk0jeq42pk"]
 
 [ext_resource type="PackedScene" uid="uid://7rov3h1r8pnk" path="res://TemplateScenes/QuizScene/QuizScene.tscn" id="1_ig6h6"]
+[ext_resource type="Texture2D" uid="uid://c37neg70kn1w0" path="res://ChapterOne/EagleLesson/Assets/Background3.png" id="2_jms5n"]
 
 [node name="QuizScene" instance=ExtResource("1_ig6h6")]
 question = "How do you say I love you in Cree"
@@ -9,3 +10,5 @@ buttonAText = "wîhkwaskwa"
 buttonBText = "Kisakihtin"
 buttonCText = "Nikaway"
 buttonDText = "eminahikostak"
+correctAnswer = 1
+backgroundImage = ExtResource("2_jms5n")

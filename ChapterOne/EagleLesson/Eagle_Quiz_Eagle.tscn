@@ -1,12 +1,22 @@
-[gd_scene load_steps=2 format=3 uid="uid://djqegd3ii4xf7"]
+[gd_scene load_steps=7 format=3 uid="uid://djqegd3ii4xf7"]
 
 [ext_resource type="PackedScene" uid="uid://7rov3h1r8pnk" path="res://TemplateScenes/QuizScene/QuizScene.tscn" id="1_qbfah"]
+[ext_resource type="Texture2D" uid="uid://t21ujq8d656i" path="res://ChapterOne/EagleLesson/Assets/Script4_Part22.png" id="2_o8ytx"]
+[ext_resource type="Texture2D" uid="uid://3jywhmn60p45" path="res://ChapterOne/BuffaloLesson/Assets/BabyBuffalo.png" id="3_t6l2v"]
+[ext_resource type="Texture2D" uid="uid://bfwqatlryi04g" path="res://ChapterOne/TurtleLesson/LessonAssets/Mom_Turtle.png" id="4_tyhrf"]
+[ext_resource type="Texture2D" uid="uid://cnky28ngld5lk" path="res://ChapterOne/EagleLesson/Assets/OverheadFlower.png" id="5_0n624"]
+[ext_resource type="Texture2D" uid="uid://c37neg70kn1w0" path="res://ChapterOne/EagleLesson/Assets/Background3.png" id="6_ltk07"]
 
 [node name="QuizScene" instance=ExtResource("1_qbfah")]
-question = "What is Eagle in Cree?"
+question = "What is Mikisiw in English?"
 correctAnswerText = "That's the right answer! Eagle is Mikisiw in Cree"
-buttonAText = "Asiniy"
-buttonBText = "Mamawi"
-buttonCText = "Nimosom"
-buttonDText = "Mikisiw"
-correctAnswer = 3
+hasPictures = true
+buttonAText = "Eagle"
+buttonBText = "Buffalo"
+buttonCText = "Turtle"
+buttonDText = "Flower"
+buttonAPic = ExtResource("2_o8ytx")
+buttonBPic = ExtResource("3_t6l2v")
+buttonCPic = ExtResource("4_tyhrf")
+buttonDPic = ExtResource("5_0n624")
+backgroundImage = ExtResource("6_ltk07")

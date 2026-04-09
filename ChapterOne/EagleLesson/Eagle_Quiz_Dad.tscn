@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://6qf5yn1anod6"]
+[gd_scene load_steps=3 format=3 uid="uid://6qf5yn1anod6"]
 
 [ext_resource type="PackedScene" uid="uid://7rov3h1r8pnk" path="res://TemplateScenes/QuizScene/QuizScene.tscn" id="1_t45co"]
+[ext_resource type="Texture2D" uid="uid://c37neg70kn1w0" path="res://ChapterOne/EagleLesson/Assets/Background3.png" id="2_pivub"]
 
 [node name="QuizScene" instance=ExtResource("1_t45co")]
 question = "Nohtahwiy is My Mom in Cree"
@@ -9,3 +10,4 @@ hasFourQuestions = false
 buttonAText = "True"
 buttonBText = "False"
 correctAnswer = 1
+backgroundImage = ExtResource("2_pivub")

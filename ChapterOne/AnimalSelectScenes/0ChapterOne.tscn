@@ -41,7 +41,7 @@ lessonName = &"Buffalo Runs Fast"
 [node name="EagleLessonSelect" parent="." index="5" instance=ExtResource("8_n3bd2")]
 position = Vector2(796, 253)
 scale = Vector2(0.1, 0.1)
-lessonPath = &"res://ChapterOne/EagleLesson/0EagleTest.tscn"
+lessonPath = &"res://ChapterOne/EagleLesson/0EagleLessonManager.tscn"
 lessonName = &"Eagle and Dad"
 
 [node name="SabeLessonSelect" parent="." index="6" instance=ExtResource("9_t4duj")]

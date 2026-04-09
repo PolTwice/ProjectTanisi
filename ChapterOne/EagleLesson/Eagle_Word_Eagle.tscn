@@ -1,13 +1,43 @@
-[gd_scene load_steps=5 format=3 uid="uid://cxynmw22ghdxr"]
+[gd_scene load_steps=11 format=3 uid="uid://cxynmw22ghdxr"]
 
 [ext_resource type="PackedScene" uid="uid://divch3hk5xww0" path="res://TemplateScenes/WordScene/WordScene.tscn" id="1_tytdm"]
 [ext_resource type="AudioStream" uid="uid://v6y6ocyuqefh" path="res://ChapterOne/EagleLesson/LessonAudio/EagleEagleEN.mp3" id="2_0k8um"]
+[ext_resource type="Texture2D" uid="uid://djgah5gdnx486" path="res://ChapterOne/EagleLesson/Assets/Background2.png" id="2_2fiwr"]
 [ext_resource type="AudioStream" uid="uid://da0167h8tbehe" path="res://ChapterOne/EagleLesson/LessonAudio/EagleEagleCR.mp3" id="3_0i7hb"]
 [ext_resource type="AudioStream" uid="uid://cmmwt612nfmsm" path="res://ChapterOne/EagleLesson/LessonAudio/EagleEagle.mp3" id="4_nfeof"]
+[ext_resource type="Texture2D" uid="uid://bevujxv44me0y" path="res://ChapterOne/EagleLesson/Assets/Script2_Part1.png" id="6_d1u1a"]
+[ext_resource type="Texture2D" uid="uid://btpku8ap7s2ct" path="res://ChapterOne/EagleLesson/Assets/Script2_Part2.png" id="7_41put"]
+[ext_resource type="Texture2D" uid="uid://b7wyu6xxtc4d3" path="res://ChapterOne/EagleLesson/Assets/Script2_Part3.png" id="8_rpbas"]
+[ext_resource type="Texture2D" uid="uid://blr7niogpk3xf" path="res://ChapterOne/EagleLesson/Assets/Script2_Part4.png" id="9_0mv3e"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3r5vq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_d1u1a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_41put")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_rpbas")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_0mv3e")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
 
 [node name="WordScene" instance=ExtResource("1_tytdm")]
+background = ExtResource("2_2fiwr")
 EnglishButtonText = "Eagle"
 CreeButtonText = "Mikisiw"
 englishReading = ExtResource("2_0k8um")
 creeReading = ExtResource("3_0i7hb")
 Reading = ExtResource("4_nfeof")
+
+[node name="AnimatedSprite2D" parent="." index="2"]
+sprite_frames = SubResource("SpriteFrames_3r5vq")
+autoplay = "default"

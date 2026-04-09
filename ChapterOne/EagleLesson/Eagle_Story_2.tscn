@@ -1,12 +1,41 @@
-[gd_scene load_steps=4 format=3 uid="uid://clowdpo2jd7en"]
+[gd_scene load_steps=10 format=3 uid="uid://clowdpo2jd7en"]
 
 [ext_resource type="PackedScene" uid="uid://bakvp2vudvfqy" path="res://TemplateScenes/StoryScene/StoryScene.tscn" id="1_fem44"]
 [ext_resource type="AudioStream" uid="uid://vtmy7blwsg4o" path="res://ChapterOne/EagleLesson/LessonAudio/Eagle2EN.mp3" id="2_2f7mv"]
+[ext_resource type="Texture2D" uid="uid://djgah5gdnx486" path="res://ChapterOne/EagleLesson/Assets/Background2.png" id="2_nqcr1"]
 [ext_resource type="AudioStream" uid="uid://c3ooloehtk318" path="res://ChapterOne/EagleLesson/LessonAudio/Eagle2CR.mp3" id="3_pjf45"]
+[ext_resource type="Texture2D" uid="uid://bevujxv44me0y" path="res://ChapterOne/EagleLesson/Assets/Script2_Part1.png" id="5_pwbee"]
+[ext_resource type="Texture2D" uid="uid://btpku8ap7s2ct" path="res://ChapterOne/EagleLesson/Assets/Script2_Part2.png" id="6_isy5f"]
+[ext_resource type="Texture2D" uid="uid://b7wyu6xxtc4d3" path="res://ChapterOne/EagleLesson/Assets/Script2_Part3.png" id="7_iuubu"]
+[ext_resource type="Texture2D" uid="uid://blr7niogpk3xf" path="res://ChapterOne/EagleLesson/Assets/Script2_Part4.png" id="8_uneeh"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7ayww"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_pwbee")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_isy5f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_iuubu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_uneeh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
 
 [node name="StoryRoot" instance=ExtResource("1_fem44")]
-StoryText = "\"To help my Dad feel happy, I will get him a gift!\" said Eagle. "
-EnglishTarget = "My Dad"
+StoryText = "\"To help my Dad feel better, I will get him a gift!\" said Eagle. "
+EnglishTarget = "my Dad"
 CreeTarget = "Nohtahwiy"
+backgroundTexture = ExtResource("2_nqcr1")
 EnglishNarration = ExtResource("2_2f7mv")
 CreeNarration = ExtResource("3_pjf45")
+
+[node name="AnimatedSprite" parent="." index="2"]
+sprite_frames = SubResource("SpriteFrames_7ayww")
