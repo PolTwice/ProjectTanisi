@@ -28,8 +28,8 @@ func changeContents (new_scene: PackedScene):
 	#make new scene a child of contents_canvas
 	contents_canvas.add_child(new)
 	
-	#disable next button until canContinue signal is emitted
-	next_button.disabled = true
+	#Turned this off for demo purposes.
+	#next_button.disabled = true
 	
 func _on_ready() -> void:
 	#set the contents to the first scene in the lesson array
@@ -51,6 +51,7 @@ func _on_next_button_pressed() -> void:
 
 	if(index >= lessonArray.size()):
 		completeLesson()
+		
 		next_button.disabled = true
 		return
 	
