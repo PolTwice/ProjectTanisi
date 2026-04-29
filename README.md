@@ -49,6 +49,5 @@ Our primary research focus is the development and implementation of a dedicated 
 ## 🤝 Acknowledgments
 Project Tanisi is a collaborative initiative:
 * **Project Lead:** Paul Alejandria
-* **CST Project Team Members:** Avery Collison, Daniel Ajunwa
 * **Instructional Advisor:** Alex Wang
 * **Linguistic & Cultural Advisor:** Martha Kilcup (Cree Translator)
