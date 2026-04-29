@@ -41,7 +41,7 @@ Our primary research focus is the development and implementation of a dedicated 
 ## 🛠 Technical Specifications
 * **Development Environment:** Godot
 * **Target Platforms:** Tablets (Android/iOS) and Classroom Workstations (Windows/Linux)
-* **Linguistic Focus:** Plains Cree (Y-Dialect)
+* **Linguistic Focus:** Plains Cree 
 * **Implementation Goal:** Direct integration into school curricula to support early-age Indigenous language literacy.
 
 ---
