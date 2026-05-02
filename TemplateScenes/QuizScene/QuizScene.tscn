@@ -130,6 +130,7 @@ mouse_filter = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/AnswerPanel/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxAB/MarginContainerA/ButtonA/buttonAVBox"]
 layout_mode = 2
+mouse_filter = 2
 theme_override_constants/margin_top = 10
 
 [node name="buttonAPic" type="TextureRect" parent="VBoxContainer/AnswerPanel/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxAB/MarginContainerA/ButtonA/buttonAVBox"]
@@ -173,6 +174,7 @@ mouse_filter = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/AnswerPanel/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxAB/MarginContainerB/ButtonB/buttonBVBox"]
 layout_mode = 2
+mouse_filter = 2
 theme_override_constants/margin_top = 10
 
 [node name="buttonBPic" type="TextureRect" parent="VBoxContainer/AnswerPanel/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxAB/MarginContainerB/ButtonB/buttonBVBox"]
@@ -220,6 +222,7 @@ mouse_filter = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/AnswerPanel/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxCD/MarginContainerC/ButtonC/buttonCVBox"]
 layout_mode = 2
+mouse_filter = 2
 theme_override_constants/margin_top = 10
 
 [node name="ButtonCPic" type="TextureRect" parent="VBoxContainer/AnswerPanel/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxCD/MarginContainerC/ButtonC/buttonCVBox"]
@@ -263,6 +266,7 @@ mouse_filter = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/AnswerPanel/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxCD/MarginContainerD/ButtonD/buttonDVbox"]
 layout_mode = 2
+mouse_filter = 2
 theme_override_constants/margin_top = 10
 
 [node name="ButtonDPic" type="TextureRect" parent="VBoxContainer/AnswerPanel/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxCD/MarginContainerD/ButtonD/buttonDVbox"]
@@ -285,21 +289,25 @@ vertical_alignment = 1
 visible = false
 layout_mode = 2
 size_flags_vertical = 3
+mouse_filter = 2
 theme_override_constants/margin_top = 15
 theme_override_constants/margin_bottom = 15
 
 [node name="CorrectAnswer" type="PanelContainer" parent="VBoxContainer/AnswerPanel/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/CorrectParentMargin"]
 layout_mode = 2
 size_flags_vertical = 3
+mouse_filter = 2
 theme = ExtResource("1_pck5s")
 theme_override_styles/panel = SubResource("StyleBoxFlat_8d8od")
 
 [node name="CorrectVBox" type="VBoxContainer" parent="VBoxContainer/AnswerPanel/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/CorrectParentMargin/CorrectAnswer"]
 layout_mode = 2
+mouse_filter = 2
 
 [node name="CorrectPicture" type="TextureRect" parent="VBoxContainer/AnswerPanel/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/CorrectParentMargin/CorrectAnswer/CorrectVBox"]
 layout_mode = 2
 size_flags_vertical = 3
+mouse_filter = 2
 expand_mode = 3
 stretch_mode = 5
 
@@ -307,6 +315,7 @@ stretch_mode = 5
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.5
+mouse_filter = 2
 
 [node name="CorrectAnswerText" type="Label" parent="VBoxContainer/AnswerPanel/PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/CorrectParentMargin/CorrectAnswer/CorrectVBox/CorrectMargin"]
 layout_mode = 2
@@ -335,6 +344,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+mouse_behavior_recursive = 1
 theme = ExtResource("1_pck5s")
 text = "Oops! Lets try again!"
 horizontal_alignment = 1

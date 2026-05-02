@@ -39,6 +39,7 @@ anchor_right = 1.0
 anchor_bottom = 0.6
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="BackMargin" type="MarginContainer" parent="ButtonsCanvas/ButtonContainer"]
 layout_mode = 2
@@ -57,6 +58,7 @@ text = "<"
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 6.38
+mouse_filter = 2
 
 [node name="NextMargin" type="MarginContainer" parent="ButtonsCanvas/ButtonContainer"]
 layout_mode = 2
