@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=3 uid="uid://dgklsntmboc4e"]
+
+[ext_resource type="PackedScene" uid="uid://xm3unyracdxw" path="res://ChapterOne/BeaverLesson/Beaver_Word_Logs.tscn" id="1_06o8a"]
+[ext_resource type="AudioStream" uid="uid://en28bfhambkn" path="res://ChapterOne/BeaverLesson/LessonAudio/BeaverElderEN.mp3" id="2_xdgnn"]
+[ext_resource type="AudioStream" uid="uid://dtt4taxyibidq" path="res://ChapterOne/BeaverLesson/LessonAudio/BeaverElderCR.mp3" id="3_opxjq"]
+[ext_resource type="AudioStream" uid="uid://bg1w7qqb3tee5" path="res://ChapterOne/BeaverLesson/LessonAudio/BeaverElder.mp3" id="4_p2vu1"]
+
+[node name="WordScene" instance=ExtResource("1_06o8a")]
+EnglishButtonText = "Elder"
+CreeButtonText = "kêhtê-aya"
+englishReading = ExtResource("2_xdgnn")
+creeReading = ExtResource("3_opxjq")
+Reading = ExtResource("4_p2vu1")
+
+[node name="AnimatedSprite2D" parent="." index="2"]
+position = Vector2(1000, 540)

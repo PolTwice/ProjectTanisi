@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://s0xwus8eayt7"]
+[gd_scene load_steps=7 format=3 uid="uid://s0xwus8eayt7"]
 
 [ext_resource type="PackedScene" uid="uid://bakvp2vudvfqy" path="res://TemplateScenes/StoryScene/StoryScene.tscn" id="1_bks22"]
 [ext_resource type="Texture2D" uid="uid://cwfinmvjejrpe" path="res://ChapterTwo/SweetGrass/Assets/SweetGrass1_7.png" id="2_g6bkm"]
-[ext_resource type="AudioStream" uid="uid://bknm06mfgj7qw" path="res://ChapterOne/Sounds/Bear.mp3" id="3_hu1ya"]
+[ext_resource type="AudioStream" uid="uid://3eiqmk406ugp" path="res://ChapterTwo/SweetGrass/LessonAudio/3SweetGrassEN.mp3" id="3_hu1ya"]
 [ext_resource type="Texture2D" uid="uid://cjoihkmb40j7a" path="res://ChapterTwo/SweetGrass/Assets/SweetGrass1_8.png" id="4_04wb0"]
+[ext_resource type="AudioStream" uid="uid://ucn3jiiwmus0" path="res://ChapterTwo/SweetGrass/LessonAudio/3SweetGrassCR.mp3" id="4_40fw3"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_40fw3"]
 animations = [{
@@ -25,13 +26,7 @@ EnglishTarget = "sweetgrass"
 CreeTarget = "wîhkwaskwa"
 backgroundTexture = ExtResource("2_g6bkm")
 EnglishNarration = ExtResource("3_hu1ya")
-CreeNarration = ExtResource("3_hu1ya")
+CreeNarration = ExtResource("4_40fw3")
 
 [node name="AnimatedSprite" parent="." index="2"]
 sprite_frames = SubResource("SpriteFrames_40fw3")
-
-[node name="Narration" parent="." index="4"]
-volume_db = -80.0
-
-[node name="BackgroundSound" parent="." index="5"]
-volume_db = -80.0

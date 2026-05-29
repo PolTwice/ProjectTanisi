@@ -1,0 +1,37 @@
+[gd_scene load_steps=9 format=3 uid="uid://b1mb4h5qld2ay"]
+
+[ext_resource type="PackedScene" uid="uid://bakvp2vudvfqy" path="res://TemplateScenes/StoryScene/StoryScene.tscn" id="1_kqeya"]
+[ext_resource type="Texture2D" uid="uid://cufkguuxso0gl" path="res://ChapterOne/BeaverLesson/LessonAssets/Background1.png" id="2_n8cp3"]
+[ext_resource type="AudioStream" uid="uid://btta1v0suiwkq" path="res://ChapterOne/BeaverLesson/LessonAudio/1BeaverEN.mp3" id="3_6412o"]
+[ext_resource type="AudioStream" uid="uid://br6gkf2v25oli" path="res://ChapterOne/BeaverLesson/LessonAudio/1BeaverCR.mp3" id="4_hoy6r"]
+[ext_resource type="Texture2D" uid="uid://b7k4ri7lmq18v" path="res://ChapterOne/BeaverLesson/LessonAssets/Scene1-1.png" id="5_yk3lx"]
+[ext_resource type="Texture2D" uid="uid://df5w1wtelppgd" path="res://ChapterOne/BeaverLesson/LessonAssets/Scene1-2.png" id="6_tauwu"]
+[ext_resource type="Texture2D" uid="uid://bc1ho1ekgj0f4" path="res://ChapterOne/BeaverLesson/LessonAssets/Scene1-3.png" id="7_81o63"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qap52"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_yk3lx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_tauwu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_81o63")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[node name="StoryRoot" instance=ExtResource("1_kqeya")]
+StoryText = "Beaver built his dam with the biggest logs he could find."
+EnglishTarget = "Beaver"
+CreeTarget = "Amisk"
+backgroundTexture = ExtResource("2_n8cp3")
+EnglishNarration = ExtResource("3_6412o")
+CreeNarration = ExtResource("4_hoy6r")
+
+[node name="AnimatedSprite" parent="." index="2"]
+sprite_frames = SubResource("SpriteFrames_qap52")

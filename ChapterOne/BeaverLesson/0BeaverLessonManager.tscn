@@ -1,0 +1,16 @@
+[gd_scene load_steps=12 format=3 uid="uid://xuvhlii7g0os"]
+
+[ext_resource type="PackedScene" uid="uid://cfm8ssfd0vkfp" path="res://TemplateScenes/LessonManager/LessonManagerScene.tscn" id="1_a6wvo"]
+[ext_resource type="PackedScene" uid="uid://trc8vc8bld10" path="res://ChapterOne/BeaverLesson/Beaver_Word_Beaver.tscn" id="2_uwora"]
+[ext_resource type="PackedScene" uid="uid://b1mb4h5qld2ay" path="res://ChapterOne/BeaverLesson/Beaver_Story_1.tscn" id="3_lk63y"]
+[ext_resource type="PackedScene" uid="uid://dgklsntmboc4e" path="res://ChapterOne/BeaverLesson/Beaver_Word_Elder.tscn" id="4_b2q6f"]
+[ext_resource type="PackedScene" uid="uid://4lsbmuqksot1" path="res://ChapterOne/BeaverLesson/Beaver_Story_2.tscn" id="5_o52vg"]
+[ext_resource type="PackedScene" uid="uid://xm3unyracdxw" path="res://ChapterOne/BeaverLesson/Beaver_Word_Logs.tscn" id="6_una1k"]
+[ext_resource type="PackedScene" uid="uid://dcekptx0d3amr" path="res://ChapterOne/BeaverLesson/Beaver_Story_3.tscn" id="7_rei01"]
+[ext_resource type="PackedScene" uid="uid://waarqff1d0ny" path="res://ChapterOne/BeaverLesson/Beaver_Story_4.tscn" id="8_mclm5"]
+[ext_resource type="PackedScene" uid="uid://rt4wt2mdkerx" path="res://ChapterOne/BeaverLesson/Beaver_Story_5.tscn" id="9_fbac2"]
+[ext_resource type="PackedScene" uid="uid://dd2bwai8cs2dn" path="res://ChapterOne/BeaverLesson/Beaver_Quiz_Beaver.tscn" id="10_lk63y"]
+[ext_resource type="PackedScene" uid="uid://bd2v6h6c56j8o" path="res://ChapterOne/BeaverLesson/Beaver_Quiz_Elder.tscn" id="11_b2q6f"]
+
+[node name="LessonManager" instance=ExtResource("1_a6wvo")]
+lessonArray = Array[PackedScene]([ExtResource("2_uwora"), ExtResource("3_lk63y"), ExtResource("4_b2q6f"), ExtResource("5_o52vg"), ExtResource("6_una1k"), ExtResource("7_rei01"), ExtResource("8_mclm5"), ExtResource("9_fbac2"), ExtResource("10_lk63y"), ExtResource("11_b2q6f")])

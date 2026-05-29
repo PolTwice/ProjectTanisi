@@ -1,0 +1,36 @@
+[gd_scene load_steps=8 format=3 uid="uid://dcekptx0d3amr"]
+
+[ext_resource type="PackedScene" uid="uid://bakvp2vudvfqy" path="res://TemplateScenes/StoryScene/StoryScene.tscn" id="1_cd0qx"]
+[ext_resource type="Texture2D" uid="uid://cufkguuxso0gl" path="res://ChapterOne/BeaverLesson/LessonAssets/Background1.png" id="2_44qwy"]
+[ext_resource type="AudioStream" uid="uid://bgd0cwh15af65" path="res://ChapterOne/BeaverLesson/LessonAudio/3BeaverEN.mp3" id="3_blnps"]
+[ext_resource type="Texture2D" uid="uid://dsrvcip245sg5" path="res://ChapterOne/BeaverLesson/LessonAssets/Background1-2.png" id="3_x61eb"]
+[ext_resource type="AudioStream" uid="uid://4gbxhvu6wfe4" path="res://ChapterOne/BeaverLesson/LessonAudio/3BeaverCR.mp3" id="4_2kkp1"]
+[ext_resource type="Texture2D" uid="uid://dkebamuld18uq" path="res://ChapterOne/BeaverLesson/LessonAssets/Background1-3.png" id="4_blnps"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2kkp1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_44qwy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_x61eb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_blnps")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[node name="StoryRoot" instance=ExtResource("1_cd0qx")]
+StoryText = "When the flood rushed down the river, the heavy logs snapped and washed away."
+EnglishTarget = "logs"
+CreeTarget = "mistikwak"
+backgroundTexture = ExtResource("2_44qwy")
+EnglishNarration = ExtResource("3_blnps")
+CreeNarration = ExtResource("4_2kkp1")
+
+[node name="AnimatedSprite" parent="." index="2"]
+sprite_frames = SubResource("SpriteFrames_2kkp1")

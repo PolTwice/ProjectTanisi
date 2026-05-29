@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://bd2v6h6c56j8o"]
+
+[ext_resource type="PackedScene" uid="uid://7rov3h1r8pnk" path="res://TemplateScenes/QuizScene/QuizScene.tscn" id="1_dy26f"]
+[ext_resource type="Texture2D" uid="uid://cufkguuxso0gl" path="res://ChapterOne/BeaverLesson/LessonAssets/Background1.png" id="2_a1d7q"]
+
+[node name="QuizScene" instance=ExtResource("1_dy26f")]
+question = "What is Elder in Cree?"
+correctAnswerText = "That's the right answer! Elder is kêhtê-aya. Mistikwak is logs."
+hasFourQuestions = false
+buttonAText = "kêhtê-aya"
+buttonBText = "mistikwak"
+backgroundImage = ExtResource("2_a1d7q")

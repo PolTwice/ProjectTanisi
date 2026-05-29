@@ -1,0 +1,30 @@
+[gd_scene load_steps=7 format=3 uid="uid://rt4wt2mdkerx"]
+
+[ext_resource type="PackedScene" uid="uid://bakvp2vudvfqy" path="res://TemplateScenes/StoryScene/StoryScene.tscn" id="1_pwqa1"]
+[ext_resource type="Texture2D" uid="uid://dcc0rqxh4ulmx" path="res://ChapterOne/BeaverLesson/LessonAssets/Background2.png" id="2_mc4ob"]
+[ext_resource type="AudioStream" uid="uid://cktwjw16v4x3u" path="res://ChapterOne/BeaverLesson/LessonAudio/5Beaver.mp3" id="3_ye3mh"]
+[ext_resource type="Texture2D" uid="uid://djg7yvj66273e" path="res://ChapterOne/BeaverLesson/LessonAssets/Scene3-1.png" id="4_5w66k"]
+[ext_resource type="Texture2D" uid="uid://bjuqckuopx0c7" path="res://ChapterOne/BeaverLesson/LessonAssets/Scene3-2.png" id="5_7h61n"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3igcl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_5w66k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_7h61n")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="StoryRoot" instance=ExtResource("1_pwqa1")]
+StoryText = "\"True strength is not in resisting the current,\" Elder said, \"but in knowing how to flow with it.\""
+switchButtonEnabled = false
+backgroundTexture = ExtResource("2_mc4ob")
+EnglishNarration = ExtResource("3_ye3mh")
+
+[node name="AnimatedSprite" parent="." index="2"]
+sprite_frames = SubResource("SpriteFrames_3igcl")

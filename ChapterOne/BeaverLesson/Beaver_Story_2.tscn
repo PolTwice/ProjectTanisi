@@ -1,0 +1,37 @@
+[gd_scene load_steps=9 format=3 uid="uid://4lsbmuqksot1"]
+
+[ext_resource type="PackedScene" uid="uid://bakvp2vudvfqy" path="res://TemplateScenes/StoryScene/StoryScene.tscn" id="1_ga36c"]
+[ext_resource type="Texture2D" uid="uid://dcc0rqxh4ulmx" path="res://ChapterOne/BeaverLesson/LessonAssets/Background2.png" id="2_jptut"]
+[ext_resource type="AudioStream" uid="uid://dj8qqac7fc2xk" path="res://ChapterOne/BeaverLesson/LessonAudio/2BeaverEN.mp3" id="3_08efa"]
+[ext_resource type="AudioStream" uid="uid://b4dfiiahf3xhr" path="res://ChapterOne/BeaverLesson/LessonAudio/2BeaverCR.mp3" id="4_uobxs"]
+[ext_resource type="Texture2D" uid="uid://bvivr7khmhdia" path="res://ChapterOne/BeaverLesson/LessonAssets/Scene2-1.png" id="5_o67ic"]
+[ext_resource type="Texture2D" uid="uid://6e7cgkybcdov" path="res://ChapterOne/BeaverLesson/LessonAssets/Scene2-2.png" id="6_jaf8v"]
+[ext_resource type="Texture2D" uid="uid://c5mfhsv3ejmp" path="res://ChapterOne/BeaverLesson/LessonAssets/Scene2-3.png" id="7_5c76h"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ie48t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_o67ic")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_jaf8v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_5c76h")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[node name="StoryRoot" instance=ExtResource("1_ga36c")]
+StoryText = "Elder Beaver chose only the smaller, flexible branches that would bend without breaking."
+EnglishTarget = "Elder"
+CreeTarget = "kêhtê-aya"
+backgroundTexture = ExtResource("2_jptut")
+EnglishNarration = ExtResource("3_08efa")
+CreeNarration = ExtResource("4_uobxs")
+
+[node name="AnimatedSprite" parent="." index="2"]
+sprite_frames = SubResource("SpriteFrames_ie48t")

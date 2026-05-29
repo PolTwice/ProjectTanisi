@@ -33,10 +33,13 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 2.0
 }]
 
 [node name="WolfLessonSelect" instance=ExtResource("1_mwd1p")]
 
 [node name="lessonSprite" parent="." index="0"]
+position = Vector2(1, -2)
+scale = Vector2(1.474624, 1.474624)
 sprite_frames = SubResource("SpriteFrames_mwd1p")
+frame_progress = 0.68924826

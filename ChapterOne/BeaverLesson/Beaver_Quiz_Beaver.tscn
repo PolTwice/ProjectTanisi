@@ -1,0 +1,22 @@
+[gd_scene load_steps=7 format=3 uid="uid://dd2bwai8cs2dn"]
+
+[ext_resource type="PackedScene" uid="uid://7rov3h1r8pnk" path="res://TemplateScenes/QuizScene/QuizScene.tscn" id="1_1vfwj"]
+[ext_resource type="Texture2D" uid="uid://cgfx65ka6wfem" path="res://ChapterOne/BeaverLesson/LessonAssets/BeaverImage.png" id="2_bs3dq"]
+[ext_resource type="Texture2D" uid="uid://djl8cau2sreyg" path="res://ChapterOne/BuffaloLesson/Assets/GrandpaBuffalo.png" id="3_1a2uu"]
+[ext_resource type="Texture2D" uid="uid://t21ujq8d656i" path="res://ChapterOne/EagleLesson/Assets/Script4_Part22.png" id="4_qiodk"]
+[ext_resource type="Texture2D" uid="uid://cnky28ngld5lk" path="res://ChapterOne/EagleLesson/Assets/OverheadFlower.png" id="5_0fbls"]
+[ext_resource type="Texture2D" uid="uid://dsrvcip245sg5" path="res://ChapterOne/BeaverLesson/LessonAssets/Background1-2.png" id="6_pfp62"]
+
+[node name="QuizScene" instance=ExtResource("1_1vfwj")]
+question = "What is Amisk in English?"
+correctAnswerText = "That's the righ! Amisk is Beaver."
+hasPictures = true
+buttonAText = "Beaver"
+buttonBText = "Buffalo"
+buttonCText = "Eagle"
+buttonDText = "Flower"
+buttonAPic = ExtResource("2_bs3dq")
+buttonBPic = ExtResource("3_1a2uu")
+buttonCPic = ExtResource("4_qiodk")
+buttonDPic = ExtResource("5_0fbls")
+backgroundImage = ExtResource("6_pfp62")

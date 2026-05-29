@@ -1,24 +1,26 @@
 [gd_scene load_steps=5 format=3 uid="uid://dj83aat4ycmm2"]
 
 [ext_resource type="PackedScene" uid="uid://drq53txkkdr8y" path="res://TemplateScenes/lessonSelectIcon/LessonSelectIcon.tscn" id="1_c3i8g"]
-[ext_resource type="Texture2D" uid="uid://clqbp2fjg7htd" path="res://ChapterOne/AnimalSelectScenes/assets/Eagle/Eagle 2.png" id="2_gioj8"]
-[ext_resource type="Texture2D" uid="uid://u44388ag735g" path="res://ChapterOne/AnimalSelectScenes/assets/Eagle/Eagle.png" id="3_rroln"]
+[ext_resource type="Texture2D" uid="uid://cwxud6xc1pkxq" path="res://ChapterOne/EagleLesson/Assets/EagleAnim2.png" id="2_c3i8g"]
+[ext_resource type="Texture2D" uid="uid://fkrg8tko1yhm" path="res://ChapterOne/EagleLesson/Assets/EagleAnim.png" id="3_gioj8"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_c3i8g"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_gioj8")
+"texture": ExtResource("2_c3i8g")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_rroln")
+"texture": ExtResource("3_gioj8")
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 3.0
 }]
 
 [node name="EagleLessonSelect" instance=ExtResource("1_c3i8g")]
 
 [node name="lessonSprite" parent="." index="0"]
+position = Vector2(-5.0000305, 6.9999695)
+scale = Vector2(2.8818898, 2.8818898)
 sprite_frames = SubResource("SpriteFrames_c3i8g")

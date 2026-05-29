@@ -1,0 +1,31 @@
+[gd_scene load_steps=8 format=3 uid="uid://xm3unyracdxw"]
+
+[ext_resource type="PackedScene" uid="uid://trc8vc8bld10" path="res://ChapterOne/BeaverLesson/Beaver_Word_Beaver.tscn" id="1_qmi85"]
+[ext_resource type="Texture2D" uid="uid://dcc0rqxh4ulmx" path="res://ChapterOne/BeaverLesson/LessonAssets/Background2.png" id="2_b55b5"]
+[ext_resource type="AudioStream" uid="uid://bdknlmjkbxawq" path="res://ChapterOne/BeaverLesson/LessonAudio/BeaverLogsEN.mp3" id="3_a1y5w"]
+[ext_resource type="AudioStream" uid="uid://it8aao5ovekd" path="res://ChapterOne/BeaverLesson/LessonAudio/BeaverLogsCR.mp3" id="4_3dfjt"]
+[ext_resource type="AudioStream" uid="uid://bb1tdjj6evyi5" path="res://ChapterOne/BeaverLesson/LessonAudio/BeaverLogs.mp3" id="5_uhudw"]
+[ext_resource type="Texture2D" uid="uid://c5mfhsv3ejmp" path="res://ChapterOne/BeaverLesson/LessonAssets/Scene2-3.png" id="6_nm48a"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6cbs7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_nm48a")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="WordScene" instance=ExtResource("1_qmi85")]
+background = ExtResource("2_b55b5")
+EnglishButtonText = "Logs"
+CreeButtonText = "mistikwak"
+englishReading = ExtResource("3_a1y5w")
+creeReading = ExtResource("4_3dfjt")
+Reading = ExtResource("5_uhudw")
+
+[node name="AnimatedSprite2D" parent="." index="2"]
+position = Vector2(1000, 440)
+sprite_frames = SubResource("SpriteFrames_6cbs7")

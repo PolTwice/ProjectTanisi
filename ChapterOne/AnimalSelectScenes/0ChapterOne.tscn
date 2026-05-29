@@ -25,48 +25,49 @@ texture = ExtResource("2_7kf7r")
 expand_mode = 1
 
 [node name="BeaverLessonSelect" parent="." index="3" instance=ExtResource("3_ri2j5")]
-visible = false
 top_level = true
 z_as_relative = false
-position = Vector2(848, 406.99997)
+position = Vector2(783, 435)
 scale = Vector2(0.1, 0.1)
-lessonName = &"Beaver"
+lessonPath = &"res://ChapterOne/BeaverLesson/0BeaverLessonManager.tscn"
+lessonName = &"Beaver builds a Dam"
 
 [node name="BuffaloLessonSelect" parent="." index="4" instance=ExtResource("7_xhfgc")]
-position = Vector2(557, 675)
+position = Vector2(577, 705)
 scale = Vector2(0.15, 0.15)
 lessonPath = &"res://ChapterOne/BuffaloLesson/0_BuffaloLesson.tscn"
 lessonName = &"Buffalo Runs Fast"
 
 [node name="EagleLessonSelect" parent="." index="5" instance=ExtResource("8_n3bd2")]
-position = Vector2(796, 253)
-scale = Vector2(0.1, 0.1)
+position = Vector2(1052, 618)
+scale = Vector2(0.15, 0.15)
 lessonPath = &"res://ChapterOne/EagleLesson/0EagleLessonManager.tscn"
 lessonName = &"Eagle and Dad"
 
 [node name="SabeLessonSelect" parent="." index="6" instance=ExtResource("9_t4duj")]
-position = Vector2(1304, 394)
+position = Vector2(1365, 428.00003)
 scale = Vector2(0.15, 0.15)
 lessonPath = &"res://ChapterOne/SabeLesson/0SabeLessonManager.tscn"
 lessonName = &"The Prettiest Stone"
 
 [node name="BearLessonSelect" parent="." index="7" instance=ExtResource("4_jyjd3")]
-position = Vector2(1709, 636)
-scale = Vector2(0.15, 0.15)
+position = Vector2(1714.0001, 532)
+rotation = -0.37873644
+scale = Vector2(0.1, 0.1)
 lessonPath = &"res://ChapterOne/BearLesson/0_BearLessonManager.tscn"
 lessonName = &"The Courageous Bear"
 lessonSound = ExtResource("5_050ne")
 lessonNameAudio = ExtResource("6_db48n")
 
 [node name="TurtleLessonSelect" parent="." index="8" instance=ExtResource("10_xto1q")]
-position = Vector2(475, 395)
+position = Vector2(541, 365)
 scale = Vector2(0.1, 0.1)
 lessonPath = &"res://ChapterOne/TurtleLesson/0_Turtle_LessonManager.tscn"
 lessonName = &"Turtle Tells the Truth"
 
 [node name="WolfLessonSelect" parent="." index="9" instance=ExtResource("11_tfyv7")]
-position = Vector2(1001, 589)
-scale = Vector2(0.15, 0.15)
+position = Vector2(1033, 260)
+scale = Vector2(0.08, 0.08)
 lessonPath = &"res://ChapterOne/WolfLesson/0WolfLessonManager.tscn"
 lessonName = &"The Best Howler"
 
