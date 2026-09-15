@@ -1,18 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://d1td81fgd4w5k"]
+[gd_scene format=3 uid="uid://d1td81fgd4w5k"]
 
 [ext_resource type="Script" uid="uid://32k7keirkbqt" path="res://Autoloads/SceneManager.gd" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://cfdga74wde3ce" path="res://TemplateScenes/NavigationBar/MainUI.tscn" id="2_272bh"]
 [ext_resource type="PackedScene" uid="uid://b6o6vt21axaak" path="res://NonLessonScenes/StartScreen.tscn" id="3_1bvp3"]
 [ext_resource type="Script" uid="uid://cuooglhpnchqk" path="res://Autoloads/audio_manager.gd" id="4_1bvp3"]
 
-[node name="Root" type="CanvasLayer"]
+[node name="Root" type="CanvasLayer" unique_id=694212204]
 layer = 0
 script = ExtResource("1_h2yge")
 
-[node name="TransitionLayer" type="CanvasLayer" parent="."]
+[node name="TransitionLayer" type="CanvasLayer" parent="." unique_id=1117515283]
 layer = 1000
 
-[node name="ColorRect" type="ColorRect" parent="TransitionLayer"]
+[node name="ColorRect" type="ColorRect" parent="TransitionLayer" unique_id=916951157]
 visible = false
 anchors_preset = 15
 anchor_right = 1.0
@@ -21,27 +21,27 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1485935324]
 layer = 5
 
-[node name="UI" parent="CanvasLayer" instance=ExtResource("2_272bh")]
+[node name="UI" parent="CanvasLayer" unique_id=1633768613 instance=ExtResource("2_272bh")]
 size_flags_horizontal = 1
 size_flags_vertical = 1
 
-[node name="NodeContainerOne" type="CanvasLayer" parent="."]
+[node name="NodeContainerOne" type="CanvasLayer" parent="." unique_id=2627874]
 layer = -1
 follow_viewport_enabled = true
 
-[node name="TitleScreen" parent="NodeContainerOne" instance=ExtResource("3_1bvp3")]
+[node name="TitleScreen" parent="NodeContainerOne" unique_id=726027513 instance=ExtResource("3_1bvp3")]
 
-[node name="AudioManager" type="Node" parent="."]
+[node name="AudioManager" type="Node" parent="." unique_id=1057764964]
 script = ExtResource("4_1bvp3")
 
-[node name="StreamOne" type="AudioStreamPlayer" parent="AudioManager"]
+[node name="StreamOne" type="AudioStreamPlayer" parent="AudioManager" unique_id=1202431059]
 
-[node name="StreamTwo" type="AudioStreamPlayer" parent="AudioManager"]
+[node name="StreamTwo" type="AudioStreamPlayer" parent="AudioManager" unique_id=1016572353]
 
-[node name="StreamThree" type="AudioStreamPlayer" parent="AudioManager"]
+[node name="StreamThree" type="AudioStreamPlayer" parent="AudioManager" unique_id=1413903747]
 
 [connection signal="tree_entered" from="NodeContainerOne" to="." method="_on_node_container_one_tree_entered"]
 [connection signal="ready" from="AudioManager" to="AudioManager" method="_on_ready"]
