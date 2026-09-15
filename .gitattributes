@@ -1,0 +1,6 @@
+# Ensure all Godot import and project files use standard Unix line endings
+*.import text eol=lf
+*.godot text eol=lf
+*.gd text eol=lf
+*.tscn text eol=lf
+*.tres text eol=lf
