@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://b6o6vt21axaak"]
+[gd_scene format=3 uid="uid://b6o6vt21axaak"]
 
 [ext_resource type="Texture2D" uid="uid://bdlxlq16xgwln" path="res://NonLessonScenes/Assets/BG.png" id="1_hl7tl"]
 [ext_resource type="Script" uid="uid://d0ayf4b0ka2g2" path="res://NonLessonScenes/start_screen.gd" id="1_s8l2f"]
@@ -7,72 +7,47 @@
 [ext_resource type="Texture2D" uid="uid://rh8pjf42xt1p" path="res://ChapterOne/AnimalSelectScenes/assets/SabeTwo/sabe.png" id="4_n6g4a"]
 [ext_resource type="Theme" uid="uid://byi38q23oj3ta" path="res://TemplateScenes/Themes/ButtonTheme.tres" id="5_66nqs"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_s56cl"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_s8l2f")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_s8l2f")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_s8l2f")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_s8l2f")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_s8l2f")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_s8l2f")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_s8l2f")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_s8l2f")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_ppvkr")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_n6g4a")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_ppvkr")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_n6g4a")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_ppvkr")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_n6g4a")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_ppvkr")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_n6g4a")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_ppvkr")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_n6g4a")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
+[sub_resource type="Animation" id="Animation_s8l2f"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_s8l2f")]
+}
 
-[node name="TitleScreen" type="CanvasLayer"]
+[sub_resource type="Animation" id="Animation_ppvkr"]
+resource_name = "SabeWave"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.5, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("3_ppvkr"), ExtResource("4_n6g4a")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_n6g4a"]
+_data = {
+&"RESET": SubResource("Animation_s8l2f"),
+&"SabeWave": SubResource("Animation_ppvkr")
+}
+
+[node name="TitleScreen" type="CanvasLayer" unique_id=46002707]
 script = ExtResource("1_s8l2f")
 
-[node name="Background" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="." unique_id=201122289]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -81,7 +56,28 @@ grow_vertical = 2
 texture = ExtResource("1_hl7tl")
 expand_mode = 1
 
-[node name="ClickToStart" type="Label" parent="."]
+[node name="SabeCtrl" type="TextureRect" parent="Background" unique_id=1398817191]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.81100005
+anchor_top = 0.5
+anchor_right = 0.81100005
+anchor_bottom = 0.5
+offset_left = -190.12012
+offset_top = -278.0
+offset_right = 173.47559
+offset_bottom = 262.0
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("2_s8l2f")
+expand_mode = 3
+
+[node name="SabeAnimation" type="AnimationPlayer" parent="." unique_id=2004389590]
+root_node = NodePath("../Background/SabeCtrl")
+libraries/ = SubResource("AnimationLibrary_n6g4a")
+autoplay = &"SabeWave"
+
+[node name="ClickToStart" type="Label" parent="." unique_id=810053865]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -93,7 +89,7 @@ text = "Click the screen to start!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Title" type="Label" parent="."]
+[node name="Title" type="Label" parent="." unique_id=1690285308]
 anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 440.0
@@ -106,13 +102,7 @@ text = "Project Tanisi"
 horizontal_alignment = 1
 vertical_alignment = 2
 
-[node name="Sabe" type="AnimatedSprite2D" parent="."]
-position = Vector2(1520, 540)
-scale = Vector2(0.2, 0.2)
-sprite_frames = SubResource("SpriteFrames_s56cl")
-autoplay = "default"
-
-[node name="ClickableLayer" type="ColorRect" parent="."]
+[node name="ClickableLayer" type="ColorRect" parent="." unique_id=523162990]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
