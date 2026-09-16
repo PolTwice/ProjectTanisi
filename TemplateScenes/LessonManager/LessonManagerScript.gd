@@ -40,7 +40,7 @@ func _on_ready() -> void:
 func _on_back_button_pressed() -> void:
 	#deincrement the index
 	index -= 1
-	
+
 	#if index is 0 or less, we can't deincrement anymore
 	if(index < 1):
 		back_button.disabled = true
