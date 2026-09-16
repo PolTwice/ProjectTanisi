@@ -8,28 +8,15 @@ extends CanvasLayer
 @onready var button_node: Button = $TextPanel/TextMargin/HBoxContainer/MarginContainer/Button
 @onready var margin_container: MarginContainer = $TextPanel/TextMargin/HBoxContainer/MarginContainer
 
-#Contents of the story
-@export var StoryText: String
-
-#The word that we are targeting in this line of the story
-@export var EnglishTarget: String
-@export var switchButtonEnabled: bool = true
-@export var CreeTarget: String
-
-#Texture of the background of the story
-@export var backgroundTexture: Texture
-@onready var label: Label = $PanelContainer/MarginContainer/Label
-
-
-@export var EnglishNarration: AudioStream
-@export var CreeNarration: AudioStream
-
 var isEnglish = true
 var firstPush = true
+
+
 
 signal canContinue
 
 func _on_ready() -> void:
+	FileAccess.new()
 	#if has switch, then we r
 	if(switchButtonEnabled):
 		StoryText = StoryText.replace(EnglishTarget, "[color=#FFD000]"+EnglishTarget+"[/color]")

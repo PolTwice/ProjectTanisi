@@ -6,10 +6,14 @@
 
 [sub_resource type="Theme" id="Theme_lgyjk"]
 
-[node name="StoryRoot" type="CanvasLayer"]
+[node name="StoryRoot" type="CanvasLayer" unique_id=330128674]
 script = ExtResource("1_u4kwu")
+StoryText = null
+EnglishTarget = null
+switchButtonEnabled = null
+CreeTarget = null
 
-[node name="PanelContainer" type="PanelContainer" parent="."]
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1143062550]
 z_index = 50
 anchors_preset = 10
 anchor_right = 1.0
@@ -18,18 +22,18 @@ grow_horizontal = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.34
 
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=1127414013]
 layout_mode = 2
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer"]
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer" unique_id=51493352]
 layout_mode = 2
 theme_override_font_sizes/font_size = 36
 text = "Listen to the story! "
 horizontal_alignment = 1
 
-[node name="BackgroundImage" type="TextureRect" parent="."]
+[node name="BackgroundImage" type="TextureRect" parent="." unique_id=945051653]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -38,10 +42,10 @@ grow_vertical = 2
 size_flags_horizontal = 3
 expand_mode = 1
 
-[node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite" type="AnimatedSprite2D" parent="." unique_id=2029142925]
 position = Vector2(960, 540)
 
-[node name="TextPanel" type="PanelContainer" parent="."]
+[node name="TextPanel" type="PanelContainer" parent="." unique_id=291311307]
 anchors_preset = -1
 anchor_top = 0.667
 anchor_right = 1.0
@@ -50,15 +54,15 @@ grow_horizontal = 2
 grow_vertical = 0
 theme = ExtResource("2_sout3")
 
-[node name="TextMargin" type="MarginContainer" parent="TextPanel"]
+[node name="TextMargin" type="MarginContainer" parent="TextPanel" unique_id=1572644295]
 layout_mode = 2
 theme = SubResource("Theme_lgyjk")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="TextPanel/TextMargin"]
+[node name="HBoxContainer" type="HBoxContainer" parent="TextPanel/TextMargin" unique_id=902480975]
 layout_mode = 2
 alignment = 1
 
-[node name="Contents" type="RichTextLabel" parent="TextPanel/TextMargin/HBoxContainer"]
+[node name="Contents" type="RichTextLabel" parent="TextPanel/TextMargin/HBoxContainer" unique_id=13926464]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("2_sout3")
@@ -69,7 +73,7 @@ We can have about three lines before a scroll bar appears"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="TextPanel/TextMargin/HBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="TextPanel/TextMargin/HBoxContainer" unique_id=1499193989]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.33
@@ -78,7 +82,7 @@ theme_override_constants/margin_top = 30
 theme_override_constants/margin_right = 30
 theme_override_constants/margin_bottom = 30
 
-[node name="Button" type="Button" parent="TextPanel/TextMargin/HBoxContainer/MarginContainer"]
+[node name="Button" type="Button" parent="TextPanel/TextMargin/HBoxContainer/MarginContainer" unique_id=310677525]
 layout_mode = 2
 theme = ExtResource("3_w4kqq")
 theme_override_font_sizes/font_size = 60
@@ -87,9 +91,9 @@ text = "English Word
 🔄
 Cree Word"
 
-[node name="Narration" type="AudioStreamPlayer" parent="."]
+[node name="Narration" type="AudioStreamPlayer" parent="." unique_id=474253136]
 
-[node name="BackgroundSound" type="AudioStreamPlayer" parent="."]
+[node name="BackgroundSound" type="AudioStreamPlayer" parent="." unique_id=1599151863]
 
 [connection signal="canContinue" from="." to="." method="_on_can_continue"]
 [connection signal="ready" from="." to="." method="_on_ready"]
