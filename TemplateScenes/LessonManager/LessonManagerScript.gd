@@ -62,6 +62,7 @@ func _on_next_button_pressed() -> void:
 func completeLesson():
 	lesson_complete.visible = true
 	GlobalState.setLessonCompleted(lessonName, true)
+	GlobalState.saveData()
 	return
 
 func _on_replay_pressed() -> void:
