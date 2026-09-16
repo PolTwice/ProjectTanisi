@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cnyos1vurp76h"]
+[gd_scene format=3 uid="uid://cnyos1vurp76h"]
 
 [ext_resource type="PackedScene" uid="uid://cfm8ssfd0vkfp" path="res://TemplateScenes/LessonManager/LessonManagerScene.tscn" id="1_ey5yt"]
 [ext_resource type="PackedScene" uid="uid://cxynmw22ghdxr" path="res://ChapterOne/EagleLesson/Eagle_Word_Eagle.tscn" id="2_63a70"]
@@ -14,5 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://dbk1xao1x18ha" path="res://ChapterOne/EagleLesson/Eagle_Word_Love.tscn" id="12_xwkp1"]
 [ext_resource type="PackedScene" uid="uid://bginew72tyxtd" path="res://ChapterOne/EagleLesson/Eagle_Word_MyDad.tscn" id="13_thman"]
 
-[node name="LessonManager" instance=ExtResource("1_ey5yt")]
+[node name="LessonManager" unique_id=1570846664 instance=ExtResource("1_ey5yt")]
 lessonArray = Array[PackedScene]([ExtResource("2_63a70"), ExtResource("2_yccr2"), ExtResource("13_thman"), ExtResource("3_hr672"), ExtResource("4_h26ai"), ExtResource("5_lmrot"), ExtResource("12_xwkp1"), ExtResource("6_66ywg"), ExtResource("7_63a70"), ExtResource("9_lmrot"), ExtResource("8_h26ai"), ExtResource("10_66ywg")])
+lessonName = &"Eagle"
+isSkipEnabled = true
