@@ -3,10 +3,9 @@ extends Node
 
 #Declare and create the SceneManager so it is accessible. 
 var sceneManager: SceneManager
+var user = "PolTestUser"
 
 var audioManager: AudioManager
-
-var saveFilePath = "user://saves"
 #signal for lesson and quiz completion
 signal lesson_completed(lesson_id: StringName)
 
@@ -23,8 +22,26 @@ func setLessonCompleted(lesson:StringName, state: bool) -> void:
 #Given a lesson name, return the lessons status. If the lesson doesn't exist, return false
 func isLessonCompleted(lesson: StringName) -> bool:
 	return lessonsCompleted.get(lesson, false)
+
 	
 func saveData() -> void:
-	var fileName = saveFilePath + Time.get_datetime_string_from_system()
+	var dir_path: String = "user://saves/"
+	
+	# Ensure the directory exists before attempting to write files into it
+	if not DirAccess.dir_exists_absolute(dir_path):
+		var err := DirAccess.make_dir_recursive_absolute(dir_path)
+		if err != OK:
+			push_error("Failed to create directory: %s (Error %d)" % [dir_path, err])
+			return
+
+	var fileName: String = dir_path + user + ".dat"
 	var saveFile : FileAccess = FileAccess.open(fileName, FileAccess.WRITE)
+	
+	if not saveFile:
+		push_error("Failed to save file")
+	
 	saveFile.store_var(lessonsCompleted)
+	saveFile.close()
+	
+	var testOpen : FileAccess = FileAccess.open(fileName, FileAccess.READ)
+	print(testOpen.get_var())
