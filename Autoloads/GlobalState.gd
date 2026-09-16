@@ -6,6 +6,7 @@ var sceneManager: SceneManager
 
 var audioManager: AudioManager
 
+var saveFilePath = "user://saves"
 #signal for lesson and quiz completion
 signal lesson_completed(lesson_id: StringName)
 
@@ -22,3 +23,8 @@ func setLessonCompleted(lesson:StringName, state: bool) -> void:
 #Given a lesson name, return the lessons status. If the lesson doesn't exist, return false
 func isLessonCompleted(lesson: StringName) -> bool:
 	return lessonsCompleted.get(lesson, false)
+	
+func saveData() -> void:
+	var fileName = saveFilePath + Time.get_datetime_string_from_system()
+	var saveFile : FileAccess = FileAccess.open(fileName, FileAccess.WRITE)
+	saveFile.store_var(lessonsCompleted)
