@@ -18,6 +18,7 @@ var currentContainerOnePath;
 func _ready() -> void:
 	currentContainerOne = $NodeContainerOne/TitleScreen
 	currentContainerOnePath = "res://NonLessonScenes/StartScreen.tscn"
+	#create folder for generated content if not already existing
 	GlobalState.createAIFolder()
 
 #Used to change the scene contained in NodeContainerOne

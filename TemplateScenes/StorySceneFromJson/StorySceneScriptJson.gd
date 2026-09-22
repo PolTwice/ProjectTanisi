@@ -5,13 +5,7 @@ extends Control
 
 const BUTTON_THEME = preload("uid://byi38q23oj3ta")
 
-
 var dirPath = "user://generatedStories"
-
-signal canContinue
-
-
-
 
 #get a list of all files in the dirPath
 func getFileNames(path) -> Array[String]:
