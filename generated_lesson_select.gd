@@ -5,7 +5,7 @@ extends Control
 
 const BUTTON_THEME = preload("uid://byi38q23oj3ta")
 
-var dirPath = "user://generatedStories"
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -19,7 +19,7 @@ func _ready() -> void:
 			side_right.add_child(createButton(file))
 		index += 1
 		
-	
+		
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass

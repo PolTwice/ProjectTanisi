@@ -4,6 +4,7 @@ extends Node
 #Declare and create the SceneManager so it is accessible. 
 var sceneManager: SceneManager
 var user = "PolTestUser"
+var dirPath = "user://generatedStories"
 
 var audioManager: AudioManager
 #signal for lesson and quiz completion
