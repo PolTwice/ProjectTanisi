@@ -23,7 +23,6 @@ func setLessonCompleted(lesson:StringName, state: bool) -> void:
 func isLessonCompleted(lesson: StringName) -> bool:
 	return lessonsCompleted.get(lesson, false)
 
-	
 func saveData() -> void:
 	var dir_path: String = "user://saves/"
 	
@@ -45,3 +44,13 @@ func saveData() -> void:
 	
 	var testOpen : FileAccess = FileAccess.open(fileName, FileAccess.READ)
 	print(testOpen.get_var())
+
+func createAIFolder() -> void:
+	var dir_path: String = "user://generatedStories/"
+	
+	# Ensure the directory exists before attempting to write files into it
+	if not DirAccess.dir_exists_absolute(dir_path):
+		var err := DirAccess.make_dir_recursive_absolute(dir_path)
+		if err != OK:
+			push_error("Failed to create directory: %s (Error %d)" % [dir_path, err])
+			return

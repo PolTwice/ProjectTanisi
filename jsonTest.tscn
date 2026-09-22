@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://dl8esdgsaf2kx"]
+
+[node name="Control" type="Control" unique_id=1348261241]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_vertical_guides_ = [960.0]
+
+[node name="List Margin" type="MarginContainer" parent="." unique_id=1975551094]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 176.505
+offset_right = -176.495
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ListContainer" type="HBoxContainer" parent="List Margin" unique_id=1565574145]
+layout_mode = 2
+
+[node name="SideLeft" type="VBoxContainer" parent="List Margin/ListContainer" unique_id=699974541]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SideLeftMargin" type="MarginContainer" parent="List Margin/ListContainer/SideLeft" unique_id=237728878]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 100
+
+[node name="SideRight" type="VBoxContainer" parent="List Margin/ListContainer" unique_id=405136539]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SideRightMargin" type="MarginContainer" parent="List Margin/ListContainer/SideRight" unique_id=1285893344]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 100

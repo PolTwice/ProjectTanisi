@@ -1,77 +1,41 @@
-extends CanvasLayer
+extends Control
 
-@onready var contents_node: RichTextLabel = $TextPanel/TextMargin/HBoxContainer/Contents
-@onready var background_image_node: TextureRect = $BackgroundImage
-@onready var animated_sprite_node: AnimatedSprite2D = $AnimatedSprite
-@onready var narration_node: AudioStreamPlayer = $Narration
-@onready var background_sound_node: AudioStreamPlayer = $BackgroundSound
-@onready var button_node: Button = $TextPanel/TextMargin/HBoxContainer/MarginContainer/Button
-@onready var margin_container: MarginContainer = $TextPanel/TextMargin/HBoxContainer/MarginContainer
+@onready var side_left_margin: MarginContainer = $"List Margin/ListContainer/SideLeft/SideLeftMargin"
+@onready var side_right_margin: MarginContainer = $"List Margin/ListContainer/SideRight/SideRightMargin"
 
-var isEnglish = true
-var firstPush = true
+const BUTTON_THEME = preload("uid://byi38q23oj3ta")
 
 
+var dirPath = "user://generatedStories"
 
 signal canContinue
 
-func _on_ready() -> void:
-	FileAccess.new()
-	#if has switch, then we r
-	if(switchButtonEnabled):
-		StoryText = StoryText.replace(EnglishTarget, "[color=#FFD000]"+EnglishTarget+"[/color]")
-		label.text = "Listen to the story! Press the button to see the word in Cree"
+
+
+
+#get a list of all files in the dirPath
+func getFileNames(path) -> Array[String]:
+	var dir = DirAccess.open(path)
+	if dir:
+		var fileContents: Array[String]
+		dir.list_dir_begin()
+		var file_name = dir.get_next()
+		while file_name != "":
+			fileContents.append(file_name)
+			file_name = dir.get_next()
+		return fileContents
 	else:
-		margin_container.visible = false
-		
-	contents_node.text = StoryText
+		print("An error occurred when trying to access the path.")
+		return []
+
+func createButton(fileName: String) -> Button:
+	var newButton = Button.new()
+	newButton.theme = BUTTON_THEME
 	
-	if (backgroundTexture != null):
-		background_image_node.texture = backgroundTexture
-	else:
-		showError()
-	animated_sprite_node.play()
-	button_node.text = EnglishTarget + "\n🔄\n" + CreeTarget
+	newButton.pressed.connect(_button_pressed(fileName))
 	
-	narration_node.stream = EnglishNarration
-	
-	narration_node.play()
-	
-#Display some error
-func showError() -> void:
-	self.visible = false
+	return newButton
+
+func _button_pressed(fileName: String):
+	#transition to new scene
 	pass
-
-func _on_button_pressed() -> void:
-	if(firstPush):
-		canContinue.emit()
-		firstPush = false
-	if(isEnglish):
-		#check if target is there
-		if !StoryText.find(EnglishTarget):
-			print("Word not found in story text")
-			showError()
-		#replace
-		StoryText = StoryText.replace(EnglishTarget, CreeTarget)
-		narration_node.stream = CreeNarration
-	#if it is currently on cree, swap to english
-	else:
-		#check if target is there
-		if !StoryText.find(CreeTarget):
-			print("Word not found in story text")
-			showError()
-		#replace
-		StoryText = StoryText.replace(CreeTarget, EnglishTarget)
-		narration_node.stream = EnglishNarration
-	#swap mode the cree mode
-	isEnglish = !isEnglish
-	#Change the text to display correctly
-	contents_node.text = StoryText
-	button_node.disabled = true
-	narration_node.play()
-
-
-func _on_narration_finished() -> void:
-	if(!switchButtonEnabled):
-		canContinue.emit()
-	button_node.disabled= false
