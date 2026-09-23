@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c35g2u1wgaqlj"]
 
-[ext_resource type="Script" uid="uid://b3u7glpncet8j" path="res://TemplateScenes/StorySceneFromJson/StorySceneScriptJson.gd" id="1_u4kwu"]
+[ext_resource type="Script" uid="uid://b3u7glpncet8j" path="res://TemplateScenes/GeneratedScenes/StorySceneScriptJson.gd" id="1_u4kwu"]
 [ext_resource type="Theme" uid="uid://cu47n5kjyr28" path="res://TemplateScenes/Themes/NewText.tres" id="2_sout3"]
 [ext_resource type="Theme" uid="uid://byi38q23oj3ta" path="res://TemplateScenes/Themes/ButtonTheme.tres" id="3_w4kqq"]
 
@@ -8,10 +8,6 @@
 
 [node name="StoryRoot" type="CanvasLayer" unique_id=330128674]
 script = ExtResource("1_u4kwu")
-StoryText = null
-EnglishTarget = null
-switchButtonEnabled = null
-CreeTarget = null
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=1143062550]
 z_index = 50
@@ -95,7 +91,6 @@ Cree Word"
 
 [node name="BackgroundSound" type="AudioStreamPlayer" parent="." unique_id=1599151863]
 
-[connection signal="canContinue" from="." to="." method="_on_can_continue"]
 [connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="pressed" from="TextPanel/TextMargin/HBoxContainer/MarginContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="finished" from="Narration" to="." method="_on_narration_finished"]

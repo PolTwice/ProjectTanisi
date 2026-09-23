@@ -5,11 +5,9 @@ extends Control
 
 const BUTTON_THEME = preload("uid://byi38q23oj3ta")
 
-
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	var files = getFileNames(dirPath)
+	var files = getFileNames(GlobalState.dirPath)
 	print(files)
 	var index = 0
 	for file in files:
