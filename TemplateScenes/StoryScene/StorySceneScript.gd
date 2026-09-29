@@ -83,7 +83,6 @@ func _on_button_pressed() -> void:
 	button_node.disabled = true
 	narration_node.play()
 
-
 func _on_narration_finished() -> void:
 	if(!switchButtonEnabled):
 		canContinue.emit()

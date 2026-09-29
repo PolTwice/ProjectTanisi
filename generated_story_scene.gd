@@ -1,11 +1,15 @@
 extends Control
 
+@onready var contents: RichTextLabel = $TextPanel/TextMargin/HBoxContainer/Contents
+@onready var button: Button = $TextPanel/TextMargin/HBoxContainer/MarginContainer/Button
+
+#Test file 
 var testFile = "test.json"
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	makeLessonScene(parseFile(testFile), 0)
 	pass # Replace with function body.
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -42,6 +46,9 @@ func makeLessonScene(lessonDict: Dictionary, sceneIndex: int):
 	var targetWord = workingScene["target_word"]
 	var text = workingScene["text"]
 	
+	text = text.replace(targetWord, "[color=#FFD000]"+targetWord+"[/color]")
+	contents.text = text
+
 	print("Scene Number: ", sceneNumber)
 	print("Target Word: ", targetWord)
 	print("Text: ", text)
