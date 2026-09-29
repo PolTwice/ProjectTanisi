@@ -1,6 +1,10 @@
 [gd_scene format=3 uid="uid://ctncrhata6xhx"]
 
 [ext_resource type="Script" uid="uid://do1oitcka3w44" path="res://generated_story_scene.gd" id="1_4lg2o"]
+[ext_resource type="Theme" uid="uid://cu47n5kjyr28" path="res://TemplateScenes/Themes/NewText.tres" id="2_eeqxt"]
+[ext_resource type="Theme" uid="uid://byi38q23oj3ta" path="res://TemplateScenes/Themes/ButtonTheme.tres" id="3_yo3wb"]
+
+[sub_resource type="Theme" id="Theme_co5bv"]
 
 [node name="StoryScene" type="Control" unique_id=1854951715]
 layout_mode = 3
@@ -11,7 +15,83 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_4lg2o")
 
-[node name="Label" type="Label" parent="." unique_id=1256721601]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=768694244]
+z_index = 50
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 90.0
+grow_horizontal = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.34
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=1983100790]
+layout_mode = 2
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer" unique_id=1817819573]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "Listen to the story! "
+horizontal_alignment = 1
+
+[node name="BackgroundImage" type="TextureRect" parent="." unique_id=672558278]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+expand_mode = 1
+
+[node name="AnimatedSprite" type="AnimatedSprite2D" parent="." unique_id=1533754304]
+position = Vector2(960, 540)
+
+[node name="TextPanel" type="PanelContainer" parent="." unique_id=1748950271]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.667
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("2_eeqxt")
+
+[node name="TextMargin" type="MarginContainer" parent="TextPanel" unique_id=620190541]
+layout_mode = 2
+theme = SubResource("Theme_co5bv")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextPanel/TextMargin" unique_id=1678399561]
+layout_mode = 2
+alignment = 1
+
+[node name="Contents" type="RichTextLabel" parent="TextPanel/TextMargin/HBoxContainer" unique_id=221347399]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("2_eeqxt")
+bbcode_enabled = true
+text = "This is a sample story line. 
+This should be replaced later.
+We can have about three lines before a scroll bar appears"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="TextPanel/TextMargin/HBoxContainer" unique_id=1640206472]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.33
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="Button" type="Button" parent="TextPanel/TextMargin/HBoxContainer/MarginContainer" unique_id=591949866]
+layout_mode = 2
+theme = ExtResource("3_yo3wb")
+theme_override_font_sizes/font_size = 60
+disabled = true
+text = "English Word
+🔄
+Cree Word"

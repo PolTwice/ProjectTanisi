@@ -3,7 +3,7 @@ extends Control
 var testFile = "test.json"
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	makeLessonScene(parseFile(testFile), 1)
+	makeLessonScene(parseFile(testFile), 0)
 	pass # Replace with function body.
 
 
