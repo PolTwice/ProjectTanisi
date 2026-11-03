@@ -1,15 +1,18 @@
 class_name AudioManager extends Node
 
+
 @onready var stream_one: AudioStreamPlayer = $StreamOne
 @onready var stream_two: AudioStreamPlayer = $StreamTwo
 @onready var stream_three: AudioStreamPlayer = $StreamThree
 
 var audioPlayers = [stream_one, stream_two, stream_three]
-enum sounds {}
 
 func _on_ready() -> void:
 	GlobalState.AudioManager = self
 
+# Takes stream path 
+# returns audiostream if found
+# returns null if error
 func getStreamFromPath(streamPath: String) -> AudioStream:
 	var audioStream = get_node(streamPath)
 	if(!audioStream):
@@ -17,7 +20,9 @@ func getStreamFromPath(streamPath: String) -> AudioStream:
 		audioStream = null
 	return audioStream
 
-#Takes an int most of the time but also take AudioStreamPlayer
+# Takes an int or a audioStream player
+# Return audio stream player
+# Error returns null
 func getPlayer(audioPlayer: Variant) -> AudioStreamPlayer:
 	#if we get an audio stream player, return it right away
 	if audioPlayer is AudioStreamPlayer:
@@ -27,46 +32,52 @@ func getPlayer(audioPlayer: Variant) -> AudioStreamPlayer:
 	if !(audioPlayer is int):
 		push_error("Error in Audio Manager: getPlayer() only takes an int or an AudioStreamPlayer")
 		return null
-	
-	#
-	var desiredStreamPlayer : AudioStreamPlayer
-	match audioPlayer:
-		1:
-			desiredStreamPlayer = stream_one
-		2:
-			desiredStreamPlayer = stream_two
-		3:
-			desiredStreamPlayer = stream_three
-		_:
-			push_error("Error in Audio Manager: Invalid stream player number: ", audioPlayer)
-			return null
-	return desiredStreamPlayer
 
-#Can take either a stream or a number. 
+	#if the int is more than the amount of audio players availabe or is 0 less, we return null
+	if audioPlayer > audioPlayers.length() || audioPlayer < 1:
+		push_error("Error in Audio Manager: getPlayer() number is ", audioPlayer)
+		return null
+	
+	#subtract one to get index
+	audioPlayer = audioPlayer - 1
+	return audioPlayers[audioPlayer]
+
+#Takes an audio player
+#return if audio is playing. 
+#error returns falls
 func isPlaying(audioPlayer: Variant) -> bool:
 	audioPlayer = getPlayer(audioPlayer)
 	if audioPlayer == null:
 		push_error("Error in Audio manager: isPlaying() is checking for a null audioPlayer")
 		return false
-
 	return audioPlayer.playing
-		
-#find a free audio stream player, if not return null
+
+# returns an audio stream player that is not currently playing. 
+# if error, returns null
 func findFree() -> AudioStreamPlayer:
 	for player in audioPlayers:
 		if !(isPlaying(player)):
 			return player
+	push_error("Error in Audio Manager: Could not find a free Audio Stream Player")
 	return null
 	
+# play a sound
 func playSound(soundPath: String)-> AudioStreamPlayer:
-	var audioStream = getStreamFromPath(soundPath) as AudioStream
+	var audioStream = getStreamFromPath(soundPath)
+	
 	if !audioStream:
-		push_error("Error in Audio Manager: Path ", soundPath, " could not be played")
-	var audioPlayer = findFree() as AudioStreamPlayer
+		push_error("Error in Audio Manager: Could not play sound. Path ", soundPath, " could not be played")
+		return null
+		
+	var audioPlayer = findFree()
+	
+	if !audioPlayer:
+		push_error("Error in Audo Manager: Could not find free audio player to play sound.")
+		return null
+	
 	changeStream(audioPlayer, audioStream, true)
 	audioPlayer.play()
 	return audioPlayer
-	
 	
 func changeStream(audioStreamPlayer: Variant, audioStream: AudioStream, checkPlaying: bool) -> AudioStreamPlayer:
 	if checkPlaying == true && isPlaying(audioStreamPlayer):
