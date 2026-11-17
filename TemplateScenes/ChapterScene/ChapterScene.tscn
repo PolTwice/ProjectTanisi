@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bixs4mdgbfi7l"]
+[gd_scene format=3 uid="uid://bixs4mdgbfi7l"]
 
 [ext_resource type="Script" uid="uid://k1eg0t7fvis5" path="res://TemplateScenes/ChapterScene/chapter_scene.gd" id="1_nw6s2"]
 [ext_resource type="Theme" uid="uid://byi38q23oj3ta" path="res://TemplateScenes/Themes/ButtonTheme.tres" id="2_4vt24"]
@@ -18,11 +18,18 @@ corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
-[node name="ChapterScene" type="CanvasLayer"]
+[node name="ChapterScene" type="CanvasLayer" unique_id=48952493]
 script = ExtResource("1_nw6s2")
 infoText = "Testing"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="BackgroundTexture" type="TextureRect" parent="." unique_id=754188665]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1187081522]
 anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 147.0
@@ -30,37 +37,37 @@ grow_horizontal = 2
 size_flags_horizontal = 3
 alignment = 1
 
-[node name="LeftMargin" type="MarginContainer" parent="HBoxContainer"]
+[node name="LeftMargin" type="MarginContainer" parent="HBoxContainer" unique_id=1776936394]
 layout_mode = 2
 size_flags_horizontal = 0
 theme_override_constants/margin_left = 50
 theme_override_constants/margin_top = 50
 theme_override_constants/margin_bottom = 20
 
-[node name="BackMargin" type="MarginContainer" parent="HBoxContainer/LeftMargin"]
+[node name="BackMargin" type="MarginContainer" parent="HBoxContainer/LeftMargin" unique_id=2052942153]
 custom_minimum_size = Vector2(350, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Back" type="Button" parent="HBoxContainer/LeftMargin/BackMargin"]
+[node name="Back" type="Button" parent="HBoxContainer/LeftMargin/BackMargin" unique_id=384449045]
 visible = false
 layout_mode = 2
 theme = ExtResource("2_4vt24")
 disabled = true
 text = "← Back To Home"
 
-[node name="MidMargin" type="MarginContainer" parent="HBoxContainer"]
+[node name="MidMargin" type="MarginContainer" parent="HBoxContainer" unique_id=26701908]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 30
 theme_override_constants/margin_right = 20
 
-[node name="PageInfoMargin" type="MarginContainer" parent="HBoxContainer/MidMargin"]
+[node name="PageInfoMargin" type="MarginContainer" parent="HBoxContainer/MidMargin" unique_id=1388966965]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Info" type="Button" parent="HBoxContainer/MidMargin/PageInfoMargin"]
+[node name="Info" type="Button" parent="HBoxContainer/MidMargin/PageInfoMargin" unique_id=3734828]
 layout_mode = 2
 theme = ExtResource("2_4vt24")
 theme_override_font_sizes/font_size = 60
@@ -70,29 +77,29 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_h47pg")
 theme_override_styles/focus = ExtResource("3_d73vd")
 text = "PLACEHOLDER"
 
-[node name="RightMargin" type="MarginContainer" parent="HBoxContainer"]
+[node name="RightMargin" type="MarginContainer" parent="HBoxContainer" unique_id=90674411]
 layout_mode = 2
 size_flags_horizontal = 8
 theme_override_constants/margin_top = 50
 theme_override_constants/margin_right = 50
 theme_override_constants/margin_bottom = 20
 
-[node name="AccountInfoMargin" type="MarginContainer" parent="HBoxContainer/RightMargin"]
+[node name="AccountInfoMargin" type="MarginContainer" parent="HBoxContainer/RightMargin" unique_id=63381955]
 custom_minimum_size = Vector2(350, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Account" type="Button" parent="HBoxContainer/RightMargin/AccountInfoMargin"]
+[node name="Account" type="Button" parent="HBoxContainer/RightMargin/AccountInfoMargin" unique_id=79442299]
 visible = false
 layout_mode = 2
 theme = ExtResource("2_4vt24")
 text = "Log in"
 
-[node name="lessonArea2D" parent="." instance=ExtResource("4_pgiiq")]
+[node name="lessonArea2D" parent="." unique_id=1060149049 instance=ExtResource("4_pgiiq")]
 visible = false
 scale = Vector2(0.1, 0.1)
 
-[node name="TransitionColor" type="ColorRect" parent="."]
+[node name="TransitionColor" type="ColorRect" parent="." unique_id=1667157796]
 visible = false
 anchors_preset = 15
 anchor_right = 1.0
@@ -102,7 +109,7 @@ grow_vertical = 2
 size_flags_horizontal = 4
 color = Color(0.5609549, 0.5609549, 0.5609549, 1)
 
-[node name="Vbox" type="VBoxContainer" parent="."]
+[node name="Vbox" type="VBoxContainer" parent="." unique_id=114431965]
 anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
@@ -113,21 +120,21 @@ grow_vertical = 0
 size_flags_horizontal = 3
 size_flags_vertical = 10
 
-[node name="MarginContainer" type="MarginContainer" parent="Vbox"]
+[node name="MarginContainer" type="MarginContainer" parent="Vbox" unique_id=1956876191]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/margin_left = 500
 theme_override_constants/margin_right = 500
 theme_override_constants/margin_bottom = 0
 
-[node name="Button" type="Button" parent="Vbox/MarginContainer"]
+[node name="Button" type="Button" parent="Vbox/MarginContainer" unique_id=1837946394]
 visible = false
 custom_minimum_size = Vector2(0, 150)
 layout_mode = 2
 theme = ExtResource("5_4vt24")
 text = "    Start the lesson    "
 
-[node name="Spacing" type="MarginContainer" parent="Vbox"]
+[node name="Spacing" type="MarginContainer" parent="Vbox" unique_id=906401483]
 layout_mode = 2
 theme_override_constants/margin_top = 150
 
