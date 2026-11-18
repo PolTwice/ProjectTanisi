@@ -8,7 +8,8 @@ class_name AudioManager extends Node
 var audioPlayers = [stream_one, stream_two, stream_three]
 
 func _on_ready() -> void:
-	GlobalState.AudioManager = self
+	#GlobalState.AudioManager = self
+	pass
 
 # Takes stream path 
 # returns audiostream if found
